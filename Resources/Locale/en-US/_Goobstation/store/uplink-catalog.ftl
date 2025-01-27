@@ -10,3 +10,8 @@ uplink-mech-teleporter-assault-desc = Contains a lightly armored Cybersun mech w
 
 uplink-hardsuit-cybersun-stealth-name = Cybersun Stealth Hardsuit
 uplink-hardsuit-cybersun-stealth-desc = Reversed engineered from Spider Clan technology, this hardsuit has stealth plating in it for those special ops. Slightly slower and less armor than the default hardsuits.
+
+# Misc
+
+uplink-dimension-pot-name = Dimension Pot
+uplink-dimension-pot-desc = A portal to your own pocket dimension disguised in the form of a potted plant, for when stashing one item isn't quite enough.
