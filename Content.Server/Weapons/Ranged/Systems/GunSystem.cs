@@ -239,7 +239,7 @@ public sealed partial class GunSystem : SharedGunSystem
         }
 
         // Do a throw
-        if (!HasComp<ProjectileComponent>(uid))
+        if (!TryComp(uid, out ProjectileComponent? projectileComp))
         {
             RemoveShootable(uid);
             // TODO: Someone can probably yeet this a billion miles so need to pre-validate input somewhere up the call stack.
@@ -260,6 +260,8 @@ public sealed partial class GunSystem : SharedGunSystem
         {
             EnsureComp<ProjectileGridPhaseComponent>(uid);
         }
+        projectileComp.Damage *= gun.DamageModifier;
+        ShootProjectile(uid, mapDirection, gunVelocity, gunUid, user, gun.ProjectileSpeedModified);
     }
 
     /// <summary>
