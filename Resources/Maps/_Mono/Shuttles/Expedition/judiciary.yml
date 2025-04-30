@@ -4,8 +4,8 @@ meta:
   engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 04/30/2025 19:22:25
-  entityCount: 670
+  time: 04/30/2025 21:20:52
+  entityCount: 668
 maps: []
 grids:
 - 2
@@ -422,6 +422,19 @@ entities:
     - type: RadiationGridResistance
     - type: BecomesStation
       id: Judiciary
+  - uid: 102
+    components:
+    - type: MetaData
+    - type: Transform
+      pos: -1.1949388,2.248987
+      parent: 2
+    - type: RadarBlip
+      enabled: False
+      visibleFromOtherGrids: True
+      shape: Ring
+      scale: 0
+      radarColor: '#00DEFEFF'
+    - type: CircularShieldRadar
   - uid: 245
     components:
     - type: MetaData
@@ -839,59 +852,50 @@ entities:
   - uid: 64
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 3.5,-0.5
+      pos: 2.5,1.5
       parent: 2
-  - uid: 129
+  - uid: 77
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
+      pos: 3.5,1.5
+      parent: 2
+  - uid: 78
+    components:
+    - type: Transform
+      pos: 2.5,0.5
+      parent: 2
+  - uid: 88
+    components:
+    - type: Transform
+      pos: 4.5,-0.5
+      parent: 2
+  - uid: 89
+    components:
+    - type: Transform
+      pos: 4.5,1.5
+      parent: 2
+  - uid: 92
+    components:
+    - type: Transform
+      pos: 4.5,0.5
+      parent: 2
+  - uid: 93
+    components:
+    - type: Transform
+      pos: 3.5,-0.5
+      parent: 2
+  - uid: 97
+    components:
+    - type: Transform
       pos: 3.5,0.5
       parent: 2
     - type: PointLight
       radius: 2
       enabled: True
-  - uid: 131
+  - uid: 98
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 3.5,1.5
-      parent: 2
-  - uid: 133
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 2.5,1.5
-      parent: 2
-  - uid: 134
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 2.5,0.5
-      parent: 2
-  - uid: 135
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
       pos: 2.5,-0.5
-      parent: 2
-  - uid: 146
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 4.5,0.5
-      parent: 2
-  - uid: 147
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 4.5,1.5
-      parent: 2
-  - uid: 148
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 4.5,-0.5
       parent: 2
 - proto: APCBasic
   entities:
@@ -2979,18 +2983,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -7.5,7.5
       parent: 2
-  - uid: 97
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -4.5,14.5
-      parent: 2
-  - uid: 98
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -3.5,13.5
-      parent: 2
   - uid: 99
     components:
     - type: Transform
@@ -3046,17 +3038,16 @@ entities:
       parent: 2
 - proto: GrilleDiagonal
   entities:
-  - uid: 88
+  - uid: 134
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -4.5,13.5
+      pos: 3.5,12.5
       parent: 2
-  - uid: 89
+  - uid: 135
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -3.5,14.5
+      rot: 3.141592653589793 rad
+      pos: 3.5,11.5
       parent: 2
 - proto: GunneryServer
   entities:
@@ -3444,29 +3435,18 @@ entities:
     - type: Transform
       pos: -2.5,13.5
       parent: 2
-  - uid: 92
-    components:
-    - type: Transform
-      pos: -4.5,14.5
-      parent: 2
-  - uid: 93
-    components:
-    - type: Transform
-      pos: -3.5,13.5
-      parent: 2
 - proto: ReinforcedWindowDiagonal
   entities:
-  - uid: 104
+  - uid: 129
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -4.5,13.5
+      rot: 3.141592653589793 rad
+      pos: 3.5,11.5
       parent: 2
-  - uid: 105
+  - uid: 147
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -3.5,14.5
+      pos: 3.5,12.5
       parent: 2
 - proto: ResearchAndDevelopmentServer
   entities:
@@ -3523,11 +3503,6 @@ entities:
     - type: Transform
       pos: -0.5,13.5
       parent: 2
-  - uid: 209
-    components:
-    - type: Transform
-      pos: -3.5,13.5
-      parent: 2
   - uid: 255
     components:
     - type: Transform
@@ -3559,8 +3534,6 @@ entities:
       parent: 2
     - type: DeviceLinkSource
       linkedPorts:
-        209:
-        - Pressed: Toggle
         206:
         - Pressed: Toggle
         207:
@@ -4104,16 +4077,6 @@ entities:
     - type: Transform
       pos: 3.5,10.5
       parent: 2
-  - uid: 77
-    components:
-    - type: Transform
-      pos: 3.5,11.5
-      parent: 2
-  - uid: 78
-    components:
-    - type: Transform
-      pos: 3.5,12.5
-      parent: 2
   - uid: 79
     components:
     - type: Transform
@@ -4163,6 +4126,21 @@ entities:
     components:
     - type: Transform
       pos: -5.5,11.5
+      parent: 2
+  - uid: 103
+    components:
+    - type: Transform
+      pos: -4.5,14.5
+      parent: 2
+  - uid: 104
+    components:
+    - type: Transform
+      pos: -3.5,13.5
+      parent: 2
+  - uid: 105
+    components:
+    - type: Transform
+      pos: -3.5,14.5
       parent: 2
   - uid: 107
     components:
@@ -4240,6 +4218,11 @@ entities:
     - type: Transform
       pos: -1.5,-4.5
       parent: 2
+  - uid: 146
+    components:
+    - type: Transform
+      pos: -4.5,13.5
+      parent: 2
   - uid: 155
     components:
     - type: Transform
@@ -4295,17 +4278,16 @@ entities:
       rot: 3.141592653589793 rad
       pos: 5.5,6.5
       parent: 2
-  - uid: 102
+  - uid: 131
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -4.5,13.5
+      rot: 3.141592653589793 rad
+      pos: 3.5,12.5
       parent: 2
-  - uid: 103
+  - uid: 133
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -3.5,14.5
+      pos: 3.5,11.5
       parent: 2
   - uid: 537
     components:
@@ -4658,6 +4640,15 @@ entities:
       parent: 2
 - proto: WindoorSecure
   entities:
+  - uid: 148
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -3.5,11.5
+      parent: 2
+    - type: AccessReader
+      access:
+      - - Captain
   - uid: 521
     components:
     - type: Transform
@@ -4667,12 +4658,6 @@ entities:
     components:
     - type: Transform
       pos: -4.5,1.5
-      parent: 2
-  - uid: 670
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -3.5,11.5
       parent: 2
 - proto: WindowReinforcedDirectional
   entities:
