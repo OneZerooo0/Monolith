@@ -4,8 +4,8 @@ meta:
   engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 04/29/2025 23:55:41
-  entityCount: 630
+  time: 04/30/2025 18:50:54
+  entityCount: 669
 maps: []
 grids:
 - 2
@@ -100,41 +100,63 @@ entities:
             id: BrickTileDarkCornerNe
           decals:
             19: -1,4
+            67: -5,8
         - node:
             color: '#FFFFFFFF'
             id: BrickTileDarkCornerNw
           decals:
             18: -3,4
+            49: -5,12
+            66: -7,8
         - node:
             color: '#FFFFFFFF'
             id: BrickTileDarkCornerSe
           decals:
             17: -1,2
+            68: -5,6
         - node:
             color: '#FFFFFFFF'
             id: BrickTileDarkCornerSw
           decals:
             16: -3,2
+            50: -5,10
+            69: -6,6
+            70: -7,7
         - node:
             color: '#FFFFFFFF'
             id: BrickTileDarkInnerNe
           decals:
             22: -2,4
+            64: -1,9
         - node:
             color: '#FFFFFFFF'
             id: BrickTileDarkInnerNw
           decals:
             23: -2,4
+            52: -4,12
+            57: 0,12
+            58: -3,9
         - node:
             color: '#FFFFFFFF'
             id: BrickTileDarkInnerSe
           decals:
             20: -2,2
+            61: -1,11
         - node:
             color: '#FFFFFFFF'
             id: BrickTileDarkInnerSw
           decals:
             21: -2,2
+            51: -4,10
+            59: -3,10
+            62: 0,11
+            71: -6,7
+        - node:
+            color: '#FFFFFFFF'
+            id: BrickTileDarkLineE
+          decals:
+            63: -1,10
+            65: -5,7
         - node:
             color: '#FFFFFFFF'
             id: BrickTileDarkLineN
@@ -144,6 +166,11 @@ entities:
             41: -1,3
             42: -4,3
             43: 0,3
+            53: -4,12
+            54: -3,12
+            55: -2,12
+            56: -1,12
+            72: -6,8
         - node:
             color: '#FFFFFFFF'
             id: BrickTileDarkLineS
@@ -153,6 +180,34 @@ entities:
             38: -1,3
             44: -4,3
             45: 0,3
+            60: -4,10
+        - node:
+            color: '#FFFFFFFF'
+            id: BrickTileDarkLineW
+          decals:
+            48: -5,11
+        - node:
+            color: '#5E7C1696'
+            id: BrickTileSteelCornerSe
+          decals:
+            74: 3,6
+            75: 2,5
+        - node:
+            color: '#5E7C1696'
+            id: BrickTileSteelInnerSe
+          decals:
+            77: 2,6
+            78: 3,8
+        - node:
+            color: '#5E7C1696'
+            id: BrickTileSteelLineE
+          decals:
+            73: 3,7
+        - node:
+            color: '#5E7C1696'
+            id: BrickTileSteelLineS
+          decals:
+            76: 1,5
         - node:
             color: '#4B709CFF'
             id: BrickTileWhiteInnerNe
@@ -407,6 +462,19 @@ entities:
       radarColor: '#00DEFEFF'
     - type: CircularShieldRadar
   - uid: 610
+    components:
+    - type: MetaData
+    - type: Transform
+      pos: -1.1949388,2.248987
+      parent: 2
+    - type: RadarBlip
+      enabled: False
+      visibleFromOtherGrids: True
+      shape: Ring
+      scale: 0
+      radarColor: '#00DEFEFF'
+    - type: CircularShieldRadar
+  - uid: 631
     components:
     - type: MetaData
     - type: Transform
@@ -897,6 +965,191 @@ entities:
     components:
     - type: Transform
       pos: -4.5,-7.5
+      parent: 2
+  - uid: 632
+    components:
+    - type: Transform
+      pos: -4.5,-9.5
+      parent: 2
+  - uid: 633
+    components:
+    - type: Transform
+      pos: -8.5,6.5
+      parent: 2
+  - uid: 634
+    components:
+    - type: Transform
+      pos: -8.5,7.5
+      parent: 2
+  - uid: 635
+    components:
+    - type: Transform
+      pos: -8.5,8.5
+      parent: 2
+  - uid: 636
+    components:
+    - type: Transform
+      pos: -7.5,4.5
+      parent: 2
+  - uid: 637
+    components:
+    - type: Transform
+      pos: -6.5,3.5
+      parent: 2
+  - uid: 638
+    components:
+    - type: Transform
+      pos: -7.5,2.5
+      parent: 2
+  - uid: 639
+    components:
+    - type: Transform
+      pos: 5.5,2.5
+      parent: 2
+  - uid: 640
+    components:
+    - type: Transform
+      pos: 3.5,3.5
+      parent: 2
+  - uid: 641
+    components:
+    - type: Transform
+      pos: 4.5,4.5
+      parent: 2
+  - uid: 642
+    components:
+    - type: Transform
+      pos: 5.5,6.5
+      parent: 2
+  - uid: 643
+    components:
+    - type: Transform
+      pos: 5.5,7.5
+      parent: 2
+  - uid: 644
+    components:
+    - type: Transform
+      pos: 5.5,8.5
+      parent: 2
+  - uid: 645
+    components:
+    - type: Transform
+      pos: 5.5,9.5
+      parent: 2
+  - uid: 646
+    components:
+    - type: Transform
+      pos: 4.5,10.5
+      parent: 2
+  - uid: 647
+    components:
+    - type: Transform
+      pos: 3.5,13.5
+      parent: 2
+  - uid: 648
+    components:
+    - type: Transform
+      pos: 0.5,15.5
+      parent: 2
+  - uid: 649
+    components:
+    - type: Transform
+      pos: -6.5,11.5
+      parent: 2
+  - uid: 650
+    components:
+    - type: Transform
+      pos: -7.5,10.5
+      parent: 2
+  - uid: 651
+    components:
+    - type: Transform
+      pos: -8.5,-2.5
+      parent: 2
+  - uid: 652
+    components:
+    - type: Transform
+      pos: -8.5,-3.5
+      parent: 2
+  - uid: 653
+    components:
+    - type: Transform
+      pos: -8.5,-4.5
+      parent: 2
+  - uid: 654
+    components:
+    - type: Transform
+      pos: -7.5,-7.5
+      parent: 2
+  - uid: 655
+    components:
+    - type: Transform
+      pos: -6.5,-9.5
+      parent: 2
+  - uid: 656
+    components:
+    - type: Transform
+      pos: -3.5,-9.5
+      parent: 2
+  - uid: 657
+    components:
+    - type: Transform
+      pos: -0.5,-7.5
+      parent: 2
+  - uid: 658
+    components:
+    - type: Transform
+      pos: -0.5,-6.5
+      parent: 2
+  - uid: 659
+    components:
+    - type: Transform
+      pos: -2.5,-6.5
+      parent: 2
+  - uid: 660
+    components:
+    - type: Transform
+      pos: 5.5,-6.5
+      parent: 2
+  - uid: 661
+    components:
+    - type: Transform
+      pos: 6.5,-4.5
+      parent: 2
+  - uid: 662
+    components:
+    - type: Transform
+      pos: 6.5,-3.5
+      parent: 2
+  - uid: 663
+    components:
+    - type: Transform
+      pos: 6.5,-2.5
+      parent: 2
+  - uid: 664
+    components:
+    - type: Transform
+      pos: 6.5,-1.5
+      parent: 2
+  - uid: 665
+    components:
+    - type: Transform
+      pos: 6.5,-1.5
+      parent: 2
+  - uid: 666
+    components:
+    - type: Transform
+      pos: 6.5,-0.5
+      parent: 2
+  - uid: 667
+    components:
+    - type: Transform
+      pos: 6.5,0.5
+      parent: 2
+  - uid: 668
+    components:
+    - type: Transform
+      pos: -3.5,-6.5
       parent: 2
 - proto: Autolathe
   entities:
@@ -2850,6 +3103,12 @@ entities:
     components:
     - type: Transform
       pos: -7.5,0.5
+      parent: 2
+  - uid: 669
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 1.5,-0.5
       parent: 2
 - proto: Poweredlight
   entities:

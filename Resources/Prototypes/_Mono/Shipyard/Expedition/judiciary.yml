@@ -9,13 +9,15 @@
   parent: BaseVessel
   name: SHM Judiciary
   description: A refitted research vessel armed with expedition-rated combat equipment.
-  price: 70001
+  price: 70001 # ~20,000$ markup
   category: Medium
   group: Expedition
+  access: Mercenary
   shuttlePath: /Maps/_Mono/Shuttles/Expedition/judiciary.yml
   guidebookPage: ShipyardJudiciary
   class:
   - Expedition
+  - Research
   engine:
   - AME
 

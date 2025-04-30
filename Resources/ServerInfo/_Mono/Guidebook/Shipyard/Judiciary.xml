@@ -34,7 +34,7 @@
   - Check that the substation unit is charging.
   - Check that the Engineering/Research APC unit's Main Breaker is toggled on.
   - Check that the Server Room/Atmos APC unit's Main Breaker is toggled on.
-  - Check that the Server Room/Atmos APC unit's Main Breaker is toggled on.
+  - Check that the Bridge APC unit's Main Breaker is toggled on.
 
   ## 1.2. Antimatter Engine (AME) reactor unit.
   <Box>
