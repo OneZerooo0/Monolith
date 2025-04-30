@@ -17,7 +17,6 @@
   guidebookPage: ShipyardJudiciary
   class:
   - Expedition
-  - Research
   engine:
   - AME
 
