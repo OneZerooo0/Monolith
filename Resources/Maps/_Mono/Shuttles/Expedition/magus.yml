@@ -4,8 +4,8 @@ meta:
   engineVersion: 247.2.0
   forkId: ""
   forkVersion: ""
-  time: 05/06/2025 21:11:31
-  entityCount: 649
+  time: 05/06/2025 21:16:44
+  entityCount: 652
 maps: []
 grids:
 - 1
@@ -499,6 +499,19 @@ entities:
       radarColor: '#00DEFEFF'
     - type: CircularShieldRadar
   - uid: 635
+    components:
+    - type: MetaData
+    - type: Transform
+      pos: 2.5466182,3.9390569
+      parent: 1
+    - type: RadarBlip
+      enabled: False
+      visibleFromOtherGrids: True
+      shape: Ring
+      scale: 0
+      radarColor: '#00DEFEFF'
+    - type: CircularShieldRadar
+  - uid: 650
     components:
     - type: MetaData
     - type: Transform
@@ -3506,6 +3519,13 @@ entities:
     - type: Transform
       pos: 0.5,6.5
       parent: 1
+- proto: SpawnPointLatejoin
+  entities:
+  - uid: 652
+    components:
+    - type: Transform
+      pos: 6.5,10.5
+      parent: 1
 - proto: Stairs
   entities:
   - uid: 171
@@ -4372,6 +4392,13 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 1.5,15.5
+      parent: 1
+- proto: WarpPoint
+  entities:
+  - uid: 651
+    components:
+    - type: Transform
+      pos: 2.5,0.5
       parent: 1
 - proto: WaterCooler
   entities:
