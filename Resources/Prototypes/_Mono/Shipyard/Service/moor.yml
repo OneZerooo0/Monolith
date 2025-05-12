@@ -1,0 +1,40 @@
+# Author Info
+# GitHub: game_and_glitch3
+# Discord: game_and_glitch3
+
+# Shuttle Notes:
+# Map made by Game_And_Glitch3, tweaked and PR'ed by Onezero0
+- type: vessel
+  id: Moor
+  parent: BaseVessel
+  name: SHM Moor
+  description: A bulky service junction, capable of pulling double-duty as a cargo freighter.
+  price: 35000 # ~5,000$ markup
+  category: Medium
+  group: Shipyard
+  shuttlePath: /Maps/_Mono/Shuttles/Service/moor.yml
+  guidebookPage: null
+  class:
+  - Civilian
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Moor
+  mapName: 'Moor'
+  mapPath: /Maps/_Mono/Shuttles/Service/moor.yml
+  minPlayers: 0
+  stations:
+    Moor:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Moor CIV{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]
