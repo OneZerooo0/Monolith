@@ -7,7 +7,7 @@
 - type: vessel
   id: Moor
   parent: BaseVessel
-  name: SHM Moor
+  name: SNS Moor
   description: A bulky service junction, capable of pulling double-duty as a cargo freighter.
   price: 35000 # ~5,000$ markup
   category: Medium
