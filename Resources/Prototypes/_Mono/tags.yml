@@ -285,6 +285,17 @@
 - type: Tag
   id: LessLethalGrenade
 
+#700Thz tags
+
+- type: Tag
+  id: Cartridge700Thz
+
+- type: Tag
+  id: Magazine700Thz
+
+- type: Tag
+  id: MagazineBox700Thz
+
 #AMMO END
 
 #Misc emote tags

@@ -4,6 +4,7 @@
 
 using Content.Shared.Weapons.Ranged;
 using Robust.Shared.GameStates;
+using Robust.Shared.Prototypes;
 
 namespace Content.Shared.Weapons.Hitscan.Components;
 
@@ -12,4 +13,10 @@ namespace Content.Shared.Weapons.Hitscan.Components;
 /// This is placed on the laser entity being shot, not the gun itself.
 /// </summary>
 [RegisterComponent, NetworkedComponent]
-public sealed partial class HitscanAmmoComponent : Component, IShootable;
+public sealed partial class HitscanAmmoComponent : Component, IShootable
+{
+
+    [ViewVariables(VVAccess.ReadWrite), DataField]
+    public EntProtoId? CasingPrototype = null;
+
+}
