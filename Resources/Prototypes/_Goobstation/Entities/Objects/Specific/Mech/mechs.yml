@@ -222,7 +222,7 @@
     openState: gygax-open
     brokenState: gygax-broken
     mechToPilotDamageMultiplier: 0.1 # Mono
-    maxIntegrity: 1000 # Mono
+    maxIntegrity: 1800 # Mono
     airtight: true
     pilotWhitelist:
       components:
@@ -299,7 +299,7 @@
     brokenState: durand-broken
     mechToPilotDamageMultiplier: 0.25
     airtight: true
-    maxIntegrity: 1200
+    maxIntegrity: 2200
     pilotWhitelist:
       components:
         - HumanoidAppearance

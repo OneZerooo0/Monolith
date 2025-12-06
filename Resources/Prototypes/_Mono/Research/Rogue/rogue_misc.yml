@@ -16,7 +16,7 @@
   recipeUnlocks:
   - ProwlerVoucherRogue
   technologyPrerequisites:
-  - RogueStealthsuit
+  - RogueSuperArmor
   - UniversalMaterialResearchT3
   position: 22, 11
 
@@ -69,22 +69,10 @@
   cost: 25000
   recipeUnlocks:
   - EmagRogue
-  technologyPrerequisites:
-  - UniversalMaterialResearchT2
-  position: 21, 4
-
-- type: technology
-  id: RogueEmag2
-  name: research-technology-rogue-access-breaker
-  entityIcon: AccessBreaker
-  discipline: RogueGear
-  tier: 3
-  cost: 25000
-  recipeUnlocks:
   - AccessBreakerRogue
   technologyPrerequisites:
   - UniversalMaterialResearchT2
-  position: 21, 3
+  position: 21, 4
 
 - type: technology
   id: RogueThermals

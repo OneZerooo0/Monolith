@@ -26,4 +26,4 @@
       sprite: _Mono/Objects/Weapons/Guns/Projectiles/lasers.rsi
       state: uv_impact_laser
   - type: HitscanAmmo
-    casingPrototype: BikeHorn
+    casingPrototype: ChemicalSlop
