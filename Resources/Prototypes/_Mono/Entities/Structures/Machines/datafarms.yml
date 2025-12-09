@@ -109,7 +109,7 @@
 
 - type: entity
   id: DatafarmResearch
-  parent: BaseDataFarm
+  parent: [BaseDataFarm, ConstructibleMachine]
   name: data farm (Research)
   description: A power-hungry server dedicated towards scraping data from... somewhere. This one generates research points at a rate of 10 per second.
   components:
@@ -147,7 +147,7 @@
 
 - type: entity
   id: DatafarmCrypto
-  parent: BaseDataFarm
+  parent: [BaseDataFarm, ConstructibleMachine]
   name: data farm (Crypto)
   description: A power-hungry server dedicated towards scraping data from... somewhere. This one generates valuable but random cryptocurrency at a rate of one every 10 minutes.
   components:

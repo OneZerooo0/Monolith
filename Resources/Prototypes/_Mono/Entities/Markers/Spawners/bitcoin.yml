@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: 2025 Onezero0
-#
-# SPDX-License-Identifier: MPL-2.0
-
-
-
 - type: entity
   name: random bitcoin
   id: SpawnLootDatafarmBitcoin
@@ -19,10 +13,10 @@
       color: red
   - type: RandomSpawner
     prototypes:
-    - Fluffcoin
-    - Kyrescoin
+    - BitcoinFluffcoin
+    - BitcoinKyrescoin
     chance: 0.75
     offset: 0.0
     rarePrototypes:
-    - Spiritcoin
+    - BitcoinSpiritcoin
     rareChance: 0.1
