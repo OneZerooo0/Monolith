@@ -1,17 +1,14 @@
 - type: entity
   abstract: true
-  # parent: BaseStructure # Mono
+  parent: BaseStructure
   id: BaseMachineIndestructible # Mono: Changed to BaseMachineIndestructible and removed destructible/damageable components
   components:
   - type: Animateable
   - type: InteractionOutline
   - type: Anchorable
     delay: 2
-  - type: Physics
-    bodyType: Static
   - type: Transform
     noRot: true
-    anchored: true
   - type: Fixtures
     fixtures:
       fix1:
@@ -33,27 +30,6 @@
   - type: FootstepModifier # mono
     footstepSoundCollection:
       collection: FootstepHull
-  - type: Transform
-    anchored: true
-  - type: Clickable
-  - type: Physics
-    bodyType: Static
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.45,-0.45,0.45,0.45"
-        density: 60
-        mask:
-        - MachineMask
-        layer:
-        - MidImpassable
-        - LowImpassable
-  - type: Pullable
-  - type: Tag
-    tags:
-    - Structure
 
 - type: entity
   abstract: true
