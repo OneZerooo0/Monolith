@@ -5,8 +5,6 @@
   components:
   - type: Animateable
   - type: InteractionOutline
-  - type: Anchorable
-    delay: 2
   - type: Transform
     noRot: true
   - type: Fixtures
@@ -56,6 +54,8 @@
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: StructuralMetallic
+  - type: Anchorable
+    delay: 2
 
 - type: entity
   abstract: true
