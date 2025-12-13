@@ -44,8 +44,8 @@
   - type: HitscanBasicDamage
     damage:
       types:
-        Heat: 45
-        Structural: 20
+        Heat: 35
+        Structural: 50
   - type: HitscanBasicVisuals
     muzzleFlash:
       sprite: _Mono/Objects/Weapons/Guns/Projectiles/lasers.rsi
@@ -67,7 +67,7 @@
     damage:
       types:
         Heat: 25
-        Structural: 5
+        Structural: 10
   - type: HitscanBasicVisuals
     muzzleFlash:
       sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
@@ -78,4 +78,27 @@
     impactFlash:
       sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
       state: impact_laser
+  - type: HitscanAmmo
+
+- type: entity
+  id: Hitscan10Phz # Used as a parent for the cartridge's ammo capabilities, not actually fired
+  parent: BasicHitscan
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Radiation: 25
+        Caustic: 5
+        Heat: 5
+  - type: HitscanBasicVisuals
+    muzzleFlash:
+      sprite: _Mono/Objects/Weapons/Guns/Projectiles/lasers.rsi
+      state: rad_muzzle_laser
+    travelFlash:
+      sprite: _Mono/Objects/Weapons/Guns/Projectiles/lasers.rsi
+      state: rad_beam
+    impactFlash:
+      sprite: _Mono/Objects/Weapons/Guns/Projectiles/lasers.rsi
+      state: rad_impact_laser
   - type: HitscanAmmo

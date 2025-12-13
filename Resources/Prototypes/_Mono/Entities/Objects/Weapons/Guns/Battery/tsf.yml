@@ -61,6 +61,7 @@
   - type: Clothing
     sprite: _Mono/Objects/Weapons/Guns/Rifles/calico_inhands_32x.rsi
   - type: Item
+    size: Huge
     sprite: _Mono/Objects/Weapons/Guns/Rifles/calico_inhands_32x.rsi
   - type: StaticPrice
     price: 2400
@@ -77,15 +78,17 @@
   name: "'Smilodon' DEW-50-C automatic energy weapon"
   parent: [BaseWeaponRifle, BaseGunWieldable, BaseC2ContrabandUnredeemable]
   id: WeaponDEWSmilodon
-  description: A box-fed directed energy weapon favored by soldiers of large build, capable of mowing down any unfortunate opponent with sheer heat. Due to it using chemical-laser cartridges, it is unaffected by EMP. Capable of using either energy or
+  description: Modified from the original "Calico" DEW, the "Smilodon" carries the philosophy of its predecessor into the world of LMGs - Capable of using battery boxes *and* chemical magazines while also having secondary storage for on-the-go marines, the Smilodon's only failures are the downsides of laser-based weapons and its bulky frame.
   components:
   - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Rifles/calico.rsi
+    sprite: _Mono/Objects/Weapons/Guns/LMGs/smilodon.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
+    - state: mag2-0
+      map: ["enum.ItemCabinetVisuals.Layer"]
   - type: Gun
     minAngle: 2
     maxAngle: 50
@@ -108,33 +111,46 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine700Thz
         insertSound: /Audio/Weapons/Guns/MagIn/sfrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/hpistol_magout.ogg
         priority: 2
         whitelist:
           tags:
           - LargeMilitaryPowerCell
+          - Magazine700Thz
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      ItemCabinet:
+        name: Secondary Magazine
+        ejectOnInteract: false
+        insertSound: /Audio/Weapons/Guns/MagIn/sfrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/hpistol_magout.ogg
+        priority: 3
+        whitelist:
+          tags:
+          - LargeMilitaryPowerCell
+          - Magazine700Thz
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: Cartridge700Thz
         priority: 1
         whitelist:
           tags:
           - Cartridge700Thz
+  - type: ItemCabinet
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
+      ItemCabinet: !type:ContainerSlot
       gun_chamber: !type:ContainerSlot
   - type: MagazineVisuals
     magState: mag
-    steps: 3
+    steps: 1
     zeroVisible: true
   - type: Appearance
   - type: Clothing
     sprite: _Mono/Objects/Weapons/Guns/Rifles/calico_inhands_32x.rsi
   - type: Item
+    size: Huge
     sprite: _Mono/Objects/Weapons/Guns/Rifles/calico_inhands_32x.rsi
   - type: StaticPrice
     price: 5000
@@ -156,3 +172,9 @@
     baseDelay: 2
     modifiedDelay: 2
     preventFiring: true
+  - type: GenericVisualizer
+    visuals:
+      enum.ItemCabinetVisuals.ContainsItem:
+        enum.ItemCabinetVisuals.Layer:
+          True: { visible: true }
+          False: { visible: false }

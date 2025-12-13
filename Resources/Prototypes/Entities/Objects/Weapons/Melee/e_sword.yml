@@ -119,7 +119,6 @@
       right:
       - state: inhand-right-blade
         shader: unshaded
-  - type: Reflect
   - type: IgnitionSource
     temperature: 700
   - type: Scalpel # Shitmed
@@ -156,6 +155,10 @@
   - type: Tag  # Mono
     tags:
     - EnergySword
+  - type: Reflect
+    reflectProb: 0.5
+    reflects:
+    - Energy
 
 - type: entity
   name: energy dagger
@@ -337,6 +340,10 @@
       map: [ "blade" ]
   - type: Item
     sprite: Objects/Weapons/Melee/e_cutlass.rsi
+  - type: Reflect
+    reflectProb: 0.5
+    reflects:
+    - Energy
 
 - type: entity
   name: double-bladed energy sword
