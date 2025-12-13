@@ -103,13 +103,14 @@
   - type: Gun
     minAngle: 1
     maxAngle: 4
-    projectileSpeed: 16
+    projectileSpeed: 30
     fireRate: 0.5
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/mateba.ogg
   - type: BallisticAmmoProvider
     proto: PanzeroRocket
     capacity: 1
+    cycleable: false
   - type: MagazineVisuals
     magState: mag
     steps: 2
@@ -143,3 +144,47 @@
     rsi:
       sprite: _RMC14/Interface/MousePointer/explosive_mouse.rsi
       state: all
+
+# grenade launcher
+
+- type: entity
+  name: GP-909 'Osiris' Grenade Launcher
+  parent: [BaseStorageItem, BaseC1Contraband] # Frontier: BaseMinorContraband<BaseC1Contraband
+  id: WeaponLauncherTSFOsiris
+  description: The TSF's powerful solution to things that don't have enough boom.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Cannons/pneumatic_cannon.rsi
+    layers:
+    - state: icon
+  - type: Item
+    size: Huge
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - Back
+  - type: Gun
+    projectileSpeed: 35
+    fireRate: 1
+    selectedMode: SemiAuto
+    availableModes:
+    - FullAuto
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Effects/thunk.ogg
+    soundEmpty:
+      path: /Audio/Items/hiss.ogg
+    clumsyProof: true
+  - type: ContainerAmmoProvider
+    container: storagebase
+  - type: PneumaticCannon
+    gasUsage: 0
+    throwItems: false
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,3,1
+    whitelist:
+      components:
+      - OnUseTimerTrigger
+  - type: Appearance

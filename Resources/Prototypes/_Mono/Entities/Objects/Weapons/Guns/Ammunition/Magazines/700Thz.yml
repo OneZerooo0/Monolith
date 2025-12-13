@@ -16,7 +16,7 @@
 
 - type: entity
   id: BaseMagazine700Thz
-  name: DEW magazine (700Thz)
+  name: DEW magazine (700Thz DEW)
   parent: [BaseItem, RecyclableItemSteelTiny] # Frontier: added RecyclableItemSteelTiny
   abstract: true
   components:
@@ -75,3 +75,5 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+
+

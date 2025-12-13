@@ -296,6 +296,11 @@
 - type: Tag
   id: MagazineBox700Thz
 
+# military power cell tags
+
+- type: Tag
+  id: LargeMilitaryPowerCell
+
 #AMMO END
 
 #Misc emote tags
