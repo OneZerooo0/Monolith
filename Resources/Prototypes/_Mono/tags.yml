@@ -296,6 +296,17 @@
 - type: Tag
   id: MagazineBox700Thz
 
+#10Phz tags
+
+- type: Tag
+  id: Cartridge10Phz
+
+- type: Tag
+  id: Magazine10Phz
+
+- type: Tag
+  id: MagazineBox10Phz
+
 # military power cell tags
 
 - type: Tag

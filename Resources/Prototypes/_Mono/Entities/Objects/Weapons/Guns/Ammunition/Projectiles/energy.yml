@@ -36,27 +36,7 @@
 
 # actual hitscans
 
-- type: entity
-  id: Hitscan700Thz # Used as a parent for the cartridge's ammo capabilities, not actually fired
-  parent: BasicHitscan
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: HitscanBasicDamage
-    damage:
-      types:
-        Heat: 35
-        Structural: 50
-  - type: HitscanBasicVisuals
-    muzzleFlash:
-      sprite: _Mono/Objects/Weapons/Guns/Projectiles/lasers.rsi
-      state: uv_muzzle_laser
-    travelFlash:
-      sprite: _Mono/Objects/Weapons/Guns/Projectiles/lasers.rsi
-      state: uv_beam
-    impactFlash:
-      sprite: _Mono/Objects/Weapons/Guns/Projectiles/lasers.rsi
-      state: uv_impact_laser
-  - type: HitscanAmmo
+# 400Phz
 
 - type: entity
   id: Hitscan400Thz # Used as a parent for the cartridge's ammo capabilities, not actually fired
@@ -80,6 +60,32 @@
       state: impact_laser
   - type: HitscanAmmo
 
+# 700Thz
+
+- type: entity
+  id: Hitscan700Thz # Used as a parent for the cartridge's ammo capabilities, not actually fired
+  parent: BasicHitscan
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Heat: 35
+        Structural: 50
+  - type: HitscanBasicVisuals
+    muzzleFlash:
+      sprite: _Mono/Objects/Weapons/Guns/Projectiles/lasers.rsi
+      state: uv_muzzle_laser
+    travelFlash:
+      sprite: _Mono/Objects/Weapons/Guns/Projectiles/lasers.rsi
+      state: uv_beam
+    impactFlash:
+      sprite: _Mono/Objects/Weapons/Guns/Projectiles/lasers.rsi
+      state: uv_impact_laser
+  - type: HitscanAmmo
+
+# 10Phz
+
 - type: entity
   id: Hitscan10Phz # Used as a parent for the cartridge's ammo capabilities, not actually fired
   parent: BasicHitscan
@@ -102,3 +108,5 @@
       sprite: _Mono/Objects/Weapons/Guns/Projectiles/lasers.rsi
       state: rad_impact_laser
   - type: HitscanAmmo
+  - type: HitscanBasicRaycast
+    maxDistance: 512
