@@ -90,6 +90,7 @@
   - SmugglingEventScheduler
   - FrontierRoundstartVariation
   - MonoChimeraSTCShuttleSpawnerScheduler
+  - MonoMonolithicEvents
 
 - type: gamePreset
   id: MonoMixed
@@ -108,6 +109,7 @@
   - MonoAISTCShuttleSpawnerSchedulerSlow
   - MonoAISTCShuttleSpawnerSchedulerTier2Slow
   - MonoAsakimSTCShuttleSpawnerSchedulerSlow
+  - MonoMonolithicEventsScheduler
 
 - type: gamePreset
   id: MonoAllAtOnce
