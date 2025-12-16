@@ -29,6 +29,7 @@
     prototype: MobQuartzCrabNF
 
 - type: entity
+  categories: [ HideSpawnMenu ]
   id: MobMonolithicBase
   parent: [ MobNonHumanHostileBase, MobStepTriggerImmune ]
   abstract: true
@@ -144,7 +145,8 @@
 - type: entity
   id: MobSpawnMonolithicGestalt
   parent: MobSpawnMonolithicBase
-  name: mobspawner monolithic gestalt
+  name: monolithic gestalt
+  suffix: Spawner
   components:
   - type: Sprite
     sprite: /Textures/Effects/mobspawn.rsi
@@ -153,6 +155,7 @@
     prototype: MobMonolithicGestalt
 
 - type: entity
+  categories: [ HideSpawnMenu ]
   id: MobMonolithicGestalt
   parent: MobMonolithicBase
   name: monolithic gestalt
@@ -219,6 +222,19 @@
         - Opaque
 
 - type: entity
+  id: MobSpawnMonolithicGolom
+  parent: MobSpawnMonolithicBase
+  name: monolithic golom
+  suffix: Spawner
+  components:
+    - type: Sprite
+      sprite: /Textures/Effects/mobspawn.rsi
+      state: crab_quartz
+    - type: SpawnOnDespawn
+      prototype: MobMonolithicGolom
+
+- type: entity
+  categories: [ HideSpawnMenu ]
   id: MobMonolithicGolom
   parent: MobMonolithicBase
   name: monolithic golom
@@ -271,3 +287,70 @@
     rootTask:
       task: SimpleHostileCompound
 
+- type: entity
+  id: MobSpawnMonolithicHalocust
+  parent: MobSpawnMonolithicBase
+  name: monolithic hell locust
+  suffix: Spawner
+  components:
+    - type: Sprite
+      sprite: /Textures/Effects/mobspawn.rsi
+      state: crab_quartz
+    - type: SpawnOnDespawn
+      prototype: MobMonolithicHalocust
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: MobMonolithicHalocust
+  parent: MobMonolithicBase
+  name: monolithic hell locust
+  description: An anomalous entity. Seems to be composed of sharply tangible energy. Also seems to be running at you. Watch out!
+  components:
+    - type: Sprite
+      sprite: Mobs/Elemental/living_light/luminous_entity.rsi
+      layers:
+        - map: [ "enum.DamageStateVisualLayers.Base" ]
+          state: luminous_entity
+        - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+          state: glow
+          shader: unshaded
+    - type: DamageStateVisuals
+      states:
+        Alive:
+          Base: luminous_entity
+          BaseUnshaded: glow
+        Dead:
+          Base: dead
+          BaseUnshaded: dead_glow
+    - type: MeleeWeapon
+      attackRate: 2
+      hidden: true
+      soundHit:
+        path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+      damage:
+        types:
+          Slash: 7
+          Pierce: 5
+          Heat: 5
+          Structural: 10
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 250
+          behaviors:
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+            - !type:PlaySoundBehavior
+              sound:
+                collection: GlassBreak
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        500: Dead
+    - type: MovementSpeedModifier
+      baseSprintSpeed: 4.5
+      baseWalkSpeed: 3
+    - type: HTN
+      rootTask:
+        task: SimpleHostileCompound
