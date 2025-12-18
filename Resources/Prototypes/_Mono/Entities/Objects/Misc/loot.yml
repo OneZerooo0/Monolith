@@ -1,28 +1,51 @@
 
 - type: entity
-  name: telecrystal
-  parent: [BaseItem, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
-  id: Telecrystal
-  suffix: 100 TC # Mono
-  description: It seems to be pulsing with suspiciously enticing energies.
+  name: small monolithic crystal
+  parent: [BaseItem, BaseMonolithContrabandT1]
+  id: MonolithicCrystalSmall
+  suffix: Small, 15 FMC/Data
+  description: A mysterious crystalline solid. Seems highly energetic, but fragile.
   components:
   - type: Sprite
     sprite: Objects/Specific/Syndicate/telecrystal.rsi
     state: telecrystal
+    color: "#b83afc"
   - type: Item
     sprite: Objects/Specific/Syndicate/telecrystal.rsi
     size: Tiny
-  - type: Stack
-    count: 100 # Mono
-    stackType: Telecrystal
   - type: StaticPrice
-    price: 0
-  - type: StackPrice
-    price: 40 # Mono
-  - type: Currency
-    price:
-      Telecrystal: 1
-  - type: Contraband
-    turnInValues:
-      FederationMilitaryCredit: 1
-      Doubloon: 1
+    price: 8000
+
+- type: entity
+  name: medium monolithic crystal
+  parent: [BaseItem, BaseMonolithContrabandT2]
+  id: MonolithicCrystalMedium
+  suffix: Medium, 25 FMC/Data
+  description: A mysterious crystalline solid. Seems highly energetic, but fragile. Notably large.
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Syndicate/telecrystal.rsi
+    state: telecrystal
+    color: "#b83afc"
+  - type: Item
+    sprite: Objects/Specific/Syndicate/telecrystal.rsi
+    size: Tiny
+  - type: StaticPrice
+    price: 12000
+
+- type: entity
+  name: large monolithic crystal
+  parent: [BaseItem, BaseMonolithContrabandT3]
+  id: MonolithicCrystalLarge
+  suffix: Large, 25 FMC/Data
+  description: A mysterious crystalline solid. Seems highly energetic, but fragile. It is of rare size!
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Syndicate/telecrystal.rsi
+    state: telecrystal
+    color: "#b83afc"
+  - type: Item
+    sprite: Objects/Specific/Syndicate/telecrystal.rsi
+    size: Tiny
+  - type: StaticPrice
+    price: 20000

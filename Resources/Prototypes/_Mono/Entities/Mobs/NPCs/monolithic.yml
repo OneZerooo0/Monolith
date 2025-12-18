@@ -2,6 +2,7 @@
 - type: entity
   abstract: true
   id: MobSpawnMonolithicBase
+  parent: MarkerBase
   name: spawner monolithic entity base
   components:
   - type: Transform
@@ -10,8 +11,8 @@
   - type: Physics
     bodyType: Static
   - type: Sprite
-    sprite: /Textures/Effects/mobspawn.rsi
-    state: crab_quartz
+    sprite: _Mono/Mobs/monolithic.rsi
+    state: gestalt_icon
   - type: Fixtures
     fixtures:
       portalFixture:
@@ -24,9 +25,9 @@
         - WallLayer
         hard: false
   - type: TimedDespawn
-    lifetime: 2.1
+    lifetime: 0.1
   - type: SpawnOnDespawn
-    prototype: MobQuartzCrabNF
+    prototype: MobMonolithicGestalt
 
 - type: entity
   categories: [ HideSpawnMenu ]
@@ -47,7 +48,6 @@
   - type: NpcFactionMember
     factions:
     - Monolithic
-  - type: MovementIgnoreGravity
   - type: MovementSpeedModifier
     baseWalkSpeed: 3.5
     baseSprintSpeed: 3.5
@@ -96,14 +96,16 @@
         - MobLayer
   - type: Damageable
     damageContainer: Inorganic
-    damageModifierSet: LivingLight
+    damageModifierSet: RGlass
   - type: PassiveDamage
     allowedStates:
     - Alive
-    damageCap: 340
+    damageCap: 1000
     damage:
+      groups:
+        Brute: -1
       types:
-        Heat: -0.2
+        Heat: -0.5
   - type: NoSlip
   - type: Pullable
   - type: ZombieImmune
@@ -120,8 +122,8 @@
       time: 18000 # 5 hrs
   - type: GhostTakeoverAvailable
   - type: PointLight
-    radius: 3.0
-    energy: 4.5
+    radius: 1.0
+    energy: 1.5
     color: "#91469e"
   - type: Speech
     speechVerb: Ghost
@@ -139,6 +141,11 @@
       - !type:PlaySoundBehavior
         sound:
           collection: GlassBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MonolithicCrystalSmall:
+            min: 0
+            max: 1
 
 # actual entity spawners
 
@@ -149,8 +156,8 @@
   suffix: Spawner
   components:
   - type: Sprite
-    sprite: /Textures/Effects/mobspawn.rsi
-    state: crab_quartz
+    sprite: _Mono/Mobs/monolithic.rsi
+    state: gestalt_icon
   - type: SpawnOnDespawn
     prototype: MobMonolithicGestalt
 
@@ -162,12 +169,12 @@
   description: An anomalous entity. Seems to be composed entirely of some kind of intangible energy, which it seems to be shooting you with. Watch out!
   components:
   - type: Sprite
-    sprite: Mobs/Elemental/living_light/luminous_entity.rsi
+    sprite: _Mono/Mobs/monolithic.rsi
     layers:
-    - map: [ "enum.DamageStateVisualLayers.Base" ]
-      state: luminous_entity
+    #- map: [ "enum.DamageStateVisualLayers.Base" ]
+    #  state: gestalt
     - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
-      state: glow
+      state: gestalt
       shader: unshaded
   - type: DamageStateVisuals
     states:
@@ -196,9 +203,9 @@
     maxAngle: 20
     useKey: false
     showExamineText: false
-    selectedMode: SemiAuto
+    selectedMode: FullAuto
     availableModes:
-    - SemiAuto
+    - FullAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
     soundEmpty:
@@ -207,8 +214,8 @@
     reflectProb: 1
     spread: 90
   - type: Stealth
-    minVisibility: 0.8
-    maxVisibility: 0.8
+    minVisibility: 0.3
+    maxVisibility: 0.4
   - type: Fixtures
     fixtures:
       fix1:
@@ -220,6 +227,7 @@
         - MobMask
         layer:
         - Opaque
+  - type: MovementIgnoreGravity
 
 - type: entity
   id: MobSpawnMonolithicGolom
@@ -228,8 +236,8 @@
   suffix: Spawner
   components:
     - type: Sprite
-      sprite: /Textures/Effects/mobspawn.rsi
-      state: crab_quartz
+      sprite: _Mono/Mobs/monolithic.rsi
+      state: golom_icon
     - type: SpawnOnDespawn
       prototype: MobMonolithicGolom
 
@@ -241,17 +249,17 @@
   description: An anomalous entity. Seems to be composed entirely of some kind of durable, crystal-like energy. It also seems to be heading right towards you.
   components:
   - type: Sprite
-    sprite: Mobs/Elemental/living_light/luminous_entity.rsi
+    sprite: _Mono/Mobs/monolithic.rsi
     layers:
     - map: [ "enum.DamageStateVisualLayers.Base" ]
-      state: luminous_entity
+      state: golom
     - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
-      state: glow
+      state: golom_crystals
       shader: unshaded
   - type: DamageStateVisuals
     states:
       Alive:
-        Base: luminous_entity
+        Base: golom
         BaseUnshaded: glow
       Dead:
         Base: dead
@@ -276,6 +284,11 @@
       - !type:PlaySoundBehavior
         sound:
           collection: GlassBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MonolithicCrystalMedium:
+            min: 1
+            max: 1
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -288,36 +301,36 @@
       task: SimpleHostileCompound
 
 - type: entity
-  id: MobSpawnMonolithicHalocust
+  id: MobSpawnMonolithicHellLocust
   parent: MobSpawnMonolithicBase
   name: monolithic hell locust
   suffix: Spawner
   components:
     - type: Sprite
-      sprite: /Textures/Effects/mobspawn.rsi
-      state: crab_quartz
+      sprite: _Mono/Mobs/monolithic.rsi
+      state: locust_icon
     - type: SpawnOnDespawn
-      prototype: MobMonolithicHalocust
+      prototype: MobMonolithicHellLocust
 
 - type: entity
   categories: [ HideSpawnMenu ]
-  id: MobMonolithicHalocust
+  id: MobMonolithicHellLocust
   parent: MobMonolithicBase
   name: monolithic hell locust
-  description: An anomalous entity. Seems to be composed of sharply tangible energy. Also seems to be running at you. Watch out!
+  description: An anomalous entity. Seems to be composed of sharply tangible energy, in an oddly familiar form. Also seems to be running at you menacingly. Watch out!
   components:
     - type: Sprite
-      sprite: Mobs/Elemental/living_light/luminous_entity.rsi
+      sprite: _Mono/Mobs/monolithic.rsi
       layers:
         - map: [ "enum.DamageStateVisualLayers.Base" ]
-          state: luminous_entity
+          state: locust
         - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
-          state: glow
+          state: locust_crystals
           shader: unshaded
     - type: DamageStateVisuals
       states:
         Alive:
-          Base: luminous_entity
+          Base: locust
           BaseUnshaded: glow
         Dead:
           Base: dead
@@ -329,10 +342,10 @@
         path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
       damage:
         types:
-          Slash: 7
-          Pierce: 5
-          Heat: 5
-          Structural: 10
+          Slash: 5
+          Pierce: 3
+          Heat: 3
+          Structural: 30
     - type: Destructible
       thresholds:
         - trigger:
@@ -344,13 +357,19 @@
             - !type:PlaySoundBehavior
               sound:
                 collection: GlassBreak
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                MonolithicCrystalSmall:
+                  min: 0
+                  max: 1
     - type: MobThresholds
       thresholds:
         0: Alive
-        500: Dead
+        200: Dead
     - type: MovementSpeedModifier
       baseSprintSpeed: 4.5
       baseWalkSpeed: 3
     - type: HTN
       rootTask:
         task: SimpleHostileCompound
+    - type: MovementIgnoreGravity
