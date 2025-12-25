@@ -409,13 +409,14 @@
   - type: IconSmooth
     key: chitin
     base: solid
-  - type: Construction
-    graph: Girder
-    node: wallChitin
-  - type: RCDDeconstructable
-    cost: 6
-    delay: 8
-    fx: EffectRCDDeconstruct8
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 99999
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
 
 - type: entity
   parent: BaseWallOutpost # Mono
@@ -427,9 +428,6 @@
   - type: Icon
     sprite: Structures/Walls/xeno.rsi
     state: rgeneric
-  - type: Damageable
-    damageContainer: StructuralInorganic
-    damageModifierSet: StructuralMetallicStrong
   - type: Appearance
   - type: GenericVisualizer
     visuals:
@@ -446,9 +444,11 @@
     price: 250
   - type: RadiationBlocker
     resistance: 5
-  - type: IconSmooth
-    key: chitin
-    base: reinf_over
-  - type: Construction
-    graph: Girder
-    node: reinforcedWallChitin
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 99999
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]

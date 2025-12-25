@@ -19,8 +19,10 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - mono-monolithic-event-name-MonolithicFragment
-        minimumDistance: 1500
-        maximumDistance: 2500
+        minCount: 1
+        maxCount: 1
+        minimumDistance: 2000
+        maximumDistance: 4000
         addComponents:
         - type: Gravity
           enabled: true
@@ -35,4 +37,7 @@
         - type: ForceAnchor
         - type: ClaimableGrid
         paths:
-        - /Maps/_NF/Bluespace/cache.yml
+        - /Maps/_Mono/Monolithic/monolithicasteroidsmallarena.yml
+        - /Maps/_Mono/Monolithic/monolithicasteroidsmallspindle.yml
+        - /Maps/_Mono/Monolithic/monolithicasteroidsmallship.yml
+        - /Maps/_Mono/Monolithic/monolithicasteroidsmallvoyager.yml

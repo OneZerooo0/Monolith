@@ -172,6 +172,9 @@
   - type: NameIdentifier
     group: GenericNumber
   - type: GhostRole
+    makeSentient: true
+    allowSpeech: false
+    allowMovement: true
     name: ghost-role-information-monolithic-generic-name
     description: ghost-role-information-monolithic-generic-description
     rules: ghost-role-information-monolithic-generic-rules
@@ -190,6 +193,7 @@
   - type: Tag
     tags:
     - FootstepSound
+    - CannotSuicide
   - type: Destructible
     thresholds:
     - trigger:
@@ -366,7 +370,7 @@
     attackRate: 1
     hidden: true
     soundHit:
-      path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+      collection: Punch
     damage:
       types:
         Blunt: 50
@@ -510,6 +514,8 @@
 
 # region intermediate monolith mobs
 
+# golom ranged
+
 - type: entity
   id: MobSpawnMonolithicGolomRanged
   parent: MobSpawnMonolithicBase
@@ -549,14 +555,14 @@
     attackRate: 1
     hidden: true
     soundHit:
-      path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+      collection: Punch
     damage:
       types:
         Blunt: 50
         Structural: 300
     altDisarm: false
     angle: 0
-    animation: WeaponArcBite
+    animation: WeaponArcPunch
   - type: Destructible
     thresholds:
     - trigger:

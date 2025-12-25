@@ -13,7 +13,7 @@
       shader: unshaded
   - type: Item
     sprite: Objects/Specific/Syndicate/telecrystal.rsi
-    size: Tiny
+    size: Small
   - type: StaticPrice
     price: 3000
   - type: Damageable
