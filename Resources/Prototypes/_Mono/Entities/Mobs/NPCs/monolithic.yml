@@ -142,7 +142,7 @@
         BaseUnshaded: glow
       Dead:
         Base: dead
-        BaseUnshaded: dead_glow
+        BaseUnshaded: dead_unshaded
   - type: Fixtures
     fixtures:
       fix1:
@@ -219,6 +219,7 @@
     solution: chemicals
   - type: Bloodstream
     bloodReagent: Gestalzitine
+    bloodMaxVolume: 35
 
 # actual entity spawners
 
@@ -256,7 +257,7 @@
         BaseUnshaded: glow
       Dead:
         Base: dead
-        BaseUnshaded: dead_glow
+        BaseUnshaded: dead_unshaded
   - type: MeleeWeapon
     damage:
       types:
@@ -360,7 +361,7 @@
         BaseUnshaded: glow
       Dead:
         Base: dead
-        BaseUnshaded: dead_glow
+        BaseUnshaded: dead_unshaded
   - type: MeleeWeapon
     attackRate: 1
     hidden: true
@@ -370,6 +371,9 @@
       types:
         Blunt: 50
         Structural: 300
+    altDisarm: false
+    angle: 20
+    animation: WeaponArcFist
   - type: Destructible
     thresholds:
     - trigger:
@@ -434,7 +438,7 @@
           BaseUnshaded: glow
         Dead:
           Base: dead
-          BaseUnshaded: dead_glow
+          BaseUnshaded: dead_unshaded
     - type: MeleeWeapon
       attackRate: 2
       hidden: true
@@ -446,6 +450,9 @@
           Pierce: 3
           Heat: 3
           Structural: 30
+      altDisarm: false
+      angle: 0
+      animation: WeaponArcBite
     - type: Destructible
       thresholds:
         - trigger:
@@ -504,6 +511,18 @@
 # region intermediate monolith mobs
 
 - type: entity
+  id: MobSpawnMonolithicGolomRanged
+  parent: MobSpawnMonolithicBase
+  name: monolithic ranged golom
+  suffix: Spawner
+  components:
+    - type: Sprite
+      sprite: _Mono/Mobs/monolithic.rsi
+      state: golom_icon
+    - type: SpawnOnDespawn
+      prototype: MobMonolithicGolomRanged
+
+- type: entity
   categories: [ HideSpawnMenu ]
   id: MobMonolithicGolomRanged
   parent: MobMonolithicBase
@@ -525,7 +544,7 @@
         BaseUnshaded: glow
       Dead:
         Base: dead
-        BaseUnshaded: dead_glow
+        BaseUnshaded: dead_unshaded
   - type: MeleeWeapon
     attackRate: 1
     hidden: true
@@ -535,6 +554,9 @@
       types:
         Blunt: 50
         Structural: 300
+    altDisarm: false
+    angle: 0
+    animation: WeaponArcBite
   - type: Destructible
     thresholds:
     - trigger:

@@ -8,6 +8,12 @@
   "copyright": "Made by Onezero0 for Monolith, golom sprites tweaked from ore golem sprite taken from CEV-Eris commit 880e1a48125c971487ff4c79d0fd6aa4977795c2",
   "states": [
     {
+      "name": "dead"
+    },
+    {
+      "name": "dead_unshaded"
+    },
+    {
       "name": "gestalt",
       "directions": 4,
       "delays":
