@@ -1,0 +1,106 @@
+
+- type: latheRecipe
+  id: UraniumCentrifugeProcessingMini
+  categories:
+  - Explosive
+  result: UraniumProcessingSpawner
+  completetime: 10
+  materials:
+    Uranium: 2000 # 20 ingots
+  icon:
+    sprite: _Mono/Effects/processing.rsi
+    state: processing_2
+
+- type: entity
+  name: uranium processing
+  description: Seperate fissile isotopes from uranium ingots. High probability of producing depleted uranium.
+  id: UraniumProcessingSpawner
+  parent: MarkerBase
+  components:
+  - type: RandomSpawner
+    prototypes:
+    - SheetUraniumDepleted1
+    rarePrototypes:
+    - SheetUraniumFissile1
+    rareChance: 0.03
+    offset: 0.0
+    chance: 1
+  - type: Sprite
+    sprite: _Mono/Effects/processing.rsi
+    state: processing_2
+  - type: Icon
+    sprite: _Mono/Effects/processing.rsi
+    state: processing_2
+
+# reprocessing
+
+- type: latheRecipe
+  id: UraniumCentrifugeReprocessingMini
+  categories:
+  - Explosive
+  result: UraniumReprocessingSpawner
+  completetime: 10
+  materials:
+    UraniumDepleted: 50 # 10 ingots
+    UraniumFissile: 1 # 0.2 ingots
+  icon:
+    sprite: _Mono/Effects/processing.rsi
+    state: processing
+
+- type: entity
+  name: uranium re-processing
+  description: Use a mixture of fissile and depleted uranium to produce all three types of uranium.
+  id: UraniumReprocessingSpawner
+  parent: MarkerBase
+  components:
+  - type: RandomSpawner
+    prototypes:
+    - SheetUraniumDepleted
+    - SheetUranium30
+    rarePrototypes:
+    - SheetUraniumFissile1
+    rareChance: 0.15
+    offset: 0.0
+    chance: 1
+  - type: Sprite
+    sprite: _Mono/Effects/processing.rsi
+    state: processing
+  - type: Icon
+    sprite: _Mono/Effects/processing.rsi
+    state: processing
+
+# plasma enriched processing
+
+- type: latheRecipe
+  id: UraniumCentrifugeEnrichedProcessingMini
+  categories:
+  - Explosive
+  result: UraniumEnrichedProcessingSpawner
+  completetime: 10
+  materials:
+    Uranium: 2000 # 20 ingots
+    Plasma: 2000 # 20 ingots
+  icon:
+    sprite: _Mono/Effects/processing.rsi
+    state: processing_3
+
+- type: entity
+  name: plasma enriched uranium processing
+  description: Use a mixture of uranium and plasma to produce fissile uranium with a higher probability.
+  id: UraniumEnrichedProcessingSpawner
+  parent: MarkerBase
+  components:
+  - type: RandomSpawner
+    prototypes:
+    - SheetUraniumDepleted1
+    rarePrototypes:
+    - SheetUraniumFissile1
+    rareChance: 0.07
+    offset: 0.0
+    chance: 1
+  - type: Sprite
+    sprite: _Mono/Effects/processing.rsi
+    state: processing_3
+  - type: Icon
+    sprite: _Mono/Effects/processing.rsi
+    state: processing_3
