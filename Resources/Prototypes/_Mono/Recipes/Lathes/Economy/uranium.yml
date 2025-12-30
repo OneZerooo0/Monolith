@@ -4,7 +4,7 @@
   categories:
   - Explosive
   result: UraniumProcessingSpawner
-  completetime: 10
+  completetime: 20
   materials:
     Uranium: 2000 # 20 ingots
   icon:
@@ -39,7 +39,7 @@
   categories:
   - Explosive
   result: UraniumReprocessingSpawner
-  completetime: 10
+  completetime: 20
   materials:
     UraniumDepleted: 50 # 10 ingots
     UraniumFissile: 1 # 0.2 ingots
@@ -59,7 +59,7 @@
     - SheetUranium30
     rarePrototypes:
     - SheetUraniumFissile1
-    rareChance: 0.15
+    rareChance: 0.3
     offset: 0.0
     chance: 1
   - type: Sprite
@@ -76,7 +76,7 @@
   categories:
   - Explosive
   result: UraniumEnrichedProcessingSpawner
-  completetime: 10
+  completetime: 20
   materials:
     Uranium: 2000 # 20 ingots
     Plasma: 2000 # 20 ingots
@@ -95,7 +95,7 @@
     - SheetUraniumDepleted1
     rarePrototypes:
     - SheetUraniumFissile1
-    rareChance: 0.07
+    rareChance: 0.1
     offset: 0.0
     chance: 1
   - type: Sprite
