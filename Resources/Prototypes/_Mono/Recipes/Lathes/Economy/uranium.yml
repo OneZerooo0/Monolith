@@ -56,10 +56,10 @@
   - type: RandomSpawner
     prototypes:
     - SheetUraniumDepleted
-    - SheetUranium30
+    - SheetUranium
     rarePrototypes:
     - SheetUraniumFissile1
-    rareChance: 0.3
+    rareChance: 0.2
     offset: 0.0
     chance: 1
   - type: Sprite
