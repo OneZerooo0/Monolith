@@ -15,7 +15,7 @@
     sprite: Objects/Specific/Syndicate/telecrystal.rsi
     size: Small
   - type: StaticPrice
-    price: 3000
+    price: 10000
   - type: Damageable
     damageContainer: Inorganic
   - type: Destructible
@@ -58,7 +58,7 @@
     sprite: Objects/Specific/Syndicate/telecrystal.rsi
     size: Normal
   - type: StaticPrice
-    price: 6000
+    price: 20000
   - type: Damageable
     damageContainer: Inorganic
   - type: Destructible
@@ -103,7 +103,7 @@
     sprite: Objects/Specific/Syndicate/telecrystal.rsi
     size: Huge
   - type: StaticPrice
-    price: 9000
+    price: 40000
   - type: Damageable
     damageContainer: Inorganic
   - type: Destructible
