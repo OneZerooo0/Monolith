@@ -182,7 +182,7 @@
     energy: 1.5
     color: "#91469e"
   - type: Speech
-    speechVerb: Ghost
+    enabled: false
   - type: ReplacementAccent
     accent: genericAggressive
   - type: Tag
@@ -226,8 +226,6 @@
     channels:
     - MonolithicMind
     defaultChannel: MonolithicMind
-  - type: Speech
-    enabled: false
 
 # actual entity spawners
 
