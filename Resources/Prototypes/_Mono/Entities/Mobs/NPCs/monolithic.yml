@@ -177,19 +177,6 @@
   - type: ZombieImmune
   - type: NameIdentifier
     group: GenericNumber
-  #- type: GhostRole
-  #  makeSentient: true
-  #  allowSpeech: false
-  #  allowMovement: true
-  #  name: ghost-role-information-monolithic-generic-name
-  #  description: ghost-role-information-monolithic-generic-description
-  #  rules: ghost-role-information-monolithic-generic-rules
-  #  raffle:
-  #    settings: default
-  #  requirements:
-  #  - !type:OverallPlaytimeRequirement
-  #    time: 18000 # 5 hrs
-  # - type: GhostTakeoverAvailable
   - type: PointLight
     radius: 1.0
     energy: 1.5
