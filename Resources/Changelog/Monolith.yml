@@ -15640,3 +15640,56 @@ Entries:
   id: 1736
   time: '2026-01-01T19:21:58.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/2866
+- author: NazrinNya
+  changes:
+    - type: Fix
+      message: Security Guard is assigned to Colonial staff, as intended.
+    - type: Tweak
+      message: Monolith entities received NVGs
+    - type: Fix
+      message: Fixed directional fan on Ant
+  id: 1737
+  time: '2026-01-02T00:11:44.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2923
+- author: EldritchPineapple
+  changes:
+    - type: Tweak
+      message: >-
+        some of the helios rooms have been a bit changed, a jani closet was
+        added, same as a dispos system, added more purple, also made the black
+        market atm charge 5% and not 20.
+  id: 1738
+  time: '2026-01-02T04:06:43.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2834
+- author: Arcticular1
+  changes:
+    - type: Fix
+      message: >-
+        Colonels suit has fire resistance and their glasses can now see in the
+        dark.
+  id: 1739
+  time: '2026-01-02T04:25:00.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2925
+- author: Arcticular1
+  changes:
+    - type: Add
+      message: Medical assembler and borg recharger has been added on the Saturn
+    - type: Fix
+      message: Fixed the Saturn's buttons.
+  id: 1740
+  time: '2026-01-02T09:29:48.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2926
+- author: Ilya246
+  changes:
+    - type: Add
+      message: Added another new drone type to outer reaches.
+  id: 1741
+  time: '2026-01-02T14:41:20.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2927
+- author: NazrinNya
+  changes:
+    - type: Tweak
+      message: EMP Disable duration no longer stacks up.
+  id: 1742
+  time: '2026-01-02T17:52:01.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/2931
