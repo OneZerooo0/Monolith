@@ -181,6 +181,10 @@
     radius: 1.0
     energy: 1.5
     color: "#91469e"
+  - type: Speech
+    speechVerb: Ghost
+  - type: ReplacementAccent
+    accent: genericAggressive
   - type: Tag
     tags:
     - FootstepSound
