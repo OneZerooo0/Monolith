@@ -4,7 +4,7 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 01/03/2026 17:57:34
+  time: 01/03/2026 18:38:38
   entityCount: 258
 maps: []
 grids:
@@ -101,14 +101,14 @@ entities:
   - uid: 189
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
+      rot: 1.5707963267948966 rad
       pos: -0.5,-1.5
       parent: 1
   - uid: 190
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -0.5,26.5
+      rot: -1.5707963267948966 rad
+      pos: 1.5,24.5
       parent: 1
   - uid: 191
     components:
@@ -123,67 +123,66 @@ entities:
   - uid: 193
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
+      rot: 1.5707963267948966 rad
       pos: -0.5,-5.5
       parent: 1
   - uid: 194
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
+      rot: 1.5707963267948966 rad
       pos: -5.5,10.5
       parent: 1
   - uid: 195
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -3.5,14.5
+      rot: 1.5707963267948966 rad
+      pos: 5.5,10.5
       parent: 1
   - uid: 196
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 5.5,10.5
+      pos: -2.5,13.5
       parent: 1
   - uid: 197
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -0.5,21.5
+      rot: -1.5707963267948966 rad
+      pos: -0.5,26.5
       parent: 1
   - uid: 198
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 1.5,23.5
+      rot: -1.5707963267948966 rad
+      pos: -0.5,21.5
       parent: 1
   - uid: 199
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
+      rot: 1.5707963267948966 rad
       pos: 0.5,5.5
       parent: 1
   - uid: 200
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
+      rot: 1.5707963267948966 rad
       pos: 0.5,7.5
       parent: 1
   - uid: 202
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
+      rot: 1.5707963267948966 rad
       pos: 0.5,16.5
       parent: 1
   - uid: 216
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -2.5,13.5
+      rot: 1.5707963267948966 rad
+      pos: -3.5,14.5
       parent: 1
   - uid: 221
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
+      rot: 1.5707963267948966 rad
       pos: 1.5,0.5
       parent: 1
 - proto: CrystalMonolithic
