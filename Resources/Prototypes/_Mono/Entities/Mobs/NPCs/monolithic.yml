@@ -226,6 +226,20 @@
     channels:
     - MonolithicMind
     defaultChannel: MonolithicMind
+  - type: GhostRole
+    prob: 0.05
+    makeSentient: false
+    allowSpeech: false
+    allowMovement: true
+    name: ghost-role-information-monolithic-generic-name
+    description: ghost-role-information-monolithic-generic-description
+    rules: ghost-role-information-monolithic-generic-rules
+    raffle:
+      settings: default
+    requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 18000 # 5 hrs
+  - type: GhostTakeoverAvailable
 
 # actual entity spawners
 
@@ -287,20 +301,23 @@
     autoRechargeRate: 1000
   - type: Gun
     fireRate: 2
-    minAngle: 5
-    maxAngle: 20
+    minAngle: 10
+    maxAngle: 40
     useKey: false
     showExamineText: false
-    selectedMode: FullAuto
+    selectedMode: Burst
     availableModes:
-    - FullAuto
+    - Burst
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
     soundEmpty:
       path: /Audio/Items/Lighters/lighter_off.ogg
+    burstCooldown: 4
+    burstFireRate: 14
+    shotsPerBurst: 6
   - type: Reflect # gigatroll, gotta use melee on these guys
-    reflectProb: 1
-    spread: 90
+    reflectProb: 0.95
+    spread: 20
   - type: Stealth
     minVisibility: 0.3
     maxVisibility: 0.4
@@ -400,7 +417,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 600
+        damage: 500
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -415,8 +432,8 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      500: Critical
-      590: Dead
+      400: Critical
+      490: Dead
   - type: MovementSpeedModifier
     baseSprintSpeed: 2
     baseWalkSpeed: 1.5
@@ -601,7 +618,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 600
+        damage: 500
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -616,8 +633,8 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      500: Critical
-      590: Dead
+      400: Critical
+      490: Dead
   - type: MovementSpeedModifier
     baseSprintSpeed: 2
     baseWalkSpeed: 1.5
