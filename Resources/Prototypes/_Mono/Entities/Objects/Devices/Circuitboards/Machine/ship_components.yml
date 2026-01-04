@@ -58,7 +58,7 @@
     stackRequirements:
       Glass: 10
       Steel: 10
-      Uranium: 10
+      Uranium: 5
 
 - type: entity
   id: MachineGCSLowCircuitboard

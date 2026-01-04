@@ -1316,7 +1316,7 @@
     stackRequirements:
       Steel: 5
       CableHV: 5
-      UraniumFissile: 1
+      Uranium: 5
 
 - type: entity
   parent: BaseMachineCircuitboard
