@@ -34,10 +34,3 @@
   keycode: 'j'
   color: "#21b0a4"
   longRange: true
-
-- type: radioChannel
-  id: MonolithicMind
-  name: chat-radio-monolithic
-  keycode: 'k'
-  color: "#a967f5"
-  longRange: true
