@@ -1,10 +1,3 @@
-# SPDX-FileCopyrightText: 2025 Arcticular
-# SPDX-FileCopyrightText: 2025 Arcticular1
-# SPDX-FileCopyrightText: 2025 Avalon
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 - type: entity
   parent: ClothingHeadHardsuitBase
   id: ClothingHelmetHardsuitUIEnforcer
@@ -53,7 +46,6 @@
     highPressureMultiplier: 0.02
     lowPressureMultiplier: 1000
   - type: RadarConsole
-    maxRange: 312
     followEntity: true
   - type: ActivatableUI
     key: enum.RadarConsoleUiKey.Key
@@ -164,7 +156,6 @@
     highPressureMultiplier: 0.02
     lowPressureMultiplier: 1000
   - type: RadarConsole
-    maxRange: 512
     followEntity: true
   - type: ActivatableUI
     key: enum.RadarConsoleUiKey.Key

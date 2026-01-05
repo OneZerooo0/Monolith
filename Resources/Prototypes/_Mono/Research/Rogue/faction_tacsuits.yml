@@ -30,7 +30,6 @@
   - ClothingOuterHardsuitViperGroupMedicRogue
   - ClothingShoesBootsMagSyndieRogue
   - ClothingMaskGasSyndicateRogue
-  - ClothingModsuitRoguePowerCellRogue
   technologyPrerequisites:
   - RogueBasicEquipment
   - UniversalMaterialResearchT2
@@ -63,4 +62,5 @@
   - ClothingOuterHardsuitJuggernautRogue
   technologyPrerequisites:
   - RogueSyndicateTacsuits
-  position: 21, 11
+  position: 21, 12
+

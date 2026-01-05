@@ -15,6 +15,7 @@ research-technology-tsfmc-pocket-crowbar = Compact Prying Technology
 research-technology-tsfmc-portable-recharger = Portable Recharger
 research-technology-tsfmc-nvd = Night Vision Devices
 research-technology-tsfmc-motion-detector = Biosignature IFF Technology
+research-technology-tsfmc-basic-module = TSFMC Basic Cyborg Module Developpment
 
 # T2 TSFMC
 research-technology-tsfmc-advanced-weapons = Advanced Portable Weapons Technology
@@ -28,3 +29,4 @@ research-technology-tsfmc-polaris-voucher = Polaris Procurement LPC
 research-technology-tsfmc-flyssa-voucher = Flyssa Procurement LPC
 research-technology-tsfmc-super-weapons = State-of-the-art Weapons Manufacturing
 research-technology-tsfmc-synthalloy = Experimental Material Science
+research-technology-tsfmc-advanced-module = TSFMC Advanced Cyborg Module Developpment
