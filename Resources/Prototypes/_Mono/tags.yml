@@ -30,7 +30,7 @@
 
 - type: Tag
   id: SimpleBiscuit
-  
+
 - type: Tag # Prevents a crash and makes future cherry-picks hurt less but not actually implemented
   id: TurretCompatibleWeapon # Used in the construction of sentry turrets
 
@@ -321,6 +321,11 @@
 
 - type: Tag
   id: LargeMilitaryPowerCell
+
+# grenade tags
+
+- type: Tag
+  id: GrenadeLaunchable
 
 #AMMO END
 

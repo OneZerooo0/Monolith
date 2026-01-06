@@ -80,7 +80,7 @@
 
 - type: entity
   name: MANPAT "Panzero" disposable anti-tank
-  parent: [ BaseItem, BaseC3Contraband ] # Frontier: BaseMajorContraband<BaseC3Contraband
+  parent: [ BaseItem ] # Frontier: BaseMajorContraband<BaseC3Contraband
   id: WeaponLauncherPanzero
   description: Based on old designs, the "Panzero" is a (relatively) easy-to-carry disposable anti-tank rocket launcher. Devastating against mechs and walls, not very good at much else.
   components:
@@ -145,22 +145,22 @@
 
 - type: entity
   name: GP-909 'Osiris' Grenade Launcher
-  parent: [BaseStorageItem, BaseC1Contraband] # Frontier: BaseMinorContraband<BaseC1Contraband
+  parent: [ BaseWeaponLauncher, BaseItem ] # Frontier: BaseMinorContraband<BaseC1Contraband
   id: WeaponLauncherTSFOsiris
-  description: The TSF's powerful solution to things that don't have enough boom.
+  description: The TSF's powerful solution to things that don't have enough boom. Capable of firing most standard grenades.
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Cannons/pneumatic_cannon.rsi
     layers:
     - state: icon
   - type: Item
-    size: Huge
+    size: Large
   - type: Clothing
     quickEquip: false
     slots:
     - Back
   - type: Gun
-    projectileSpeed: 35
+    projectileSpeed: 15
     fireRate: 1
     selectedMode: SemiAuto
     availableModes:
@@ -171,16 +171,12 @@
     soundEmpty:
       path: /Audio/Items/hiss.ogg
     clumsyProof: true
-  - type: ContainerAmmoProvider
-    container: storagebase
-  - type: PneumaticCannon
-    gasUsage: 0
-    throwItems: false
-  - type: Storage
-    maxItemSize: Normal
-    grid:
-    - 0,0,3,1
+  - type: BallisticAmmoProvider # Goobstation
+    autoCycle: true
     whitelist:
-      components:
-      - OnUseTimerTrigger
+      tags:
+      - GrenadeLaunchable
+    capacity: 6
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/shotgun_insert.ogg
   - type: Appearance
