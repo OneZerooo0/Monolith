@@ -111,9 +111,6 @@
   - type: CartridgeAmmo
     proto: StickyGrenadeLaunched
     deleteOnSpawn: true
-  - type: ProjectileGrenade
-    fillPrototype: DirtyRadHeap
-    capacity: 3
 
 - type: entity
   name: radioactive heap
@@ -135,5 +132,5 @@
     lifetime: 120
   - type: PointLight
     enabled: true
-    radius: 1
+    radius: 2
     color: "#03b1fc"
