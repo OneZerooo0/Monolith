@@ -19,7 +19,6 @@
     Blunt: 0.6
     Slash: 0.7
     Piercing: 0.7
-    Radiation: 0.9
 
 - type: damageModifierSet
   id: StructuralMetallicHeatReinforced
