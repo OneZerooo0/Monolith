@@ -35,7 +35,7 @@
             - MachineLayer
     - type: RadarBlip
       visibleFromOtherGrids: true
-      radarColor: "#9b34eb"
+      radarColor: "#fcba03"
       scale: 1
       shape: square
 
