@@ -84,13 +84,13 @@
   result: ShipVoucherFlyssa
   completetime: 10
   materials:
-    Steel: 60000
-    Plasteel: 75000
+    Steel: 40000
+    Plasteel: 55000
     Plastic: 50000
-    Glass: 10000
+    Glass: 9000
     Plasma: 500
-    UraniumFissile: 30
-    UraniumDepleted: 50
+    UraniumFissile: 500
+    UraniumDepleted: 3000
     Silver: 5000
     Gold: 5000
 
@@ -105,26 +105,12 @@
     Plastic: 30000
     Glass: 10000
     Plasma: 5000
-    UraniumDepleted: 25
-    UraniumFissile: 15
+    UraniumDepleted: 500
+    UraniumFissile: 200
     Silver: 10000
     Gold: 5000
 
-# Rogues
-- type: latheRecipe
-  parent: BaseVoucherRecipe
-  id: ProwlerVoucherRogue
-  result: ShipVoucherProwler
-  materials:
-    Steel: 20000
-    Plasteel: 10000
-    Plastic: 30000
-    Glass: 10000
-    Plasma: 20000
-    UraniumFissile: 15
-    UraniumDepleted: 30
-    Silver: 15000
-    Gold: 15000
+# PDV
 
 - type: latheRecipe
   parent: BaseVoucherRecipe
@@ -136,7 +122,7 @@
     Plastic: 30000
     Glass: 5000
     Plasma: 5000
-    UraniumFissile: 10
-    UraniumDepleted: 30
+    UraniumFissile: 200
+    UraniumDepleted: 500
     Silver: 5000
     Gold: 5000

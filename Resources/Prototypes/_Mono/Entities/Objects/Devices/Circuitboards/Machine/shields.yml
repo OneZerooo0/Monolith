@@ -39,7 +39,7 @@
       Plasteel: 20
       Gold: 10
       Silver: 10
-      UraniumFissile: 25
+      UraniumFissile: 1
 
 - type: entity
   id: MachineShieldMS500Circuitboard
@@ -62,4 +62,4 @@
       Plasteel: 50
       Gold: 15
       Silver: 15
-      UraniumFissile: 50
+      UraniumFissile: 2

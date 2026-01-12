@@ -229,7 +229,7 @@
   unit: materials-unit-sheet
   icon: { sprite: /Textures/_Mono/Objects/Materials/fissiles.rsi, state: uranium }
   color: "#8a8568"
-  price: 500 # 5000/sheet
+  price: 250 # 25000/sheet
 
 - type: entity
   parent: MaterialBase
@@ -269,7 +269,7 @@
   - type: Appearance
   - type: PhysicalComposition
     materialComposition:
-      UraniumFissile: 5
+      UraniumFissile: 100
   - type: Explosive
     explosionType: Radioactive
     totalIntensity: 20.0
@@ -362,7 +362,7 @@
   - type: Appearance
   - type: PhysicalComposition
     materialComposition:
-      UraniumDepleted: 5
+      UraniumDepleted: 100
 
 - type: entity
   parent: SheetUraniumDepleted

@@ -6,7 +6,7 @@
   result: UraniumProcessingSpawner
   completetime: 20
   materials:
-    Uranium: 2000 # 20 ingots
+    Uranium: 1000 # 10 ingots
   icon:
     sprite: _Mono/Effects/processing.rsi
     state: processing_2
@@ -41,8 +41,8 @@
   result: UraniumReprocessingSpawner
   completetime: 20
   materials:
-    UraniumDepleted: 50 # 10 ingots
-    UraniumFissile: 1 # 0.2 ingots
+    UraniumDepleted: 150 # 1.5 ingots
+    UraniumFissile: 10 # 0.1 ingots
   icon:
     sprite: _Mono/Effects/processing.rsi
     state: processing
@@ -55,11 +55,11 @@
   components:
   - type: RandomSpawner
     prototypes:
-    - SheetUraniumDepleted
+    - SheetUraniumDepleted1
     - SheetUranium
     rarePrototypes:
     - SheetUraniumFissile1
-    rareChance: 0.2
+    rareChance: 0.1
     offset: 0.0
     chance: 1
   - type: Sprite
@@ -78,8 +78,8 @@
   result: UraniumEnrichedProcessingSpawner
   completetime: 20
   materials:
-    Uranium: 2000 # 20 ingots
-    Plasma: 2000 # 20 ingots
+    Uranium: 1000 # 10 ingots
+    Plasma: 1000 # 10 ingots
   icon:
     sprite: _Mono/Effects/processing.rsi
     state: processing_3

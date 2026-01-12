@@ -165,7 +165,7 @@
     stackRequirements:
       Glass: 20
       Steel: 20
-      UraniumFissile: 50
+      UraniumFissile: 2
 
 - type: entity
   id: MachineDriveCTLA50Circuitboard
@@ -187,4 +187,4 @@
     stackRequirements:
       Glass: 20
       Steel: 20
-      UraniumFissile: 50
+      UraniumFissile: 2

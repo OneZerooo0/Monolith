@@ -79,7 +79,7 @@
     Plasteel: 2000
     Silver: 500
     Gold: 500
-    UraniumDepleted: 25
+    UraniumDepleted: 500
 
 - type: latheRecipe
   id: UllmanHardsuitEnforcerMKII
@@ -98,8 +98,8 @@
     Silver: 1000
     Gold: 1000
     Glass: 1000
-    UraniumDepleted: 100
-    UraniumFissile: 10
+    UraniumDepleted: 500
+    UraniumFissile: 100
     Diamond: 200
 
 - type: latheRecipe
@@ -116,7 +116,7 @@
     Plastic: 2000
     Silver: 500
     Gold: 500
-    UraniumFissile: 1
+    UraniumFissile: 50
     Plasma: 500
 
 - type: latheRecipe
@@ -152,8 +152,8 @@
     Gold: 2000
     Plasma: 2500
     Plastic: 2500
-    UraniumDepleted: 50
-    UraniumFissile: 15
+    UraniumDepleted: 800
+    UraniumFissile: 100
 
 - type: latheRecipe
   id: UllmanWeaponPulseSniper
@@ -171,8 +171,8 @@
     Gold: 2000
     Plastic: 2500
     Plasma: 3000
-    UraniumDepleted: 50
-    UraniumFissile: 20
+    UraniumDepleted: 700
+    UraniumFissile: 200
     Diamond: 100
 
 - type: latheRecipe
@@ -189,7 +189,7 @@
     Silver: 1000
     Gold: 1000
     Plasma: 500
-    UraniumFissile: 5
+    UraniumFissile: 50
 
 #Armor Plates
 - type: latheRecipe
