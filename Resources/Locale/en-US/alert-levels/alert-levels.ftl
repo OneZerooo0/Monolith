@@ -47,8 +47,8 @@ alert-level-yellow-instructions = Crews are advised to stay away from the threat
 alert-level-gamma = 2
 # alert-level-gamma-announcement = Central Command has ordered the Gamma security level on the station. Security is to have weapons equipped at all times, and all civilians are to immediately seek their nearest head for transportation to a secure location.
 # alert-level-gamma-instructions = All civilians are to immediately seek their nearest head for transportation to a secure location.
-alert-level-gamma-announcement = Central Command has ordered the Gamma security level in the sector. Crews are to avoid areas of conflict where possible.
-alert-level-gamma-instructions = Crews are to avoid areas of conflict where possible.
+alert-level-gamma-announcement = Something has enacted DEFCON 2 in the sector. Crews are to avoid areas of conflict and/or potential danger where possible.
+alert-level-gamma-instructions = Crews are to avoid areas of conflict and/or danger where possible.
 
 # alert-level-delta = Delta
 alert-level-delta = !! 1 !!
