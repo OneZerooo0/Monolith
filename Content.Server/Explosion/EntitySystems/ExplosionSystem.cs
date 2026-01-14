@@ -5,6 +5,7 @@ using Content.Server.Atmos.Components;
 using Content.Server.Chat.Managers;
 using Content.Server.NodeContainer.EntitySystems;
 using Content.Server.NPC.Pathfinding;
+using Content.Server.GameTicking; // Mono
 using Content.Shared.Camera;
 using Content.Shared.CCVar;
 using Content.Shared.Damage;
@@ -27,7 +28,9 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
+using Robust.Shared.Timing; // Mono
 using Content.Shared.Maps;
+using Content.Shared.GameTicking; // Mono
 using Robust.Shared.Map.Components;
 using Content.Shared.Tiles; // Frontier: safe zone
 
@@ -41,6 +44,8 @@ public sealed partial class ExplosionSystem : SharedExplosionSystem
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly IConfigurationManager _cfg = default!;
     [Dependency] private readonly IPlayerManager _playerManager = default!;
+	[Dependency] private readonly IGameTiming _timing = default!; // Mono
+	[Dependency] private readonly SharedGameTicker _gameTicker = default!;
 
     [Dependency] private readonly MapSystem _mapSystem = default!;
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
@@ -145,7 +150,8 @@ public sealed partial class ExplosionSystem : SharedExplosionSystem
     /// <inheritdoc/>
     public override void TriggerExplosive(EntityUid uid, ExplosiveComponent? explosive = null, bool delete = true, float? totalIntensity = null, float? radius = null, EntityUid? user = null)
     {
-        // log missing: false, because some entities (e.g. liquid tanks) attempt to trigger explosions when damaged,
+        var roundTime = (float) _gameTicker.RoundDuration().TotalSeconds;
+		// log missing: false, because some entities (e.g. liquid tanks) attempt to trigger explosions when damaged,
         // but may not actually be explosive.
         if (!Resolve(uid, ref explosive, logMissing: false))
             return;
@@ -153,6 +159,13 @@ public sealed partial class ExplosionSystem : SharedExplosionSystem
         // No reusable explosions here.
         if (explosive.Exploded)
             return;
+
+		// Mono edit: Unable to explode unless roundtime is past # determined in component
+		if (explosive.TimeUntilExplodable != 0)
+        		if (explosive.TimeUntilExplodable > roundTime)
+            		return;
+
+		
 
         explosive.Exploded = !explosive.Repeatable;
 
