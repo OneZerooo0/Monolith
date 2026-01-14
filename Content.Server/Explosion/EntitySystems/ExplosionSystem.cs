@@ -6,6 +6,8 @@ using Content.Server.Chat.Managers;
 using Content.Server.NodeContainer.EntitySystems;
 using Content.Server.NPC.Pathfinding;
 using Content.Server.GameTicking; // Mono
+using Content.Server.AlertLevel; // Mono
+using Content.Server.Station.Systems; // Mono
 using Content.Shared.Camera;
 using Content.Shared.CCVar;
 using Content.Shared.Damage;
@@ -34,6 +36,7 @@ using Content.Shared.GameTicking; // Mono
 using Robust.Shared.Map.Components;
 using Content.Shared.Tiles; // Frontier: safe zone
 
+
 namespace Content.Server.Explosion.EntitySystems;
 
 public sealed partial class ExplosionSystem : SharedExplosionSystem
@@ -46,6 +49,8 @@ public sealed partial class ExplosionSystem : SharedExplosionSystem
     [Dependency] private readonly IPlayerManager _playerManager = default!;
 	[Dependency] private readonly IGameTiming _timing = default!; // Mono
 	[Dependency] private readonly SharedGameTicker _gameTicker = default!;
+    [Dependency] private readonly AlertLevelSystem _alertLevel = default!; // Mono
+    [Dependency] private readonly StationSystem _station = default!; // Mono
 
     [Dependency] private readonly MapSystem _mapSystem = default!;
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
@@ -151,6 +156,7 @@ public sealed partial class ExplosionSystem : SharedExplosionSystem
     public override void TriggerExplosive(EntityUid uid, ExplosiveComponent? explosive = null, bool delete = true, float? totalIntensity = null, float? radius = null, EntityUid? user = null)
     {
         var roundTime = (float) _gameTicker.RoundDuration().TotalSeconds;
+        var stationUid = _station.GetOwningStation(uid);
 		// log missing: false, because some entities (e.g. liquid tanks) attempt to trigger explosions when damaged,
         // but may not actually be explosive.
         if (!Resolve(uid, ref explosive, logMissing: false))
@@ -165,7 +171,10 @@ public sealed partial class ExplosionSystem : SharedExplosionSystem
         		if (explosive.TimeUntilExplodable > roundTime)
             		return;
 
-		
+        // Mono edit: Set station alert when exploded if applicable
+		if (explosive.DetonationAlert != null)
+            _alertLevel.SetLevel(stationUid.Value, explosive.DetonationAlert, true, true, true, true);
+
 
         explosive.Exploded = !explosive.Repeatable;
 
