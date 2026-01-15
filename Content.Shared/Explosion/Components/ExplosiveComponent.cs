@@ -39,9 +39,8 @@ public sealed partial class ExplosiveComponent : Component
     /// <summary>
     ///     What alert level this bomb sets when detonated.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
 	[DataField]
-    public string? DetonationAlert = null;
+    public string DetonationAlert = "delta";
 
     // Mono End
 
