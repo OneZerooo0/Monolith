@@ -34,7 +34,7 @@ public sealed partial class ExplosiveComponent : Component
     ///     What round time is needed to be able to detonate.
     /// </summary>
     [DataField]
-    public float TimeUntilExplodable = 0;
+    public float? TimeUntilExplodable = null;
 
     /// <summary>
     ///     What alert level this bomb sets when detonated.

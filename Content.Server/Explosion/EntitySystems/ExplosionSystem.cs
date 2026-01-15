@@ -167,15 +167,15 @@ public sealed partial class ExplosionSystem : SharedExplosionSystem
             return;
 
 		// Mono edit: Unable to explode unless roundtime is past # determined in component
-		if (explosive.TimeUntilExplodable != 0)
+		if (explosive.TimeUntilExplodable != null)
         		if (explosive.TimeUntilExplodable > roundTime)
             		return;
+		// End mono
 
         // Mono edit: Set station alert when exploded if applicable
 		if (explosive.DetonationAlert != null && stationUid is { } station)
             _alertLevel.SetLevel(station, explosive.DetonationAlert, true, true, true, true);
-
-
+		// End mono
 
         explosive.Exploded = !explosive.Repeatable;
 
