@@ -1,0 +1,34 @@
+
+- type: entity
+  id: NukeTestingProjectile
+  name: nuclear lobster
+  description: You need to krill yourself NOW.
+  parent: [ BaseBulletTrigger, BlueLobster ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Radiation: 25
+        Structural: 500
+        Heat: 50
+  - type: Ammo
+    muzzleFlash: MuzzleFlashEffectPlasmaPulser
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    radarColor: "#C92BCC"
+    scale: 2.5
+    requireNoGrid: true
+    shape: triangle
+  - type: TimedDespawn
+    lifetime: 120
+  - type: PointLight
+    color: "#FF0040"
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 30000
+    intensitySlope: 12
+    maxIntensity: 15
+    maxTileBreak: 50
+    timeUntilExplodable: 1
+    detonationAlert: "delta"

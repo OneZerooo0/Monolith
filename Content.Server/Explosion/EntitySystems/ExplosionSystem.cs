@@ -157,6 +157,7 @@ public sealed partial class ExplosionSystem : SharedExplosionSystem
     {
         var roundTime = (float) _gameTicker.RoundDuration().TotalSeconds;
         var stationUid = _station.GetOwningStation(uid);
+
 		// log missing: false, because some entities (e.g. liquid tanks) attempt to trigger explosions when damaged,
         // but may not actually be explosive.
         if (!Resolve(uid, ref explosive, logMissing: false))
