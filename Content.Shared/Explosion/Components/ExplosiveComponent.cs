@@ -40,7 +40,7 @@ public sealed partial class ExplosiveComponent : Component
     ///     What alert level this bomb sets when detonated.
     /// </summary>
 	[DataField]
-    public string DetonationAlert = "delta";
+    public string? DetonationAlert = null;
 
     // Mono End
 

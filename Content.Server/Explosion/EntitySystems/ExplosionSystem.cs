@@ -172,7 +172,7 @@ public sealed partial class ExplosionSystem : SharedExplosionSystem
             		return;
 
         // Mono edit: Set station alert when exploded if applicable
-		if (explosive.DetonationAlert != "green" && stationUid is { } station)
+		if (explosive.DetonationAlert != null && stationUid is { } station)
             _alertLevel.SetLevel(station, explosive.DetonationAlert, true, true, true, true);
 
 
