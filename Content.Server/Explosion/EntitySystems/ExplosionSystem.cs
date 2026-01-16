@@ -8,6 +8,7 @@ using Content.Server.NPC.Pathfinding;
 using Content.Server.GameTicking; // Mono
 using Content.Server.AlertLevel; // Mono
 using Content.Server.Station.Systems; // Mono
+using Content.Server._Mono.NuclearWar.Components; // Mono
 using Content.Shared.Camera;
 using Content.Shared.CCVar;
 using Content.Shared.Damage;
