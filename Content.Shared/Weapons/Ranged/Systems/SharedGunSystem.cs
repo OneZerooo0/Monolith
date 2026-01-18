@@ -616,7 +616,7 @@ public abstract partial class SharedGunSystem : EntitySystem
             return;
 
         if (cartridge.AutoTimedDespawn != 0)
-            EnsureComp<TimedDespawnComponent>(uid).Lifetime = cartridge.AutoTimedDespawn
+            EnsureComp<TimedDespawnComponent>(uid).Lifetime = cartridge.AutoTimedDespawn;
         // End mono
 
         Appearance.SetData(uid, AmmoVisuals.Spent, spent);
