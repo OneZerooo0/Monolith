@@ -615,10 +615,8 @@ public abstract partial class SharedGunSystem : EntitySystem
         if (cartridge.DeleteOnSpawn) // Mono - No need to update appearance if cartridge is getting deleted anyways
             return;
 
-        if (cartridge.AutoTimedDespawn != 0 && !TryComp(uid, out TimedDespawnComponent? timedDespawnComponent)) // Mono - Used for lag reduction (lowered number of entities during gunfights)
-        {
-            AddComp<TimedDespawnComponent>(uid).Lifetime = cartridge.AutoTimedDespawn;
-        }
+        if (cartridge.AutoTimedDespawn != 0)
+            EnsureComp<TimedDespawnComponent>(uid).Lifetime = cartridge.AutoTimedDespawn
         // End mono
 
         Appearance.SetData(uid, AmmoVisuals.Spent, spent);
