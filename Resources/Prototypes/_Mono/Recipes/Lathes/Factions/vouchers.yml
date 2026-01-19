@@ -89,8 +89,8 @@
     Plastic: 50000
     Glass: 9000
     Plasma: 500
-    UraniumFissile: 500
-    UraniumDepleted: 3000
+    UraniumFissile: 1000
+    UraniumDepleted: 5000
     Silver: 5000
     Gold: 5000
 
@@ -105,8 +105,8 @@
     Plastic: 30000
     Glass: 10000
     Plasma: 5000
-    UraniumFissile: 200
-    UraniumDepleted: 500
+    UraniumFissile: 600
+    UraniumDepleted: 4000
     Silver: 10000
     Gold: 5000
 
@@ -122,8 +122,8 @@
     Plastic: 30000
     Glass: 5000
     Plasma: 5000
-    UraniumFissile: 200
-    UraniumDepleted: 500
+    UraniumFissile: 600
+    UraniumDepleted: 4000
     Silver: 5000
     Gold: 5000
 
@@ -138,7 +138,7 @@
     Plastic: 50000
     Glass: 10000
     Plasma: 7500
-    UraniumFissile: 500
-    UraniumDepleted: 3000
+    UraniumFissile: 1000
+    UraniumDepleted: 5000
     Silver: 10000
     Gold: 10000
