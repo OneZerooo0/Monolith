@@ -119,7 +119,7 @@
     visibleFromOtherGrids: true
     radarColor: "#fcba03"
     scale: 2
-    shape: square
+    shape: diamond
 
 - type: entity
   categories: [ HideSpawnMenu ]
