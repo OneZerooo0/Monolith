@@ -757,6 +757,12 @@
   - Magazine45_ACPSubMachineGunHP
   - AmmoBox45_ACPHP
 
+# Energy
+  - Magazine700Thz
+  - AmmoBox700Thz
+  - Magazine10Phz
+  - AmmoBox10Phz
+
 #advanced = Uranium + Incendiary + Plasteel AP + Synth AP + RIP
 # MARK: Dynamic
 - type: latheRecipePack
@@ -906,3 +912,23 @@
 
 #DP
   - MagazineDP29
+
+# Energy
+  - Magazine700Thz
+  - AmmoBox700Thz
+  - Magazine10Phz
+  - AmmoBox10Phz
+  - LargePowerCell400Thz
+  - LargePowerCell700Thz
+
+- type: latheRecipePack
+  id: EnergyAmmo # All energy ammo (which isn't a lot.)
+  recipes:
+
+# Energy
+  - Magazine700Thz
+  - AmmoBox700Thz
+  - Magazine10Phz
+  - AmmoBox10Phz
+  - LargePowerCell400Thz
+  - LargePowerCell700Thz

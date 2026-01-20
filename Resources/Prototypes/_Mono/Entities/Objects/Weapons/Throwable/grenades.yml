@@ -76,8 +76,6 @@
   - type: EmbeddableProjectile
     offset: 0.3,0.0
     removalTime: 3.0
-  - type: ThrowingAngle
-    angle: 315
   - type: LandAtCursor
   - type: Tag
     tags:
@@ -85,6 +83,11 @@
   - type: CartridgeAmmo
     proto: StickyGrenadeLaunched
     deleteOnSpawn: true
+  - type: Sprite
+    sprite: _Mono/Objects/Weapons/Bombs/sticky_bomb.rsi
+    layers:
+    - state: icon
+      map: [ "enum.TriggerVisualLayers.Base" ]
 
 - type: entity
   name: dirty bomb

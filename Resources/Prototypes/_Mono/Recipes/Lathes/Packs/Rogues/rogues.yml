@@ -19,6 +19,8 @@
   - WeaponShotgunBulldogRogue
   - WeaponSniperHristovRogue
   - WeaponSubMachineGunMla73Rogue
+  - WeaponDEWBasilisk
+  - WeaponShotgunSultanPulsar
 
 - type: latheRecipePack
   id: MonoRogueVouchersDynamic

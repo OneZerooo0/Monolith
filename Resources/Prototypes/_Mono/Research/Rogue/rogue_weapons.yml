@@ -37,6 +37,8 @@
   - WeaponSubMachineGunC20rRogue
   - WeaponRevolverPythonRogue
   - WeaponRifleM90Rogue
+  - WeaponShotgunSultanPulsar
+  - PrintableDirtyBomb
   technologyPrerequisites:
   - UniversalMaterialResearchT1
   position: 20, 2
@@ -69,6 +71,9 @@
   - WeaponSniperHristovRogue
   - AmmoBox145x114mm
   - AmmoBox145x114mmBig
+  - WeaponDEWBasilisk
+  - Magazine10Phz # for basilisk
+  - AmmoBox10Phz # for basilisk
   technologyPrerequisites:
   - RogueAdvancedGuns
   - UniversalMaterialResearchT3
