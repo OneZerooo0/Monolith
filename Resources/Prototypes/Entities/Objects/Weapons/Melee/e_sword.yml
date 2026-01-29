@@ -110,6 +110,18 @@
     reflectProb: 0.5
     reflects:
     - Energy
+  - type: MeleeWeapon
+    heavyStaminaCost: 2.5 # goob edit
+    wideAnimationRotation: -135
+    attackRate: 1.2
+    damage:
+      types:
+        Blunt: 4.5
+  - type: ItemToggleMeleeWeapon
+    activatedDamage:
+      types:
+        Slash: 50
+        Structural: 100
 
 - type: entity
   name: energy dagger
