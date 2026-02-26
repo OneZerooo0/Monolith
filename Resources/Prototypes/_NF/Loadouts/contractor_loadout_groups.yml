@@ -600,6 +600,7 @@
   - ContractorClothingHeadsetAltEngineeringCommon
   - ContractorClothingHeadsetAltMedicalCommon
   - ContractorClothingHeadsetAltScienceCommon
+  - USSPHeadset # Mono
   fallbacks:
   - ContractorClothingHeadsetGreyCommon
 
@@ -647,7 +648,6 @@
   - ContractorClothingNeckHeadphones
   - ContractorClothingNeckNovaSharksLeatherJacket
   - ContractorClothingNeckCrucifix
-  - ContractorClothingNeckBellCollar
   - ContractorCDDogtags
   - ContractorClothingNeckStethoscope
   - ContractorClothingOuterPoncho

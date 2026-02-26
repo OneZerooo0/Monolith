@@ -89,3 +89,10 @@
   parent: BaseGoldCircuitboardRecipe
   id: DataFarmResearchCircuitboard
   result: DataFarmResearchCircuitboard
+
+# economy
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: CentrifugeLatheMiniCircuitboard
+  result: CentrifugeLatheMiniCircuitboard
