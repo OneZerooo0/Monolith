@@ -3,9 +3,15 @@
   name: Lore
   text: "/ServerInfo/Guidebook/Lore/BasicLore.xml"
   children:
+  - LorePrimer
   - PhaethonDynasty
   - TransSolarFederation
   - UnitedSovietSocialistPlanets
+
+- type: guideEntry
+  id: LorePrimer
+  name: Lore Primer
+  text: "/ServerInfo/Guidebook/Lore/Primer.xml"
 
 - type: guideEntry
   id: PhaethonDynasty
