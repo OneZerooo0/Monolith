@@ -1,29 +1,11 @@
 - type: guideEntry
   id: BasicLore
   name: Lore
-  text: "/ServerInfo/Guidebook/Lore/BasicLore.xml"
-  children:
-  - LorePrimer
-  - PhaethonDynasty
-  - TransSolarFederation
-  - UnitedSovietSocialistPlanets
-
-- type: guideEntry
-  id: LorePrimer
-  name: Lore Primer
   text: "/ServerInfo/Guidebook/Lore/Primer.xml"
+  children:
+  - Timeline
 
 - type: guideEntry
-  id: PhaethonDynasty
-  name: Phaethon Dynasty
-  text: "/ServerInfo/Guidebook/Lore/PhaethonDynasty.xml"
-
-- type: guideEntry
-  id: TransSolarFederation
-  name: Trans-Solar Federation
-  text: "/ServerInfo/Guidebook/Lore/TransSolarFederation.xml"
-
-- type: guideEntry
-  id: UnitedSovietSocialistPlanets
-  name: United Soviet Socialist Planets
-  text: "/ServerInfo/Guidebook/Lore/UnitedSovietSocialistPlanets.xml"
+  id: Timeline
+  name: Quick Timeline
+  text: "/ServerInfo/Guidebook/Lore/Timeline.xml"
