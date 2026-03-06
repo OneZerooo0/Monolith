@@ -160,7 +160,7 @@
       color: "#7E16F7"
   - type: FTLDrive
     range: 250
-    cooldown: 30
+    cooldown: 20
     hyperSpaceTime: 2
     startupTime: 0.5
     thermalSignature: 4000000 # ~4000m range but for smaller ships it might not have time to get to full heat signature
