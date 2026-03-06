@@ -2,7 +2,7 @@
   id: MachineHeavyFTLDriveCore
   parent: [BaseStructureDisableToolUse, BaseStructureDestructible, BaseMachinePowered]
   name: ECES-60 heavy phase core
-  description: A powerful phase drive that allows a vessel to escape into a latent rift to dodge incoming fire. This one has a 60-second escape period with a large cooldown.
+  description: A powerful phase drive that allows a vessel to escape into a latent rift to dodge incoming fire. This one has a 60-second escape period with a large cooldown and long range.
   placement:
     mode: SnapgridCenter
   components:
@@ -28,7 +28,7 @@
     layers:
     - state: control
   - type: FTLDrive
-    range: 250
+    range: 1000
     cooldown: 240
     hyperSpaceTime: 60
     startupTime: 2

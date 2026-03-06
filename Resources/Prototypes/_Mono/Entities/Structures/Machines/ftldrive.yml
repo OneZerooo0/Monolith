@@ -106,7 +106,7 @@
   parent: MachineFTLDrive
   id: MachineFTLDrive50
   name: ECES-SPRINT15 phase drive
-  description: An advanced phase drive that allows a vessel to escape into a latent rift to dodge enemy fire. 15-second escape period, with a longer cooldown.
+  description: An advanced phase drive that allows a vessel to escape into a latent rift to dodge enemy fire. 15-second escape period, with a longer cooldown and range.
   components:
   - type: Sprite
     sprite: _Mono/Structures/ShuttleComponents/drive.rsi
@@ -119,7 +119,7 @@
       shader: unshaded
       color: "#E6173E"
   - type: FTLDrive
-    range: 250
+    range: 500
     cooldown: 120
     hyperSpaceTime: 15
     startupTime: 0.5

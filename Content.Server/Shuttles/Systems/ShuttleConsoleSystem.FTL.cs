@@ -17,7 +17,7 @@ public sealed partial class ShuttleConsoleSystem
 {
     [Dependency] private readonly IMapManager _mapManager = default!;
 
-    private const float ShuttleFTLRange = 512f;
+    private const float ShuttleFTLRange = 0f;
     private const float ShuttleFTLMassThreshold = 100f; // Mono: now a soft limit, ships under the limit just stop you from shorter distance
 
     private const float MassConstant = 50f; // Arbitrary, at this value massMultiplier = 0.65
