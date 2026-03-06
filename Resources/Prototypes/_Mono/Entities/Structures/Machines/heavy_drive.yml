@@ -1,8 +1,8 @@
 - type: entity
   id: MachineHeavyFTLDriveCore
   parent: [BaseStructureDisableToolUse, BaseStructureDestructible, BaseMachinePowered]
-  name: CTLA-160 heavy bluespace core
-  description: A FTL drive that extends a ship's FTL range to ~25 kilometers.
+  name: ECES-60 heavy phase core
+  description: A powerful phase drive that allows a vessel to escape into a latent rift to dodge incoming fire. This one has a 60-second escape period with a large cooldown.
   placement:
     mode: SnapgridCenter
   components:
@@ -28,10 +28,10 @@
     layers:
     - state: control
   - type: FTLDrive
-    range: 25000
-    cooldown: 60
-    hyperSpaceTime: 25
-    startupTime: 6.4
+    range: 250
+    cooldown: 240
+    hyperSpaceTime: 60
+    startupTime: 2
     driveMassMultiplier: 0.25
     thermalSignature: 6000000 # ~4900m range
   - type: ThermalSignature

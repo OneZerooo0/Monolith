@@ -1,8 +1,8 @@
 - type: entity
   id: MachineFTLDrive
   parent: BaseMachinePowered
-  name: CTLA-25 bluespace drive
-  description: A FTL drive that extends a ship's FTL range to ~5 kilometers. Does not stack.
+  name: ECES-ROLL5 phase drive
+  description: A basic phase drive that allows a vessel to escape into a latent rift to dodge incoming fire. 5-second escape period, very short ranged with a medium-length cooldown. Does not stack.
   placement:
     mode: SnapgridCenter
   components:
@@ -21,7 +21,10 @@
         shader: unshaded
         color: "#349BEB"
     - type: FTLDrive
-      range: 5000
+      range: 250
+      cooldown: 60
+      hyperSpaceTime: 5
+      startupTime: 0.5
       thermalSignature: 2000000 # ~2828m range
     - type: ThermalSignature
     - type: Destructible
@@ -102,8 +105,8 @@
 - type: entity
   parent: MachineFTLDrive
   id: MachineFTLDrive50
-  name: CTLA-50 bluespace drive
-  description: A FTL drive that extends a ship's FTL range to ~10 kilometers. Does not stack.
+  name: ECES-SPRINT15 phase drive
+  description: An advanced phase drive that allows a vessel to escape into a latent rift to dodge enemy fire. 15-second escape period, with a longer cooldown.
   components:
   - type: Sprite
     sprite: _Mono/Structures/ShuttleComponents/drive.rsi
@@ -116,7 +119,10 @@
       shader: unshaded
       color: "#E6173E"
   - type: FTLDrive
-    range: 10000
+    range: 250
+    cooldown: 120
+    hyperSpaceTime: 15
+    startupTime: 0.5
     thermalSignature: 4000000 # ~4000m range
   - type: ThermalSignature
   - type: ApcPowerReceiver
@@ -139,8 +145,8 @@
 - type: entity
   parent: MachineFTLDrive
   id: MachineFTLDrive25S
-  name: CTLA-25s bluespace drive
-  description: An advanced FTL drive that extends a ship's FTL range to ~5 kilometers, but with upgrades to allow for faster recharge and flight times. Does not stack.
+  name: ECES-DODGE2 phase drive
+  description: An advanced phase drive that allows a vessel to escape into a latent rift to dodge enemy fire. 2(!)-second escape period with a short cooldown.
   components:
   - type: Sprite
     sprite: _Mono/Structures/ShuttleComponents/drive.rsi
@@ -153,10 +159,10 @@
       shader: unshaded
       color: "#7E16F7"
   - type: FTLDrive
-    range: 5000
-    cooldown: 7.5
-    hyperSpaceTime: 15
-    startupTime: 4.2
+    range: 250
+    cooldown: 30
+    hyperSpaceTime: 2
+    startupTime: 0.5
     thermalSignature: 4000000 # ~4000m range but for smaller ships it might not have time to get to full heat signature
   - type: ThermalSignature
   - type: ApcPowerReceiver
