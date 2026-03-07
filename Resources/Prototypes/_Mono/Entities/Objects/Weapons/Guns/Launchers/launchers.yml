@@ -150,15 +150,16 @@
   description: The TSF's powerful solution to things that don't have enough boom. Capable of firing most standard grenades.
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Cannons/pneumatic_cannon.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Launchers/osiris.rsi
     layers:
-    - state: icon
+    - state: base
   - type: Item
     size: Large
   - type: Clothing
-    quickEquip: false
+    sprite: _Mono/Objects/Weapons/Guns/Launchers/panzero_inhands_32x.rsi
     slots:
     - Back
+    - suitStorage
   - type: Gun
     projectileSpeed: 15
     fireRate: 1
@@ -167,9 +168,9 @@
     - FullAuto
     - SemiAuto
     soundGunshot:
-      path: /Audio/Effects/thunk.ogg
+      path: /Audio/Weapons/Guns/Gunshots/grenade_launcher.ogg
     soundEmpty:
-      path: /Audio/Items/hiss.ogg
+      path: /Audio/Weapons/Guns/Empty/empty.ogg
     clumsyProof: true
   - type: BallisticAmmoProvider # Goobstation
     autoCycle: true
@@ -180,3 +181,9 @@
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/shotgun_insert.ogg
   - type: Appearance
+  - type: Wieldable
+  - type: GunRequiresWield
+  - type: WieldDelay
+    baseDelay: 2
+    modifiedDelay: 2
+    preventFiring: true
