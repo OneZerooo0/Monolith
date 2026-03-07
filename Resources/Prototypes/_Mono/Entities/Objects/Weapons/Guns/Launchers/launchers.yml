@@ -156,7 +156,7 @@
   - type: Item
     size: Large
   - type: Clothing
-    sprite: _Mono/Objects/Weapons/Guns/Launchers/panzero_inhands_32x.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Launchers/osiris_inhands_32x.rsi
     slots:
     - Back
     - suitStorage

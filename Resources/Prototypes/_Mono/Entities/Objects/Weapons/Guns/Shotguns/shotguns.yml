@@ -168,11 +168,13 @@
   - type: Gun
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/bigshotgun_fire.ogg
-    fireRate: 0.5
+    fireRate: 0.8
+    selectedMode: Semiauto
+    availableModes:
+    - SemiAuto
   - type: GunSpreadModifier
     spread: 0.25
   - type: BallisticAmmoProvider
-    autoCycle: false
     whitelist:
       tags:
       - ShellShotgun23x75mmBuckshot
