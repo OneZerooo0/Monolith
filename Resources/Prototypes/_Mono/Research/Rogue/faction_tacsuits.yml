@@ -30,6 +30,7 @@
   - ClothingOuterHardsuitViperGroupMedicRogue
   - ClothingShoesBootsMagSyndieRogue
   - ClothingMaskGasSyndicateRogue
+  - MechIFFPDV
   technologyPrerequisites:
   - RogueBasicEquipment
   - UniversalMaterialResearchT2
