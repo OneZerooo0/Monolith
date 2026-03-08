@@ -10,7 +10,7 @@
       tags:
       - Cartridge700Thz
     proto: Cartridge700Thz
-    capacity: 100
+    capacity: 60
   - type: Tag
     tags:
     - MagazineBox700Thz
@@ -20,7 +20,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/8x65mm.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Boxes/700Thz.rsi
   - type: MagazineVisuals
     magState: mag
     steps: 5

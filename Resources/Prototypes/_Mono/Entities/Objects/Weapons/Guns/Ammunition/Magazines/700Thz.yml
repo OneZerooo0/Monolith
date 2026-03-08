@@ -64,7 +64,7 @@
 
 - type: entity
   id: Magazine700Thz
-  name: DEW magazine (700Thz)
+  name: DEW magazine (700Thz DEW)
   parent: BaseMagazine700Thz
   components:
   - type: BallisticAmmoProvider
