@@ -39,6 +39,8 @@ namespace Content.Server.NPC.Systems
         private float _playerPauseDistance;
         private float _playerDistanceCheckTimer;
         private const float PlayerDistanceCheckInterval = 2.0f; // Check every 2 seconds
+        private float _updateInterval = 0.1f; // Mono
+        private float _updateAccumulator = 0f; // Mono
 
         /// <inheritdoc />
         public override void Initialize()
@@ -141,6 +143,11 @@ namespace Content.Server.NPC.Systems
         /// <inheritdoc />
         public override void Update(float frameTime)
         {
+            _updateAccumulator += frameTime;
+            if (_updateAccumulator < _updateInterval)
+                return;
+            _updateAccumulator -= _updateInterval; // Mono - Update delay
+
             base.Update(frameTime);
 
             if (!Enabled)
