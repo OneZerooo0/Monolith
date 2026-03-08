@@ -12,7 +12,7 @@
   - type: HitscanAmmo
     casingPrototype: ChemicalSlop
   - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Casings/energy_casing.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Casings/700Thz.rsi
     layers:
     - state: base
       map: ["enum.AmmoVisualLayers.Base"]

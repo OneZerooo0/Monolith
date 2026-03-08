@@ -10,7 +10,7 @@
   - type: Item
     size: Tiny
   - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Casings/energy_casing.rsi
+    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Casings/700Thz.rsi
     state: pile
   - type: Tag
     tags:
@@ -94,9 +94,8 @@
   - type: HitscanBasicDamage
     damage:
       types:
-        Radiation: 25
-        Caustic: 5
-        Heat: 5
+        Radiation: 40
+        Heat: 15
   - type: HitscanBasicVisuals
     muzzleFlash:
       sprite: _Mono/Objects/Weapons/Guns/Projectiles/lasers.rsi
