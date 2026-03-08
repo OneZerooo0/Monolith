@@ -66,9 +66,9 @@
 - type: damageModifierSet
   id: MechArmorLight
   coefficients:
-    Blunt: 1.2
-    Slash: 1.2
-    Piercing: 1.2
+    Blunt: 1.1
+    Slash: 1.1
+    Piercing: 1.1
     Shock: 2
     Heat: 1
     Structural: 0.5
@@ -81,11 +81,11 @@
 - type: damageModifierSet
   id: MechArmorMedium
   coefficients:
-    Blunt: 1
-    Slash: 1
+    Blunt: 0.7
+    Slash: 0.7
     Cold: 0
     Radiation: 0
-    Piercing: 1
+    Piercing: 0.7
     Shock: 2
     Heat: 0.7
     Structural: 0.5
@@ -98,11 +98,11 @@
 - type: damageModifierSet
   id: MechArmorHeavy
   coefficients:
-    Blunt: 0.8
-    Slash: 0.8
+    Blunt: 0.4
+    Slash: 0.4
     Cold: 0
     Radiation: 0
-    Piercing: 0.7
+    Piercing: 0.5
     Shock: 2
     Heat: 0.4
     Structural: 0.6
@@ -111,4 +111,4 @@
     Slash: 7
     Piercing: 7
     Heat: 4
-    Structural: 2
+    Structural: 1

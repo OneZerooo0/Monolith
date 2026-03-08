@@ -303,9 +303,7 @@ namespace Content.Server.Explosion.EntitySystems
             if (component.timerOnly == true)
                 StartTimer(uid,uid);
             else
-            {
                 Trigger(uid);
-            }
         }
 
         private void OnActivate(EntityUid uid, TriggerOnActivateComponent component, ActivateInWorldEvent args)

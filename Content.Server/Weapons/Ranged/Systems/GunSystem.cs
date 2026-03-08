@@ -182,9 +182,8 @@ public sealed partial class GunSystem : SharedGunSystem
 
                     Audio.PlayPredicted(gun.SoundGunshotModified, gunUid, user);
                     // Mono start
-                        Spawn(hitscanammo.CasingPrototype, fromEnt);
-
-                        Del(ent);
+                    Spawn(hitscanammo.CasingPrototype, fromEnt);
+                    Del(ent);
                     // Mono end
                     break;
 
