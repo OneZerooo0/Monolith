@@ -66,7 +66,7 @@ public sealed class ItemMinerSystem : EntitySystem
                 continue;
             miner.NextAt += miner.Interval;
 
-            if (ent.Comp.SpawnChance < 1f && !_gambling.Prob(ent.Comp.SpawnChance))
+            if (miner.SpawnChance < 1f && !_gambling.Prob(miner.SpawnChance))
                 continue;
 
             // mine
