@@ -9,8 +9,8 @@ public sealed class DriftingPriceSystem : EntitySystem
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
 
-    private TimeSpan _updateSpacing = TimeSpan.FromSeconds(1);
-    private TimeSpan _updateAccum = TimeSpan.FromSeconds(0);
+    private float _updateSpacing = 1f;
+    private float _updateAccum = 0f;
 
     public override void Initialize()
     {
@@ -30,7 +30,7 @@ public sealed class DriftingPriceSystem : EntitySystem
 
     public override void Update(float frameTime)
     {
-        _updateAccum += TimeSpan.FromSeconds(frameTime);
+        _updateAccum += frameTime;
         if (_updateAccum < _updateSpacing)
             return;
         _updateAccum -= _updateSpacing;
@@ -38,7 +38,7 @@ public sealed class DriftingPriceSystem : EntitySystem
         var query = EntityQueryEnumerator<DriftingPriceComponent>();
         while (query.MoveNext(out var uid, out var price))
         {
-            var driftTotal = price.CurrentPrice * price.DriftRate * _updateSpacing.TotalSeconds;
+            var driftTotal = price.CurrentPrice * price.DriftRate * _updateSpacing;
             var priceScale = price.CurrentPrice / price.BasePrice;
             var priceOffset = Math.Pow(priceScale, price.Stability);
             var driftPoint = Math.Pow(_random.NextDouble(), priceOffset) * 2 - 1;

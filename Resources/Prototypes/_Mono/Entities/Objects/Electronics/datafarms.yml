@@ -1,8 +1,3 @@
-# SPDX-FileCopyrightText: 2025 Onezero0
-#
-# SPDX-License-Identifier: MPL-2.0
-
-
 - type: entity
   id: DataFarmResearchCircuitboard
   parent: BaseMachineCircuitboard
@@ -14,6 +9,7 @@
     state: datafarm_research
   - type: MachineBoard
     prototype: DatafarmResearch
+    flatpackable: false
     requirements:
       Capacitor: 4
     stackRequirements:
@@ -39,6 +35,7 @@
     state: datafarm_crypto
   - type: MachineBoard
     prototype: DatafarmCrypto
+    flatpackable: false
     requirements:
       Capacitor: 4
     stackRequirements:

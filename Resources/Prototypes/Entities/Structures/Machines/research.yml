@@ -73,7 +73,7 @@
   components:
   - type: ResearchClient
   - type: ResearchPointSource
-    pointspersecond: 35
+    pointsPerSecond: 35
     active: true
   - type: PointLight
     radius: 1.5
