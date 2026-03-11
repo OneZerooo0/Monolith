@@ -224,6 +224,23 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             }
         }
 
+		var remainingTime = voucher.NextBuyAt - _timing.CurTime; // Mono
+
+		// Mono: Check if voucher has a purchase cooldown, and if it is still in cooldown cancel purchase
+		if (voucherUsed == true)
+		{
+			if (_timing.CurTime >= voucher.NextBuyAt)
+			{
+				voucher.NextBuyAt = _timing.CurTime + voucher.Cooldown;
+			}
+			else
+			{
+				ConsolePopup(player, Loc.GetString("ship-voucher-cooldown-active", ("remainingTime", remainingTime)));
+            	PlayDenySound(player, shipyardConsoleUid, component);
+				return;
+			}
+		}
+
         // Add company information to the shuttle from the ID card or voucher
         string? companyName = null;
 
