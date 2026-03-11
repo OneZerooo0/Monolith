@@ -184,6 +184,21 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         bool voucherUsed = false;
         if (voucher is not null)
         {
+			// Mono: Check if voucher has a purchase cooldown, and if it is still in cooldown cancel purchase
+			var remainingTime = voucher.NextBuyAt - _timing.CurTime; // Mono
+
+			if (_timing.CurTime >= voucher.NextBuyAt && remainingTime <= TimeSpan.FromSeconds(0))
+			{
+				voucher.NextBuyAt = _timing.CurTime + voucher.Cooldown;
+			}
+			else
+			{
+				ConsolePopup(player, Loc.GetString("ship-voucher-cooldown-active", ("remainingTime", Math.Round(remainingTime.TotalSeconds))));
+            	PlayDenySound(player, shipyardConsoleUid, component);
+				return;
+			}
+			// End mono
+
             if (voucher!.RedemptionsLeft <= 0)
             {
                 Del(shuttleUid);
@@ -223,23 +238,6 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
                 return;
             }
         }
-
-		var remainingTime = voucher.NextBuyAt - _timing.CurTime; // Mono
-
-		// Mono: Check if voucher has a purchase cooldown, and if it is still in cooldown cancel purchase
-		if (voucherUsed == true)
-		{
-			if (_timing.CurTime >= voucher.NextBuyAt && remainingTime <= TimeSpan.FromSeconds(0))
-			{
-				voucher.NextBuyAt = _timing.CurTime + voucher.Cooldown;
-			}
-			else
-			{
-				ConsolePopup(player, Loc.GetString("ship-voucher-cooldown-active", ("remainingTime", remainingTime)));
-            	PlayDenySound(player, shipyardConsoleUid, component);
-				return;
-			}
-		}
 
         // Add company information to the shuttle from the ID card or voucher
         string? companyName = null;
