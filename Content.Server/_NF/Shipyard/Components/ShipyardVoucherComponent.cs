@@ -59,5 +59,5 @@ public sealed partial class ShipyardVoucherComponent : Component
     ///     Mono: Current purchase delay on this voucher
     /// </summary>
     [DataField]
-    public TimeSpan NextBuyAt = 0;
+    public TimeSpan NextBuyAt = TimeSpan.FromSeconds(0);
 }

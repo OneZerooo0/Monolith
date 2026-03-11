@@ -229,7 +229,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
 		// Mono: Check if voucher has a purchase cooldown, and if it is still in cooldown cancel purchase
 		if (voucherUsed == true)
 		{
-			if (_timing.CurTime >= voucher.NextBuyAt)
+			if (_timing.CurTime >= voucher.NextBuyAt && remainingTime <= TimeSpan.FromSeconds(0))
 			{
 				voucher.NextBuyAt = _timing.CurTime + voucher.Cooldown;
 			}
