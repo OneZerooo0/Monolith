@@ -565,7 +565,7 @@
 
 - type: entity
   id: BoxFolderQmClipboard
-  parent: [BoxFolderClipboard, BaseC2ContrabandUnredeemable] # Frontier: BaseGrandTheftContraband<BaseC2ContrabandUnredeemable
+  parent: BoxFolderClipboard
   name: requisition digi-board
   description: A bulky electric clipboard, filled with shipping orders and financing details. With so many compromising documents, you ought to keep this safe.
   components:
@@ -636,7 +636,7 @@
     stealGroup: BoxFolderQmClipboard
 
 - type: entity
-  parent: [Paper, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband # eat or burn your damn piece of paper damn thieves
+  parent: Paper # eat or burn your damn piece of paper damn thieves
   id: TraitorCodePaper
   name: syndicate codeword
   description: A leaked codeword to possibly get in touch with the Syndicate.
@@ -645,7 +645,7 @@
   - type: TraitorCodePaper
 
 - type: entity
-  parent: [Paper, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: Paper
   id: AllTraitorCodesPaper
   name: syndicate codewords registry
   description: A registry of all active Syndicate codewords.
@@ -693,8 +693,11 @@
         insertSound: /Audio/Effects/packetrip.ogg
         ejectSound: /Audio/Effects/packetrip.ogg
         whitelist:
-          tags:
-            - Paper
+#          tags: #Mono start
+#            - Paper
+          components:
+            - Cash
+            - Paper #Mono end
   - type: ActivatableUI
     key: enum.PaperUiKey.Key
     requiresComplex: false

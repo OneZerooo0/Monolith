@@ -1,21 +1,6 @@
-// SPDX-FileCopyrightText: 2023 Leon Friedrich
-// SPDX-FileCopyrightText: 2023 Pieter-Jan Briers
-// SPDX-FileCopyrightText: 2023 Visne
-// SPDX-FileCopyrightText: 2024 Mervill
-// SPDX-FileCopyrightText: 2024 TemporalOroboros
-// SPDX-FileCopyrightText: 2024 eoineoineoin
-// SPDX-FileCopyrightText: 2025 Ark
-// SPDX-FileCopyrightText: 2025 Ilya246
-// SPDX-FileCopyrightText: 2025 Redrover1760
-// SPDX-FileCopyrightText: 2025 ark1368
-// SPDX-FileCopyrightText: 2025 gus
-// SPDX-FileCopyrightText: 2025 metalgearsloth
-// SPDX-FileCopyrightText: 2025 starch
-//
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
 using Content.Server.Shuttles.Components;
 using Content.Server._NF.Shuttles.Components;
+using Content.Shared._Crescent.ShipShields;
 using Content.Shared._Mono;
 using Content.Shared.Atmos.Components;
 using Content.Shared.Atmos.Components;
@@ -109,6 +94,7 @@ public sealed partial class ShuttleSystem
     /// </summary>
     private void OnShuttleCollide(EntityUid uid, ShuttleComponent component, ref StartCollideEvent args)
     {
+
         if (TerminatingOrDeleted(uid) || EntityManager.IsQueuedForDeletion(uid)
             || TerminatingOrDeleted(args.OtherEntity) || EntityManager.IsQueuedForDeletion(args.OtherEntity)
         )
@@ -218,9 +204,23 @@ public sealed partial class ShuttleSystem
             var totalInertia = ourVelocity * ourMass + otherVelocity * otherMass;
             var inelasticVel = totalInertia / (ourMass + otherMass);
 
+            // Mono Edit - partial credit to https://github.com/Sector-Crescent/Hullrot/pull/692
+            //ShipShieldedComp is removed when shields are broken, only reduces energy delivered when shields are active. ShipShieldsSystem ln 256.
+            if (TryComp<ShipShieldedComponent>(args.OurEntity, out var ShipShieldedComponent) //Our ship collision resistance
+                && TryComp<ShipShieldEmitterComponent>(ShipShieldedComponent.Source, out var ShipShieldEmitterComponent)
+            )
+                toUsEnergy *= ShipShieldEmitterComponent.CollisionResistanceMultiplier;
+            
+            if (TryComp<ShipShieldedComponent>(args.OtherEntity, out var OtherShipShieldedComponent) //Other ship collision resistance
+                && TryComp<ShipShieldEmitterComponent>(OtherShipShieldedComponent.Source, out var OtherShipShieldEmitterComponent)
+            ) 
+                toOtherEnergy *= OtherShipShieldEmitterComponent.CollisionResistanceMultiplier;
+            // Mono Edit end
+
             DoGridImpact((args.OurEntity, ourGrid, ourXform, ourBody), args.OurFixture, inelasticVel, ourVelocity, ourTile, ourTiles, toUsEnergy);
             DoGridImpact((args.OtherEntity, otherGrid, otherXform, otherBody), args.OtherFixture, inelasticVel, otherVelocity, otherTile, otherTiles, toOtherEnergy);
         }
+
     }
 
     private void DoGridImpact(Entity<MapGridComponent, TransformComponent, PhysicsComponent> ent,

@@ -1,26 +1,3 @@
-// SPDX-FileCopyrightText: 2022 Myctai
-// SPDX-FileCopyrightText: 2022 metalgearsloth
-// SPDX-FileCopyrightText: 2023 Artjom
-// SPDX-FileCopyrightText: 2023 Kevin Zheng
-// SPDX-FileCopyrightText: 2023 Morb
-// SPDX-FileCopyrightText: 2023 TemporalOroboros
-// SPDX-FileCopyrightText: 2024 Dvir
-// SPDX-FileCopyrightText: 2024 Ed
-// SPDX-FileCopyrightText: 2024 Leon Friedrich
-// SPDX-FileCopyrightText: 2024 Mervill
-// SPDX-FileCopyrightText: 2024 Nemanja
-// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
-// SPDX-FileCopyrightText: 2024 Tayrtahn
-// SPDX-FileCopyrightText: 2024 Whatstone
-// SPDX-FileCopyrightText: 2024 neuPanda
-// SPDX-FileCopyrightText: 2025 Ark
-// SPDX-FileCopyrightText: 2025 Ilya246
-// SPDX-FileCopyrightText: 2025 ark1368
-// SPDX-FileCopyrightText: 2025 gus
-// SPDX-FileCopyrightText: 2025 sleepyyapril
-//
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
 using Content.Server._Mono.Ships.Systems;
 using Content.Server._Mono.Shuttles.Components;
 using Content.Server.Power.EntitySystems;
@@ -316,23 +293,15 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
                 processedMainGrid = true;
             }
 
-            if (TryComp<FTLLockComponent>(dockedEntity, out var ftlLock))
-            {
-                Logger.DebugS("shuttle", $"Setting FTL lock for {ToPrettyString(dockedEntity)} to {args.Enabled}");
-                ftlLock.Enabled = args.Enabled;
-                Dirty(dockedEntity, ftlLock);
-            }
+            SetFTLLock(dockedEntity, args.Enabled);
+            Logger.DebugS("shuttle", $"Setting FTL lock for {ToPrettyString(dockedEntity)} to {args.Enabled}");
         }
 
         // If we didn't process the main grid yet, do it now
         if (!processedMainGrid && shuttleGrid != null)
         {
-            if (TryComp<FTLLockComponent>(shuttleGrid, out var ftlLock))
-            {
-                Logger.DebugS("shuttle", $"Setting FTL lock for main grid {ToPrettyString(shuttleGrid.Value)} to {args.Enabled}");
-                ftlLock.Enabled = args.Enabled;
-                Dirty(shuttleGrid.Value, ftlLock);
-            }
+            SetFTLLock(shuttleGrid.Value, args.Enabled);
+            Logger.DebugS("shuttle", $"Setting FTL lock for main grid {ToPrettyString(shuttleGrid.Value)} to {args.Enabled}");
         }
     }
 
@@ -348,27 +317,26 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
         var modified = false;
 
         // Modify the main shuttle if it has the component
-        if (TryComp<FTLLockComponent>(shuttleUid, out var shuttleFtlLock))
-        {
-            shuttleFtlLock.Enabled = enabled;
-            Dirty(shuttleUid, shuttleFtlLock);
-            modified = true;
-        }
+        SetFTLLock(shuttleUid, enabled);
+        modified = true;
 
         // Modify any docked entities if provided
         foreach (var dockedEntityNet in dockedEntities)
         {
             var dockedEntity = GetEntity(dockedEntityNet);
 
-            if (TryComp<FTLLockComponent>(dockedEntity, out var ftlLock))
-            {
-                ftlLock.Enabled = enabled;
-                Dirty(dockedEntity, ftlLock);
-                modified = true;
-            }
+            SetFTLLock(dockedEntity, enabled);
+            modified = true;
         }
 
         return modified;
+    }
+
+    public void SetFTLLock(EntityUid shuttleUid, bool enabled)
+    {
+        var ftlLock = EnsureComp<FTLLockComponent>(shuttleUid);
+        ftlLock.Enabled = enabled;
+        Dirty(shuttleUid, ftlLock);
     }
 
     /// <summary>

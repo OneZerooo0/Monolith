@@ -1,11 +1,3 @@
-// SPDX-FileCopyrightText: 2025 Ark
-// SPDX-FileCopyrightText: 2025 Ilya246
-// SPDX-FileCopyrightText: 2025 LaCumbiaDelCoronavirus
-// SPDX-FileCopyrightText: 2025 Redrover1760
-// SPDX-FileCopyrightText: 2025 RikuTheKiller
-//
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
 using System.Numerics;
 using Content.Shared.Interaction;
 using Content.Server.Shuttles.Components;
@@ -78,7 +70,7 @@ public sealed class TargetSeekingSystem : EntitySystem
 
     /// <summary>
     /// Sets a target-seeking projectile's <see cref="TargetSeekingComponent.CurrentTarget"/>, and raises
-    /// the appropriate events. 
+    /// the appropriate events.
     /// </summary>
     // NOTE: In the future, someone could want to change this to separate whether `CurrentTarget` is null with whether the seeker is actually targeting something.
     //       If so, change this to take in whether the seeker should be targeting something, rather than whether the target exists.
@@ -220,7 +212,7 @@ public sealed class TargetSeekingSystem : EntitySystem
         EntityUid? bestTarget = null;
 
         // Look for shuttles to target
-        var shuttleQuery = EntityQueryEnumerator<ShuttleConsoleComponent>();
+        var shuttleQuery = EntityQueryEnumerator<TargetSeekingTargetComponent>();
 
         while (shuttleQuery.MoveNext(out var targetUid, out _))
         {

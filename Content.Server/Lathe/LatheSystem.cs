@@ -1,35 +1,3 @@
-// SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto
-// SPDX-FileCopyrightText: 2020 chairbender
-// SPDX-FileCopyrightText: 2021 Acruid
-// SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
-// SPDX-FileCopyrightText: 2022 0x6273
-// SPDX-FileCopyrightText: 2022 Chief-Engineer
-// SPDX-FileCopyrightText: 2022 Chris V
-// SPDX-FileCopyrightText: 2022 Paul Ritter
-// SPDX-FileCopyrightText: 2022 Rane
-// SPDX-FileCopyrightText: 2022 Visne
-// SPDX-FileCopyrightText: 2022 keronshb
-// SPDX-FileCopyrightText: 2023 Cheackraze
-// SPDX-FileCopyrightText: 2023 DrSmugleaf
-// SPDX-FileCopyrightText: 2023 Hannah Giovanna Dawson
-// SPDX-FileCopyrightText: 2023 Moony
-// SPDX-FileCopyrightText: 2023 Pieter-Jan Briers
-// SPDX-FileCopyrightText: 2023 TemporalOroboros
-// SPDX-FileCopyrightText: 2023 chromiumboy
-// SPDX-FileCopyrightText: 2023 ubis1
-// SPDX-FileCopyrightText: 2024 Ed
-// SPDX-FileCopyrightText: 2024 Jezithyr
-// SPDX-FileCopyrightText: 2024 Leon Friedrich
-// SPDX-FileCopyrightText: 2024 Nemanja
-// SPDX-FileCopyrightText: 2024 Whatstone
-// SPDX-FileCopyrightText: 2024 checkraze
-// SPDX-FileCopyrightText: 2024 metalgearsloth
-// SPDX-FileCopyrightText: 2025 Ilya246
-// SPDX-FileCopyrightText: 2025 ScarKy0
-// SPDX-FileCopyrightText: 2025 deltanedas
-//
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Content.Server.Administration.Logs;
@@ -218,19 +186,17 @@ namespace Content.Server.Lathe
         {
             if (args.Storage != uid)
                 return;
-            var materialWhitelist = new List<ProtoId<MaterialPrototype>>();
+            var materialWhitelist = new HashSet<ProtoId<MaterialPrototype>>();
             var recipes = GetAvailableRecipes(uid, component, true);
             foreach (var id in recipes)
             {
                 if (!_proto.TryIndex(id, out var proto))
                     continue;
                 foreach (var (mat, _) in proto.Materials)
-                {
-                    if (!materialWhitelist.Contains(mat))
-                    {
-                        materialWhitelist.Add(mat);
-                    }
-                }
+                    materialWhitelist.Add(mat);
+                // Mono
+                foreach (var (mat, _) in proto.MaterialResult)
+                    materialWhitelist.Add(mat);
             }
 
             var combined = args.Whitelist.Union(materialWhitelist).ToList();
@@ -315,9 +281,7 @@ namespace Content.Server.Lathe
 
             foreach (var (mat, amount) in recipe.Materials)
             {
-                var adjustedAmount = recipe.ApplyMaterialDiscount
-                    ? (int) (-amount * component.FinalMaterialUseMultiplier) // Frontier: MaterialUseMultiplier<FinalMaterialUseMultiplier
-                    : -amount;
+                var adjustedAmount = -AdjustMaterial(amount, recipe.MaterialDiscountScale, component.FinalMaterialUseMultiplier);
 
                 _materialStorage.TryChangeMaterialAmount(uid, mat, adjustedAmount);
             }
@@ -371,6 +335,9 @@ namespace Content.Server.Lathe
 
                     _stack.TryMergeToContacts(result);
                 }
+
+                // Mono
+                _materialStorage.TryChangeMaterialAmount(uid, comp.CurrentRecipe.MaterialResult.ToDictionary()); // copy
 
                 if (comp.CurrentRecipe.ResultReagents is { } resultReagents &&
                     comp.ReagentOutputSlotId is { } slotId)

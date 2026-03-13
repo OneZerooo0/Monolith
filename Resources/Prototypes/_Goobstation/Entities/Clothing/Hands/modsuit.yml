@@ -1,10 +1,3 @@
-# SPDX-FileCopyrightText: 2025 Blu
-# SPDX-FileCopyrightText: 2025 NotActuallyMarty
-# SPDX-FileCopyrightText: 2025 Redrover1760
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 - type: entity
   parent: ClothingHandsBase
   id: ClothingModsuitGauntletsStandard
@@ -41,7 +34,6 @@
     clothingVisuals:
       gloves:
       - state: equipped-HAND-sealed
-
 - type: entity
   parent: ClothingHandsBase
   id: ClothingModsuitGauntletsSecurity
@@ -65,6 +57,16 @@
     damageProtection:
       flatReductions:
         Heat: 10
+  - type: MeleeWeapon # Mono edit start
+    canWideSwing: false
+    attackRate: 1
+    damage:
+      types:
+        Shock: 5
+  - type: StaminaDamageOnHit
+    damage: 15
+    overtime: 40 # Mono edit end
+    sound: /Audio/Weapons/egloves.ogg
   - type: Insulated
   - type: Fiber
     fiberMaterial: fibers-modular
@@ -78,7 +80,9 @@
     clothingVisuals:
       gloves:
       - state: equipped-HAND-sealed
-
+      gloves-vox:
+      - state: equipped-HAND-sealed-vox
+      
 - type: entity
   parent: ClothingHandsBase
   id: ClothingModsuitGauntletsParamedic
@@ -102,6 +106,14 @@
     damageProtection:
       flatReductions:
         Heat: 10
+  - type: MeleeWeapon # Mono edit
+    canWideSwing: false
+    autoAttack: true
+    attackRate: 3
+    damage:
+      groups:
+        Burn: -4
+        Brute: -3
   - type: Insulated
   - type: Fiber
     fiberMaterial: fibers-modular
@@ -115,7 +127,9 @@
     clothingVisuals:
       gloves:
       - state: equipped-HAND-sealed
-
+      gloves-vox:
+      - state: equipped-HAND-sealed-vox
+      
 - type: entity
   parent: ClothingHandsBase
   id: ClothingModsuitGauntletsHeadOfSecurity
@@ -139,6 +153,12 @@
     damageProtection:
       flatReductions:
         Heat: 10
+  - type: MeleeWeapon # Mono edit
+    canWideSwing: false
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 35
   - type: Insulated
   - type: Fiber
     fiberMaterial: fibers-modular
@@ -152,7 +172,9 @@
     clothingVisuals:
       gloves:
       - state: equipped-HAND-sealed
-
+      gloves-vox:
+      - state: equipped-HAND-sealed-vox
+      
 - type: entity
   parent: ClothingHandsBase
   id: ClothingModsuitGauntletsEngineer
@@ -191,7 +213,9 @@
       - state: equipped-HAND-sealed
       gloves-resomi:
       - state: equipped-HAND-sealed-resomi
-
+      gloves-vox:
+      - state: equipped-HAND-sealed-vox
+      
 - type: entity
   parent: ClothingHandsBase
   id: ClothingModsuitGauntletsAtmostech
@@ -230,7 +254,9 @@
       - state: equipped-HAND-sealed
       gloves-resomi:
       - state: equipped-HAND-sealed-resomi
-
+      gloves-vox:
+      - state: equipped-HAND-sealed-vox
+      
 - type: entity
   parent: ClothingHandsBase
   id: ClothingModsuitGauntletsResearchDirector
@@ -267,7 +293,9 @@
     clothingVisuals:
       gloves:
       - state: equipped-HAND-sealed
-
+      gloves-vox:
+      - state: equipped-HAND-sealed-vox
+      
 - type: entity
   parent: ClothingHandsBase
   id: ClothingModsuitGauntletsCaptain
@@ -292,6 +320,8 @@
         - state: equipped-HAND
         hands-resomi:
         - state: equipped-HAND-resomi
+        hands-vox:
+        - state: equipped-HAND-vox
   - type: DamageOnInteractProtection
     damageProtection:
       flatReductions:
@@ -311,3 +341,5 @@
       - state: equipped-HAND-sealed
       gloves-resomi:
       - state: equipped-HAND-sealed-resomi
+      gloves-vox:
+      - state: equipped-HAND-sealed-vox

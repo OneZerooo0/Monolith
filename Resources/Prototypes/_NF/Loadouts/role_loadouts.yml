@@ -6,6 +6,7 @@
 # SPDX-FileCopyrightText: 2025 Blu
 # SPDX-FileCopyrightText: 2025 Daniel Lenrd
 # SPDX-FileCopyrightText: 2025 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2025 NazrinNya
 # SPDX-FileCopyrightText: 2025 Redrover1760
 # SPDX-FileCopyrightText: 2025 Whatstone
 # SPDX-FileCopyrightText: 2025 core-mene
@@ -108,7 +109,7 @@
 
 # Frontier
 - type: roleLoadout
-  id: JobValet
+  id: JobCCServiceWorker # Mono
   groups:
   - ContractorNeck
   - ValetJumpsuit
@@ -124,10 +125,13 @@
   - ContractorWallet
   - ContractorCartridge
   - ContractorImplanter
+  - ContractorUtility # Mono
   - ContractorFun
   - ContractorTrinkets
   - ContractorBureaucracy
   - NFSpeciesSpecific
+  - ContractorFirearm # Mono
+  - ContractorMag # Mono
 
 - type: roleLoadout
   id: JobNFJanitor
@@ -145,9 +149,12 @@
   - ContractorWallet
   - ContractorCartridge
   - ContractorImplanter
+  - ContractorUtility # Mono
   - ContractorFun
   - ContractorTrinkets
   - NFSpeciesSpecific
+  - ContractorFirearm # Mono
+  - ContractorMag # Mono
 
 - type: roleLoadout
   id: JobMailCarrier
@@ -165,10 +172,13 @@
   - MailCarrierWallet
   - ContractorCartridge
   - ContractorImplanter
+  - ContractorUtility # Mono
   - ContractorFun
   - ContractorTrinkets
   - ContractorBureaucracy
   - NFSpeciesSpecific
+  - ContractorFirearm # Mono
+  - ContractorMag # Mono
 
 - type: roleLoadout
   id: JobStationTrafficController
@@ -188,32 +198,42 @@
   - ContractorWallet
   - ContractorCartridge
   - ContractorImplanter
+  - ContractorUtility # Mono
   - ContractorFun
   - ContractorTrinkets
   - ContractorBureaucracy
   - NFSpeciesSpecific
+  - ContractorFirearm # Mono
+  - ContractorMag # Mono
 
+# Mono edit
 - type: roleLoadout
   id: JobStationRepresentative
   groups:
-  - StationRepHead
-  - StationRepNeck
-  - StationRepJumpsuit
+#  - StationRepHead
+#  - StationRepNeck
+#  - StationRepJumpsuit
   - StationRepGloves
   - StationRepBackpack
   - StationRepOuterClothing
-  - ContractorShoes
-  - ContractorFace
-  - ContractorGlasses
-  - ContractorBelt
+#  - ContractorShoes
+#  - ContractorFace
+#  - ContractorGlasses
+#  - ContractorBelt
+  - MonoSecurityGuardHud
   - StationRepEars
+  - MonoSecurityGuardShoes
+  - HeadofSecurityHead
+  - HeadofSecurityJumpsuit
+  - HeadofSecurityNeck
   - ColonialLiaisonFirearm # Mono
   - ContractorBoxSurvival
   - StationRepPDA
   - ContractorWallet
   - ContractorCartridge
   - ContractorImplanter
-  - ContractorFun
+  - ContractorUtility # Mono
+ # - ContractorFun # Mono - no fun allowed
   - StationRepTrinkets
   - ContractorBureaucracy
   - NFSpeciesSpecific
@@ -241,6 +261,7 @@
   - ContractorWallet
   - ContractorCartridge
   - ContractorImplanter
+  - ContractorUtility # Mono
   - ContractorEncryptionKey
   - ContractorFun
   - ContractorTrinkets
@@ -266,6 +287,7 @@
   - ContractorWallet
   - ContractorCartridge
   - ContractorImplanter
+  - ContractorUtility # Mono
   - ContractorEncryptionKey
   - ContractorFun
   - ContractorTrinkets

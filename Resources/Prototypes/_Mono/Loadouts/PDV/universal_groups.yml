@@ -1,8 +1,3 @@
-# SPDX-FileCopyrightText: 2025 Blu
-# SPDX-FileCopyrightText: 2025 Hyenh
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 - type: loadoutGroup
   id: PDVJumpsuit
   name: loadout-group-contractor-jumpsuit
@@ -24,6 +19,10 @@
   loadouts:
   - PDVClothingNeckIFFOrange
   - PDVClothingNeckCloakCommander
+  - PDVClothingNeckCloakVizier
+  - PDVClothingNeckMantleVizier
+  - PDVClothingNeckCloakPdvPurple
+
 - type: loadoutGroup
   id: PDVOuterClothing
   name: loadout-group-contractor-outerclothing
@@ -91,6 +90,8 @@
   minLimit: 1
   loadouts:
   - PDVCommanderBeret
+  - PDVCapVizier
+  - PDVCapVizierPurple
   fallbacks:
   - PDVCommanderBeret
 - type: loadoutGroup

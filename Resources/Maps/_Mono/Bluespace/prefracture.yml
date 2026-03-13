@@ -1,7 +1,3 @@
-# SPDX-FileCopyrightText: 2025 NazrinNya
-#
-# SPDX-License-Identifier: MPL-2.0
-
 meta:
   format: 7
   category: Grid
@@ -51,6 +47,11 @@ entities:
     components:
     - type: MetaData
       name: Unidentified Vessel
+    - type: InitRepairSnapshot
+    - type: ShipRepairRestrict
+      toolWhitelist:
+        tags:
+        - ADSRepairTool
     - type: Transform
       parent: invalid
     - type: MapGrid

@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: 2025 Ark
-# SPDX-FileCopyrightText: 2025 Ilya246
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 # Base
 
 - type: entity
@@ -19,13 +13,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 20000
+        damage: 7000
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 10000
+        damage: 6000
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -47,12 +41,13 @@
         - MachineMask
         layer:
         - MachineLayer
+  - type: Climbable
   - type: Transform
     anchored: true
   - type: Rotatable
     rotateWhilePulling: false
     rotateWhileAnchored: false
-    increment: 45
+    increment: 90
   - type: DeviceLinkSink
     ports:
     - SpaceArtilleryFire
@@ -69,9 +64,15 @@
       ballistic-ammo: !type:Container
   - type: FireControllable
   - type: RadarBlip
-    visibleFromOtherGrids: false
+    visibleFromOtherGrids: true
     radarColor: "#9999FF"
     scale: 1
+    gridConfig:
+      color: "#9999FF"
+      shape: Square
+      respectZoom: true
+      rotate: true
+      bounds: "-1,-1,1,1"
   - type: ShipGunType
     shipType: Kinetic
   - type: ShipGunClass
@@ -79,6 +80,15 @@
   - type: LightningTarget
     priority: 1
   - type: ThermalSignature # at least most have a thermal signature when firing
+  - type: Gun
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+  - type: ExaminableDamage
+    messages: WindowMessages
+  - type: Repairable
+    qualities:
+    - Applicating
 
 - type: entity
   id: BallisticArtilleryUnanchorable
@@ -111,13 +121,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 20000
+        damage: 9000
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 10000
+        damage: 8000
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -139,6 +149,7 @@
         - MachineMask
         layer:
         - MachineLayer
+  - type: Climbable
   - type: Transform
     anchored: true
   - type: DeviceLinkSink
@@ -157,8 +168,17 @@
     visibleFromOtherGrids: false
     radarColor: "#9999FF"
     scale: 1
+    gridConfig:
+      color: "#9999FF"
+      shape: Square
+      respectZoom: true
+      rotate: true
+      bounds: "-1,-1,1,1"
   - type: Gun
     fireRate: 3
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rocket_launcher.ogg
     soundEmpty:
@@ -174,6 +194,11 @@
     capacity: 2
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+  - type: ExaminableDamage
+    messages: WindowMessages
+  - type: Repairable
+    qualities:
+    - Applicating
 
 - type: entity
   id: BallisticArtilleryCartridge
@@ -182,6 +207,10 @@
   components:
   - type: Anchorable
     delay: 10
+  - type: Rotatable
+    rotateWhilePulling: false
+    rotateWhileAnchored: false
+    increment: 90
   - type: Pullable
   - type: PirateBountyItem # not putting this on the other, because like. how do you get a cyrexa for your bounty. thats stupid.
     id: ShipWeapon
@@ -206,13 +235,13 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 20000
+        damage: 7000
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 10000
+        damage: 6000
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -234,6 +263,7 @@
         - MachineMask
         layer:
         - MachineLayer
+  - type: Climbable
   - type: Transform
     anchored: true
   - type: DeviceLinkSink
@@ -252,8 +282,17 @@
     visibleFromOtherGrids: false
     radarColor: "#9999FF"
     scale: 1
+    gridConfig:
+      color: "#9999FF"
+      shape: Square
+      respectZoom: true
+      rotate: true
+      bounds: "-1,-1,1,1"
   - type: Gun
     fireRate: 3
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/rocket_launcher.ogg
     soundEmpty:
@@ -276,7 +315,11 @@
           params:
             pitch: 2
         ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
-
+  - type: ExaminableDamage
+    messages: WindowMessages
+  - type: Repairable
+    qualities:
+    - Applicating
 
 - type: entity
   id: BallisticArtilleryMagazine
@@ -285,6 +328,10 @@
   components:
   - type: Anchorable
     delay: 10
+  - type: Rotatable
+    rotateWhilePulling: false
+    rotateWhileAnchored: false
+    increment: 90
   - type: Pullable
   - type: PirateBountyItem # not putting this on the other, because like. how do you get a cyrexa for your bounty. thats stupid.
     id: ShipWeapon

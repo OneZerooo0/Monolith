@@ -1,7 +1,3 @@
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 #Magazines
 
 - type: latheRecipe
@@ -40,3 +36,10 @@
   parent: BaseAmmoPracticeIntermediateAmmoBoxRecipe
   id: AmmoBox68x52mmPractice
   result: AmmoBox68x52mmCaselessPractice
+
+#big box
+- type: latheRecipe
+  parent: BaseAmmoFMJIntermediateBigAmmoBoxRecipe
+  id: AmmoBox68x52mmCaselessBig
+  result: AmmoBox68x52mmCaselessBig
+

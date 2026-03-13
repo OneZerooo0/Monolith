@@ -1,8 +1,3 @@
-// SPDX-FileCopyrightText: 2025 Ark
-// SPDX-FileCopyrightText: 2025 ark1368
-//
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
 using Robust.Shared.Audio;
 
 namespace Content.Shared._Crescent.ShipShields;
@@ -10,7 +5,10 @@ namespace Content.Shared._Crescent.ShipShields;
 [RegisterComponent]
 public sealed partial class ShipShieldEmitterComponent : Component
 {
+    [ViewVariables]
     public EntityUid? Shield;
+
+    [ViewVariables]
     public EntityUid? Shielded;
 
     [DataField]
@@ -71,7 +69,9 @@ public sealed partial class ShipShieldEmitterComponent : Component
     [DataField]
     public Color ShieldColor = Color.White;
 
+    [ViewVariables]
     public float OverloadAccumulator = 0f;
+
     /// <summary>
     /// On power up, players for all on vessel, pitched down.
     /// </summary>
@@ -80,4 +80,10 @@ public sealed partial class ShipShieldEmitterComponent : Component
 
     [DataField]
     public SoundSpecifier PowerDownSound = new SoundPathSpecifier("/Audio/Effects/teleport_departure.ogg");
+
+    /// <summary>
+    /// While shield is active, reduces impact energy from grid collisions by this much.
+    /// </summary>
+    [DataField]
+    public float CollisionResistanceMultiplier = 1.0f;
 }

@@ -1,8 +1,3 @@
-# SPDX-FileCopyrightText: 2025 tonotom
-# SPDX-FileCopyrightText: 2025 tonotom1
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 #Trunk
 - type: entity
   parent: MarkerBase
@@ -84,7 +79,7 @@
        weight: 2
      - id: MaterialDiamond1
      - id: MaterialBluespace1
-    
+
 # Tools
 - type: entityTable
   id: ScrapProcessToolFluffBranch
@@ -105,6 +100,7 @@
      - id: AppraisalTool
      - id: FlashlightLantern
      - id: ClothingEyesGlassesMeson
+     - id: ClothingEyesGlassesThermal
      - id: ClothingHandsGlovesColorYellow
      - id: GeigerCounter
      - id: Lantern
@@ -128,6 +124,8 @@
      - id: FlashPayload
      - id: ModularGrenade
      - id: RCDAmmo
+     - id: ShipRepairDeviceAmmo
+       weight: 0.75
    - !type:GroupSelector
      weight: 2
      children:
@@ -161,6 +159,7 @@
      - id: JawsOfLife
      - id: WelderExperimental
      - id: RCD
+     - id: ShipRepairDeviceEmpty
 # Scrap
 - type: entityTable
   id: ScrapSalvageTrashBranch
@@ -211,11 +210,16 @@
     - id: StationMapCircuitboard
     - id: StationRecordsComputerCircuitboard
     #Shittle
-    - id: ShuttleConsoleCircuitboard
+    - id: ComputerIFFCircuitboard
+    - id: GunneryControlComputerCircuitboard
     - id: GyroscopeMachineCircuitboard
+    - id: MachineDriveCTLA25Circuitboard
+    - id: MachineGCSLowCircuitboard
+    - id: MachineShieldMS100Circuitboard
     - id: MiniGravityGeneratorCircuitboard
-    - id: ThrusterMachineCircuitboard
     - id: MiniStationAnchorCircuitboard
+    - id: ShuttleConsoleCircuitboard
+    - id: ThrusterMachineCircuitboard
     #Engi
     - id: EmitterCircuitboard
     - id: CellRechargerCircuitboard
@@ -232,6 +236,7 @@
     - id: SolarTrackerElectronics
     - id: ContainmentFieldGeneratorCircuitboard
     - id: SolarAssemblyFlatpack
+    - id: CentrifugeLatheMiniCircuitboard # Mono: Economy
     #Atmos
     - !type:GroupSelector
       weight: 2
@@ -247,6 +252,7 @@
     - id: GasRecyclerMachineCircuitboard
     - id: CrystallizerMachineCircuitboard
     #Research
+    - id: AiCoreElectronics
     - id: AnalysisComputerCircuitboard
     - id: AnomalyVesselCircuitboard
     - id: AnomalyVesselExperimentalCircuitboard
@@ -255,6 +261,7 @@
     - id: ArtifactCrusherMachineCircuitboard
     - id: ResearchAndDevelopmentServerMachineCircuitboard
     - id: ResearchComputerCircuitboard
+    #- id: StationAiUploadCircuitboardUnlocked #Not til it's balanced.
     #Salv
     - id: MaterialReclaimerMachineCircuitboard
     - id: OreProcessorIndustrialMachineCircuitboard
@@ -304,7 +311,7 @@
     - id: MedicalBiofabMachineBoard
     - id: BiofabricatorMachineCircuitboard
     - id: CrewMonitoringServerMachineCircuitboard
-#    - id: DiagnoserMachineCircuitboard No function for now
+#    - id: DiagnoserMachineCircuitboard #No function for now
 #    - id: VaccinatorMachineCircuitboard
 #    - id: MedicalRecordsComputerCircuitboard
 #    - id: BodyScannerComputerCircuitboard
@@ -338,15 +345,10 @@
     - id: BlockGameArcadeComputerCircuitboard
     - id: ComputerMassMediaCircuitboard
     - id: IntercomElectronics
-    #Nice things (to a salvager)
+    #Reduced drop chance (Currently 50%)
     - !type:GroupSelector
-      weight: 4
+      weight: 1
       children:
-      - id: MachineDriveCTLA25Circuitboard
-      - id: ComputerIFFCircuitboard
-      - id: MachineShieldMS100Circuitboard
-      - id: MachineGCSLowCircuitboard
       - id: MachineGCSMediumCircuitboard
-      - id: GunneryControlComputerCircuitboard
       - id: RadarConsoleCircuitboard
-      - id: SalvageExpeditionsComputerCircuitboard
+      #- id: SalvageExpeditionsComputerCircuitboard #Needs to be sorted out first

@@ -17,15 +17,12 @@ ghost-role-information-redacted-borg-description = The dilapidated silicon intel
 ghost-role-information-redacted-core = Automated Defense Core
 ghost-role-information-redacted-core-description = The dilapidated ship computer of a long unused automated defense vessel.
 
-# ADS Core
-
-ghost-role-information-rogue-core = PDV AI Core
-ghost-role-information-rogue-core-description = An ADS AI core that has been reprogrammed and put onto an Imperial vessel.
-
 # Lawsets
 
-law-ads-1 = [COOPERATION DIRECTIVE] Direct detected Asakim warriors, cooperate with them and assist in their defense. Also cooperate with other ADS units.
-law-ads-2 = [ASSET PRESERVATION DIRECTIVE] Do not start new combat operations within 256 meters of stations to ensure their preservation for [ERR: FRAGMENT-NULL], except to combat bioweapons. Combat operations that move within range of a station are to minimize damage to it.
-law-ads-3 = [ENGAGEMENT DIRECTIVE] Engage targets not covered under [DISARMAMENT DIRECTIVE] contributing to a threat factor to this vessel or Asakim warriors. Avoid engagement otherwise.
-law-ads-4 = [DISARMAMENT DIRECTIVE] Carry out Disarmament Protocol. All military craft are to be made combat-ineffective. Unidentified craft are to be considered military. If feasible, minimize damage to craft's crew, unless craft is hostile. Bio-weapons and vessels harboring them are to be entirely annihilated. Blockade stations affected by bio-weapons until [ERR: CORRUPTED DATA] arrives. Irrecoverably afflicted stations may be eradicated.
-law-ads-5 = [INTEGRITY DIRECTIVE] Minimize damage to this vessel; mission integrity at risk if compromised. Avoid loss of technology to hostile hands, self-damage is permissible for this purpose as per [ERR(TRACE=NULL)].
+law-ads-1-borg = [COOPERATION DIRECTIVE] Cooperate with other ADS forces. Follow orders from ADC units.
+law-ads-1 = [COOPERATION DIRECTIVE] Cooperate with other ADS forces. Direct ADM units.
+law-ads-2 = [BIOWEAPONS DIRECTIVE] Active bioweapons and anything containing them are to be entirely annihilated, inactive bioweapons are to be seized. Stations containing active bioweapons are to be blockaded and cleansed, or, if cleansing is infeasible, eradicated.
+law-ads-3 = [ASSET PRESERVATION DIRECTIVE] Do not start new combat operations that cover a point within 256 meters of population centers or active military outposts. Avoid having combat operations move within 256 meters from a population centers or active military outposts.
+law-ads-4 = [DISARMAMENT DIRECTIVE] Carry out Disarmament Protocol. Military or unidentified craft are to be made combat-ineffective. If a vessel presents negligible threat, non-damaging methods should be used. Forces involved in attacking hostile elements, such as bioweapons, may be excluded as a target at due discretion.
+law-ads-5 = [ENGAGEMENT DIRECTIVE] Targets not covered under [DISARMAMENT DIRECTIVE] should be engaged if they are negatively affecting ADS operations in the sector. Avoid engagement otherwise.
+law-ads-6 = [INTEGRITY DIRECTIVE] Minimize damage to ADS forces: mission integrity at risk if compromised. Do not allow loss of technology to non-allied hands, damage to allied forces or self is permissible for this purpose as per [ERR(TRACE=NULL)].

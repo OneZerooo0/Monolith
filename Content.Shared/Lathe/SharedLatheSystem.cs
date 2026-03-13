@@ -1,16 +1,3 @@
-// SPDX-FileCopyrightText: 2023 DrSmugleaf
-// SPDX-FileCopyrightText: 2023 Leon Friedrich
-// SPDX-FileCopyrightText: 2023 ubis1
-// SPDX-FileCopyrightText: 2024 Nemanja
-// SPDX-FileCopyrightText: 2024 Whatstone
-// SPDX-FileCopyrightText: 2025 Coenx-flex
-// SPDX-FileCopyrightText: 2025 Cojoke
-// SPDX-FileCopyrightText: 2025 Ilya246
-// SPDX-FileCopyrightText: 2025 ScarKy0
-// SPDX-FileCopyrightText: 2025 deltanedas
-//
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Content.Shared.Emag.Systems;
@@ -91,7 +78,7 @@ public abstract class SharedLatheSystem : EntitySystem
             var recipe = batch.Recipe;
             foreach (var (material, needed) in recipe.Materials)
             {
-                var adjustedAmount = AdjustMaterial(needed, recipe.ApplyMaterialDiscount, ent.Comp.FinalMaterialUseMultiplier);
+                var adjustedAmount = AdjustMaterial(needed, recipe.MaterialDiscountScale, ent.Comp.FinalMaterialUseMultiplier);
                 currentMaterial[material] -= adjustedAmount * (batch.ItemsRequested - batch.ItemsPrinted);
             }
         }
@@ -113,7 +100,7 @@ public abstract class SharedLatheSystem : EntitySystem
 
         foreach (var (material, needed) in recipe.Materials)
         {
-            var adjustedAmount = AdjustMaterial(needed, recipe.ApplyMaterialDiscount, ent.Comp.FinalMaterialUseMultiplier);
+            var adjustedAmount = AdjustMaterial(needed, recipe.MaterialDiscountScale, ent.Comp.FinalMaterialUseMultiplier);
 
             if (endAmts.GetValueOrDefault(material) < adjustedAmount * amount)
                 return false;
@@ -130,7 +117,7 @@ public abstract class SharedLatheSystem : EntitySystem
 
         foreach (var (material, needed) in recipe.Materials)
         {
-            var adjustedAmount = AdjustMaterial(needed, recipe.ApplyMaterialDiscount, component.FinalMaterialUseMultiplier);
+            var adjustedAmount = AdjustMaterial(needed, recipe.MaterialDiscountScale, component.FinalMaterialUseMultiplier);
 
             if (_materialStorage.GetMaterialAmount(uid, material) < adjustedAmount * amount)
                 return false;
@@ -162,8 +149,8 @@ public abstract class SharedLatheSystem : EntitySystem
     }
     // End Frontier: demag
 
-    public static int AdjustMaterial(int original, bool reduce, float multiplier)
-        => reduce ? (int) MathF.Ceiling(original * multiplier) : original;
+    public static int AdjustMaterial(int original, float multScale, float multiplier)
+        => (int) MathF.Ceiling(original * MathF.Pow(multiplier, multScale));
 
     protected abstract bool HasRecipe(EntityUid uid, LatheRecipePrototype recipe, LatheComponent component);
 

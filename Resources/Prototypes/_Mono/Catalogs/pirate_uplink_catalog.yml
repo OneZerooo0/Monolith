@@ -1,21 +1,3 @@
-# SPDX-FileCopyrightText: 2025 Ark
-# SPDX-FileCopyrightText: 2025 Blu
-# SPDX-FileCopyrightText: 2025 BlueHNT
-# SPDX-FileCopyrightText: 2025 EctoplasmIsGood
-# SPDX-FileCopyrightText: 2025 Ghost581
-# SPDX-FileCopyrightText: 2025 HungryCuban
-# SPDX-FileCopyrightText: 2025 KiraZen_
-# SPDX-FileCopyrightText: 2025 Redrover1760
-# SPDX-FileCopyrightText: 2025 RikuTheKiller
-# SPDX-FileCopyrightText: 2025 ScyronX
-# SPDX-FileCopyrightText: 2025 SupernoobTheN1
-# SPDX-FileCopyrightText: 2025 Your Name
-# SPDX-FileCopyrightText: 2025 ark1368
-# SPDX-FileCopyrightText: 2025 core-mene
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 #MARK: Medical
 - type: listing
   id: UplinkPirateMedicalBundle
@@ -1021,6 +1003,27 @@
       tags:
       - PirateUplink
 
+- type: listing
+  id: UplinkPirateDesword
+  name: uplink-pirate-desword-name
+  description: uplink-pirate-desword-desc
+  productEntity: EnergySwordDouble
+  icon: { sprite: Objects/Weapons/Melee/e_sword_double.rsi, state: icon }
+  cost:
+    Doubloon: 75
+  categories:
+  - UplinkPirateWeapons
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - PirateUplink
+  - !type:BuyerJobCondition
+    whitelist:
+      - PDVDenasvar
+      - PirateFirstMate
+      - PirateCaptain
+
 #MARK: Equipment
 
 - type: listing
@@ -1215,21 +1218,6 @@
           - PirateUplink
 
 # Misc
-
-- type: listing
-  id: UplinkPirateProwlerVoucher
-  name: uplink-pirate-prowler-voucher-name
-  description: uplink-pirate-prowler-voucher-desc
-  productEntity: ShipVoucherProwler
-  cost:
-    Doubloon: 300
-  categories:
-  - UplinkPirateUtility
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - PirateUplink
 
 - type: listing
   id: UplinkPirateFactionRDServer

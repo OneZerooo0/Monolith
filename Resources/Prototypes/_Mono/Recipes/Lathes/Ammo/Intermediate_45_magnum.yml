@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: 2025 HungryCuban
-# SPDX-FileCopyrightText: 2025 core-mene
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 #Pistol Magazines
 
 - type: latheRecipe
@@ -144,3 +138,9 @@
   parent: BaseAmmoRIPIntermediateMagazineRecipe
   id: AmmoBox45_magnumRIP
   result: AmmoBox45_magnumRIP
+
+#big box
+- type: latheRecipe
+  parent: BaseAmmoFMJIntermediateBigAmmoBoxRecipe
+  id: AmmoBox45_magnumBigFMJ
+  result: AmmoBox45_magnumBigFMJ

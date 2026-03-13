@@ -1,11 +1,3 @@
-// SPDX-FileCopyrightText: 2024 Nemanja
-// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
-// SPDX-FileCopyrightText: 2024 Verm
-// SPDX-FileCopyrightText: 2024 nikthechampiongr
-// SPDX-FileCopyrightText: 2025 ScyronX
-//
-// SPDX-License-Identifier: MPL-2.0
-
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Components.SolutionManager;
 using Content.Shared.Database;
@@ -125,6 +117,20 @@ public abstract partial class SharedToolSystem
             && SolutionContainerSystem.TryGetDrainableSolution(target, out var targetSoln, out var targetSolution)
             && SolutionContainerSystem.TryGetSolution(entity.Owner, entity.Comp.FuelSolutionName, out var solutionComp, out var welderSolution))
         {
+            // MONO: Exit refill attempt if the tank contains incompatible reagents
+            // mitigates borgs self-btfoing from welder/applicator refill mixup
+            foreach (var reagent in targetSolution.Contents)
+            {
+                if (reagent.Reagent.Prototype != entity.Comp.FuelReagent.Id)
+                {
+                    _popup.PopupClient(
+                        Loc.GetString("welder-component-incompatible-fuel", ("owner", args.Target)), entity, args.User);
+
+                    return;
+                }
+            }
+            //Mono end
+
             var trans = FixedPoint2.Min(welderSolution.AvailableVolume, targetSolution.Volume);
             if (trans > 0)
             {

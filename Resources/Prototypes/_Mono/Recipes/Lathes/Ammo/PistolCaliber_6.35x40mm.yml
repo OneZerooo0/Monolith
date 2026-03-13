@@ -1,7 +1,3 @@
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 #SMG Magazines
 
 - type: latheRecipe
@@ -20,3 +16,8 @@
   parent: BaseAmmoFMJPistolCaliberAmmoBoxRecipe
   id: MagazineAsmgtUniversal635x40mm
   result: MagazineAsmgtUniversal635x40mm
+
+- type: latheRecipe
+  parent: BaseAmmoFMJPistolCaliberAmmoBoxRecipe
+  id: AmmoBox635x40mmCaselessBig
+  result: AmmoBox635x40mmCaselessBig

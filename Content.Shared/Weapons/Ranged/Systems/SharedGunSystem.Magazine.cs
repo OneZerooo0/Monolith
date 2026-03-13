@@ -1,16 +1,3 @@
-// SPDX-FileCopyrightText: 2022 Kara
-// SPDX-FileCopyrightText: 2022 Leon Friedrich
-// SPDX-FileCopyrightText: 2023 Scribbles0
-// SPDX-FileCopyrightText: 2023 TaralGit
-// SPDX-FileCopyrightText: 2023 and_a
-// SPDX-FileCopyrightText: 2023 metalgearsloth
-// SPDX-FileCopyrightText: 2024 DrSmugleaf
-// SPDX-FileCopyrightText: 2024 geraeumig
-// SPDX-FileCopyrightText: 2025 Ilya246
-// SPDX-FileCopyrightText: 2025 slarticodefast
-//
-// SPDX-License-Identifier: MPL-2.0
-
 using Content.Shared.Examine;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Verbs;
@@ -28,6 +15,7 @@ public abstract partial class SharedGunSystem
     {
         SubscribeLocalEvent<MagazineAmmoProviderComponent, MapInitEvent>(OnMagazineMapInit);
         SubscribeLocalEvent<MagazineAmmoProviderComponent, TakeAmmoEvent>(OnMagazineTakeAmmo);
+        SubscribeLocalEvent<MagazineAmmoProviderComponent, CheckShootPrototypeEvent>(OnMagazineCheckProto); // Mono
         SubscribeLocalEvent<MagazineAmmoProviderComponent, GetAmmoCountEvent>(OnMagazineAmmoCount);
         SubscribeLocalEvent<MagazineAmmoProviderComponent, GetVerbsEvent<AlternativeVerb>>(OnMagazineVerb);
         SubscribeLocalEvent<MagazineAmmoProviderComponent, EntInsertedIntoContainerMessage>(OnMagazineSlotChange);
@@ -163,6 +151,16 @@ public abstract partial class SharedGunSystem
         var ammoEv = new GetAmmoCountEvent();
         RaiseLocalEvent(magEntity.Value, ref ammoEv);
         FinaliseMagazineTakeAmmo(uid, component, ammoEv.Count, ammoEv.Capacity, args.User, appearance);
+    }
+
+    // Mono
+    private void OnMagazineCheckProto(Entity<MagazineAmmoProviderComponent> ent, ref CheckShootPrototypeEvent args)
+    {
+        var magEntity = GetMagazineEntity(ent);
+        if (magEntity == null)
+            return;
+
+        RaiseLocalEvent(magEntity.Value, ref args);
     }
 
     private void FinaliseMagazineTakeAmmo(EntityUid uid, MagazineAmmoProviderComponent component, int count, int capacity, EntityUid? user, AppearanceComponent? appearance)

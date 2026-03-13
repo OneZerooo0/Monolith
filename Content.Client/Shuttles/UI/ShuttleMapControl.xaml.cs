@@ -1,15 +1,3 @@
-// SPDX-FileCopyrightText: 2024 Plykiya
-// SPDX-FileCopyrightText: 2024 Whatstone
-// SPDX-FileCopyrightText: 2024 eoineoineoin
-// SPDX-FileCopyrightText: 2024 metalgearsloth
-// SPDX-FileCopyrightText: 2025 Ark
-// SPDX-FileCopyrightText: 2025 Ilya246
-// SPDX-FileCopyrightText: 2025 LukeZurg22
-// SPDX-FileCopyrightText: 2025 RikuTheKiller
-// SPDX-FileCopyrightText: 2025 ark1368
-//
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
 using System.Buffers;
 using System.Numerics;
 using Content.Client.Shuttles.Systems;
@@ -68,6 +56,16 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
     /// Shows only the FTL range circle without cursor targeting elements.
     /// </summary>
     public bool ShowFTLRangeOnly;
+
+    /// <summary>
+    /// Mono - Whether to show FTL range at all.
+    /// </summary>
+    public bool ShowFTLRange = true;
+
+    /// <summary>
+    /// Mono - Whether to ignore FTL obstructions and range for preview display.
+    /// </summary>
+    public bool NoFTLRange = false;
 
     private Angle _ftlAngle;
 
@@ -151,7 +149,7 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
                 else
                 {
                     // We'll send the "adjusted" position and server will adjust it back when relevant.
-                    var mapCoords = new MapCoordinates(InverseMapPosition(args.RelativePosition), ViewingMap);
+                    var mapCoords = new MapCoordinates(InverseMapPosition(args.RelativePixelPosition), ViewingMap);
 
                     RequestFTL?.Invoke(mapCoords, _ftlAngle);
                 }
@@ -208,7 +206,7 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
 
         // Remove offset so we can floor.
         var botLeft = new Vector2(0f, 0f);
-        var topRight = botLeft + Size;
+        var topRight = botLeft + PixelSize;
 
         var flooredBL = botLeft - originBL;
 
@@ -287,7 +285,7 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
 
         // Draw our FTL range + no FTL zones
         // Do it up here because we want this layered below most things.
-        if (FtlMode || ShowFTLRangeOnly)
+        if ((FtlMode || ShowFTLRangeOnly) && ShowFTLRange) // Mono
         {
             if (EntManager.TryGetComponent<TransformComponent>(_shuttleEntity, out var shuttleXform))
             {
@@ -425,7 +423,7 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
             var iffText = hideLabel ?
                 detectionLevel == DetectionLevel.PartialDetected ?
                     Loc.GetString($"shuttle-console-signature-infrared")
-                    : Loc.GetString($"shuttle-console-signature-unknown")
+                    : _detection.HandleUnknownMassLabel(grid.Owner)
                 : _shuttles.GetIFFLabel(grid, self: true, component: iffComp);
 
             if (string.IsNullOrEmpty(iffText))
@@ -527,7 +525,8 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
                     var mouseMapPos = InverseMapPosition(mouseLocalPos);
 
                     var ftlFree = (!beaconsOnly || foundBeacon != default) &&
-                                  _shuttles.FTLFree(_shuttleEntity.Value, new EntityCoordinates(viewedMapUid, mouseMapPos), _ftlAngle, _viewportExclusions);
+                                  _shuttles.FTLFree(_shuttleEntity.Value, new EntityCoordinates(viewedMapUid, mouseMapPos), _ftlAngle, _viewportExclusions)
+                                  || NoFTLRange; // Mono
 
                     var color = ftlFree ? Color.LimeGreen : Color.Magenta;
 

@@ -1,8 +1,3 @@
-# SPDX-FileCopyrightText: 2025 Redrover1760
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 - type: entityTable
   id: ChimeraShipsTable
   table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
@@ -21,7 +16,7 @@
     startAudio:
       path: /Audio/Misc/notice1.ogg
     weight: 2
-    maxOccurrences: 6 # You may think this is absurd, but it can only spawn 4 events max in normal schedulers anyways.
+    maxOccurrences: 4 # You may think this is absurd, but it can only spawn 4 events max in normal schedulers anyways.
   - type: GameRule
     minPlayers: 40
   - type: LoadMapRule
@@ -36,7 +31,7 @@
     startAudio:
       path: /Audio/Misc/notice1.ogg
     weight: 2
-    maxOccurrences: 3 # You may think this is absurd, but it can only spawn 4 events max in normal schedulers anyways.
+    maxOccurrences: 2 # You may think this is absurd, but it can only spawn 4 events max in normal schedulers anyways.
   - type: GameRule
     minPlayers: 40
   - type: LoadMapRule
@@ -51,7 +46,7 @@
     startAudio:
       path: /Audio/Misc/notice1.ogg
     weight: 2
-    maxOccurrences: 6 # You may think this is absurd, but it can only spawn 4 events max in normal schedulers anyways.
+    maxOccurrences: 4 # You may think this is absurd, but it can only spawn 4 events max in normal schedulers anyways.
   - type: GameRule
     minPlayers: 40
   - type: LoadMapRule
@@ -66,7 +61,7 @@
     startAudio:
       path: /Audio/Misc/notice1.ogg
     weight: 2
-    maxOccurrences: 6 # You may think this is absurd, but it can only spawn 4 events max in normal schedulers anyways.
+    maxOccurrences: 4 # You may think this is absurd, but it can only spawn 4 events max in normal schedulers anyways.
   - type: GameRule
     minPlayers: 40
   - type: LoadMapRule

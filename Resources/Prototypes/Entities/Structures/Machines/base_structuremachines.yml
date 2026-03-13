@@ -1,48 +1,12 @@
-# SPDX-FileCopyrightText: 2020 AJCM-git
-# SPDX-FileCopyrightText: 2020 Acruid
-# SPDX-FileCopyrightText: 2020 Hugo Laloge
-# SPDX-FileCopyrightText: 2020 Paul Ritter
-# SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto
-# SPDX-FileCopyrightText: 2021 20kdc
-# SPDX-FileCopyrightText: 2021 DrSmugleaf
-# SPDX-FileCopyrightText: 2021 Galactic Chimp
-# SPDX-FileCopyrightText: 2021 Julian Giebel
-# SPDX-FileCopyrightText: 2021 Pieter-Jan Briers
-# SPDX-FileCopyrightText: 2021 ShadowCommander
-# SPDX-FileCopyrightText: 2021 Swept
-# SPDX-FileCopyrightText: 2021 metalgearsloth
-# SPDX-FileCopyrightText: 2021 mirrorcult
-# SPDX-FileCopyrightText: 2022 Jacob Tong
-# SPDX-FileCopyrightText: 2022 Leon Friedrich
-# SPDX-FileCopyrightText: 2022 Moony
-# SPDX-FileCopyrightText: 2022 Peptide90
-# SPDX-FileCopyrightText: 2022 Profane McBane
-# SPDX-FileCopyrightText: 2023 Ed
-# SPDX-FileCopyrightText: 2024 Cojoke
-# SPDX-FileCopyrightText: 2024 Ilya246
-# SPDX-FileCopyrightText: 2024 Kara
-# SPDX-FileCopyrightText: 2025 ActiveMammmoth
-# SPDX-FileCopyrightText: 2025 MrTswe
-# SPDX-FileCopyrightText: 2025 Onezero0
-# SPDX-FileCopyrightText: 2025 ScyronX
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 - type: entity
   abstract: true
-  # parent: BaseStructure # Mono
+  parent: BaseStructure
   id: BaseMachineIndestructible # Mono: Changed to BaseMachineIndestructible and removed destructible/damageable components
   components:
   - type: Animateable
   - type: InteractionOutline
-  - type: Anchorable
-    delay: 2
-  - type: Physics
-    bodyType: Static
   - type: Transform
     noRot: true
-    anchored: true
   - type: Fixtures
     fixtures:
       fix1:
@@ -64,27 +28,6 @@
   - type: FootstepModifier # mono
     footstepSoundCollection:
       collection: FootstepHull
-  - type: Transform
-    anchored: true
-  - type: Clickable
-  - type: Physics
-    bodyType: Static
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.45,-0.45,0.45,0.45"
-        density: 60
-        mask:
-        - MachineMask
-        layer:
-        - MidImpassable
-        - LowImpassable
-  - type: Pullable
-  - type: Tag
-    tags:
-    - Structure
 
 - type: entity
   abstract: true
@@ -111,6 +54,8 @@
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: StructuralMetallic
+  - type: Anchorable
+    delay: 2
 
 - type: entity
   abstract: true

@@ -1,37 +1,6 @@
-// SPDX-FileCopyrightText: 2021 20kdc
-// SPDX-FileCopyrightText: 2021 Acruid
-// SPDX-FileCopyrightText: 2021 DrSmugleaf
-// SPDX-FileCopyrightText: 2021 Javier Guardia Fernández
-// SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
-// SPDX-FileCopyrightText: 2022 Alex Evgrashin
-// SPDX-FileCopyrightText: 2022 CommieFlowers
-// SPDX-FileCopyrightText: 2022 EmoGarbage404
-// SPDX-FileCopyrightText: 2022 Flipp Syder
-// SPDX-FileCopyrightText: 2022 Paul Ritter
-// SPDX-FileCopyrightText: 2022 Rane
-// SPDX-FileCopyrightText: 2022 ShadowCommander
-// SPDX-FileCopyrightText: 2022 Visne
-// SPDX-FileCopyrightText: 2022 mirrorcult
-// SPDX-FileCopyrightText: 2022 rolfero
-// SPDX-FileCopyrightText: 2022 wrexbe
-// SPDX-FileCopyrightText: 2023 Jezithyr
-// SPDX-FileCopyrightText: 2023 Kara
-// SPDX-FileCopyrightText: 2023 Leon Friedrich
-// SPDX-FileCopyrightText: 2023 Nemanja
-// SPDX-FileCopyrightText: 2023 PixelTK
-// SPDX-FileCopyrightText: 2023 Slava0135
-// SPDX-FileCopyrightText: 2023 deltanedas
-// SPDX-FileCopyrightText: 2023 metalgearsloth
-// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
-// SPDX-FileCopyrightText: 2025 ActiveMammmoth
-// SPDX-FileCopyrightText: 2025 Ark
-// SPDX-FileCopyrightText: 2025 SlamBamActionman
-// SPDX-FileCopyrightText: 2025 ark1368
-// SPDX-FileCopyrightText: 2025 starch
-//
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
-using System.Linq;
+using Content.Shared._Shitmed.Targeting;
+// Shitmed Change
+using Content.Shared.Body.Systems;
 using Content.Shared.CCVar;
 using Content.Shared.Chemistry;
 using Content.Shared.Damage.Prototypes;
@@ -46,12 +15,10 @@ using Robust.Shared.Configuration;
 using Robust.Shared.GameStates;
 using Robust.Shared.Network;
 using Robust.Shared.Prototypes;
-using Robust.Shared.Utility;
-
-// Shitmed Change
-using Content.Shared.Body.Systems;
-using Content.Shared._Shitmed.Targeting;
 using Robust.Shared.Random;
+using Robust.Shared.Utility;
+using System.Linq;
+using static Content.Shared.Damage.DamageableSystem;
 
 namespace Content.Shared.Damage
 {
@@ -197,6 +164,13 @@ namespace Content.Shared.Damage
             RaiseLocalEvent(uid, new DamageChangedEvent(component, damageDelta, interruptsDoAfters, origin, canSever ?? true)); // Shitmed Change
         }
 
+        // Mono: damage origin flags for if we can't or don't want to discern by UID
+        public enum DamageOriginFlag
+        {
+            Explosion, // flag set by ExplosionSystem.Processing
+            Barotrauma // flag set by BarotraumaSystem
+        }
+
         /// <summary>
         ///     Applies damage specified via a <see cref="DamageSpecifier"/>.
         /// </summary>
@@ -212,7 +186,9 @@ namespace Content.Shared.Damage
         public DamageSpecifier? TryChangeDamage(EntityUid? uid, DamageSpecifier damage, bool ignoreResistances = false,
             bool interruptsDoAfters = true, DamageableComponent? damageable = null, EntityUid? origin = null, float armorPenetration = 0f,
             // Shitmed Change
-            bool? canSever = true, bool? canEvade = false, float? partMultiplier = 1.00f, TargetBodyPart? targetPart = null, EntityUid? tool = null)
+            bool? canSever = true, bool? canEvade = false, float? partMultiplier = 1.00f, TargetBodyPart? targetPart = null, EntityUid? tool = null,
+            // Mono: arg to ID indirect damage sources
+            DamageOriginFlag? originFlag = null)
         {
             if (!uid.HasValue || !_damageableQuery.Resolve(uid.Value, ref damageable, false))
             {
@@ -225,7 +201,8 @@ namespace Content.Shared.Damage
                 return damage;
             }
 
-            var before = new BeforeDamageChangedEvent(damage, origin, targetPart); // Shitmed Change
+            var before = new BeforeDamageChangedEvent(damage, origin, targetPart, //Shitmed Change
+                false, originFlag); // Mono: originFlag
             RaiseLocalEvent(uid.Value, ref before);
 
             if (before.Cancelled)
@@ -436,7 +413,8 @@ namespace Content.Shared.Damage
         DamageSpecifier Damage,
         EntityUid? Origin = null,
         TargetBodyPart? TargetPart = null, // Shitmed Change
-        bool Cancelled = false);
+        bool Cancelled = false,
+        DamageOriginFlag? OriginFlag = null); // Mono: OriginFlag
 
     /// <summary>
     ///     Shitmed Change: Raised on parts before damage is done so we can cancel the damage if they evade.

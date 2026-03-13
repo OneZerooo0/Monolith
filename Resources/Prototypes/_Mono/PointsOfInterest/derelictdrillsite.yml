@@ -1,8 +1,3 @@
-# SPDX-FileCopyrightText: 2025 Primus
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 # Author Info
 # GitHub: Primusirius
 # Discord: Primusirius
@@ -14,7 +9,7 @@
 # Notes:
 - type: pointOfInterest
   id: Mining
-  parent: BasePOI
+  parent: [BasePOI, BaseRepairablePOI]
   name: 'Derelict Drillsite'
   minimumDistance: 3500
   maximumDistance: 7500

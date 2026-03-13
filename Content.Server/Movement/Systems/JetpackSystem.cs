@@ -1,14 +1,3 @@
-// SPDX-FileCopyrightText: 2022 Júlio César Ueti
-// SPDX-FileCopyrightText: 2022 rolfero
-// SPDX-FileCopyrightText: 2023 DrSmugleaf
-// SPDX-FileCopyrightText: 2023 Wrexbe (Josh)
-// SPDX-FileCopyrightText: 2023 metalgearsloth
-// SPDX-FileCopyrightText: 2025 Ark
-// SPDX-FileCopyrightText: 2025 ScyronX
-// SPDX-FileCopyrightText: 2025 starch
-//
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
 using Content.Server.Atmos.Components;
 using Content.Server.Atmos.EntitySystems;
 using Content.Server._Mono.Radar;
@@ -42,18 +31,21 @@ public sealed class JetpackSystem : SharedJetpackSystem
     }
 
     /// <summary>
-    /// Adds radar blip to jetpacks when they are activated
+    /// Adds radar blip to jetpacks when they are activated - Mono
     /// </summary>
     private void OnJetpackActivated(EntityUid uid, ActiveJetpackComponent component, ComponentStartup args)
     {
-        var blip = EnsureComp<RadarBlipComponent>(uid);
-        blip.RadarColor = Color.Cyan;
-        blip.Scale = 0.5f;
-        blip.VisibleFromOtherGrids = true;
+        if (TryComp<JetpackComponent>(uid, out var jetpack) && (jetpack.Stealth = false))
+        {
+            var blip = EnsureComp<RadarBlipComponent>(uid);
+            blip.Config.Color = Color.Cyan;
+            blip.Config.Bounds = new(-0.25f, -0.25f, 0.25f, 0.25f);
+            blip.VisibleFromOtherGrids = true;
+        }
     }
 
     /// <summary>
-    /// Removes radar blip from jetpacks when they are deactivated
+    /// Removes radar blip from jetpacks when they are deactivated - Mono
     /// </summary>
     private void OnJetpackDeactivated(EntityUid uid, ActiveJetpackComponent component, ComponentShutdown args)
     {

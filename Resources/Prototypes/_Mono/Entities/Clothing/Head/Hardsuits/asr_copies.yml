@@ -1,9 +1,5 @@
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 - type: entity
-  parent: ClothingHeadHelmetHardsuitSyndie
+  parent: [ClothingHeadHelmetHardsuitSyndie, ShowSecurityIcons]
   id: ClothingHeadHelmetHardsuitAshen
   name: PDV CV-32 combat tacsuit helmet
   description: A combat tacsuit designed in the Phaethon Dynasty.
@@ -14,12 +10,23 @@
     sprite: _Mono/Clothing/Head/Hardsuits/syndicate.rsi
 
 - type: entity
-  parent: ClothingHeadHelmetHardsuitSyndieElite
+  parent: [ClothingHeadHelmetHardsuitSyndieElite, ShowSecurityIcons]
   id: ClothingHeadHelmetHardsuitAshenElite
   name: PDV CV-53 combat hardsuit helmet
-  description: Based off of the CV-32, sacrifices combat protection for enviornment protection.
+  description: Based off of the CV-32, sacrifices combat protection for environment protection.
   components:
   - type: Sprite
     sprite: _Mono/Clothing/Head/Hardsuits/syndieelite.rsi
   - type: Clothing
     sprite: _Mono/Clothing/Head/Hardsuits/syndieelite.rsi
+
+- type: entity
+  parent: [ClothingHeadHelmetHardsuitSyndieElite, ShowSecurityIcons]
+  id: ClothingHeadHelmetHardsuitVizier
+  name: PDV CV-67 combat hardsuit helmet
+  description: An adorned tacsuit designed with an imperfect nanolaminate composition. High maneuverability, sturdy armor.
+  components:
+  - type: Sprite
+    sprite: _Mono/Clothing/Head/Hardsuits/pdv_vizier.rsi
+  - type: Clothing
+    sprite: _Mono/Clothing/Head/Hardsuits/pdv_vizier.rsi

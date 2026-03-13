@@ -1,21 +1,10 @@
-// SPDX-FileCopyrightText: 2025 Arcticular
-// SPDX-FileCopyrightText: 2025 Arcticular1
-// SPDX-FileCopyrightText: 2025 Ark
-// SPDX-FileCopyrightText: 2025 Blu
-// SPDX-FileCopyrightText: 2025 HacksLua
-// SPDX-FileCopyrightText: 2025 LukeZurg22
-// SPDX-FileCopyrightText: 2025 Onezero0
-// SPDX-FileCopyrightText: 2025 significant harassment
-// SPDX-FileCopyrightText: 2025 starch
-//
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
 using Content.Shared._Mono.Company;
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
 using Content.Shared.GameTicking;
 using Content.Shared.Inventory;
 using Content.Shared.PDA;
+using Content.Shared.Roles;
 using Content.Shared.Roles.Jobs;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
@@ -24,6 +13,8 @@ namespace Content.Server._Mono.Company;
 
 /// <summary>
 /// This system handles assigning a company to players when they join.
+/// TODO: remove hardcoded slop.
+/// whoever hardcoded ts is getting slimed out no joke.
 /// </summary>
 public sealed class CompanySystem : EntitySystem
 {
@@ -32,55 +23,9 @@ public sealed class CompanySystem : EntitySystem
     [Dependency] private readonly SharedIdCardSystem _idCardSystem = default!;
     [Dependency] private readonly InventorySystem _inventorySystem = default!;
 
+
     // Dictionary to store original company preferences for players
     private readonly Dictionary<string, string> _playerOriginalCompanies = new();
-
-    private readonly HashSet<string> _tsfJobs = new()
-    {
-        "Sheriff",
-        "Bailiff",
-        "SeniorOfficer", // Sergeant
-        "Deputy",
-        "Brigmedic",
-        "NFDetective",
-        "PublicAffairsLiaison",
-        "SecurityGuard",
-        "Cadet",
-        "TsfEngineer"
-    };
-
-    private readonly HashSet<string> _rogues = new()
-    {
-        "PirateCaptain",
-        "PirateFirstMate",
-        "Pirate",
-        "PDVInfiltrator",
-    };
-
-    // private readonly HashSet<string> _usspJobs = new()
-    // {
-    //    "USSPCommissar",
-    //    "USSPSergeant",
-    //    "USSPCorporal",
-    //    "USSPMedic",
-    //    "USSPRifleman"
-    //};
-
-    private readonly HashSet<string> _colonialJobs = new()
-    {
-        "StationRepresentative",
-        "StationTrafficController",
-        "SecurityGuard",
-        "NFJanitor",
-        "MailCarrier",
-        "Valet",
-    };
-
-    private readonly HashSet<string> _mdJobs = new()
-    {
-        "DirectorOfCare",
-        "MdMedic",
-    };
 
     public override void Initialize()
     {
@@ -102,7 +47,7 @@ public sealed class CompanySystem : EntitySystem
     private void OnPlayerSpawnComplete(PlayerSpawnCompleteEvent args)
     {
         // Add the company component with the player's saved company
-        var companyComp = EnsureComp<Shared._Mono.Company.CompanyComponent>(args.Mob);
+        var companyComp = EnsureComp<CompanyComponent>(args.Mob);
 
         var playerId = args.Player.UserId.ToString();
         var profileCompany = args.Profile.Company;
@@ -113,36 +58,14 @@ public sealed class CompanySystem : EntitySystem
             _playerOriginalCompanies[playerId] = profileCompany;
         }
 
-        // todo - make this a switch statement or something lol. who cares.
-        // Check if player's job is one of the TSF jobs
-        if (args.JobId != null && _tsfJobs.Contains(args.JobId))
+        var assigned = false;
+        if (args.JobId != null)
         {
-            // Assign TSF company
-            companyComp.CompanyName = "TSF";
+            var job = _prototypeManager.Index<JobPrototype>(args.JobId);
+            companyComp.CompanyName = job.AssignedCompany;
+            assigned = companyComp.CompanyName != "None";
         }
-        // Check if player's job is one of the Rogue jobs
-        else if (args.JobId != null && _rogues.Contains(args.JobId))
-        {
-            // Assign Rogue company
-            companyComp.CompanyName = "PDV";
-        }
-        // Check if player's job is one of the USSP jobs
-        //else if (args.JobId != null && _usspJobs.Contains(args.JobId))
-        //{
-        //    // Assign USSP company
-        //    companyComp.CompanyName = "USSP";
-        //}
-        else if (args.JobId != null && _colonialJobs.Contains(args.JobId))
-        {
-            // Assign MD company
-            companyComp.CompanyName = "Colonial";
-        }
-        else if (args.JobId != null && _mdJobs.Contains(args.JobId))
-        {
-            // Assign MD company
-            companyComp.CompanyName = "MD";
-        }
-        else
+        if (!assigned)
         {
             // Only consider whitelist if the player has NO specific company preference
             bool loginFound = false;

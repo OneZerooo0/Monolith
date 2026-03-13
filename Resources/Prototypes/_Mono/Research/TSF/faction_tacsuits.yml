@@ -1,8 +1,3 @@
-# SPDX-FileCopyrightText: 2025 Onezero0
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 - type: technology
   id: TsfmcBasicEquipment
   name: research-technology-tsfmc-basic-equipment
@@ -26,6 +21,7 @@
   cost: 35000
   recipeUnlocks:
   - ClothingOuterHardsuitM86Tsf
+  - MechIFFTSF
   technologyPrerequisites:
   - TsfmcBasicEquipment
   - UniversalMaterialResearchT2

@@ -1,10 +1,3 @@
-# SPDX-FileCopyrightText: 2025 Blu
-# SPDX-FileCopyrightText: 2025 BlueHNT
-# SPDX-FileCopyrightText: 2025 Onezero0
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 - type: entity
   parent: EncryptionKey
   id: EncryptionKeyUssp
@@ -44,3 +37,51 @@
     - state: sec_label
   - type: PirateBountyItem
     id: EncryptionKeyFaction
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyVanguardCommand
+  name: vanguard command encryption key # mono
+  description: An encryption key used by officers in the vanguard. # Mono
+  components:
+    - type: EncryptionKey
+      channels:
+        - VanguardCommand
+      defaultChannel: VanguardCommand
+    - type: Sprite
+      layers:
+        - state: crypt_blue
+        - state: pirate_label
+
+# Overseer variant w/ no TSFMC or TSF command radio key
+
+- type: entity
+  parent: EncryptionKeyStationMaster
+  id: EncryptionKeyStationMasterSR
+  components:
+  - type: EncryptionKey
+    channels:
+    - Common
+    - Engineering
+    - Medical
+    - Science
+    - Security
+    - Service
+    - Supply
+    - Traffic
+    defaultChannel: Service
+
+ # Diplomacy with faction heads, seperated from master key to allow toggling off
+- type: entity
+  parent: EncryptionKeyStationMaster
+  id: EncryptionKeyDiplomacy
+  name: diplomatic encryption key
+  description: A direct communications channel to the heads of the sector's warring states.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Command
+    - VanguardCommand
+    #- Nfsd #Deliberately excluded: You don't command them
+    #- Freelance
+    defaultChannel: Command

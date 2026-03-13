@@ -1,11 +1,3 @@
-# SPDX-FileCopyrightText: 2025 HungryCuban
-# SPDX-FileCopyrightText: 2025 Onezero0
-# SPDX-FileCopyrightText: 2025 Redrover1760
-# SPDX-FileCopyrightText: 2025 core-mene
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 - type: technology
   id: RogueEdagger
   name: research-technology-rogue-energy-dagger
@@ -86,6 +78,7 @@
   recipeUnlocks:
   - WeaponSubMachineGunAtreidesRogue
   - WeaponShotgunBulldogRogue
+  - AmmoBox57x28mmBigFMJ
   technologyPrerequisites:
   - RogueAdvancedGuns
   position: 20, 8
@@ -121,6 +114,7 @@
   - Magazine635x40mmCaseless
   - AmmoBox635x40mmCaseless
   - MagazineAsmgtUniversal635x40mm
+  - AmmoBox635x40mmCaselessBig
   technologyPrerequisites:
   - RogueCQCGuns
   position: 21, 8

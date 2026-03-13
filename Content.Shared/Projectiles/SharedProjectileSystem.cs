@@ -1,32 +1,3 @@
-// SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
-// SPDX-FileCopyrightText: 2021 metalgearsloth
-// SPDX-FileCopyrightText: 2022 wrexbe
-// SPDX-FileCopyrightText: 2023 AJCM-git
-// SPDX-FileCopyrightText: 2023 DrSmugleaf
-// SPDX-FileCopyrightText: 2023 KP
-// SPDX-FileCopyrightText: 2023 Kara
-// SPDX-FileCopyrightText: 2023 Leon Friedrich
-// SPDX-FileCopyrightText: 2023 Pieter-Jan Briers
-// SPDX-FileCopyrightText: 2023 PixelTK
-// SPDX-FileCopyrightText: 2023 Slava0135
-// SPDX-FileCopyrightText: 2023 deltanedas
-// SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
-// SPDX-FileCopyrightText: 2024 Arendian
-// SPDX-FileCopyrightText: 2024 Cojoke
-// SPDX-FileCopyrightText: 2024 Dakamakat
-// SPDX-FileCopyrightText: 2024 Nemanja
-// SPDX-FileCopyrightText: 2024 nikthechampiongr
-// SPDX-FileCopyrightText: 2024 slarticodefast
-// SPDX-FileCopyrightText: 2025 Ark
-// SPDX-FileCopyrightText: 2025 Ed
-// SPDX-FileCopyrightText: 2025 NazrinNya
-// SPDX-FileCopyrightText: 2025 ScarKy0
-// SPDX-FileCopyrightText: 2025 SlamBamActionman
-// SPDX-FileCopyrightText: 2025 Whatstone
-// SPDX-FileCopyrightText: 2025 ark1368
-//
-// SPDX-License-Identifier: MPL-2.0
-
 using System.Numerics;
 using Content.Shared._RMC14.Weapons.Ranged.Prediction;
 using Content.Shared.Administration.Logs;
@@ -42,7 +13,7 @@ using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Interaction;
 using Content.Shared.Inventory;
 using Content.Shared.Mobs.Components;
-using Robust.Shared.Player;
+using Content.Shared.Movement.Events; // Mono
 using Content.Shared.Throwing;
 using Content.Shared.Weapons.Ranged.Components;
 using Content.Shared.Weapons.Ranged.Systems;
@@ -110,6 +81,9 @@ public abstract partial class SharedProjectileSystem : EntitySystem
         SubscribeLocalEvent<ProjectileGridPhaseComponent, ComponentStartup>(OnProjectileGridPhaseStartup);
         // Subscribe to ensure MetaDataComponent on projectile entities for networking
         SubscribeLocalEvent<ProjectileComponent, ComponentStartup>(OnProjectileMetaStartup);
+
+        // Mono
+        SubscribeLocalEvent<ProjectileComponent, TileFrictionEvent>(OnTileFriction);
     }
 
     /// <summary>
@@ -151,13 +125,6 @@ public abstract partial class SharedProjectileSystem : EntitySystem
     public virtual DamageSpecifier? ProjectileCollide(Entity<ProjectileComponent, PhysicsComponent> projectile, EntityUid target, MapCoordinates? collisionCoordinates, bool predicted = false)
     {
         var (uid, component, ourBody) = projectile;
-        if (projectile.Comp1.DamagedEntity)
-        {
-            if (_net.IsServer && component.DeleteOnCollide)
-                QueueDel(uid);
-
-            return null;
-        }
 
         // it's here so this check is only done once before possible hit
         var attemptEv = new ProjectileReflectAttemptEvent(uid, component, false);
@@ -167,11 +134,19 @@ public abstract partial class SharedProjectileSystem : EntitySystem
             SetShooter(uid, component, target);
             return null;
         }
-
+        
         var ev = new ProjectileHitEvent(component.Damage, target, component.Shooter);
         RaiseLocalEvent(uid, ref ev);
         if (ev.Handled)
             return null;
+
+        if (projectile.Comp1.DamagedEntity)
+        {
+            if (_net.IsServer && component.DeleteOnCollide)
+                QueueDel(uid);
+
+            return null;
+        }
 
         var coordinates = collisionCoordinates != null
             ? _transform.ToCoordinates(collisionCoordinates.Value)
@@ -185,7 +160,8 @@ public abstract partial class SharedProjectileSystem : EntitySystem
                 ev.Damage,
                 component.IgnoreResistances,
                 origin: component.Shooter,
-                tool: uid) ?? new DamageSpecifier();
+                tool: uid,
+                armorPenetration: component.ArmorPenetration) ?? new DamageSpecifier();
         }
         else
         {
@@ -232,7 +208,6 @@ public abstract partial class SharedProjectileSystem : EntitySystem
 
         component.DamagedEntity = true;
         Dirty(uid, component);
-
         if (!predicted && component.DeleteOnCollide && (_net.IsServer || IsClientSide(uid)))
             QueueDel(uid);
         else if (_net.IsServer && component.DeleteOnCollide)
@@ -579,6 +554,12 @@ public abstract partial class SharedProjectileSystem : EntitySystem
     {
         if (TryComp<RequireProjectileTargetComponent>(args.OtherEntity, out var requireTarget) && requireTarget.IgnoreThrow && requireTarget.Active)
             args.Cancelled = true;
+    }
+
+    // Mono
+    private void OnTileFriction(Entity<ProjectileComponent> ent, ref TileFrictionEvent args)
+    {
+        args.Modifier = ent.Comp.LinearDampening;
     }
 
     public void SetShooter(EntityUid id, ProjectileComponent component, EntityUid shooterId)

@@ -1,19 +1,3 @@
-// SPDX-FileCopyrightText: 2022 Leon Friedrich
-// SPDX-FileCopyrightText: 2023 Errant
-// SPDX-FileCopyrightText: 2023 Scribbles0
-// SPDX-FileCopyrightText: 2023 TaralGit
-// SPDX-FileCopyrightText: 2023 TemporalOroboros
-// SPDX-FileCopyrightText: 2023 Volodius
-// SPDX-FileCopyrightText: 2023 and_a
-// SPDX-FileCopyrightText: 2024 BramvanZijp
-// SPDX-FileCopyrightText: 2024 Kara
-// SPDX-FileCopyrightText: 2024 Nemanja
-// SPDX-FileCopyrightText: 2024 Plykiya
-// SPDX-FileCopyrightText: 2024 metalgearsloth
-// SPDX-FileCopyrightText: 2025 Ilya246
-//
-// SPDX-License-Identifier: MPL-2.0
-
 using System.Diagnostics.CodeAnalysis;
 using Content.Shared.Containers.ItemSlots;
 using Content.Shared.Examine;
@@ -34,6 +18,7 @@ public abstract partial class SharedGunSystem
     {
         SubscribeLocalEvent<ChamberMagazineAmmoProviderComponent, ComponentStartup>(OnChamberStartup);
         SubscribeLocalEvent<ChamberMagazineAmmoProviderComponent, TakeAmmoEvent>(OnChamberMagazineTakeAmmo);
+        SubscribeLocalEvent<ChamberMagazineAmmoProviderComponent, CheckShootPrototypeEvent>(OnChamberMagazineCheckProto); // Mono
         SubscribeLocalEvent<ChamberMagazineAmmoProviderComponent, GetAmmoCountEvent>(OnChamberAmmoCount);
 
         /*
@@ -58,7 +43,7 @@ public abstract partial class SharedGunSystem
         // Appearance data doesn't get serialized and want to make sure this is correct on spawn (regardless of MapInit) so.
         if (component.BoltClosed != null)
         {
-           Appearance.SetData(uid, AmmoVisuals.BoltClosed, component.BoltClosed.Value);
+            Appearance.SetData(uid, AmmoVisuals.BoltClosed, component.BoltClosed.Value);
         }
     }
 
@@ -200,7 +185,7 @@ public abstract partial class SharedGunSystem
                     // The problem is client will dump the cartridge on the ground and the new server state
                     // won't correspond due to randomness so looks weird
                     // but we also need to always take it from the chamber or else ammocount won't be correct.
-                    TransformSystem.DetachParentToNull(chambered.Value, Transform(chambered.Value));
+                    TransformSystem.DetachEntity(chambered.Value, Transform(chambered.Value));
                 }
 
                 UpdateAmmoCount(uid);
@@ -218,6 +203,7 @@ public abstract partial class SharedGunSystem
         }
 
         component.BoltClosed = value;
+        RaiseLocalEvent(uid, new BoltStateChangedEvent(user ?? EntityUid.Invalid, value)); //Mono
         Dirty(uid, component);
     }
 
@@ -442,5 +428,21 @@ public abstract partial class SharedGunSystem
             chamberEnt = slot.ContainedEntity;
             args.Ammo.Add((chamberEnt.Value, EnsureShootable(chamberEnt.Value)));
         }
+    }
+
+    // Mono
+    private void OnChamberMagazineCheckProto(Entity<ChamberMagazineAmmoProviderComponent> ent, ref CheckShootPrototypeEvent args)
+    {
+        if (Containers.TryGetContainer(ent, ChamberSlot, out var container)
+            && container is ContainerSlot slot
+            && slot.ContainedEntity != null)
+        {
+            args.ShootPrototype = MetaData(slot.ContainedEntity.Value).EntityPrototype;
+            return;
+        }
+
+        var mag = GetMagazineEntity(ent);
+        if (mag != null)
+            RaiseLocalEvent(mag.Value, ref args);
     }
 }

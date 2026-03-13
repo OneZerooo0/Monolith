@@ -45,6 +45,7 @@
     - ClothingOuterEVASuitCargo
     - ClothingOuterEVASuitSalvage
     - ClothingBeltSalvageWebbing
+    - ArmorPlateSteel
     - Pickaxe
     - RadioHandheldNF
     - Floodlight
@@ -57,6 +58,8 @@
     - GlowstickYellow
     - OreBag
     - ConstructionBag # Mono
+    - MaterialBoxFlatpack # Mono
+    - OreBoxFlatpack # Mono
     - MiningDrill
     - WeaponProtoKineticAccelerator
     - ClothingNeckIFFNeutral

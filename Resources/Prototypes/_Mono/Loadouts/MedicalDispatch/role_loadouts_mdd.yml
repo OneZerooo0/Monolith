@@ -14,9 +14,13 @@
   - MdMedicEars
   - ContractorBoxSurvival
   - MdMedicPDA
+  - MercenaryFirearm
+  - MercenaryPistol
+  - MercenaryMag
   - ContractorWallet
   - ContractorCartridge
   - ContractorImplanter
+  - ContractorUtility
   - ContractorEncryptionKey
   - ContractorFun
   - ContractorTrinkets

@@ -1,13 +1,3 @@
-# SPDX-FileCopyrightText: 2024 Alice "Arimah" Heurlin
-# SPDX-FileCopyrightText: 2024 AndresE55
-# SPDX-FileCopyrightText: 2024 Dvir
-# SPDX-FileCopyrightText: 2024 Salvantrix
-# SPDX-FileCopyrightText: 2025 Daniel Lenrd
-# SPDX-FileCopyrightText: 2025 LukeZurg22
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 - type: entity
   parent: TelecomServer
   id: NFTelecomServerFilled
@@ -23,27 +13,28 @@
       - EncryptionKeyScience
       - EncryptionKeySecurity
       - EncryptionKeyService
-      - EncryptionKeyCommand
-      - EncryptionKeyNfsd
+#      - EncryptionKeyCommand #Mono
+#      - EncryptionKeyNfsd #Mono
       - EncryptionKeyTraffic
 
 - type: entity
   parent: TelecomServer
   id: TelecomServerFilledNfsd
-  suffix: Ship, TSFMC
+  suffix: TSFMC #Mono: Ship suffix out
   components:
   - type: ContainerFill
     containers:
       key_slots:
-      - EncryptionKeyCommon
-      - EncryptionKeyCargo
-      - EncryptionKeyEngineering
-      - EncryptionKeyMedical
-      - EncryptionKeyScience
-      - EncryptionKeySecurity
-      - EncryptionKeyService
+#      - EncryptionKeyCommon #Mono start
+#      - EncryptionKeyCargo
+#      - EncryptionKeyEngineering
+#      - EncryptionKeyMedical
+#      - EncryptionKeyScience
+#      - EncryptionKeySecurity
+#      - EncryptionKeyService #Mono end
+      - EncryptionKeyCommand #Mono
       - EncryptionKeyNfsd
-      - EncryptionKeyTraffic
+#      - EncryptionKeyTraffic #Mono
 
 - type: entity
   parent: TelecomServer
@@ -76,3 +67,4 @@
     containers:
       key_slots:
       - EncryptionKeyFreelance
+      - EncryptionKeyVanguardCommand

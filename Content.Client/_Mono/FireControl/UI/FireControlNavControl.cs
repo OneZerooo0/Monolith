@@ -1,11 +1,3 @@
-// SPDX-FileCopyrightText: 2025 Ark
-// SPDX-FileCopyrightText: 2025 Ilya246
-// SPDX-FileCopyrightText: 2025 Redrover1760
-// SPDX-FileCopyrightText: 2025 RikuTheKiller
-// SPDX-FileCopyrightText: 2025 ark1368
-//
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
 using System.Linq;
 using System.Numerics;
 using Content.Client.Shuttles.UI;
@@ -15,7 +7,6 @@ using Content.Shared.Shuttles.BUIStates;
 using Content.Shared.Shuttles.Components;
 using Content.Shared.Shuttles.Systems;
 using Content.Client._Mono.Radar;
-using Content.Shared._Mono.Detection;
 using Content.Shared._Mono.Radar;
 using Content.Shared._Crescent.ShipShields;
 using Robust.Shared.Physics.Collision.Shapes;
@@ -40,6 +31,8 @@ public sealed class FireControlNavControl : ShuttleNavControl
     private EntityUid? _activeConsole;
     private FireControllableEntry[]? _controllables;
     private HashSet<NetEntity> _selectedWeapons = new();
+
+    private readonly Dictionary<NetEntity, Color> _blipColors = new();
 
     // Add a limit to how often we update the cursor position to prevent network spam
     private float _lastCursorUpdateTime = 0f;
@@ -73,8 +66,6 @@ public sealed class FireControlNavControl : ShuttleNavControl
             return;
         }
 
-        UseCircleMaskShader(handle); // Mono
-
         base.Draw(handle);
 
         var mapPos = _transform.ToMapCoordinates(_coordinates.Value);
@@ -88,9 +79,9 @@ public sealed class FireControlNavControl : ShuttleNavControl
         Matrix3x2.Invert(worldToView, out var viewToWorld);
 
         var blips = _blips.GetCurrentBlips();
-        var colors = new Dictionary<NetEntity, Color>();
+        _blipColors.Clear();
         foreach (var blip in blips)
-            colors[blip.NetUid] = blip.Color;
+            _blipColors[blip.NetUid] = blip.Config.Color;
 
         if (_controllables != null)
         {
@@ -111,13 +102,11 @@ public sealed class FireControlNavControl : ShuttleNavControl
 
                     var results = _physics.IntersectRay(xform.MapID, ray, direction.Length(), ignoredEnt: _coordinates?.EntityId);
 
-                    if (!results.Any() && colors.TryGetValue(controllable.NetEntity, out var color))
+                    if (!results.Any() && _blipColors.TryGetValue(controllable.NetEntity, out var color))
                         handle.DrawLine(Vector2.Transform(worldPos, worldToView), cursorViewPos, color.WithAlpha(0.3f));
                 }
             }
         }
-
-        ClearShader(handle);
     }
 
     public void UpdateControllables(EntityUid console, FireControllableEntry[] controllables)

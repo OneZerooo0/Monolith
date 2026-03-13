@@ -19,10 +19,10 @@
       color: red
   - type: RandomSpawner
     prototypes:
-    - Contribcoin
-    - Ideascoin
+    - BitcoinContribcoin
+    - BitcoinIdeascoin
     chance: 0.75
     offset: 0.0
     rarePrototypes:
-    - Goidacoin
+    - BitcoinGoidacoin
     rareChance: 0.1

@@ -1,8 +1,3 @@
-# SPDX-FileCopyrightText: 2025 Onezero0
-#
-# SPDX-License-Identifier: MPL-2.0
-
-
 - type: entity
   id: BaseDataFarmIndestructible
   parent: BaseMachineIndestructible
@@ -29,15 +24,6 @@
           False: {visible: false}
   - type: ApcPowerReceiver
     powerLoad: 40000
-  - type: ContainerContainer
-    machine_board: !type:Container
-      showEnts: False
-      occludes: True
-      ents: [ ]
-      machine_parts: !type:Container
-        showEnts: False
-        occludes: True
-        ents: [ ]
   - type: AmbientSound
     volume: -9
     range: 5
@@ -79,10 +65,9 @@
   - type: Anchorable
 
 - type: entity
-  id: DatafarmResearchFaction
-  parent: BaseDataFarmIndestructible
-  name: bolted data farm (Research)
-  description: A power-hungry server dedicated towards scraping data from... somewhere. This one generates research points at a rate of 35 per second. It seems to be bolted to the floor.
+  id: BaseDataFarmResearch
+  parent: BaseDataFarm
+  abstract: true
   components:
   - type: Sprite
     sprite: _Mono/Structures/Machines/neapolitan_server.rsi
@@ -96,9 +81,6 @@
     - state: stripe2
       color: "#5b0093"
   - type: ResearchClient
-  - type: ResearchPointSource
-    pointspersecond: 35
-    active: true
   - type: ActivatableUI
     key: enum.ResearchClientUiKey.Key
   - type: ActivatableUIRequiresPower
@@ -113,50 +95,37 @@
   - type: GuideHelp
     guides:
     - Science
+  - type: ResearchPointSource
+    pointsPerSecond: 10
+    active: true
+
+- type: entity
+  id: DatafarmResearchFaction
+  parent: BaseDataFarmIndestructible
+  name: bolted data farm (Research)
+  description: A power-hungry server dedicated towards scraping data from... somewhere. This one generates research points at a rate of 35 per second. It seems to be bolted to the floor.
+  components:
+  - type: ResearchPointSource
+    pointsPerSecond: 35
+    active: true
   - type: ApcPowerReceiver
     powerLoad: 10000
 
 - type: entity
   id: DatafarmResearch
-  parent: BaseDataFarm
+  parent: [BaseDataFarm, ConstructibleMachine]
   name: data farm (Research)
   description: A power-hungry server dedicated towards scraping data from... somewhere. This one generates research points at a rate of 10 per second.
   components:
-  - type: Sprite
-    sprite: _Mono/Structures/Machines/neapolitan_server.rsi
-    layers:
-    - state: icon
-    - state: unlit
-      shader: unshaded
-      map: ["enum.PowerDeviceVisualLayers.Powered"]
-    - state: stripe
-      color: "#b3aa79"
-    - state: stripe2
-      color: "#5b0093"
-  - type: ResearchClient
-  - type: ResearchPointSource
-    pointspersecond: 10
-    active: true
-  - type: ActivatableUI
-    key: enum.ResearchClientUiKey.Key
-  - type: ActivatableUIRequiresPower
-  - type: UserInterface
-    interfaces:
-      enum.ResearchClientUiKey.Key:
-        type: ResearchClientBoundUserInterface
   - type: PointLight
     radius: 1.1
     energy: 1.1
-    color: "#5b0093"
-  - type: GuideHelp
-    guides:
-    - Science
   - type: Machine
     board: DataFarmResearchCircuitboard
 
 - type: entity
   id: DatafarmCrypto
-  parent: BaseDataFarm
+  parent: [BaseDataFarm, ConstructibleMachine]
   name: data farm (Crypto)
   description: A power-hungry server dedicated towards scraping data from... somewhere. This one generates valuable but random cryptocurrency at a rate of one every 10 minutes.
   components:
@@ -177,7 +146,8 @@
     color: "#009360"
   - type: ItemMiner
     proto: SpawnLootDatafarmBitcoin
-    interval: 600
+    interval: 6
+    spawnChance: 0.01 # highly random like real cryptomining
     minedSound: /Audio/Effects/Cargo/ping.ogg
     needApcPower: true
   - type: Machine

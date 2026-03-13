@@ -1,7 +1,3 @@
-# SPDX-FileCopyrightText: 2025 Onezero0
-#
-# SPDX-License-Identifier: MPL-2.0
-
 - type: entity
   parent: BaseItem
   id: BaseBitcoin
@@ -29,12 +25,16 @@
     layers:
     - state: icon
     - state: fluffcoin
-  - type: StaticPrice
-    price: 10000
+  - type: DriftingPrice
+    minInitial: 8000
+    maxInitial: 12000
+    basePrice: 10000
+    stability: 0.4
+    driftRate: 0.025
 
 - type: entity
   parent: BaseBitcoin
-  id: Contribcoin
+  id: BitcoinContribcoin
   name: Contribcoin™
   description: A weirdly valuable bitcoin composed of many generic definitions, raw data and operating presets. Slightly volatile.
   components:
@@ -46,7 +46,7 @@
 
 - type: entity
   parent: BaseBitcoin
-  id: Ideascoin
+  id: BitcoinIdeascoin
   name: Ideascoin™
   description: A strangely valuable bitcoin composed of raw conceptual data of a multitude of completely hypothetical things. Moderately volatile.
   components:
@@ -55,12 +55,16 @@
     layers:
     - state: icon
     - state: kyrescoin
-  - type: StaticPrice
-    price: 15000
+  - type: DriftingPrice
+    minInitial: 12000
+    maxInitial: 18000
+    basePrice: 15000
+    stability: 0.2
+    driftRate: 0.05
 
 - type: entity
   parent: BaseBitcoin
-  id: Goidacoin
+  id: BitcoinGoidacoin
   name: Goidacoin™
   description: An absurdly valuable and rare bitcoin, made up of tons of high(?)-quality code and generic systems. Highly volatile.
   components:
@@ -69,5 +73,9 @@
     layers:
     - state: icon
     - state: spiritcoin
-  - type: StaticPrice
-    price: 20000
+  - type: DriftingPrice
+    minInitial: 10000
+    maxInitial: 30000
+    basePrice: 20000
+    stability: 0.1
+    driftRate: 0.1
