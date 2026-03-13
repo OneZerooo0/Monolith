@@ -6,7 +6,7 @@ using Content.Shared._NF.Shipyard.Components;
 using Content.Shared.Examine;
 using Robust.Shared.Timing;
 
-namespace Content.Shared._Mono.Shipyard.VoucherInfoSystem;
+namespace Content.Shared._Mono.Shipyard;
 
 public class VoucherInfoSystem
 {
@@ -17,7 +17,7 @@ public class VoucherInfoSystem
 
     protected virtual void InitializeVoucher()
     {
-        SubscribeLocalEvent<MagazineAmmoProviderComponent, ExaminedEvent>(OnVoucherExamine);
+        SubscribeLocalEvent<ShipyardVoucherComponent, ExaminedEvent>(OnVoucherExamine);
     }
     private void OnVoucherExamine(EntityUid uid, ShipyardVoucherComponent component, ExaminedEvent args)
     {
@@ -31,7 +31,7 @@ public class VoucherInfoSystem
 
         var remainingTime = component.NextBuyAt - _timing.CurTime;
 
-        if (remainingTime <= TimeSpan.FromSeconds(0))
+        if (remainingTime >= TimeSpan.FromSeconds(0))
         {
             args.PushMarkup(Loc.GetString("voucher-current-cooldown", ("color", CooldownExamineColor), ("cooldown", Math.Round(remainingTime.TotalSeconds))));
         }
