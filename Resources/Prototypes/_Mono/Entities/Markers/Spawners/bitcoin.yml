@@ -19,10 +19,10 @@
       color: red
   - type: RandomSpawner
     prototypes:
-    - Fluffcoin
-    - Kyrescoin
+    - Contribcoin
+    - Ideascoin
     chance: 0.75
     offset: 0.0
     rarePrototypes:
-    - Spiritcoin
+    - Goidacoin
     rareChance: 0.1
