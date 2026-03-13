@@ -1,14 +1,13 @@
-using Content.Server._NF.Shipyard.Systems;
-using Content.Server._NF.Shipyard.Components;
-using Content.Shared._NF.Shipyard.Systems;
+using Content.Server._NF.Shipyard;
+//using Content.Server._NF.Shipyard.Components;
+using Content.Shared._NF.Shipyard;
 using Content.Shared._Mono.Ships.Components;
-using Content.Shared._NF.Shipyard.Components;
 using Content.Shared.Examine;
 using Robust.Shared.Timing;
 
 namespace Content.Shared._Mono.Shipyard;
 
-public class VoucherInfoSystem
+public class VoucherInfoSystem : EntitySystem
 {
     [Dependency] private readonly IGameTiming _timing = default!;
 
