@@ -80,3 +80,17 @@
       sprite: _Mono/Structures/Decoration/Greeble/64x64.rsi
       layers:
         - state: radarpanel1
+
+- type: entity
+  name: radar panel
+  description: Like antennas to hell.
+  id: Radarpanel2
+  parent: BaseGreeble
+  placement:
+    mode: SnapgridCenter
+  components:
+    - type: Sprite
+      offset: 0.2,0
+      sprite: _Mono/Structures/Decoration/Greeble/64x64.rsi
+      layers:
+        - state: radarpanel2
