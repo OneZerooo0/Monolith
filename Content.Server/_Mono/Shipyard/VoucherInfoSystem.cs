@@ -1,21 +1,19 @@
-using Content.Server._NF.Shipyard;
-//using Content.Server._NF.Shipyard.Components;
 using Content.Shared._NF.Shipyard;
+using Content.Shared._NF.Shipyard.Components;
+using Content.Server._NF.Shipyard.Components;
 using Content.Shared._Mono.Ships.Components;
 using Content.Shared.Examine;
 using Robust.Shared.Timing;
 
-namespace Content.Shared._Mono.Shipyard;
+namespace Content.Server._Mono.Shipyard;
 
 public class VoucherInfoSystem : EntitySystem
 {
     [Dependency] private readonly IGameTiming _timing = default!;
-
-    protected const string RedemptionsExamineColor = "yellow";
-    protected const string CooldownExamineColor = "yellow";
-
     protected virtual void InitializeVoucher()
     {
+        base.Initialize();
+
         SubscribeLocalEvent<ShipyardVoucherComponent, ExaminedEvent>(OnVoucherExamine);
     }
     private void OnVoucherExamine(EntityUid uid, ShipyardVoucherComponent component, ExaminedEvent args)
@@ -25,14 +23,14 @@ public class VoucherInfoSystem : EntitySystem
 
         if (component.DestroyOnEmpty != true)
         {
-            args.PushMarkup(Loc.GetString("voucher-current-redemptions", ("color", RedemptionsExamineColor), ("count", component.RedemptionsLeft)));
+            args.PushMarkup(Loc.GetString("voucher-current-redemptions", ("count", component.RedemptionsLeft)));
         }
 
         var remainingTime = component.NextBuyAt - _timing.CurTime;
 
         if (remainingTime >= TimeSpan.FromSeconds(0))
         {
-            args.PushMarkup(Loc.GetString("voucher-current-cooldown", ("color", CooldownExamineColor), ("cooldown", Math.Round(remainingTime.TotalSeconds))));
+            args.PushMarkup(Loc.GetString("voucher-current-cooldown", ("cooldown", Math.Round(remainingTime.TotalSeconds))));
         }
     }
 }
