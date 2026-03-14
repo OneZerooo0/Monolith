@@ -18,7 +18,7 @@
 - type: entity
   name: Antenna
   description: Like antennas to hell.
-  id: Antenna1
+  id: GreebleAntenna1
   parent: BaseGreeble
   placement:
     mode: SnapgridCenter
@@ -37,7 +37,7 @@
 - type: entity
   name: Antenna
   description: Like antennas to hell.
-  id: Antenna2
+  id: GreebleAntenna2
   parent: BaseGreeble
   placement:
     mode: SnapgridCenter
@@ -56,7 +56,7 @@
 - type: entity
   name: ELINT
   description: Like antennas to hell.
-  id: Elint1
+  id: GreebleElint1
   parent: BaseGreeble
   placement:
     mode: SnapgridCenter
@@ -70,7 +70,7 @@
 - type: entity
   name: radar panel
   description: Like antennas to hell.
-  id: Radarpanel1
+  id: GreebleRadarpanel1
   parent: BaseGreeble
   placement:
     mode: SnapgridCenter
@@ -84,7 +84,7 @@
 - type: entity
   name: radar panel
   description: Like antennas to hell.
-  id: Radarpanel2
+  id: GreebleRadarpanel2
   parent: BaseGreeble
   placement:
     mode: SnapgridCenter
