@@ -1,0 +1,54 @@
+- type: entity
+  id: BaseGreeble
+  abstract: true
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Transform
+    anchored: true
+  - type: Clickable
+  - type: Animateable
+  - type: Tag
+    tags:
+    - Structure
+  - type: Repairable #Mono: Nanite applicator
+    qualities:
+    - Applicating
+
+- type: entity
+  name: Antenna
+  description: Like antennas to hell.
+  id: Antenna1
+  parent: BaseGreeble
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    offset: 0,2
+    sprite: _Mono/Structures/Decoration/Greeble/antennae.rsi
+    layers:
+    - state: antenna1
+    - state: antenna1_unshaded
+      shader: unshaded
+  - type: GridEdgeMarker
+    begin: 0, -0.1
+    end: 0, 1.5
+
+- type: entity
+  name: Antenna
+  description: Like antennas to hell.
+  id: Antenna2
+  parent: BaseGreeble
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    offset: 0,2
+    sprite: _Mono/Structures/Decoration/Greeble/antennae.rsi
+    layers:
+    - state: antenna2
+    - state: antenna2_unshaded
+      shader: unshaded
+  - type: GridEdgeMarker
+    begin: 0, -0.1
+    end: 0, 1.2
