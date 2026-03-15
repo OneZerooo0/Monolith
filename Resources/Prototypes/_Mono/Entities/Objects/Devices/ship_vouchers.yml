@@ -176,7 +176,6 @@
     destroyOnEmpty: true
     consoleType: Security
     companyName: TSF
-    cooldown: 50
     vessels:
     - Flyssa
   - type: StaticPrice

@@ -53,11 +53,11 @@ public sealed partial class ShuttleDeedSystem : EntitySystem
 
 			if (remainingTime >= TimeSpan.FromSeconds(60))
         	{
-            	args.PushMarkup(Loc.GetString("voucher-current-cooldown", ("cooldown", remainingTime.TotalMinutes)));
+            	args.PushMarkup(Loc.GetString("voucher-current-cooldown-minutes", ("cooldown", remainingTime.TotalMinutes)));
         	}
 			else if (remainingTime >= TimeSpan.FromSeconds(0))
         	{
-            	args.PushMarkup(Loc.GetString("voucher-current-cooldown", ("cooldown", remainingTime.TotalSeconds)));
+            	args.PushMarkup(Loc.GetString("voucher-current-cooldown-seconds", ("cooldown", remainingTime.TotalSeconds)));
         	}
 		}
     }
