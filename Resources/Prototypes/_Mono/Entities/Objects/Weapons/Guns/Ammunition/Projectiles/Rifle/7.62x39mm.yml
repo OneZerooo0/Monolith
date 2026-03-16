@@ -1,3 +1,5 @@
+# Intermediate rifle ammo
+
 - type: entity
   id: Bullet762x39mmFMJ
   name: bullet (7.62x39mm FMJ)
