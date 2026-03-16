@@ -103,7 +103,7 @@
   - type: Stack
     count: 50
 
-# Plastitanium - here it is sir. Atmos gas only.
+# Plastitanium
 
 - type: material
   id: Plastitanium
@@ -112,14 +112,14 @@
   unit: materials-unit-sheet
   icon: { sprite: /Textures/_Mono/Objects/Materials/plastitanium.rsi, state: plastitanium }
   color: "#5c5c5c"
-  price: 4 # 400/sheet
+  price: 6 # 600/sheet
 
 - type: entity
   parent: MaterialBase
   id: SheetPlastitanium
   name: plastitanium
-  description: A commonly produced high-strength alloy. Even if its rare here, its extremely abundant in core sectors.
-  suffix: Full
+  description: An advanced, high-strength alloy. Even if it's extremely abundant in core sectors, it is hard to find in the Colossus region.
+  suffix: 15
   components:
   - type: Sprite
     sprite: _Mono/Objects/Materials/plastitanium.rsi
@@ -135,7 +135,7 @@
     heldPrefix: plastitanium
   - type: Stack
     stackType: Plastitanium
-    count: 100
+    count: 15
     baseLayer: base
     layerStates:
     - plastitanium
