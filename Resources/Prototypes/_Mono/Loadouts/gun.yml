@@ -568,11 +568,11 @@
     - WeaponRifleMR3C
 
 - type: loadout #Bandit Ammo
-  id: Faction8x65mmAmmoLoadout
+  id: Faction762x51mmFMJAmmoLoadout
   price: 0
   storage:
     back:
-    - BoxMagazine8x65mmFMJ
+    - BoxMagazine762x51mmFMJ
 
 - type: loadout #AKM
   id: FactionAkmLoadout

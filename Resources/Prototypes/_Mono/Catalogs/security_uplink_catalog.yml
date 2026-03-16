@@ -157,10 +157,10 @@
 #      - SecurityUplink
 
 - type: listing
-  id: UplinkSecurityMagazine8x65mm
-  name:  uplink-security-8x65mm-magazine-name
-  description: uplink-security-8x65mm-magazine-desc
-  productEntity: Magazine8x65mmSKR
+  id: UplinkSecurityMagazine762x51mmFMJ
+  name:  uplink-security-762x51mmFMJ-magazine-name
+  description: uplink-security-762x51mmFMJ-magazine-desc
+  productEntity: Magazine762x51mmFMJ
   cost:
     FederationMilitaryCredit: 5
   categories:
@@ -173,9 +173,9 @@
 
 - type: listing
   id: UplinkSecurityBoxSKR
-  name:  uplink-security-8x65mm-box-name
-  description: uplink-security-8x65mm-box-desc
-  productEntity: AmmoBox8x65mmSKR
+  name:  uplink-security-762x51mmFMJ-box-name
+  description: uplink-security-762x51mmFMJ-box-desc
+  productEntity: AmmoBox762x51mmFMJ
   cost:
     FederationMilitaryCredit: 12
   categories:

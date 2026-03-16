@@ -71,12 +71,6 @@
   - AmmoBox762x54mmRUranium
   - AmmoBox762x54mmRHP
   - AmmoBox762x54mmRRIP
-  - Magazine8x65mmSKR
-  - Magazine8x65mmSKRPractice
-  - Magazine8x65mmSKRIncendiary
-  - AmmoBox8x65mmSKR
-  - AmmoBox8x65mmSKRIncendiary
-  - AmmoBox8x65mmSKRPractice
   - AmmoBox145x114mm
   - AmmoBox145x114mmBig
   - Magazine556x45mmFMJ
@@ -276,7 +270,6 @@
   - Magazine12_gaugeEmpty
   - Magazine762x51mmEmpty
   - Magazine762x54mmREmpty
-  - Magazine8x65mmEmpty
   - Magazine556x45mmEmpty
   - SpeedLoader556x45mmEmpty
   - Magazine762x39mmEmpty
@@ -300,8 +293,6 @@
   - AmmoBox762x51mmPractice
   - Magazine762x54mmRPractice
   - AmmoBox762x54mmRPractice
-  - Magazine8x65mmSKRPractice
-  - AmmoBox8x65mmSKRPractice
   - Magazine556x45mmPractice
   - SpeedLoader556x45mmPractice
   - AmmoBox556x45mmPractice
@@ -330,8 +321,6 @@
   - AmmoBox762x51mmIncendiary
   - Magazine762x54mmRIncendiary
   - AmmoBox762x54mmRIncendiary
-  - Magazine8x65mmSKRIncendiary
-  - AmmoBox8x65mmSKRIncendiary
   - Magazine556x45mmIncendiary
   - SpeedLoader556x45mmIncendiary
   - AmmoBox556x45mmIncendiary
@@ -541,10 +530,6 @@
   - MagazineAsmgtUniversal762x39mm
   - MagazineAsmgtUniversal556x45mm
 
-#SKR
-
-  - Magazine8x65mmSKR
-
 #Practice recipes
 
   - AmmoBox23x75mmPractice
@@ -554,8 +539,6 @@
   - AmmoBox762x51mmPractice
   - Magazine762x54mmRPractice
   - AmmoBox762x54mmRPractice
-  - Magazine8x65mmSKRPractice
-  - AmmoBox8x65mmSKRPractice
   - Magazine556x45mmPractice
   - SpeedLoader556x45mmPractice
   - AmmoBox556x45mmPractice
@@ -580,7 +563,6 @@
   - Magazine12_gaugeEmpty
   - Magazine762x51mmEmpty
   - Magazine762x54mmREmpty
-  - Magazine8x65mmEmpty
   - Magazine556x45mmEmpty
   - SpeedLoader556x45mmEmpty
   - Magazine762x39mmEmpty
@@ -688,8 +670,6 @@
   - AmmoBox762x51mmIncendiary
   - Magazine762x54mmRIncendiary
   - AmmoBox762x54mmRIncendiary
-  - Magazine8x65mmSKRIncendiary
-  - AmmoBox8x65mmSKRIncendiary
   - Magazine556x45mmIncendiary
   - SpeedLoader556x45mmIncendiary
   - AmmoBox556x45mmIncendiary
@@ -790,6 +770,3 @@
   - AmmoBox45_magnumBigFMJ
   - AmmoBox556x45mmBigFMJ
   - AmmoBox57x28mmBigFMJ
-
-#8x65 SKR Ammo Box
-  - AmmoBox8x65mmSKR

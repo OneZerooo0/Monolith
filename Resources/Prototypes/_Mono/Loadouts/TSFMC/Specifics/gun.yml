@@ -34,7 +34,6 @@
   - FactionAcpSmgEmpAmmoLoadout #Drozd EMP
   - Faction762x51mmAmmoLoadout #Vulcan
   - FactionRechargerLoadout #Energy
-  # - Faction8x65mmAmmoLoadout #Bandit
   - FactionAcpPistolAmmoLoadout #MK58
   fallbacks:
   - Faction556x45mmAmmoLoadout

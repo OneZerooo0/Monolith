@@ -119,12 +119,12 @@
     - BluespaceLifelineImplanter
     - PinpointerUniversal
     belt:
-    - Magazine8x65mmSKR
-    - Magazine8x65mmSKR
-    - Magazine8x65mmSKR
-    - Magazine8x65mmSKR
-    - AmmoBox8x65mmSKR
-    - AmmoBox8x65mmSKRIncendiary
+    - Magazine762x51mmFMJ
+    - Magazine762x51mmFMJ
+    - Magazine762x51mmFMJ
+    - Magazine762x51mmFMJ
+    - AmmoBox762x51mmFMJ
+    - AmmoBox762x51mmIncendiary
     - MotionDetectorBorg
     - HandHeldMassScannerBorg
 

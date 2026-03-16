@@ -45807,7 +45807,7 @@ entities:
     - type: Transform
       pos: 3.5,-33.5
       parent: 1
-- proto: Magazine8x65mmSKR
+- proto: Magazine762x51mmFMJ
   entities:
   - uid: 6956
     components:
