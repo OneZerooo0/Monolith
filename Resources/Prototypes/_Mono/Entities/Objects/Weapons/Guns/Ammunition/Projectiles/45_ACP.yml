@@ -7,9 +7,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 20
-        Structural: 20
-    armorPenetration: 0.2
+        Piercing: 16
+    armorPenetration: 0.1
 
 - type: entity
   id: Bullet45_ACPPractice
@@ -42,8 +41,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 8
-        Heat: 7
+        Piercing: 7
+        Heat: 6
     armorPenetration: -0.1
 
 - type: entity
@@ -55,10 +54,9 @@
   - type: Projectile
     damage:
       types:
-        Radiation: 9
-        Piercing: 15
-        Structural: 20
-    armorPenetration: -0.075
+        Radiation: 4
+        Piercing: 9
+    armorPenetration: 0.1
 
 # Upstream
 - type: entity
