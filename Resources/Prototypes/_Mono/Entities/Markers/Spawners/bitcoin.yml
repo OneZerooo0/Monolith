@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: 2025 Onezero0
-#
-# SPDX-License-Identifier: MPL-2.0
-
-
-
 - type: entity
   name: random bitcoin
   id: SpawnLootDatafarmBitcoin
