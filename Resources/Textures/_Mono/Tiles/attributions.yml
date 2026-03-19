@@ -6,7 +6,7 @@
   copyright: "Taken from Beestation-Hornet"
   source: "https://github.com/BeeStation/BeeStation-Hornet/tree/master/icons/turf"
 
-- files: [ "catwalk-tile-horizontal.png" ]
+- files: [ "catwalk-tile-horizontal.png", "catwalk-tile-vertical.png" ]
   license: "CC-BY-SA-3.0"
   copyright: "Made by Onezero0"
-  source: "file location"
+  source: "https://github.com/Monolith-Station/Monolith/tree/main/Resources/Textures/_Mono/Tiles"
