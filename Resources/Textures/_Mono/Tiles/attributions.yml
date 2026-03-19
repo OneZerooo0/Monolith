@@ -5,3 +5,8 @@
   license: "CC-BY-SA-3.0"
   copyright: "Taken from Beestation-Hornet"
   source: "https://github.com/BeeStation/BeeStation-Hornet/tree/master/icons/turf"
+
+- files: [ "catwalk-tile-horizontal.png" ]
+  license: "CC-BY-SA-3.0"
+  copyright: "Made by Onezero0"
+  source: "file location"
