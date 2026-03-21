@@ -10,17 +10,14 @@ research-technology-tsfmc-mopp-equipment = Chemical Protection Gear
 
 # T1 TSFMC
 research-technology-tsfmc-guns = Standard Ballistics Production
-research-technology-tsfmc-forensics = Forensics Analysis
-research-technology-tsfmc-pocket-crowbar = Compact Prying Technology
+research-technology-tsfmc-forensics = Forensics Analysis Devices
 research-technology-tsfmc-portable-recharger = Portable Recharger
-research-technology-tsfmc-nvd = Night Vision Devices
 research-technology-tsfmc-motion-detector = Biosignature IFF Technology
 research-technology-tsfmc-basic-module = TSFMC Basic Cyborg Module Developpment
 
 # T2 TSFMC
 research-technology-tsfmc-advanced-weapons = Advanced Portable Weapons Technology
 research-technology-tsfmc-nanofoam = Nanomaterial Growth
-research-technology-tsfmc-demag = System Reset Technology
 research-technology-tsfmc-eshield = Energy Shielding
 research-technology-tsfmc-advanced-meds = Reconstructive Technologies
 research-technology-tsfmc-polaris-voucher = Polaris Procurement LPC
