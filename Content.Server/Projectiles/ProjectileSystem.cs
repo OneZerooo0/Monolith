@@ -1,4 +1,5 @@
 using Content.Server.Destructible;
+using Content.Server.Weapons.Penetration;
 using Content.Shared.Damage;
 using Content.Shared.FixedPoint;
 using Content.Shared.Physics;

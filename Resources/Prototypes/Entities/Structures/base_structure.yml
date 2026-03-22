@@ -30,6 +30,8 @@
   - type: Repairable #Mono: Nanite applicator
     qualities:
     - Applicating
+  - type: Penetratable #Mono
+    PenetrateDamage: 200
 
 - type: entity
   # This means that it's not anchored on spawn.

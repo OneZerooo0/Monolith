@@ -27,12 +27,12 @@
     lifetime: 3.1 # ~2.4 km range
   - type: PointLight
     color: "#19AFFF"
-  - type: ExplodeOnTrigger
-  - type: Explosive
-    explosionType: Default
-    totalIntensity: 1500
-    intensitySlope: 40
-    maxIntensity: 200
+  #- type: ExplodeOnTrigger
+  #- type: Explosive
+  #  explosionType: Default
+  #  totalIntensity: 1500
+  #  intensitySlope: 40
+  #  maxIntensity: 200
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard

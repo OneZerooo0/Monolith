@@ -3,7 +3,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-namespace Content.Goobstation.Common.Weapons.Penetration;
+namespace Content.Server.Weapons.Penetration;
 
 /// <summary>
 /// This penetratable component determine how many "penetration health" projectile requires to penetrate object.
