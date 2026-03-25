@@ -425,7 +425,7 @@
       color: "#678AD9" # WD EDIT
     - type: ItemTogglePointLight
     - type: Reflect
-      reflectProb: 0.7 # Mono EDIT
+      reflectProb: 0.9 # Mono EDIT
       damageOnReflectModifier: 0.2 # Mono edit
       reflects:
         - Energy
