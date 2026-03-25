@@ -153,7 +153,7 @@
   materials:
     Steel: 4000
     Plasteel: 2000
-    Synthalloy: 1500
+    Plastitanium: 1500
     Silver: 500
 
 # TSF ICWS
@@ -169,7 +169,7 @@
   materials:
     Steel: 500
     Plasteel: 1500
-    Synthalloy: 2500
+    Plastitanium: 2500
     Silver: 250
 
 # TSF energy

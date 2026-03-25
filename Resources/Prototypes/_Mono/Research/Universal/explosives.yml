@@ -11,6 +11,8 @@
   - PrintableEmpGrenade
   - PrintableExplosiveGrenade
   - PrintableStickyBomb
+  - PrintableBombCollar
+  - PrintableBombCollarSealer
   technologyPrerequisites:
   - UniversalPlastitaniumCore
   position: 7, 6
