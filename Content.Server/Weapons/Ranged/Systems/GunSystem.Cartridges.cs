@@ -108,7 +108,14 @@ public sealed partial class GunSystem
         }
         else if (armorPenetrationSpec != 0)
         {
-            args.PushMarkup(Loc.GetString("cartridge-partial-ap",("percent", armorPenetrationSpec * 100)));
+            if (armorPenetrationSpec >= 0)
+            {
+                args.PushMarkup(Loc.GetString("cartridge-positive-ap",("percent", armorPenetrationSpec * 100)));
+            }
+            else if (armorPenetrationSpec <= 0)
+            {
+                args.PushMarkup(Loc.GetString("cartridge-negative-ap",("percent", armorPenetrationSpec * -100)));
+            }
         }
         // End Mono
     }
