@@ -14,4 +14,10 @@ public sealed partial class HitscanBasicDamageComponent : Component
     /// </summary>
     [DataField(required: true)]
     public DamageSpecifier Damage;
+
+    /// <summary>
+    /// Mono: % armor piercing the hitscan weapon has when hitting a target.
+    /// </summary>
+    [DataField]
+    public float ArmorPenetration;
 }
