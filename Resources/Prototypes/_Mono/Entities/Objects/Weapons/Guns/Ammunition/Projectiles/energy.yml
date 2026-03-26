@@ -36,7 +36,7 @@
 
 # actual hitscans
 
-# 400Phz
+# 400Thz
 
 - type: entity
   id: Hitscan400Thz # Used as a parent for the cartridge's ammo capabilities, not actually fired
@@ -94,7 +94,7 @@
   - type: HitscanBasicDamage
     damage:
       types:
-        Radiation: 40
+        Radiation: 45
         Heat: 15
   - type: HitscanBasicVisuals
     muzzleFlash:

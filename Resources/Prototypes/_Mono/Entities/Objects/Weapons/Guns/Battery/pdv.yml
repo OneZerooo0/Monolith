@@ -17,10 +17,8 @@
     maxAngle: -14
   - type: Gun
     minAngle: 0
-    maxAngle: 5
-    angleIncrease: 27
-    angleDecay: 16
-    fireRate: 0.7
+    maxAngle: 0
+    fireRate: 1
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
