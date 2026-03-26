@@ -161,7 +161,7 @@
     - Back
     - suitStorage
   - type: Gun
-    projectileSpeed: 15
+    projectileSpeed: 30
     fireRate: 1
     selectedMode: SemiAuto
     availableModes:

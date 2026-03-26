@@ -175,7 +175,6 @@
   - type: GunSpreadModifier
     spread: 0.4
   - type: BallisticAmmoProvider
-    autoCycle: false
     whitelist:
       tags:
       - ShellShotgun23x75mmBuckshot
