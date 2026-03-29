@@ -1,0 +1,56 @@
+<Document>
+# TSFMC
+
+  The [color=cyan]Trans-Solarian Federation Marine Corps[/color] detachment is one of the primary actors in the Colossus Sector.
+  These marines, supposedly here to "keep the peace", are heavily-armed and wield advanced weapons technology. Their domination is only hindered by the threats posed by the [color=lightpurple]Monolith's[/color] anomalies.
+  While powerful, the main forces of the TSFMC are seperated, blockaded by the [color=lightpurple]interference[/color] around the Colossus sector, and are thus liable to being picked off by opponents.
+  As such, TSFMC marines, despite their futuristic gadgets, have been forced into a defensive position. Their gear reflects this, with heavier weapons and durable equipment.
+
+In-sector, they are primarily in conflict with the resident [color=orange]Phaethon Dynasty[/color], a local developing empire much more used to the anomalies and action of the Colossus sector, though during each emission period they may make more enemies.
+
+  Their objectives in the sector, as briefed by their High Command before dropping into the Monolith radius, are to:
+
+  > Confiscate and study Corporate-war era technology
+  > Eliminate opposition and establish control over the sector
+
+  After dropping in, however, the actual task marines face is clear: Survival.
+  To meet this goal, federation military personnel follow the orders of their higher officers, which usually involves collecting resources from debris and detritus to strengthen their local military, fending off anomalous threats, and studying any relevant technology.
+  While this might not be what High Command has in mind, they aren't exactly able to reach you or know what you are doing in-sector - and neither are the outer sectors. Remember, the Colossus sector is a bloody place, and no doubt will some of that be shed by your hand.
+
+## Personnel and Ranking
+[color=cyan]The TSF Marine Corps division[/color]'s staff is made up, in order of authority, by the [color=gold]Colonel[/color], the
+
+  <Box>
+    <GuideEntityEmbed Entity="ToyFigurineSecurity" Caption="Secoff"/>
+    <GuideEntityEmbed Entity="ToyFigurineDetective" Caption="Detective"/>
+    <GuideEntityEmbed Entity="ToyFigurineWarden" Caption="Warden"/>
+    <GuideEntityEmbed Entity="ToyFigurineHeadOfSecurity" Caption="HoS"/>
+  </Box>
+
+## Gear
+First we have non-lethals a step above simply telling someone to cooperate with instructions. Both the stunbaton and disabler are capable of limiting the movement of an assailant, whereas handcuffs can be applied to deny a criminal free movement and access to their hands.
+  <Box>
+    <GuideEntityEmbed Entity="Stunbaton"/>
+    <GuideEntityEmbed Entity="Handcuffs"/>
+   <GuideEntityEmbed Entity="WeaponDisabler"/>
+  </Box>
+
+## Flashes
+[color=#a4885c]Flashes[/color] are an effective tool for dispersing crowds and apprehending particularly evasive targets, with a large area of effect blinding all those without protection.
+It is worth noting that flashes can be both used in a large area ([color=yellow]Z[/color] hotkey) and if you attack somebody with it while [color=red]harm mode[/color] is active. Important to note that localized flashes last [color=yellow]2.5[/color] times as long as large area ones.
+[color=#cb0000]Security[/color] and [color=#a4885c]some[/color] other members of staff have eye protection from flashbangs and flashes.
+  <Box>
+    <GuideEntityEmbed Entity="Flash"/>
+    <GuideEntityEmbed Entity="ClothingEyesGlassesSecurity"/>
+    <GuideEntityEmbed Entity="GrenadeFlashBang"/>
+  </Box>
+
+## Lethals
+Should the situation dictate, [color=#cb0000]Security[/color] have access to laser rifles, shotguns, handguns and automatic rifles able to put down substancial fire against any who would stand against the station.
+  <Box>
+    <GuideEntityEmbed Entity="WeaponLaserCarbine"/>
+    <GuideEntityEmbed Entity="WeaponShotgunKammerer"/>
+    <GuideEntityEmbed Entity="WeaponPistolMk58"/>
+    <GuideEntityEmbed Entity="WeaponRifleLecter"/>
+  </Box>
+</Document>
