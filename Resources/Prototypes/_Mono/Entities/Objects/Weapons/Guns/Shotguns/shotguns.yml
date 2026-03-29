@@ -168,7 +168,7 @@
   - type: Gun
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/bigshotgun_fire.ogg
-    fireRate: 0.8
+    fireRate: 1.2
     selectedMode: Semiauto
     availableModes:
     - SemiAuto
@@ -187,8 +187,8 @@
     vendPrice: 20000
   - type: SpeedModifiedOnWield
     walkModifier: 0.8
-    sprintModifier: 0.8
+    sprintModifier: 0.95
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
-    maxOffset: 6
-    pvsIncrease: 2
+    maxOffset: 3
+    pvsIncrease: 1
