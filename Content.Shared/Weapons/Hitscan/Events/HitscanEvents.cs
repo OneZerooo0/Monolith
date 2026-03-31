@@ -93,4 +93,9 @@ public record struct HitscanDamageDealtEvent
     /// The amount of damage that the target was dealt.
     /// </summary>
     public DamageSpecifier DamageDealt;
+
+    /// <summary>
+    /// How much the damage is affected by armor.
+    /// </summary>
+    public float ArmorPenetration;
 }

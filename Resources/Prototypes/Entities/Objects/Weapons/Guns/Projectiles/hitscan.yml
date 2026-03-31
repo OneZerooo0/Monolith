@@ -54,6 +54,7 @@
     damage:
       types:
         Heat: 18 # Mono
+    armorPenetration: 1
 
 - type: entity
   parent: BasicHitscan

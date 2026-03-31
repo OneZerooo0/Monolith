@@ -24,6 +24,8 @@ public sealed class HitscanBasicDamageSystem : EntitySystem
 
         var damageDealt = _damage.TryChangeDamage(args.HitEntity, dmg, origin: args.Gun);
 
+        var armorPenetration = ent.Comp.ArmorPenetration;
+
         if (damageDealt == null)
             return;
 
@@ -31,6 +33,7 @@ public sealed class HitscanBasicDamageSystem : EntitySystem
         {
             Target = args.HitEntity.Value,
             DamageDealt = damageDealt,
+            ArmorPenetration = armorPenetration,
         };
 
         RaiseLocalEvent(ent, ref damageEvent);
