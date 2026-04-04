@@ -12,10 +12,10 @@
     access: [["TsfmcEngineering"]]
 
 - type: entity
-  id: APCLarge
+  id: LargeAPC
   name: LAPC substation
   parent: BaseStructure
-  description: A centralized substation terminal for the vessel's electrical systems. Tranforms current from HV to LV in bulk.
+  description: A centralized, reinforced substation terminal for the vessel's electrical systems. Tranforms current from HV to LV in bulk. Useful for shield generators and the like.
   placement:
     mode: SnapgridCenter
   components:
@@ -105,9 +105,8 @@
   - type: ActivatableUI
     inHandsOnly: false
     key: enum.ApcUiKey.Key
-  #- type: Construction
-  #  graph: APC
-  #  node: apc
+  - type: Machine
+    board: APCElectronics
   - type: PowerNetworkBattery
     maxSupply: 60000
     maxChargeRate: 20000
@@ -122,7 +121,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1200
+        damage: 1200 # Tanky
       behaviors: #excess damage, don't spawn entities.
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -178,3 +177,9 @@
     totalIntensity: 10.0
     intensitySlope: 5
     maxIntensity: 4
+  - type: Construction
+    graph: Machine
+    node: machine
+    containers:
+    - machine_board
+    - machine_parts
