@@ -1,6 +1,6 @@
 - type: entity
-  parent: BaseItem
-  id: [BaseFactionGearPDVT1, EmagUnlimited ]
+  parent: [BaseFactionGearPDVT1, BaseItem ]
+  id: EmagUnlimited
   suffix: Unlimited
   name: cryptographic sequencer
   description: The all-in-one hacking solution. Friend of any syndicate agent. The iconic EMAG. # Frontier: add "agent"
