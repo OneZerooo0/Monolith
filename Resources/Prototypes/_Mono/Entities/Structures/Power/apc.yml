@@ -16,8 +16,6 @@
   name: LAPC substation
   parent: BaseStructure
   description: A centralized, reinforced substation terminal for the vessel's electrical systems. Tranforms current from HV to LV in bulk. Useful for shield generators and the like.
-  placement:
-    mode: SnapgridCenter
   components:
   - type: StationAiWhitelist
   - type: AmbientOnPowered
@@ -29,16 +27,10 @@
   - type: PointLight
     radius: 1.5
     energy: 1.6
-    color: "#3db83b"
-    castShadows: false
-    netsync: false
-  - type: Clickable
   - type: InteractionOutline
-  - type: Transform
-    anchored: true
   - type: Anchorable
   - type: Sprite
-    drawdepth: WallMountedItems
+    #drawdepth: WallMountedItems
     sprite: _Mono/Structures/Power/Distributors/largeapc.rsi
     offset: 0,0.2
     layers:
