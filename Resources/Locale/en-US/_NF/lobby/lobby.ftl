@@ -30,11 +30,10 @@ frontier-lobby-medical-description = TSF civilian medical dispatch hub. Here you
    - Drop off medical bounties
  Some of the roles on this station are whitelist-only and require an application in the discord to be accepted.
 
-frontier-lobby-nfsd-subtext = The center of operations for the TSFMC.
-frontier-lobby-nfsd-description = The TFSMC-FOB is the center of operations for the TSF's armed expansion into the Colossus. Here you can:
-   - Join the TSFMC department
-   - Apply for a bounty hunting license
-   - Report crimes
+lobby-inner-base-tsfmc-subtext = The forward operating base of the TSFMC.
+lobby-inner-base-tsfmc-description = The TFSMC-FOB is the center of operations for the TSF's armed expansion into the Colossus. Here you can:
+   - Join the TSFMC
+   - Negotiate
    - Turn in contraband
 
 frontier-lobby-pirate-subtext = The center of operations for the PDV.
