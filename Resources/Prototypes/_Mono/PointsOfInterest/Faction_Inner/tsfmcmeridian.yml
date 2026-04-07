@@ -7,7 +7,7 @@
 #
 - type: pointOfInterest
   id: TSFMCMeridian
-  parent: [BasePOI, BaseRepairablePOI]
+  parent: [BaseRepairablePOI]
   name: 'TSFMC Battlecarrier Meridian'
   minimumDistance: 4500 # Mono
   maximumDistance: 5500 # Mono
