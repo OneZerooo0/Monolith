@@ -1,0 +1,59 @@
+# Author Info
+# GitHub: onezerooo0
+# Discord: onezero00
+#
+
+# Notes: Yipes.
+#
+- type: pointOfInterest
+  id: TSFMCMeridian
+  parent: [BaseRepairablePOI]
+  name: 'TSFMC Battlecarrier Meridian'
+  minimumDistance: 4500 # Mono
+  maximumDistance: 5500 # Mono
+  spawnGamePreset: [ NFAdventure, NFPirate, MonoStandard, MonoRogueTSF, MonoTSFUSSP, MonoADS, MonoChimera, MonoMixed, MonoAllAtOnce ]
+  spawnGroup: Required
+  gridPath: /Maps/_Mono/POI/Faction_Inner/tsfmcmeridian.yml
+  addComponents:
+  - type: IFF
+    color: "#047abd"
+    readOnly: true
+  - type: SolarPoweredGrid
+    doNotCull: true
+
+- type: gameMap
+  id: TSFMCMeridian
+  mapName: 'TSFMC Battlecarrier Meridian'
+  mapPath: /Maps/_Mono/POI/Faction_Inner/tsfmcmeridian.yml
+  minPlayers: 0
+  randomRotation: false
+  stations:
+    TSFMCMeridian:
+      stationProto: SecurityFrontierOutpost
+      gridComponents:
+      - type: VesselInfo
+        description: "The forward operating base of the TSFMC forces in the sector. A sense of grandeur falls over you."
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'TSFMC Battlecarrier Meridian'
+      - type: ExtraStationInformation
+        icon:
+          sprite: _NF/Structures/Decoration/banner.rsi
+          state: nfsd-banner
+        stationSubtext: 'lobby-inner-base-tsfmc-subtext'
+        stationDescription: 'lobby-inner-base-tsfmc-description'
+        lobbySortOrder: 2
+      - type: StationJobs
+        availableJobs:
+          Bailiff: [1, 1 ]
+          SeniorOfficer: [ 2, 2 ]
+          Brigmedic: [ 1, 1 ]
+          Deputy: [ -1, -1 ]
+          TsfEngineer: [ 1, 1 ]
+          TsfBorg: [ 2, 2 ]
+        tags:
+        - HeadOfPersonnel
+        - HeadOfSecurity
+      - type: StationDeadDropReporting
+        messageSet: Nfsd
+      - type: StationDeadDropHintExempt
