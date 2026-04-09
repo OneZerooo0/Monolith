@@ -255,13 +255,12 @@ public sealed partial class GunSystem : SharedGunSystem
             predicted.ClientEnt = user;
         }
 
+        projectileComp.Damage *= gun.DamageModifier;
         ShootProjectile(uid, mapDirection, gunVelocity, gunUid, user, gun.ProjectileSpeedModified, offset); // Mono - add offset
         if (HasComp<FireControllableComponent>(gunUid))
         {
             EnsureComp<ProjectileGridPhaseComponent>(uid);
         }
-        projectileComp.Damage *= gun.DamageModifier;
-        ShootProjectile(uid, mapDirection, gunVelocity, gunUid, user, gun.ProjectileSpeedModified);
     }
 
     /// <summary>
