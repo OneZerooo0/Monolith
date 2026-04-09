@@ -45,8 +45,8 @@
           icon:
             sprite: _NF/Structures/Decoration/banner.rsi
             state: nfsd-banner
-          stationSubtext: 'frontier-lobby-nfsd-subtext'
-          stationDescription: 'frontier-lobby-nfsd-description'
+          stationSubtext: 'lobby-inner-base-tsfmc-subtext'
+          stationDescription: 'lobby-inner-base-tsfmc-subtext'
           lobbySortOrder: 2
         - type: StationJobs
           availableJobs:
