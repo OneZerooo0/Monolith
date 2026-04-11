@@ -27,7 +27,7 @@
           collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 1000
+        damage: 650
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -75,7 +75,7 @@
           collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 2000
+        damage: 1250
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -123,7 +123,7 @@
           collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 3500
+        damage: 2000
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -171,7 +171,7 @@
           collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 5000
+        damage: 3500
       behaviors:
       - !type:PlaySoundBehavior
         sound:

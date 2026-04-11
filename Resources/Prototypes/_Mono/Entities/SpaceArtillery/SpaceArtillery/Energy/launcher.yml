@@ -183,7 +183,7 @@
   name: M25 mining pulser
   parent:
   - BallisticArtillery
-  - BallisticArtilleryTier0HP
+  - BallisticArtilleryTier1HP
   - ConstructibleMachine #Could possibly create a ConstructibleTurret proto if more are added; comps currently do nothing upgrade wise
   description: Uses mechanisms to launch... something. Destroys rock easily. Limited range.
   components:
@@ -649,7 +649,7 @@
   name: Curio-8640 plasma lance "Malice"
   parent:
   - BallisticArtilleryUnanchorable
-  - BallisticArtilleryTier6HP
+  - BallisticArtilleryTier5HP
   suffix: ADS ONLY
   description: A devastating weapon, known for glassing whole fleets when used en masse
   components:
