@@ -118,7 +118,7 @@
     powerUseActive: 0
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
-    proto: 90mmBullet
+    proto: 90mmBulletAPHE
     fireCost: 50
   - type: RadarBlip
     radarColor: "#FF0000"
@@ -207,7 +207,7 @@
     powerUseActive: 0
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
-    proto: ShipCyrexaProjectile
+    proto: 220mmBulletAPHE
     fireCost: 4000
   - type: RadarBlip
     radarColor: "#FF0000"

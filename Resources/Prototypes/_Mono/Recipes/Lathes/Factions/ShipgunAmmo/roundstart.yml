@@ -17,20 +17,20 @@
 
 - type: latheRecipe
   parent: BaseMediumShipgunAmmoRecipe
-  id: Magazine90mmAmmoRecipe
-  result: Magazine90mm
+  id: Magazine90mmAPHEAmmoRecipe
+  result: Magazine90mmAPHE
 
 # Individual
 
 - type: latheRecipe
   parent: BaseLightShipgunAmmoRecipe
-  id: 220mmCartridgeAmmoRecipe
-  result: 220mmCartridge
+  id: 220mmCartridgeAPHEAmmoRecipe
+  result: 220mmCartridgeAPHE
 
 - type: latheRecipe
   parent: BaseShipgunAmmoRecipe
-  id: 255mmCartridgeAmmoRecipe
-  result: 255mmCartridge
+  id: 255mmCartridgeAPHEAmmoRecipe
+  result: 255mmCartridgeAPHE
 
 # Missiles
 

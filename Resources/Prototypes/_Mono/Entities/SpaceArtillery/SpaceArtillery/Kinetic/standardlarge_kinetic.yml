@@ -70,7 +70,7 @@
       tags:
       - 220mmCartridge
     capacity: 24
-    proto: 220mmCartridge
+    proto: 220mmCartridgeAPHE
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
   - type: ShipGunType
@@ -137,7 +137,7 @@
       tags:
       - 255mmCartridge
     capacity: 8
-    proto: 255mmCartridge
+    proto: 255mmCartridgeAPHE
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
   - type: RadarBlip
@@ -220,7 +220,7 @@
     powerUseActive: 0
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
-    proto: ShipBoforsProjectile
+    proto: 255mmBulletAPHE
     fireCost: 6000
   - type: RadarBlip
     radarColor: "#FF0000"
@@ -308,7 +308,7 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: Magazine90mm
+        startingItem: Magazine90mmAPHE
         insertSound: /Audio/Weapons/Guns/MagIn/hpistol_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/sfrifle_magout.ogg
         priority: 2

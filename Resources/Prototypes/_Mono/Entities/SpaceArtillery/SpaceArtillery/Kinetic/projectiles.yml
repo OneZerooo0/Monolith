@@ -128,7 +128,7 @@
     radarColor: "#1df1f5"
 
 - type: entity
-  id: 90mmBullet
+  id: 90mmBulletAPHE
   parent: 90mmBulletBase
   categories: [ HideSpawnMenu ]
   components:
@@ -136,6 +136,7 @@
     damage:
       types:
         Piercing: 55
+        Structural: 100
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
     layers:
@@ -143,26 +144,26 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    totalIntensity: 12
+    totalIntensity: 7
     intensitySlope: 4
-    maxIntensity: 3
+    maxIntensity: 7
     maxTileBreak: 1
   - type: PointLight
     color: orange
 
-# 220mm Cyrexa
+# 220mm
 
 - type: entity
-  id: ShipCyrexaProjectile
-  name: CYREXA 220mm projectile
+  id: 220mmBulletAPHE
+  name: 220mm APHE projectile
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
     damage:
       types:
-        Structural: 200
-        Blunt: 250
+        Structural: 600
+        Blunt: 200
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
     layers:
@@ -181,19 +182,19 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    totalIntensity: 60
+    totalIntensity: 30
     intensitySlope: 5
-    maxIntensity: 35
-    maxTileBreak: 3
+    maxIntensity: 30
+    maxTileBreak: 2
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
 
-# 255mm Bofors
+# 255mm
 
 - type: entity
-  id: ShipBoforsProjectile
-  name: Bofors 255mm projectile
+  id: 255mmBulletAPHE
+  name: 255mm APHE projectile
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:

@@ -13,7 +13,7 @@
   components:
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: StructuralMetallic
+    damageModifierSet: WallDefense1
   - type: Destructible
     thresholds:
     - trigger:
@@ -61,7 +61,7 @@
   components:
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: StructuralMetallic
+    damageModifierSet: WallDefense2
   - type: Destructible
     thresholds:
     - trigger:
@@ -109,7 +109,7 @@
   components:
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: StructuralMetallic
+    damageModifierSet: WallDefense3
   - type: Destructible
     thresholds:
     - trigger:
@@ -157,7 +157,7 @@
   components:
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: StructuralMetallic
+    damageModifierSet: WallDefense3
   - type: Destructible
     thresholds:
     - trigger:
@@ -206,7 +206,7 @@
   components:
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: StructuralMetallic
+    damageModifierSet: WallDefense3
   - type: Destructible
     thresholds:
     - trigger:

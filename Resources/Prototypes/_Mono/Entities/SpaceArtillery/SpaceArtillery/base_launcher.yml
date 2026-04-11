@@ -8,7 +8,7 @@
   components:
   - type: Damageable
     damageContainer: StructuralInorganic
-    damageModifierSet: StructuralMetallic
+    damageModifierSet: WallDefense2
   - type: Clickable
   - type: InteractionOutline
   - type: Physics
@@ -299,6 +299,9 @@
   id: BallisticArtilleryTier1HP # Basic weapons, e.g PD. Reinforced wall level.
   abstract: true
   components:
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: WallDefense1
   - type: Destructible
     thresholds:
     - trigger:
@@ -321,6 +324,9 @@
   id: BallisticArtilleryTier2HP # Normal weapons, slightly stronger than plastitanium. This is the baseline durability for your average sized anchorable weapon.
   abstract: true
   components:
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: WallDefense2
   - type: Destructible
     thresholds:
     - trigger:
@@ -337,6 +343,9 @@
   id: BallisticArtilleryTier3HP # Medium weapons. Reinforced plastitanium level. Typical for medium-class weapons. In-between heavy artillery and standard anchorables.
   abstract: true
   components:
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: WallDefense2
   - type: Destructible
     thresholds:
     - trigger:
@@ -359,6 +368,9 @@
   id: BallisticArtilleryTier4HP # Capital Weapons. Cyrexas, main cannons. Anything really big.
   abstract: true
   components:
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: WallDefense3
   - type: Destructible
     thresholds:
     - trigger:
@@ -381,6 +393,9 @@
   id: BallisticArtilleryTier5HP # Supercapital class armament, station outpost weaponry and capital pre-fracture weaponry, around 4x Reinforced Plastitanium Health.
   abstract: true
   components:
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: WallDefense3
   - type: Destructible
     thresholds:
     - trigger:
