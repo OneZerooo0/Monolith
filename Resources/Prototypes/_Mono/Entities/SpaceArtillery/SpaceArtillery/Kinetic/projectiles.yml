@@ -135,8 +135,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 55
-        Structural: 100
+        Piercing: 25
+        Structural: 60
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
     layers:
@@ -144,12 +144,40 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    totalIntensity: 5
+    totalIntensity: 3
     intensitySlope: 2
-    maxIntensity: 5
+    maxIntensity: 3
     maxTileBreak: 1
   - type: PointLight
     color: orange
+
+- type: entity
+  id: 90mmBulletAP
+  parent: 90mmBulletBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 70
+        Structural: 250
+  - type: Sprite
+    sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
+    layers:
+    - state: base-projectile
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 1
+    intensitySlope: 1
+    maxIntensity: 1
+    maxTileBreak: 1
+  - type: PointLight
+    color: orange
+  - type: RadarBlip
+    scale: 2.5
+    shape: triangle
+    radarColor: "#1df5cd"
 
 # 220mm
 
@@ -162,8 +190,8 @@
   - type: Projectile
     damage:
       types:
-        Structural: 600
-        Blunt: 200
+        Structural: 1800
+        Blunt: 250
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
     layers:
@@ -182,7 +210,7 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    totalIntensity: 60
+    totalIntensity: 90
     intensitySlope: 5
     maxIntensity: 60
     maxTileBreak: 2
@@ -201,8 +229,8 @@
   - type: Projectile
     damage:
       types:
-        Structural: 800
-        Blunt: 250
+        Structural: 2000
+        Blunt: 300
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
     layers:

@@ -118,7 +118,7 @@
     powerUseActive: 0
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
-    proto: 90mmBulletAPHE
+    proto: 90mmBulletAP
     fireCost: 50
   - type: RadarBlip
     radarColor: "#FF0000"
