@@ -2,7 +2,7 @@
   id: WeaponTurretCharonBase
   parent: BallisticArtilleryTier4HP
   name: M381 CHARON mass driver
-  suffix: Spinal, High Tech
+  suffix: Capital, T4
   abstract: true
   components:
   - type: StaticPrice
@@ -88,7 +88,7 @@
   id: WeaponTurretCharonReload
   name: M381 CHARON mass driver
   parent: [WeaponTurretCharonBase, BallisticArtilleryUnanchorableCartridge]
-  suffix: Ship, Manual Reload, No Rotate
+  suffix: Spinal, T4
   description: A capital-class railgun that fires a massive slug at extreme velocity, capable of catastrophic damage to enemy ships. Heavy linear accelerator, can be remotely activated or linked up to a GCS.
   components:
   - type: BallisticAmmoProvider
