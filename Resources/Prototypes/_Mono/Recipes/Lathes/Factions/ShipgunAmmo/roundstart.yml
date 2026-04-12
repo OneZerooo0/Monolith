@@ -12,13 +12,13 @@
 
 - type: latheRecipe
   parent: BaseShipgunAmmoRecipe
-  id: Magazine57mmAmmoRecipe
-  result: Magazine57mm
+  id: Magazine57mmHEAmmoRecipe
+  result: MagazineHE57mm
 
 - type: latheRecipe
   parent: BaseMediumShipgunAmmoRecipe
-  id: Magazine90mmAPHEAmmoRecipe
-  result: Magazine90mmAPHE
+  id: 90mmMagazineHEAmmoRecipe
+  result: 90mmMagazineHE
 
 # Individual
 

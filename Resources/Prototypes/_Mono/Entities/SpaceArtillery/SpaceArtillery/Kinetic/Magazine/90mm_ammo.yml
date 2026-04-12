@@ -1,7 +1,7 @@
 - type: entity
-  id: Magazine90mmAPHE
-  name: "90mm APHE ammo loader"
-  description: "An ammunition loader containing infinite 90mm armor-piercing high-explosive rounds. Usable by 90mm vessel-mounted artillery pieces."
+  id: 90mmMagazineHE
+  name: "90mm HE ammo loader"
+  description: "An ammunition loader containing infinite 90mm high-explosive rounds. Usable by 90mm vessel-mounted artillery pieces."
   parent: [BaseItem, RecyclableItemSteelTiny]
   components:
   - type: Tag
@@ -11,7 +11,7 @@
     size: Small
   - type: BallisticAmmoProvider
     infiniteUnspawned: true
-    proto: 90mmCartridgeAPHE
+    proto: 90mmCartridgeHE
     capacity: 1 # normally should hold 400
     mayTransfer: true
     whitelist:
@@ -34,8 +34,8 @@
   - type: Appearance
 
 - type: entity
-  id: 90mmCartridgeAPHE
-  name: cartridge (90mm APHE)
+  id: 90mmCartridgeHE
+  name: cartridge (90mm HE)
   parent: BaseCartridge
   components:
   - type: Tag
@@ -44,7 +44,7 @@
     - 90mmCartridge
   - type: CartridgeAmmo
     deleteOnSpawn: true
-    proto: 90mmBulletAPHE
+    proto: 90mmBulletHE
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/Ammunition/Explosives/generic_cartridges.rsi
     layers:

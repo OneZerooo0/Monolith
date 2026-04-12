@@ -43,18 +43,18 @@
   components:
   - type: StorageFill
     contents:
-    - id: Magazine57mm
+    - id: Magazine57mmHE
       amount: 1
 
 - type: entity
   parent: CrateAmmoSecureMercenary
   id: CrateAmmoBox90mm
-  name: AK-570 90mm APHE box
-  description: Contains one box of 90mm armor-piercing high-explosive ammunition. Provides an artillery piece with infinite APHE rounds. Buy in case you lost the ammo it came with.
+  name: AK-570 90mm HE box
+  description: Contains one box of 90mm high-explosive ammunition. Provides an artillery piece with infinite HE rounds. Buy in case you lost the ammo it came with.
   components:
   - type: StorageFill
     contents:
-    - id: Magazine90mm
+    - id: 90mmMagazineHE
       amount: 1
 
 # Missiles

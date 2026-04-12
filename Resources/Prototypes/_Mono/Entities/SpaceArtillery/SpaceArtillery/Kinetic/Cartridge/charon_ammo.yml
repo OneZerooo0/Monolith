@@ -11,7 +11,7 @@
       types:
         Structural: 9000
         Blunt: 5000
-    penetrationThreshold: 2500
+    deleteOnCollide: false
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
     layers:
@@ -30,12 +30,44 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    totalIntensity: 1500
-    intensitySlope: 40
-    maxIntensity: 200
+    totalIntensity: 10
+    intensitySlope: 10
+    maxIntensity: 10
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
+  - type: Meteor
+    damageTypes:
+      types:
+        Blunt: 5
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.3
+        density: 9001
+        hard: true
+        layer:
+        - LargeMobLayer
+        mask:
+        - Impassable
+        - BulletImpassable
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 80000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:ExplodeBehavior
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
 
 - type: entity
   id: CharonSlugAmmo

@@ -76,7 +76,7 @@
 # 57mm
 
 - type: entity
-  id: 57mmBullet
+  id: 57mmBulletHE
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
@@ -102,9 +102,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    totalIntensity: 9 # totalIntensity goes first, please.
-    intensitySlope: 2
-    maxIntensity: 3
+    totalIntensity: 3 # totalIntensity goes first, please.
+    intensitySlope: 1
+    maxIntensity: 1
     maxTileBreak: 1
 
 # 90mm
@@ -128,7 +128,7 @@
     radarColor: "#1df1f5"
 
 - type: entity
-  id: 90mmBulletAPHE
+  id: 90mmBulletHE
   parent: 90mmBulletBase
   categories: [ HideSpawnMenu ]
   components:
@@ -136,7 +136,7 @@
     damage:
       types:
         Piercing: 25
-        Structural: 60
+        Structural: 20
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
     layers:
@@ -144,9 +144,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    totalIntensity: 3
+    totalIntensity: 10
     intensitySlope: 2
-    maxIntensity: 3
+    maxIntensity: 2
     maxTileBreak: 1
   - type: PointLight
     color: orange
@@ -217,6 +217,45 @@
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
+
+- type: entity
+  id: 220mmBulletHE
+  name: 220mm HE projectile
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 200
+        Blunt: 200
+  - type: Sprite
+    sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
+    layers:
+    - state: base-projectile
+    scale: 2, 2
+  - type: Ammo
+    muzzleFlash: null
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 3.25
+    shape: triangle
+    color: "#f55e1d"
+  - type: TimedDespawn
+    lifetime: 5.15
+  - type: PointLight
+    color: "#FCBA03"
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 200
+    intensitySlope: 2
+    maxIntensity: 40
+    maxTileBreak: 3
+  - type: GatheringProjectile
+  - type: MiningGatheringSoft
+  - type: MiningGatheringHard
+
 
 # 255mm
 

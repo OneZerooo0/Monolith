@@ -2,6 +2,7 @@
   id: WeaponTurretCharonBase
   parent: BallisticArtilleryTier4HP
   name: M381 CHARON mass driver
+  suffix: Spinal, High Tech
   abstract: true
   components:
   - type: StaticPrice
