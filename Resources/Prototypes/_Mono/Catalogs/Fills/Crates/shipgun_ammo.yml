@@ -74,11 +74,11 @@
   parent: CrateAmmoSecureMercenary
   id: CrateAmmoBoxVespera
   name: ADMP-50 Vespera HE missile box
-  description: Contains 12 bursts of 13 missiles. 2 full loads.
+  description: Contains 12 bursts of 13 high-explosive missiles. 2 full loads.
   components:
   - type: StorageFill
     contents:
-    - id: VesperaMagazine
+    - id: MissileMagazine50mm
       amount: 2 # 2 reload
 
 - type: entity

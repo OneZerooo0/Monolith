@@ -14,7 +14,7 @@
   #- CharonetteSlugCartridgeAmmoRecipe
   # Missiles
   - VanykMagazineAmmoRecipe
-  - VesperaMagazineAmmoRecipe
+  - MissileMagazine50mmHEAmmoRecipe
 
 - type: latheRecipePack
   id: UniversalMissileAmmo

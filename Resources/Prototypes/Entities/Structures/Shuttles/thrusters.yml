@@ -16,6 +16,7 @@
           - MachineMask
           layer:
           - MachineLayer #Mono end
+          - MobLayer
     - type: AmbientSound
       enabled: false
       range: 4
@@ -31,7 +32,7 @@
     - type: Thruster
       damage:
         types:
-          Heat: 40
+          Heat: 10
     - type: ThermalSignature # Mono
     - type: InteractionOutline
     - type: Sprite

@@ -30,10 +30,10 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    totalIntensity: 30
-    intensitySlope: 12
+    totalIntensity: 45
+    intensitySlope: 3
     maxIntensity: 15
-    maxTileBreak: 1
+    maxTileBreak: 2
 
 # Cerberus
 
@@ -67,9 +67,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    totalIntensity: 10
+    totalIntensity: 20
     intensitySlope: 15
-    maxIntensity: 15
+    maxIntensity: 20
 
 - type: entity
   name: cerberus spread
