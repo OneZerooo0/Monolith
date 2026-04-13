@@ -54,7 +54,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
   - type: ProjectileBatteryAmmoProvider
-    proto: Bullet762x51mmAntiMaterial
+    proto: Bullet762x51mmFMJ
     fireCost: 25
   - type: BatterySelfRecharger
     autoRecharge: true
