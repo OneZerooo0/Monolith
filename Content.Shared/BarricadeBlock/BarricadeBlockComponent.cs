@@ -22,6 +22,11 @@ public sealed partial class BarricadeBlockComponent : Component
     public bool Bidirectional = true;
 
 
+    /// <summary>
+    /// Distance between the shooter and barricade
+    /// </summary>
+    [DataField("passthroughdistance")]
+    public float PassThroughDistance = 1.5f;
 
 }
 

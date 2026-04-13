@@ -416,15 +416,21 @@ public abstract partial class SharedProjectileSystem : EntitySystem
                         //_sawmill.Debug("Shooter and BarricadeBlock facing opposite cardinal directions (bidirectional pass).");
                     }
                 }
+                else if (BarricadeBlock.Omnidirectional)
+                {
+                    directionallyAllowed = true;
+                    //_sawmill.Debug("Has the omnidirectional field");
+                }
 
                 if (directionallyAllowed)
                 {
                     // Condition 2: Firer is within 1 tile of the BarricadeBlock.
                     var shooterCoords = Transform(shooterUid).Coordinates;
                     var BarricadeBlockCoords = Transform(args.OtherEntity).Coordinates;
+                    var BypassDistance = BarricadeBlock.PassThroughDistance;
 
                     if (shooterCoords.TryDistance(EntityManager, BarricadeBlockCoords, out var distance) &&
-                        distance <= 1.5f)
+                        distance <= BypassDistance)
                     {
                         alwaysPassThrough = true;
                     }
