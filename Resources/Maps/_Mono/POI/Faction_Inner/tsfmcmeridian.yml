@@ -4,8 +4,8 @@ meta:
   engineVersion: 271.2.0
   forkId: ""
   forkVersion: ""
-  time: 04/07/2026 23:25:10
-  entityCount: 3492
+  time: 04/13/2026 20:42:50
+  entityCount: 3494
 maps: []
 grids:
 - 1
@@ -131,8 +131,8 @@ entities:
       spreadQueues:
         MetalFoam: []
         Puddle: []
-        Kudzu: []
         Smoke: []
+        Kudzu: []
     - type: Shuttle
       dampingModifier: 0.25
     - type: GridPathfinding
@@ -1038,6 +1038,7 @@ entities:
     - type: RadiationGridResistance
     - type: ShipGridLock
       locked: False
+    - type: ThermalSignature
 - proto: AirAlarm
   entities:
   - uid: 1972
@@ -1324,7 +1325,7 @@ entities:
       pos: 10.5,-31.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -13919.398
+      secondsUntilStateChange: -13994.627
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1504,7 +1505,7 @@ entities:
       pos: 1.5,-19.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -19532.191
+      secondsUntilStateChange: -19607.42
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -11670,7 +11671,6 @@ entities:
       inletTwoConcentration: 0.20999998
       inletOneConcentration: 0.79
       targetPressure: 4500
-      enabled: True
 - proto: GasPassiveVent
   entities:
   - uid: 1036
@@ -14569,6 +14569,18 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 10.719274,9.432999
+      parent: 1
+- proto: LargeAPC
+  entities:
+  - uid: 3493
+    components:
+    - type: Transform
+      pos: 8.5,-10.5
+      parent: 1
+  - uid: 3494
+    components:
+    - type: Transform
+      pos: 8.5,-11.5
       parent: 1
 - proto: LockerAtmosphericsFilled
   entities:
