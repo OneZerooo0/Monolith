@@ -43,22 +43,15 @@ public sealed partial class ShuttleDeedSystem : EntitySystem
     		var remainingTime = voucher.NextBuyAt - _timing.CurTime;
 
 			if (voucher.DestroyOnEmpty == true)
-        	{
             	args.PushMarkup(Loc.GetString("voucher-current-redemptions", ("count", voucher.RedemptionsLeft)));
-        	}
 			else
-			{
             	args.PushMarkup(Loc.GetString("voucher-infinite-redemptions"));
-        	}
 
 			if (remainingTime >= TimeSpan.FromSeconds(60))
-        	{
             	args.PushMarkup(Loc.GetString("voucher-current-cooldown-minutes", ("cooldown", remainingTime.TotalMinutes)));
-        	}
-			else if (remainingTime >= TimeSpan.FromSeconds(0))
-        	{
-            	args.PushMarkup(Loc.GetString("voucher-current-cooldown-seconds", ("cooldown", remainingTime.TotalSeconds)));
-        	}
+        	else if (remainingTime >= TimeSpan.FromSeconds(0))
+        		args.PushMarkup(Loc.GetString("voucher-current-cooldown-seconds", ("cooldown", remainingTime.TotalSeconds)));
+
 		}
     }
 }
