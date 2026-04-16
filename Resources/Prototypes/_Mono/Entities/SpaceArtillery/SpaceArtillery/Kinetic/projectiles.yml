@@ -288,9 +288,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    totalIntensity: 800
-    intensitySlope: 20
-    maxIntensity: 20
+    totalIntensity: 600
+    intensitySlope: 15
+    maxIntensity: 15
     maxTileBreak: 4
   - type: GatheringProjectile
   - type: MiningGatheringSoft
