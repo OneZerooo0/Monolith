@@ -102,9 +102,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    totalIntensity: 3 # totalIntensity goes first, please.
-    intensitySlope: 1
-    maxIntensity: 1
+    totalIntensity: 10 # totalIntensity goes first, please.
+    intensitySlope: 2
+    maxIntensity: 2
     maxTileBreak: 1
 
 # 90mm
@@ -144,9 +144,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    totalIntensity: 10
-    intensitySlope: 2
-    maxIntensity: 2
+    totalIntensity: 27
+    intensitySlope: 3
+    maxIntensity: 3
     maxTileBreak: 1
   - type: PointLight
     color: orange
@@ -248,9 +248,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    totalIntensity: 200
-    intensitySlope: 2
-    maxIntensity: 40
+    totalIntensity: 300
+    intensitySlope: 12
+    maxIntensity: 12
     maxTileBreak: 3
   - type: GatheringProjectile
   - type: MiningGatheringSoft
@@ -288,9 +288,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    totalIntensity: 150
-    intensitySlope: 6
-    maxIntensity: 50
+    totalIntensity: 800
+    intensitySlope: 20
+    maxIntensity: 20
     maxTileBreak: 4
   - type: GatheringProjectile
   - type: MiningGatheringSoft
@@ -360,9 +360,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    totalIntensity: 1250
-    intensitySlope: 15
-    maxIntensity: 200
+    totalIntensity: 1400
+    intensitySlope: 10
+    maxIntensity: 30
     maxTileBreak: 6
   - type: GatheringProjectile
   - type: MiningGatheringSoft
@@ -431,7 +431,7 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    totalIntensity: 20
+    totalIntensity: 45
     intensitySlope: 5
     maxIntensity: 5
     maxTileBreak: 1
