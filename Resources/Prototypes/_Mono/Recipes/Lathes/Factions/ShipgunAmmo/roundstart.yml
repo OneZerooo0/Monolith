@@ -37,7 +37,7 @@
 - type: latheRecipe
   parent: BaseMissileShipgunAmmoRecipe
   id: MissileMagazine50mmHEAmmoRecipe
-  result: MissileMagazine50mm
+  result: MissileMagazine50mmHE
 
 - type: latheRecipe
   parent: BaseMissileShipgunAmmoRecipe

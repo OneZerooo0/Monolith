@@ -240,7 +240,7 @@
   - type: RadarBlip
     scale: 3.25
     shape: triangle
-    color: "#f55e1d"
+    radarColor: "#f55e1d"
   - type: TimedDespawn
     lifetime: 5.15
   - type: PointLight
