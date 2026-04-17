@@ -13,9 +13,9 @@
     proto: 220mmBulletAPHE
     deleteOnSpawn: true
   - type: Sprite
-    sprite: _Mono/Objects/Weapons/Guns/Ammunition/Explosives/generic_cartridges.rsi
+    sprite: _Mono/Objects/SpaceArtillery/shells.rsi
     layers:
-    - state: 220mm
+    - state: 220mmAPHE
       map: ["enum.AmmoVisualLayers.Base"]
   - type: Appearance
   - type: SpentAmmoVisuals

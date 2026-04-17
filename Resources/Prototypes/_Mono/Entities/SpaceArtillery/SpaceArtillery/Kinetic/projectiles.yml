@@ -86,9 +86,9 @@
         Blunt: 35
         Piercing: 25
   - type: Sprite
-    sprite: _Mono/Objects/SpaceArtillery/57_shell.rsi
+    sprite: _Mono/Objects/SpaceArtillery/shells.rsi
     layers:
-    - state: 57-shell
+    - state: 57mmHE
     scale: 1, 1
   - type: ShipWeaponProjectile
   - type: RadarBlip
@@ -138,9 +138,9 @@
         Piercing: 25
         Structural: 20
   - type: Sprite
-    sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
+    sprite: _Mono/Objects/SpaceArtillery/shells.rsi
     layers:
-    - state: base-projectile
+    - state: 90mmHE
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
@@ -162,9 +162,9 @@
         Piercing: 70
         Structural: 250
   - type: Sprite
-    sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
+    sprite: _Mono/Objects/SpaceArtillery/shells.rsi
     layers:
-    - state: base-projectile
+    - state: 90mmAP
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
@@ -193,10 +193,9 @@
         Structural: 1800
         Blunt: 250
   - type: Sprite
-    sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
+    sprite: _Mono/Objects/SpaceArtillery/shells.rsi
     layers:
-    - state: base-projectile
-    scale: 2, 2
+    - state: 220mmAPHE
   - type: Ammo
     muzzleFlash: null
   - type: ShipWeaponProjectile
@@ -230,9 +229,9 @@
         Structural: 200
         Blunt: 200
   - type: Sprite
-    sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
+    sprite: _Mono/Objects/SpaceArtillery/shells.rsi
     layers:
-    - state: base-projectile
+    - state: 220mmHE
     scale: 2, 2
   - type: Ammo
     muzzleFlash: null
@@ -256,7 +255,6 @@
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
 
-
 # 255mm
 
 - type: entity
@@ -271,10 +269,9 @@
         Structural: 2000
         Blunt: 300
   - type: Sprite
-    sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
+    sprite: _Mono/Objects/SpaceArtillery/shells.rsi
     layers:
-    - state: base-projectile
-    scale: 2, 2
+    - state: 255mmAPHE
   - type: Ammo
     muzzleFlash: null
   - type: ShipWeaponProjectile
@@ -291,6 +288,43 @@
     totalIntensity: 600
     intensitySlope: 15
     maxIntensity: 15
+    maxTileBreak: 4
+  - type: GatheringProjectile
+  - type: MiningGatheringSoft
+  - type: MiningGatheringHard
+
+- type: entity
+  id: 255mmBulletEMP
+  name: 255mm EMP projectile
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 500
+        Blunt: 300
+  - type: Sprite
+    sprite: _Mono/Objects/SpaceArtillery/shells.rsi
+    layers:
+    - state: 255mmEMP
+  - type: Ammo
+    muzzleFlash: null
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 2.5
+    shape: triangle
+    radarColor: "#035EFC"
+  - type: TimedDespawn
+    lifetime: 7
+  - type: PointLight
+    color: "#035EFC"
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 30
+    intensitySlope: 5
+    maxIntensity: 5
     maxTileBreak: 4
   - type: GatheringProjectile
   - type: MiningGatheringSoft
@@ -382,9 +416,9 @@
         Blunt: 50
         Piercing: 50
   - type: Sprite
-    sprite: _Mono/Objects/SpaceArtillery/57_shell.rsi
+    sprite: _Mono/Objects/SpaceArtillery/shells.rsi
     layers:
-    - state: 57-shell
+    - state: 57mmHE
     scale: 1, 1
   - type: ShipWeaponProjectile
   - type: RadarBlip
@@ -415,9 +449,9 @@
         Blunt: 200
         Piercing: 100
   - type: Sprite
-    sprite: _Mono/Objects/SpaceArtillery/57_shell.rsi
+    sprite: _Mono/Objects/SpaceArtillery/shells.rsi
     layers:
-    - state: 57-shell
+    - state: 90mmAP
     scale: 0.8, 2
   - type: ShipWeaponProjectile
   - type: RadarBlip
