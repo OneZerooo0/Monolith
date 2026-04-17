@@ -22,7 +22,7 @@
     angleIncrease: 5
     angleDecay: 20
     fireRate: 8
-    DamageModifier: 0.9
+    damageModifier: 0.9
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/mla_fire.ogg
   - type: ChamberMagazineAmmoProvider

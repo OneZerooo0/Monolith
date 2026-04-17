@@ -166,7 +166,6 @@
     sprite: _Mono/Objects/Weapons/Guns/Shotguns/SultansPulsar_inhands_64x.rsi
   - type: GunRequiresWield
   - type: Gun
-    autoCycle: false
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/bigshotgun_fire.ogg
     fireRate: 0.7
@@ -183,6 +182,7 @@
     proto: ShellShotgun23x75mmBuckshot
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/shotgun_insert.ogg
+    autoCycle: false
   - type: StaticPrice
     price: 20000
     vendPrice: 20000
