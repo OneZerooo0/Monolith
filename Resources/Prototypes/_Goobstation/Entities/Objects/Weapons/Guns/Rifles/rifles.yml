@@ -185,6 +185,9 @@
     zeroVisible: true
   - type: Appearance
   - type: GunRequiresWield
+  - type: GunWieldBonus
+    minAngle: 10
+    maxAngle: 8
 
 - type: entity
   name: CS Burner (12.7x99mm)
