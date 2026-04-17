@@ -166,9 +166,10 @@
     sprite: _Mono/Objects/Weapons/Guns/Shotguns/SultansPulsar_inhands_64x.rsi
   - type: GunRequiresWield
   - type: Gun
+    autoCycle: false
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/SmallArms/Gunshots/bigshotgun_fire.ogg
-    fireRate: 1.2
+    fireRate: 0.7
     selectedMode: Semiauto
     availableModes:
     - SemiAuto
@@ -187,7 +188,7 @@
     vendPrice: 20000
   - type: SpeedModifiedOnWield
     walkModifier: 0.8
-    sprintModifier: 0.95
+    sprintModifier: 0.90
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
     maxOffset: 3
