@@ -12,7 +12,7 @@
     sprite: _Mono/Clothing/ArmorPlate/armor_plates.rsi
     size: Normal
   - type: ArmorPlateItem
-    maxDurability: 25
+    maxDurability: 50
     walkSpeedModifier: 0.95
     sprintSpeedModifier: 0.95
     staminaDamageMultiplier: 1.0
@@ -44,12 +44,12 @@
     sprite: _Mono/Clothing/ArmorPlate/armor_plates.rsi
     size: Normal
   - type: ArmorPlateItem
-    maxDurability: 25
+    maxDurability: 50
     walkSpeedModifier: 0.95
     sprintSpeedModifier: 0.95
     staminaDamageMultiplier: 1.0
     absorptionRatios:
-      Piercing: 0.5
+      Piercing: 0.7
       Burn: 1.2
   - type: Damageable
     damageContainer: Inorganic
@@ -75,12 +75,12 @@
     sprite: _Mono/Clothing/ArmorPlate/armor_plates.rsi
     size: Normal
   - type: ArmorPlateItem
-    maxDurability: 25
+    maxDurability: 50
     walkSpeedModifier: 0.95
     sprintSpeedModifier: 0.95
     staminaDamageMultiplier: 1.0
     absorptionRatios:
-      Heat: 0.8
+      Heat: 0.7
       Piercing: 1.2
   - type: Damageable
     damageContainer: Inorganic
