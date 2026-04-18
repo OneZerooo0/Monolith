@@ -15,7 +15,7 @@ PlayerStationAiRogue: PlayerStationAiPDV
 
 ShipMissileASM557: ShipMissileASM250
 ShipMissileASM302: ShipMissileASM150
-ShipMissileASM417: ShipMissileASM50
+ShipMissileASM417: MissileProjectile50mmHE
 
 # shipgun caliber changes
 
