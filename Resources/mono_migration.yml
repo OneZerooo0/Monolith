@@ -22,7 +22,7 @@ ShipMissileASM417: MissileProjectile50mmHE
 220mmCartridge: 220mmCartridgeAPHE
 VesperaMagazine: MissileMagazine50mmHE
 255mmCartridge: 255mmCartridgeAPHE
-Magazine57mm: Magazine57mmHEHE
+Magazine57mm: Magazine57mmHE
 Magazine90mm: 90mmMagazineHE
 
 # bullets
