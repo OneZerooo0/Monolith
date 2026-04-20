@@ -49,5 +49,16 @@ public sealed partial class ArmorPlateItemComponent : Component
 	[DataField("absorptionRatios")]
     public Dictionary<string, float> AbsorptionRatios = new();
 
+    /// <summary>
+    /// Multiplier applied when converting absorbed damage to another damage type (specified in damageType).
+    /// </summary>
+    [DataField]
+    public float OtherDamageMultiplier = 1.0f;
+
+    /// <summary>
+    /// What kind of damage should be applied?
+    /// </summary>
+    [DataField("damageType")]
+    public string DamageType = "blunt";
 }
 

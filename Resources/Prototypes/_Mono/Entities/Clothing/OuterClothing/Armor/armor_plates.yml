@@ -19,7 +19,7 @@
     absorptionRatios:
       Blunt: 0.7
       Slash: 0.7
-      Burn: 1.2
+      Heat: 1.2
   - type: Damageable
     damageContainer: Inorganic
   - type: Destructible
@@ -50,7 +50,7 @@
     staminaDamageMultiplier: 1.0
     absorptionRatios:
       Piercing: 0.7
-      Burn: 1.2
+      Heat: 1.2
   - type: Damageable
     damageContainer: Inorganic
   - type: Destructible
@@ -110,8 +110,8 @@
     walkSpeedModifier: 1.1
     sprintSpeedModifier: 1.1
     staminaDamageMultiplier: 2
+    otherDamageMultipler: 2
     absorptionRatios:
-      Burn: 1.2
       Piercing: 1.2
       Blunt: 1.2
       Slash: 1.2
@@ -121,7 +121,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 25
+        damage: 500
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]

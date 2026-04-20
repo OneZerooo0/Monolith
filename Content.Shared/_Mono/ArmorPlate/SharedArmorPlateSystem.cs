@@ -100,9 +100,14 @@ public sealed class SharedArmorPlateSystem : EntitySystem
 
     {
         var damageSpec = new DamageSpecifier();
+        var damageSpecWearer = new DamageSpecifier();
+
         damageSpec.DamageDict.Add("Blunt", plateDamage);
+        damageSpecWearer.DamageDict.Add(plate.Comp.DamageType, (absorbed.Float() * plate.Comp.OtherDamageMultiplier));
 
         _damageable.TryChangeDamage(plate.Owner, damageSpec, ignoreResistances: true);
+
+        _damageable.TryChangeDamage(wearer, damageSpecWearer, ignoreResistances: true);
 
         var staminaDamage = absorbed.Float() * plate.Comp.StaminaDamageMultiplier;
         _stamina.TakeStaminaDamage(wearer, staminaDamage);

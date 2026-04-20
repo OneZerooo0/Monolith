@@ -42,5 +42,10 @@ public sealed partial class ArmorPlateHolderComponent : Component
     [DataField]
     public float StaminaDamageMultiplier = 1.0f;
 
+    /// <summary>
+    /// Applied damage multiplier from the currently active plate.
+    /// </summary>
+    [DataField]
+    public float OtherDamageMultiplier = 1.0f;
 }
 
