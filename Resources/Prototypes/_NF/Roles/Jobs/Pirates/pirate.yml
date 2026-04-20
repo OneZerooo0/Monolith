@@ -43,7 +43,7 @@
   equipment:
     ears: ClothingHeadsetAltFreelancer
     #belt: ClothingBeltUtility
-    pocket1: BasePirateUplinkPirateCrew
+    pocket1: Doubloon50
     #pocket2: AppraisalTool
   storage:
     back:

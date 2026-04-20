@@ -56,6 +56,30 @@
   - type: Stack
     count: 50
 
+- type: entity
+  parent: Doubloon
+  id: Doubloon75
+  suffix: 75 DC
+  components:
+  - type: Stack
+    count: 75
+
+- type: entity
+  parent: Doubloon
+  id: Doubloon100
+  suffix: 100 DC
+  components:
+  - type: Stack
+    count: 100
+
+- type: entity
+  parent: Doubloon
+  id: Doubloon125
+  suffix: 125 DC
+  components:
+  - type: Stack
+    count: 125
+
 # Uplinks
 - type: entity
   parent: [ BaseItem, StorePresetPirateUplink ]

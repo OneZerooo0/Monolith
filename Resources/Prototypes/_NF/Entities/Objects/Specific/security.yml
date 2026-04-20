@@ -56,6 +56,30 @@
   - type: Stack
     count: 50
 
+- type: entity
+  parent: FederationMilitaryCredit
+  id: FederationMilitaryCredit75
+  suffix: 75 FMC
+  components:
+  - type: Stack
+    count: 75
+
+- type: entity
+  parent: FederationMilitaryCredit
+  id: FederationMilitaryCredit100
+  suffix: 100 FMC
+  components:
+  - type: Stack
+    count: 100
+
+- type: entity
+  parent: FederationMilitaryCredit
+  id: FederationMilitaryCredit125
+  suffix: 125 FMC
+  components:
+  - type: Stack
+    count: 125
+
 # Uplinks
 - type: entity
   parent: [ BaseItem, StorePresetSecurityUplink ]
