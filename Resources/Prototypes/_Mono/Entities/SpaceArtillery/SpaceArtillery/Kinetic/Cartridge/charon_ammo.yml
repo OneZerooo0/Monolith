@@ -11,6 +11,7 @@
       types:
         Structural: 9000
         Blunt: 5000
+    penetrationThreshhold: 900000
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
     layers:

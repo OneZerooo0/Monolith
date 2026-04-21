@@ -161,17 +161,11 @@
       types:
         Piercing: 70
         Structural: 250
+    penetrationThreshhold: 5000
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/shells.rsi
     layers:
     - state: 90mmAP
-  - type: ExplodeOnTrigger
-  - type: Explosive
-    explosionType: Default
-    totalIntensity: 1
-    intensitySlope: 1
-    maxIntensity: 1
-    maxTileBreak: 1
   - type: PointLight
     color: orange
   - type: RadarBlip
@@ -192,6 +186,7 @@
       types:
         Structural: 1800
         Blunt: 250
+    penetrationThreshold: 5000
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/shells.rsi
     layers:
@@ -208,6 +203,7 @@
     color: "#FCBA03"
   - type: ExplodeOnTrigger
   - type: Explosive
+    deleteAfterExplosion: false
     explosionType: Default
     totalIntensity: 90
     intensitySlope: 5
@@ -268,6 +264,7 @@
       types:
         Structural: 2000
         Blunt: 300
+    penetrationThreshhold: 8000
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/shells.rsi
     layers:
@@ -284,6 +281,7 @@
     color: "#fc5a03"
   - type: ExplodeOnTrigger
   - type: Explosive
+    deleteAfterExplosion: false
     explosionType: Default
     totalIntensity: 600
     intensitySlope: 15
@@ -292,6 +290,7 @@
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
+  - type: TriggerOnProjectileSpent
 
 - type: entity
   id: 255mmBulletEMP
@@ -374,7 +373,6 @@
       types:
         Structural: 12000
         Blunt: 2000
-    penetrationThreshold: 2500
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/630_armorpiercing_shell_casing.rsi
     layers:
@@ -393,7 +391,6 @@
     color: "#fc5a03"
   - type: ExplodeOnTrigger
   - type: Explosive
-    deleteAfterExplosion: false
     explosionType: Default
     totalIntensity: 1400
     intensitySlope: 10
