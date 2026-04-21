@@ -160,8 +160,8 @@
     damage:
       types:
         Piercing: 70
-        Structural: 250
-    penetrationThreshhold: 5000
+        Structural: 400
+    penetrationThreshold: 1000
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/shells.rsi
     layers:
@@ -178,7 +178,7 @@
 - type: entity
   id: 220mmBulletAPHE
   name: 220mm APHE projectile
-  parent: BaseBulletTrigger
+  parent: BaseBulletTriggerSpent
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -256,7 +256,7 @@
 - type: entity
   id: 255mmBulletAPHE
   name: 255mm APHE projectile
-  parent: BaseBulletTrigger
+  parent: BaseBulletTriggerSpent
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -264,7 +264,7 @@
       types:
         Structural: 2000
         Blunt: 300
-    penetrationThreshhold: 8000
+    penetrationThreshold: 8000
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/shells.rsi
     layers:
@@ -290,7 +290,6 @@
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
-  - type: TriggerOnProjectileSpent
 
 - type: entity
   id: 255mmBulletEMP
@@ -328,6 +327,10 @@
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
+  - type: EmpOnTrigger
+    range: 2
+    energyConsumption: 2700000
+    disableDuration: 20
 
 # Syndicate
 

@@ -3,7 +3,7 @@
 - type: entity
   id: ShipRailgunProjectile
   name: M381 CHARON 280mm 26.5 kg slug
-  parent: BaseBulletTrigger
+  parent: BaseBulletTriggerSpent
   categories: [ HideSpawnMenu ]
   components:
   - type: Projectile
@@ -11,7 +11,7 @@
       types:
         Structural: 9000
         Blunt: 5000
-    penetrationThreshhold: 900000
+    penetrationThreshold: 36000
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
     layers:
@@ -92,9 +92,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    totalIntensity: 12000
-    intensitySlope: 30
-    maxIntensity: 400
+    totalIntensity: 18000
+    intensitySlope: 25
+    maxIntensity: 450
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
