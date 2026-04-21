@@ -32,3 +32,38 @@
   icon: { sprite: /Textures/_Mono/Objects/Materials/fissiles.rsi, state: depleted }
   spawn: SheetUraniumDepleted1
   maxCount: 5
+
+- type: stack
+  id: ArmorPlateEconomy1
+  name: basic armor plate
+  icon: { sprite: _Mono/Objects/Materials/bayponents.rsi, state: armor1 }
+  spawn: ArmorPlateEconomy1
+  maxCount: 1
+
+- type: stack
+  id: ArmorPlateEconomy2
+  name: heavy armor plate
+  icon: { sprite: _Mono/Objects/Materials/bayponents.rsi, state: armor2 }
+  spawn: ArmorPlateEconomy2
+  maxCount: 1
+
+- type: stack
+  id: ArmorPlateEconomy3
+  name: composite armor plate
+  icon: { sprite: _Mono/Objects/Materials/bayponents.rsi, state: armor3 }
+  spawn: ArmorPlateEconomy3
+  maxCount: 1
+
+- type: stack
+  id: ArmorPlateEconomy3Fragment
+  name: composite armor plate fragment
+  icon: { sprite: _Mono/Objects/Materials/bayponents.rsi, state: armor3_fragment }
+  spawn: ArmorPlateEconomy3Fragment
+  maxCount: 1
+
+- type: stack
+  id: ArmorPlateEconomy4
+  name: EMAG armor plate
+  icon: { sprite: _Mono/Objects/Materials/bayponents.rsi, state: armor4 }
+  spawn: ArmorPlateEconomy4
+  maxCount: 1
