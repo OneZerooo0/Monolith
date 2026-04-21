@@ -184,9 +184,9 @@
   - type: Projectile
     damage:
       types:
-        Structural: 1800
+        Structural: 2500
         Blunt: 250
-    penetrationThreshold: 5000
+    penetrationThreshold: 3000
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/shells.rsi
     layers:
@@ -262,9 +262,9 @@
   - type: Projectile
     damage:
       types:
-        Structural: 2000
+        Structural: 2500
         Blunt: 300
-    penetrationThreshold: 8000
+    penetrationThreshold: 5000
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/shells.rsi
     layers:
@@ -283,9 +283,9 @@
   - type: Explosive
     deleteAfterExplosion: false
     explosionType: Default
-    totalIntensity: 600
-    intensitySlope: 15
-    maxIntensity: 15
+    totalIntensity: 400
+    intensitySlope: 10
+    maxIntensity: 10
     maxTileBreak: 4
   - type: GatheringProjectile
   - type: MiningGatheringSoft
@@ -331,6 +331,83 @@
     range: 2
     energyConsumption: 2700000
     disableDuration: 20
+
+# CHARON
+
+- type: entity
+  id: ShipRailgunProjectile
+  name: M381 CHARON 280mm 26.5 kg slug
+  parent: BaseBulletTriggerSpent
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 9000
+        Blunt: 5000
+    penetrationThreshold: 36000
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: omnilaser
+  - type: Ammo
+    muzzleFlash: null
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    radarColor: "#CF0E0E"
+    scale: 4
+    shape: triangle
+  - type: TimedDespawn
+    lifetime: 3.1 # ~2.4 km range
+  - type: PointLight
+    color: "#19AFFF"
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    deleteAfterExplosion: false
+    explosionType: Default
+    totalIntensity: 10
+    intensitySlope: 10
+    maxIntensity: 10
+  - type: GatheringProjectile
+  - type: MiningGatheringSoft
+  - type: MiningGatheringHard
+
+- type: entity
+  id: ShipRailgunProjectileSubnuclear
+  name: M381 CHARON 280mm 1.5kt nuclear slug
+  description: Once the genie is out of the bottle, there's no putting it back inside, tarkhan.
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 125000
+        Blunt: 5000
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: omnilaser
+  - type: Ammo
+    muzzleFlash: null
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    radarColor: "#268521"
+    scale: 4
+    shape: triangle
+  - type: TimedDespawn
+    lifetime: 1.7
+  - type: PointLight
+    color: "#19AFFF"
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 18000
+    intensitySlope: 25
+    maxIntensity: 450
+  - type: GatheringProjectile
+  - type: MiningGatheringSoft
+  - type: MiningGatheringHard
 
 # Syndicate
 
