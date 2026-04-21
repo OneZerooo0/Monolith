@@ -47,9 +47,9 @@
         availableJobs:
           Bailiff: [1, 1 ]
           SeniorOfficer: [ 2, 2 ]
-          Brigmedic: [ 1, 1 ]
+          Brigmedic: [ 2, 2 ]
           Deputy: [ -1, -1 ]
-          TsfEngineer: [ 1, 1 ]
+          TsfEngineer: [ 2, 2 ]
           TsfBorg: [ 2, 2 ]
         tags:
         - HeadOfPersonnel

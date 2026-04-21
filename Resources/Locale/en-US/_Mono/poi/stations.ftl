@@ -6,3 +6,6 @@ frontier-lobby-camelot-description = This is NOT a safezone. This is not a recom
 
 frontier-lobby-jupiter-subtext = A mobile large mech-carrier.
 frontier-lobby-jupiter-description = This does NOT fall under the protection of portstriking rules. A large back-line mech carrier operated by the Phaethon Dynasty Imperial Vanguard. Doesn't have much firepower to brawl with other ships or a full-sized shipyard, but has a large amount of mechs and point defense.
+
+lobby-inner-base-tsfmc-subtext = Forward operating carrier of the TSFMC.
+lobby-inner-base-tsfmc-description = A battlecarrier of the local TSFMC detachment dispatched into the Monolith. Used for establishing operations, defensive points, and for showing the glory of the Federation to all who threaten its wake. Glory to Sol.
