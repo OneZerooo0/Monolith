@@ -2,4 +2,4 @@
   id: EconomyBasic
   recipes:
   - ArmorPlateEconomy1Recipe
-  - CapsuleEconomy
+  - CapsuleEconomyRecipe
