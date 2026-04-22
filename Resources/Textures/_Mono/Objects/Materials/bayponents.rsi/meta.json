@@ -41,13 +41,13 @@
             "name": "camera"
         },
         {
-            "name": "canister_closed"
+            "name": "canister"
         },
         {
             "name": "canister_open"
         },
         {
-            "name": "canister2_closed"
+            "name": "canister2"
         },
         {
             "name": "canister2_open"

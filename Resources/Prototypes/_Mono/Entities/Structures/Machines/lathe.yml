@@ -107,6 +107,9 @@
       - Ingot
       - Ore
   - type: RequireProjectileTarget
+  - type: GuideHelp
+    guides:
+    - Economy
 
 - type: entity
   id: IndustrialLatheEconomy
@@ -133,7 +136,7 @@
     idleState: icon
     runningState: building
     staticPacks:
-    - AutomationStatic
+    - EconomyBasic
     # dynamicPacks:
   - type: MaterialStorage
     whitelist:
@@ -141,12 +144,14 @@
       - Sheet
       - RawMaterial
       - Ingot
-      - EconomyGood
   - type: RequireProjectileTarget
+  - type: GuideHelp
+    guides:
+    - Economy
 
 - type: entity
   id: IndustrialFurnaceEconomy
-  parent: BaseLatheLube
+  parent: [ BaseMachinePowered, BaseStructureDisableToolUse ]
   name: industrial arc furnace
   description: An advanced arc furnace capable of melting ore and refining material through heat. Essential for creating advanced alloys.
   components:
@@ -159,30 +164,8 @@
     - state: unlit
       shader: unshaded
       map: ["enum.PowerDeviceVisualLayers.Powered"]
-    - state: inserting
-      map: ["enum.MaterialStorageVisualLayers.Inserting"]
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: Lathe
-    producingSound: /Audio/Machines/microwave_loop.ogg
-    idleState: icon
-    unlitIdleState: unlit
-    runningState: building
-    materialUseMultiplier: 1
-    timeMultiplier: 0.2
-    staticPacks:
-    - OreSmelting
-    - RGlassSmelting
-    - AdvancedSmelting
-    - EconomyFurnaceBasic
-    # dynamicPacks:
-  - type: MaterialStorage
-    whitelist:
-      tags:
-      - Sheet
-      - RawMaterial
-      - Ingot
-      - Ore
   - type: RequireProjectileTarget
   - type: Destructible
     thresholds:
@@ -206,5 +189,44 @@
         - MachineMask
         layer:
         - MachineLayer
-  - type: Anchorable
-    delay: 999999
+  # microwave comps
+  - type: GuideHelp
+    guides:
+    - ArcFurnace
+  - type: Microwave
+    capacity: 15
+    explosionChance: 0
+    lightningChance: 0
+    baseHeatMultiplier: 300
+    temperatureUpperThreshold: 3300
+    maxItemSize: Ginormous
+    validRecipeTypes: ArcFurnace
+    beginCookingSound: /Audio/Machines/machine_switch.ogg
+    foodDoneSound: /Audio/Effects/Shuttle/radar_ping.ogg
+    loopingSound: /Audio/_Mono/Structures/Economy/furnace.ogg
+    key: ArcFurnaceKey
+  - type: ActivatableUI
+    key: enum.MicrowaveUiKey.ArcFurnaceKey
+  - type: ContainerContainer
+    containers:
+      microwave_entity_container: !type:Container
+      machine_board: !type:Container
+      machine_parts: !type:Container
+  - type: UserInterface
+    interfaces:
+      enum.MicrowaveUiKey.ArcFurnaceKey:
+        type: AssemblerBoundUserInterface
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerDeviceVisuals.VisualState:
+        enum.MicrowaveVisualizerLayers.Base:
+          Idle: { state: "icon" }
+          Cooking: { state: "building" }
+        enum.MicrowaveVisualizerLayers.BaseUnlit:
+          Idle: { state: "unlit" }
+          Broken: { state: "panel" }
+          Cooking: { state: "unlit" }
+      enum.PowerDeviceVisuals.Powered:
+        enum.MicrowaveVisualizerLayers.BaseUnlit:
+          True: { visible: true }
+          False: { visible: false }

@@ -1,5 +1,5 @@
 - type: latheRecipePack
-  id: EconomyFurnaceBasic
+  id: EconomyBasic
   recipes:
   - ArmorPlateEconomy1Recipe
-  - ArmorPlateEconomy2Recipe
+  - CapsuleEconomy

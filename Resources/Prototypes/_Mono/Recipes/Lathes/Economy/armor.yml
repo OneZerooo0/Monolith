@@ -3,17 +3,7 @@
   result: ArmorPlateEconomy1
   categories:
   - Materials
-  completetime: 50
+  completetime: 15
   materials:
     Steel: 2000
     Plasteel: 1000
-
-- type: latheRecipe
-  id: ArmorPlateEconomy2Recipe
-  result: ArmorPlateEconomy2
-  categories:
-  - Materials
-  completetime: 50
-  materials:
-    ArmorPlateEconomy1Material: 10
-    Silver: 800

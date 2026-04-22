@@ -9,19 +9,6 @@
     - EconomyGood
   - type: Item
     size: Normal
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.15,-0.15,0.15,0.15"
-        density: 20
-        mask:
-        - MobMask
-        layer:
-        - MobLayer
-        restitution: 0.3  # fite me
-        friction: 0.2
   - type: Sprite
     sprite: _Mono/Objects/Materials/bayponents.rsi
     state: "armor1"
@@ -39,6 +26,34 @@
           collection: MetalBreak
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+# Cherry picked base item things
+  - type: EmitSoundOnPickup
+    sound:
+      collection: GenericPickup
+      params:
+        volume: -7
+  - type: EmitSoundOnDrop
+    sound:
+      collection: GenericDrop
+      params:
+        volume: -7
+  - type: Animateable
+  - type: Clickable
+  - type: InteractionOutline
+  - type: MovedByPressure
+  - type: EmitSoundOnCollide
+    sound:
+      collection: WeakHit
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Effects/drop.ogg
+      params:
+        volume: 2
+  - type: Physics
+    bodyType: Dynamic
+    fixedRotation: false
+  - type: Pullable
+  - type: DamageExaminable
 
 - type: entity
   name: base economy item

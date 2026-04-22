@@ -1,46 +1,17 @@
 # T1
 
-- type: material
-  id: ArmorPlateEconomy1Material
-  stackEntity: ArmorPlateEconomy1
-  name: materials-armorplateeconomy1
-  unit: materials-armorplateeconomy1
-  icon: { sprite: _Mono/Objects/Materials/bayponents.rsi, state: armor1 }
-  color: "#14211d"
-  price: 1
-
 - type: entity
   name: basic armor plate
   description: A simple, refined "armor" alloy plate useful for things that need structural stability.
-  parent: BaseEconomyGoodTier1
+  parent: ArmorPlateEconomy1Broken
   id: ArmorPlateEconomy1
   components:
   - type: Tag
     tags:
     - EconomyGood
-  - type: Item
-    size: Huge
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.15,-0.15,0.15,0.15"
-        density: 40
-        mask:
-        - MobMask
-        layer:
-        - MobLayer
-        restitution: 0.3  # fite me
-        friction: 0.2
   - type: Sprite
     sprite: _Mono/Objects/Materials/bayponents.rsi
     state: "armor1"
-  - type: MultiHandedItem
-  - type: ClothingSpeedModifier
-    walkModifier: 0.9
-    sprintModifier: 0.8
-  - type: HeldSpeedModifier
   - type: Destructible
     thresholds:
     - trigger:
@@ -57,20 +28,13 @@
             max: 1
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-  - type: PhysicalComposition
-    materialComposition:
-      Steel: 1500
-      Plasteel: 500
-  - type: Stack
-    stackType: ArmorPlateEconomy1
-    count: 1
-    baseLayer: armor1
-  - type: Material
+  - type: StaticPrice
+    price: 600
 
 - type: entity
   name: broken basic armor plate
   description: Wreckage from a simple armor plate. Not very surprising.
-  parent: ArmorPlateEconomy1
+  parent: BaseEconomyGoodTier1
   id: ArmorPlateEconomy1Broken
   components:
   - type: Sprite
@@ -89,27 +53,6 @@
           collection: MetalBreak
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-
-# T2
-
-- type: material
-  id: ArmorPlateEconomy2Material
-  stackEntity: ArmorPlateEconomy2
-  name: materials-armorplateeconomy2
-  unit: materials-armorplateeconomy2
-  icon: { sprite: _Mono/Objects/Materials/bayponents.rsi, state: armor2 }
-  color: "#14211d"
-  price: 2
-
-- type: entity
-  name: heavy armor plate
-  description: A heavier, layered alloy armor plate. Heavy, but strong. Useful for things that need significant structural stability, or more commonly, the ability to take a hit.
-  parent: BaseEconomyGoodTier2
-  id: ArmorPlateEconomy2
-  components:
-  - type: Tag
-    tags:
-    - EconomyGood
   - type: Item
     size: Huge
   - type: Fixtures
@@ -117,27 +60,38 @@
       fix1:
         shape:
           !type:PhysShapeAabb
-          bounds: "-0.2,-0.2,0.2,0.2"
+          bounds: "-0.15,-0.15,0.15,0.15"
         density: 40
         mask:
         - MobMask
         layer:
         - MobLayer
         restitution: 0.3  # fite me
-        friction: 0.4
+        friction: 0.2
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 1500
+      Plasteel: 500
+  - type: MultiHandedItem
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.8
+  - type: HeldSpeedModifier
+
+# T2
+
+- type: entity
+  name: heavy armor plate
+  description: A heavier, layered alloy armor plate. Heavy, but strong. Useful for things that need significant structural stability, or more commonly, the ability to take a hit.
+  parent: ArmorPlateEconomy2Broken
+  id: ArmorPlateEconomy2
+  components:
+  - type: Tag
+    tags:
+    - EconomyGood
   - type: Sprite
     sprite: _Mono/Objects/Materials/bayponents.rsi
     state: "armor2"
-  - type: MultiHandedItem
-  - type: ClothingSpeedModifier
-    walkModifier: 0.8
-    sprintModifier: 0.6
-  - type: HeldSpeedModifier
-  - type: PhysicalComposition
-    materialComposition:
-      Steel: 3000
-      Plasteel: 1000
-      Silver: 500
   - type: Destructible
     thresholds:
     - trigger:
@@ -154,16 +108,13 @@
             max: 1
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-  - type: Stack
-    stackType: ArmorPlateEconomy2
-    count: 1
-    baseLayer: armor2
-  - type: Material
+  - type: StaticPrice
+    price: 3000
 
 - type: entity
   name: broken heavy armor plate
   description: Wreckage from a heavy alloy armor plate. A little concerning.
-  parent: ArmorPlateEconomy2
+  parent: BaseEconomyGoodTier2
   id: ArmorPlateEconomy2Broken
   components:
   - type: Sprite
@@ -182,15 +133,31 @@
           collection: MetalBreak
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-
-- type: material
-  id: ArmorPlateEconomy3FragmentMaterial
-  stackEntity: ArmorPlateEconomy3Fragment
-  name: materials-armorplateeconomy3fragment
-  unit: materials-armorplateeconomy3fragment
-  icon: { sprite: _Mono/Objects/Materials/bayponents.rsi, state: armor3 }
-  color: "#14211d"
-  price: 2
+  - type: Item
+    size: Huge
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2,-0.2,0.2,0.2"
+        density: 40
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+        restitution: 0.3  # fite me
+        friction: 0.4
+  - type: MultiHandedItem
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.6
+  - type: HeldSpeedModifier
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 3000
+      Plasteel: 1000
+      Silver: 500
 
 - type: entity
   name: composite armor plate fragment
@@ -201,6 +168,7 @@
   - type: Tag
     tags:
     - EconomyGood
+    - Slice
   - type: Item
     size: Normal
   - type: Fixtures
@@ -229,63 +197,21 @@
     chemicalComposition:
       Carbon: 15
       Silicon: 15
-  - type: Stack
-    stackType: ArmorPlateEconomy3Fragment
-    count: 1
-    baseLayer: armor3_fragment
-  - type: Material
 
 # T3
-
-- type: material
-  id: ArmorPlateEconomy3Material
-  stackEntity: ArmorPlateEconomy3
-  name: materials-armorplateeconomy3
-  unit: materials-armorplateeconomy3
-  icon: { sprite: _Mono/Objects/Materials/bayponents.rsi, state: armor3 }
-  color: "#14211d"
-  price: 3
 
 - type: entity
   name: composite armor plate
   description: A relatively difficult-to-produce ceramic/carbide armor plate. Lightweight for the amount of protection it grants, but it is still exceptionally heavy, making it primarily useful in ship hulls. Can be cut into two fragments.
-  parent: BaseEconomyGoodTier3
+  parent: ArmorPlateEconomy3Broken
   id: ArmorPlateEconomy3
   components:
   - type: Tag
     tags:
     - EconomyGood
-  - type: Item
-    size: Huge
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.2,-0.2,0.2,0.2"
-        density: 60
-        mask:
-        - MobMask
-        layer:
-        - MobLayer
-        restitution: 0.3  # fite me
-        friction: 0.4
   - type: Sprite
     sprite: _Mono/Objects/Materials/bayponents.rsi
     state: "armor3"
-  - type: MultiHandedItem
-  - type: ClothingSpeedModifier
-    walkModifier: 0.8
-    sprintModifier: 0.6
-  - type: HeldSpeedModifier
-  - type: PhysicalComposition
-    materialComposition:
-      Steel: 4000
-      Plasteel: 2000
-      Silver: 1000
-    chemicalComposition:
-      Carbon: 25
-      Silicon: 25
   - type: Destructible
     thresholds:
     - trigger:
@@ -302,19 +228,16 @@
             max: 1
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+  - type: StaticPrice
+    price: 6000
   - type: SliceableFood # yes definitely tasty
     count: 2
     slice: ArmorPlateEconomy3Fragment
-  - type: Stack
-    stackType: ArmorPlateEconomy3
-    count: 1
-    baseLayer: armor3
-  - type: Material
 
 - type: entity
   name: broken composite armor plate
   description: Wreckage from an advanced ceramic/carbide alloy armor plate. Kind of concerning.
-  parent: ArmorPlateEconomy3
+  parent: BaseEconomyGoodTier3
   id: ArmorPlateEconomy3Broken
   components:
   - type: Sprite
@@ -333,27 +256,6 @@
           collection: MetalBreak
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-
-# T4
-
-- type: material
-  id: ArmorPlateEconomy4Material
-  stackEntity: ArmorPlateEconomy4
-  name: materials-armorplateeconomy4
-  unit: materials-armorplateeconomy4
-  icon: { sprite: _Mono/Objects/Materials/bayponents.rsi, state: armor4 }
-  color: "#14211d"
-  price: 4
-
-- type: entity
-  name: EMAG armor plate
-  description: A state-of-the-art EMAG electromagnetic armor plate. Exceptional resistance even when unpowered, but still very heavy. Useful for high-power reactor shielding, infantry armor, FTL drives, and most things that undergo significant stress.
-  parent: BaseEconomyGoodTier4
-  id: ArmorPlateEconomy4
-  components:
-  - type: Tag
-    tags:
-    - EconomyGood
   - type: Item
     size: Huge
   - type: Fixtures
@@ -362,31 +264,43 @@
         shape:
           !type:PhysShapeAabb
           bounds: "-0.2,-0.2,0.2,0.2"
-        density: 80
+        density: 60
         mask:
         - MobMask
         layer:
         - MobLayer
         restitution: 0.3  # fite me
-        friction: 0.6
-  - type: Sprite
-    sprite: _Mono/Objects/Materials/bayponents.rsi
-    state: "armor4"
+        friction: 0.4
   - type: MultiHandedItem
   - type: ClothingSpeedModifier
-    walkModifier: 0.7
-    sprintModifier: 0.5
+    walkModifier: 0.8
+    sprintModifier: 0.6
   - type: HeldSpeedModifier
   - type: PhysicalComposition
     materialComposition:
       Steel: 4000
       Plasteel: 2000
       Silver: 1000
-      Gold: 1000
-      Plastitanium: 500
     chemicalComposition:
       Carbon: 25
       Silicon: 25
+
+# T4
+
+- type: entity
+  name: EMAG armor plate
+  description: A state-of-the-art EMAG electromagnetic armor plate. Exceptional resistance even when unpowered, but still very heavy. Useful for high-power reactor shielding, infantry armor, FTL drives, and most things that undergo significant stress.
+  parent: ArmorPlateEconomy4Broken
+  id: ArmorPlateEconomy4
+  components:
+  - type: Tag
+    tags:
+    - EconomyGood
+  - type: StaticPrice
+    price: 9000
+  - type: Sprite
+    sprite: _Mono/Objects/Materials/bayponents.rsi
+    state: "armor4"
   - type: Destructible
     thresholds:
     - trigger:
@@ -403,16 +317,11 @@
             max: 1
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-  - type: Stack
-    stackType: ArmorPlateEconomy4
-    count: 1
-    baseLayer: armor4
-  - type: Material
 
 - type: entity
   name: broken EMAG armor plate
   description: Wreckage from an advanced ceramic/carbide alloy armor plate. Extremely concerning.
-  parent: ArmorPlateEconomy4
+  parent: BaseEconomyGoodTier4
   id: ArmorPlateEconomy4Broken
   components:
   - type: Sprite
@@ -431,3 +340,33 @@
           collection: MetalBreak
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+  - type: Item
+    size: Huge
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2,-0.2,0.2,0.2"
+        density: 80
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+        restitution: 0.3  # fite me
+        friction: 0.6
+  - type: MultiHandedItem
+  - type: ClothingSpeedModifier
+    walkModifier: 0.7
+    sprintModifier: 0.5
+  - type: HeldSpeedModifier
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 4000
+      Plasteel: 2000
+      Silver: 1000
+      Gold: 1000
+      Plastitanium: 500
+    chemicalComposition:
+      Carbon: 25
+      Silicon: 25
