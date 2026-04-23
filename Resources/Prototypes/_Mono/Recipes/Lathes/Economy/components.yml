@@ -3,6 +3,18 @@
   result: CapsuleEconomy
   categories:
   - Materials
-  completetime: 5
+  completetime: 10
   materials:
     Steel: 1000
+
+- type: latheRecipe
+  id: MicroprocessorEconomy1Recipe
+  result: MicroprocessorEconomy1
+  categories:
+  - Materials
+  completetime: 15
+  materials:
+    Steel: 300
+    Plastic: 300
+    Gold: 300
+    Silver: 300

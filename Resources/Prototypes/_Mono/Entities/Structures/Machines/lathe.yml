@@ -230,3 +230,85 @@
         enum.MicrowaveVisualizerLayers.BaseUnlit:
           True: { visible: true }
           False: { visible: false }
+
+- type: entity
+  id: PrecisionAssemblerEconomy
+  parent: [ BaseMachinePowered, BaseStructureDisableToolUse ]
+  name: precision assembler
+  description: A high-accuracy microfabricator capable of manipulating almost all forms of matter in the right circumstances. Astoundingly useful for creating advanced components of all kinds.
+  components:
+  - type: Sprite
+    offset: 0.5,0
+    sprite: _Mono/Structures/Machines/2x1arcfurnace.rsi
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning" ]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: RequireProjectileTarget
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 900000
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "1.4,0.4,-0.4,-0.4"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  # microwave comps
+  - type: GuideHelp
+    guides:
+    - PrecisionAssembler
+  - type: Microwave
+    capacity: 15
+    explosionChance: 0
+    lightningChance: 0
+    baseHeatMultiplier: 300
+    temperatureUpperThreshold: 3300
+    maxItemSize: Ginormous
+    validRecipeTypes: PrecisionAssembler
+    beginCookingSound: /Audio/Machines/machine_switch.ogg
+    foodDoneSound: /Audio/Effects/Shuttle/radar_ping.ogg
+    loopingSound: /Audio/_Mono/Structures/Economy/furnace.ogg
+    key: PrecisionAssemblerKey
+  - type: ActivatableUI
+    key: enum.MicrowaveUiKey.PrecisionAssemblerKey
+  - type: ContainerContainer
+    containers:
+      microwave_entity_container: !type:Container
+      machine_board: !type:Container
+      machine_parts: !type:Container
+  - type: UserInterface
+    interfaces:
+      enum.MicrowaveUiKey.PrecisionAssemblerKey:
+        type: AssemblerBoundUserInterface
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerDeviceVisuals.VisualState:
+        enum.MicrowaveVisualizerLayers.Base:
+          Idle: { state: "icon" }
+          Cooking: { state: "building" }
+        enum.MicrowaveVisualizerLayers.BaseUnlit:
+          Idle: { state: "unlit" }
+          Broken: { state: "panel" }
+          Cooking: { state: "unlit" }
+      enum.PowerDeviceVisuals.Powered:
+        enum.MicrowaveVisualizerLayers.BaseUnlit:
+          True: { visible: true }
+          False: { visible: false }

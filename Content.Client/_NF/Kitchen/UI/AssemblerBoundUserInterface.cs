@@ -35,6 +35,11 @@ namespace Content.Client._NF.Kitchen.UI
                 _menuTitle = "assembler-menu-arc-furnace-title";
                 _leftFlavorText = "assembler-menu-arc-furnace-footer-flavor-left";
             }
+            else if ((MicrowaveUiKey)uiKey == MicrowaveUiKey.PrecisionAssemblerKey) // Mono - added precision assembler key
+            {
+                _menuTitle = "assembler-menu-precision-assembler-title";
+                _leftFlavorText = "assembler-precision-assembler-footer-flavor-left";
+            }
             else
             {
                 _menuTitle = "assembler-menu-title";

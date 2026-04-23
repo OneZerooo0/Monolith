@@ -22,3 +22,18 @@
     Carbon: 30
     Silicon: 30
   recipeType: ArcFurnace
+
+# end armor recipes
+
+- type: microwaveMealRecipe
+  id: RecipeSiliconBoule
+  name: silicon boule recipe
+  result: SiliconBouleEconomy
+  time: 30
+  group: ArcFurnace
+  solids:
+    MaterialDiamond1: 1 # seed crystal
+  reagents:
+    Silicon: 500
+    EZNutrient: 30 # doping agent
+  recipeType: ArcFurnace

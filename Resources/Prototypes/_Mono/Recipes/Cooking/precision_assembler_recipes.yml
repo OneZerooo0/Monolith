@@ -1,0 +1,49 @@
+- type: microwaveMealRecipe
+  id: RecipeMicroprocessorEconomy2
+  name: nanoprocessor recipe
+  result: MicroprocessorEconomy2
+  time: 15
+  group: PrecisionAssembler
+  solids:
+    MicroprocessorEconomy1: 2
+    SiliconWaferEconomy: 1
+  reagents:
+    Plasma: 100
+  recipeType: PrecisionAssembler
+
+- type: microwaveMealRecipe
+  id: RecipeSiliconWaferEconomy
+  name: silicon wafer recipe
+  result: SiliconWaferEconomySliceSpawner
+  time: 15
+  group: PrecisionAssembler
+  solids:
+    SiliconBouleEconomy: 1
+  recipeType: PrecisionAssembler
+
+# Component bricks
+
+- type: microwaveMealRecipe
+  id: RecipeComponentBrickEconomy1
+  name: basic components recipe
+  result: ComponentBrickEconomy1
+  time: 15
+  group: PrecisionAssembler
+  solids:
+    MicroprocessorEconomy1: 1
+    ArmorPlateEconomy1: 1
+    CapsuleEconomy: 1
+  recipeType: PrecisionAssembler
+
+- type: microwaveMealRecipe
+  id: RecipeComponentBrickEconomy2
+  name: advanced components recipe
+  result: ComponentBrickEconomy2
+  time: 20
+  group: PrecisionAssembler
+  solids:
+    MicroprocessorEconomy2: 1
+    ArmorPlateEconomy2: 1
+    CapsuleLargeEconomy: 1
+    ComponentBrickEconomy1: 1
+  recipeType: PrecisionAssembler

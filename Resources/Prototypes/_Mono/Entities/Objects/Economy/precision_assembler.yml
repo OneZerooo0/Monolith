@@ -258,3 +258,44 @@
     state: "componentbrick3"
 
 # end component bricks
+
+# magnets
+
+- type: entity
+  name: basic electromagnet
+  description: A circular ring composed of magnetic metal and conductive cabling. Useful for containment structures and mechanical/electrical interfacing.
+  parent: BaseEconomyGoodTier1
+  id: ElectromagnetEconomy1
+  components:
+  - type: Tag
+    tags:
+    - EconomyGood
+  - type: Sprite
+    sprite: _Mono/Objects/Materials/bayponents.rsi
+    state: "electromagnet1"
+
+- type: entity
+  name: compound electromagnet
+  description: A stacked electromagnet in the shape of a tube, lined with strong conductive material. Capable of powerfully interchanging electrical and kinetic energy.
+  parent: BaseEconomyGoodTier2
+  id: ElectromagnetEconomy2
+  components:
+  - type: Tag
+    tags:
+    - EconomyGood
+  - type: Sprite
+    sprite: _Mono/Objects/Materials/bayponents.rsi
+    state: "electromagnet2"
+
+- type: entity
+  name: superconductive electromagnet
+  description: A hefty superconducting electromagnet. Extremely useful for high-energy containment and propulsion.
+  parent: BaseEconomyGoodTier3
+  id: ElectromagnetEconomy3
+  components:
+  - type: Tag
+    tags:
+    - EconomyGood
+  - type: Sprite
+    sprite: _Mono/Objects/Materials/bayponents.rsi
+    state: "electromagnet3"
