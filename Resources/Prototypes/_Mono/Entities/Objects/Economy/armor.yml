@@ -168,7 +168,6 @@
   - type: Tag
     tags:
     - EconomyGood
-    - Slice
   - type: Item
     size: Normal
   - type: Fixtures
@@ -230,9 +229,11 @@
         acts: [ "Destruction" ]
   - type: StaticPrice
     price: 6000
-  - type: SliceableFood # yes definitely tasty
-    count: 2
-    slice: ArmorPlateEconomy3Fragment
+  - type: Butcherable
+    butcheringType: Knife
+    spawned:
+      - id: ArmorPlateEconomy3Fragment
+        amount: 2
 
 - type: entity
   name: broken composite armor plate
