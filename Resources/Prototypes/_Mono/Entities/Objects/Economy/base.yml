@@ -3,6 +3,7 @@
   description: Used to keeo the ol' rust belt rolling.
   parent: BaseItem
   id: BaseEconomyGood
+  abstract: true
   components:
   - type: Tag
     tags:
@@ -65,6 +66,12 @@
   components:
   - type: StaticPrice
     price: 1000
+  - type: RadarBlip
+    visibleFromOtherGrids: true
+    radarColor: "#999999"
+    scale: 0.6
+    shape: circle
+    requireNoGrid: false
 
 - type: entity
   name: base economy item
@@ -76,6 +83,10 @@
   components:
   - type: StaticPrice
     price: 3000
+  - type: RadarBlip
+    radarColor: "#83a37f"
+    scale: 0.7
+
 
 - type: entity
   name: base economy item
@@ -87,6 +98,9 @@
   components:
   - type: StaticPrice
     price: 6000
+  - type: RadarBlip
+    radarColor: "#8bbac9"
+    scale: 0.8
 
 - type: entity
   name: base economy item
@@ -98,3 +112,6 @@
   components:
   - type: StaticPrice
     price: 9000
+  - type: RadarBlip
+    radarColor: "#FFFF00"
+    scale: 1

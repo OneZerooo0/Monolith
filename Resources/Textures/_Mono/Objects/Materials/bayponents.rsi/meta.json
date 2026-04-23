@@ -47,10 +47,22 @@
             "name": "canister_open"
         },
         {
+            "name": "canisterfill1"
+        },
+        {
+            "name": "canisterfill2"
+        },
+        {
             "name": "canister2"
         },
         {
             "name": "canister2_open"
+        },
+        {
+            "name": "canister2fill1"
+        },
+        {
+            "name": "canister2fill2"
         },
         {
             "name": "capacitor1"

@@ -3,7 +3,7 @@
 - type: entity
   id: CapsuleEconomy
   name: storage capsule
-  description: Used for storing chemicals and other substances needed for industrial processes. Can be opened by alt-clicking.
+  description: Used for storing chemicals and other substances needed for industrial processes. Can be opened and closed.
   parent: BaseEconomyGood
   components:
   - type: GenericVisualizer
@@ -12,12 +12,19 @@
         enum.OpenableVisuals.Layer:
           True: {state: "canister_open"}
           False: {state: "canister"}
+  - type: SolutionContainerVisuals
+    maxFillLevels: 2
+    fillBaseName: canisterfill
+    inHandsFillBaseName: -fill-
   - type: Appearance
   - type: Sprite
     sprite: _Mono/Objects/Materials/bayponents.rsi
     layers:
     - state: canister
       map: ["enum.OpenableVisuals.Layer"]
+    - state: canisterfill1
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+      visible: false
   - type: Openable
     sound:
       collection: flaskOpenSounds
@@ -26,17 +33,43 @@
       collection: flaskCloseSounds
   - type: SolutionContainerManager
     solutions:
-      drink:
+      capsule:
         maxVol: 100
   - type: PhysicalComposition
     materialComposition:
       Steel: 500
+  - type: MixableSolution
+    solution: capsule
+  - type: FitsInDispenser
+    solution: capsule
+  - type: RefillableSolution
+    solution: capsule
+  - type: DrainableSolution
+    solution: capsule
+  - type: ExaminableSolution
+    solution: capsule
+  - type: DrawableSolution
+    solution: capsule
+  - type: InjectableSolution
+    solution: capsule
+  - type: SolutionTransfer
+    canChangeTransferAmount: true
+  - type: SolutionItemStatus
+    solution: capsule
+  - type: UserInterface
+    interfaces:
+      enum.TransferAmountUiKey.Key:
+        type: TransferAmountBoundUserInterface
+  - type: Drink
+    solution: capsule
+  - type: Spillable
+    solution: capsule
 
 - type: entity
   id: CapsuleLargeEconomy
   name: large storage capsule
-  description: Used for storing chemicals and other substances needed for industrial processes. Much larger than its predecessor. Can be opened by alt-clicking.
-  parent: BaseEconomyGood
+  description: Used for storing chemicals and other substances needed for industrial processes. Much larger than its predecessor. Can be opened and closed.
+  parent: BaseEconomyGoodTier1
   components:
   - type: GenericVisualizer
     visuals:
@@ -44,12 +77,19 @@
         enum.OpenableVisuals.Layer:
           True: {state: "canister2_open"}
           False: {state: "canister2"}
+  - type: SolutionContainerVisuals
+    maxFillLevels: 2
+    fillBaseName: canister2fill
+    inHandsFillBaseName: -fill-
   - type: Appearance
   - type: Sprite
     sprite: _Mono/Objects/Materials/bayponents.rsi
     layers:
     - state: canister2
       map: ["enum.OpenableVisuals.Layer"]
+    - state: canister2fill1
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+      visible: false
   - type: Openable
     sound:
       collection: flaskOpenSounds
@@ -58,12 +98,163 @@
       collection: flaskCloseSounds
   - type: SolutionContainerManager
     solutions:
-      drink:
+      capsule:
         maxVol: 200
   - type: PhysicalComposition
     materialComposition:
       Steel: 1000
       Plastic: 1000
       Glass: 500
+  - type: MixableSolution
+    solution: capsule
+  - type: FitsInDispenser
+    solution: capsule
+  - type: RefillableSolution
+    solution: capsule
+  - type: DrainableSolution
+    solution: capsule
+  - type: ExaminableSolution
+    solution: capsule
+  - type: DrawableSolution
+    solution: capsule
+  - type: InjectableSolution
+    solution: capsule
+  - type: SolutionTransfer
+    canChangeTransferAmount: true
+  - type: SolutionItemStatus
+    solution: capsule
+  - type: UserInterface
+    interfaces:
+      enum.TransferAmountUiKey.Key:
+        type: TransferAmountBoundUserInterface
+  - type: Drink
+    solution: capsule
+  - type: Spillable
+    solution: capsule
 
 # end capsules
+
+# microprocessors
+
+- type: entity
+  name: microprocessor
+  description: A fairly common field programmable microcontroller. Useful in everything that needs even a smidge of brain.
+  parent: BaseEconomyGoodTier1
+  id: MicroprocessorEconomy1
+  components:
+  - type: Tag
+    tags:
+    - EconomyGood
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Mono/Objects/Materials/bayponents.rsi
+    state: "microprocessor1"
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  name: nanoprocessor
+  description: A more advanced, miniaturized computation system, capable of handling a basic operating system!
+  parent: BaseEconomyGoodTier2
+  id: MicroprocessorEconomy2
+  components:
+  - type: Tag
+    tags:
+    - EconomyGood
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Mono/Objects/Materials/bayponents.rsi
+    state: "microprocessor2"
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  name: quantum processor
+  description: A state-of-the-art quantum computing system with in-built cooling, memory, and back-up power supply, capable of handling everything from persona level A.I to FTL piloting.
+  parent: BaseEconomyGoodTier3
+  id: MicroprocessorEconomy3
+  components:
+  - type: Tag
+    tags:
+    - EconomyGood
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Mono/Objects/Materials/bayponents.rsi
+    state: "microprocessor3"
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+# end microprocessors
+
+# component bricks
+
+- type: entity
+  name: basic components
+  description: A casing of mechanical-electrical interfacing systems, like gears, stepper motors, cabling and more.
+  parent: BaseEconomyGoodTier1
+  id: ComponentBrickEconomy1
+  components:
+  - type: Tag
+    tags:
+    - EconomyGood
+  - type: Sprite
+    sprite: _Mono/Objects/Materials/bayponents.rsi
+    state: "componentbrick1"
+
+- type: entity
+  name: advanced components
+  description: A casing of more advanced, precise and durable mechanical-electrical interfacing systems.
+  parent: BaseEconomyGoodTier2
+  id: ComponentBrickEconomy2
+  components:
+  - type: Tag
+    tags:
+    - EconomyGood
+  - type: Sprite
+    sprite: _Mono/Objects/Materials/bayponents.rsi
+    state: "componentbrick2"
+
+- type: entity
+  name: super components
+  description: A casing of state-of-the-art interfacing systems and miscellaneous parts. Robust, efficient, and expensive.
+  parent: BaseEconomyGoodTier3
+  id: ComponentBrickEconomy3
+  components:
+  - type: Tag
+    tags:
+    - EconomyGood
+  - type: Sprite
+    sprite: _Mono/Objects/Materials/bayponents.rsi
+    state: "componentbrick3"
+
+# end component bricks
