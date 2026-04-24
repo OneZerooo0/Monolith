@@ -69,7 +69,7 @@
   id: CapsuleLargeEconomy
   name: large storage capsule
   description: Used for storing chemicals and other substances needed for industrial processes. Much larger than its predecessor. Can be opened and closed.
-  parent: BaseEconomyGoodTier1
+  parent: BaseEconomyGoodTier2
   components:
   - type: GenericVisualizer
     visuals:
@@ -216,12 +216,65 @@
 
 # end microprocessors
 
+# capacitors
+
+- type: entity
+  name: basic capacitor
+  description: A simple capacitor useful in small-scale power storage and simple circuits.
+  parent: BaseEconomyGoodTier1
+  id: CapacitorEconomy1
+  components:
+    - type: Tag
+      tags:
+        - EconomyGood
+        - CapacitorStockPart
+    - type: Sprite
+      sprite: _Mono/Objects/Materials/bayponents.rsi
+      state: "capacitor1"
+    - type: MachinePart
+      part: Capacitor
+      rating: 1
+
+- type: entity
+  name: advanced capacitor
+  description: An upgraded capacitor capable of handling more voltage and storing more energy through the power of refined semiconductors.
+  parent: BaseEconomyGoodTier2
+  id: CapacitorEconomy2
+  components:
+    - type: Tag
+      tags:
+        - EconomyGood
+    - type: Sprite
+      sprite: _Mono/Objects/Materials/bayponents.rsi
+      state: "capacitor2"
+    - type: MachinePart
+      part: Capacitor
+      rating: 3
+
+- type: entity
+  name: supercapacitor
+  description: A state-of-the-art capacitor capable of storing incredible amounts of energy for its size through the use of miniaturized SMES technology.
+  parent: BaseEconomyGoodTier3
+  id: CapacitorEconomy3
+  components:
+    - type: Tag
+      tags:
+        - EconomyGood
+    - type: Sprite
+      sprite: _Mono/Objects/Materials/bayponents.rsi
+      state: "capacitor3"
+    - type: MachinePart
+      part: Capacitor
+      rating: 4
+
+# end capacitors
+
 # component bricks
 
 - type: entity
   name: basic components
   description: A casing of mechanical-electrical interfacing systems, like gears, stepper motors, cabling and more.
-  parent: BaseEconomyGoodTier1
+  parent: BaseEconomyGoodTier2
   id: ComponentBrickEconomy1
   components:
   - type: Tag
@@ -234,7 +287,7 @@
 - type: entity
   name: advanced components
   description: A casing of more advanced, precise and durable mechanical-electrical interfacing systems.
-  parent: BaseEconomyGoodTier2
+  parent: BaseEconomyGoodTier3
   id: ComponentBrickEconomy2
   components:
   - type: Tag
@@ -247,7 +300,7 @@
 - type: entity
   name: super components
   description: A casing of state-of-the-art interfacing systems and miscellaneous parts. Robust, efficient, and expensive.
-  parent: BaseEconomyGoodTier3
+  parent: BaseEconomyGoodTier4
   id: ComponentBrickEconomy3
   components:
   - type: Tag
@@ -275,6 +328,22 @@
     state: "electromagnet1"
 
 - type: entity
+  name: compound electromagnet (unfinished)
+  description: A work-in-progress compound electromagnet. Needs 30 LV cables to begin construction.
+  parent: BaseEconomyGoodTier1
+  id: ElectromagnetEconomy2Start
+  components:
+  - type: Tag
+    tags:
+    - EconomyGood
+  - type: Sprite
+    sprite: _Mono/Objects/Materials/bayponents.rsi
+    state: "electromagnet2_unfinished"
+  - type: Construction
+    graph: ElectromagnetEconomy2Finish
+    node: unfinished
+
+- type: entity
   name: compound electromagnet
   description: A stacked electromagnet in the shape of a tube, lined with strong conductive material. Capable of powerfully interchanging electrical and kinetic energy.
   parent: BaseEconomyGoodTier2
@@ -283,9 +352,13 @@
   - type: Tag
     tags:
     - EconomyGood
+    - ElectromagnetEconomy2
   - type: Sprite
     sprite: _Mono/Objects/Materials/bayponents.rsi
     state: "electromagnet2"
+  - type: Construction
+    graph: ElectromagnetEconomy2Finish
+    node: finished
 
 - type: entity
   name: superconductive electromagnet
@@ -299,3 +372,65 @@
   - type: Sprite
     sprite: _Mono/Objects/Materials/bayponents.rsi
     state: "electromagnet3"
+
+# end magnets
+
+# start radios
+
+- type: entity
+  name: T/R broadband radio component
+  description: A transmitter/reciever radio component capable of tuning and transmitting to most common radio frequencies, even at a distance.
+  parent: BaseEconomyGoodTier2
+  id: RadioEconomy1
+  components:
+    - type: Tag
+      tags:
+        - EconomyGood
+    - type: Sprite
+      sprite: _Mono/Objects/Materials/bayponents.rsi
+      state: "radio1"
+
+- type: entity
+  name: HF signal tranciever component
+  description: A high-frequency signal transmitter/reciever, capable of intercepting and communicating in various frequencies. The range of detection also gives it utility in high-end sensor systems, like radar, ELINT, and thermal panels.
+  parent: BaseEconomyGoodTier4
+  id: RadioEconomy2
+  components:
+    - type: Tag
+      tags:
+        - EconomyGood
+    - type: Sprite
+      sprite: _Mono/Objects/Materials/bayponents.rsi
+      state: "radio2"
+
+# end radios
+
+# start optics
+
+- type: entity
+  name: optical sensor
+  description: An eye-like camera capable of capturing photons. Basically a fancy eyeball, though it has other uses.
+  parent: BaseEconomyGoodTier2
+  id: OpticsEconomy1
+  components:
+    - type: Tag
+      tags:
+        - EconomyGood
+    - type: Sprite
+      sprite: _Mono/Objects/Materials/bayponents.rsi
+      state: "optics1"
+
+- type: entity
+  name: precision optical sensor
+  description: An advanced, high-resolution photon sensor capable of maintaining visual clarity of distant objects. Extremely useful for monitoring, detection and tracking equipment.
+  parent: BaseEconomyGoodTier3
+  id: OpticsEconomy2
+  components:
+    - type: Tag
+      tags:
+        - EconomyGood
+    - type: Sprite
+      sprite: _Mono/Objects/Materials/bayponents.rsi
+      state: "optics2"
+
+# end optics

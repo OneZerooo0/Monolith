@@ -155,6 +155,9 @@
   name: industrial arc furnace
   description: An advanced arc furnace capable of melting ore and refining material through heat. Essential for creating advanced alloys.
   components:
+  - type: Transform
+    noRot: false
+  - type: Rotatable
   - type: Sprite
     offset: 0.5,0
     sprite: _Mono/Structures/Machines/2x1arcfurnace.rsi
@@ -237,6 +240,9 @@
   name: precision assembler
   description: A high-accuracy microfabricator capable of manipulating almost all forms of matter in the right circumstances. Astoundingly useful for creating advanced components of all kinds.
   components:
+  - type: Transform
+    noRot: false
+  - type: Rotatable
   - type: Sprite
     offset: 0.5,0
     sprite: _Mono/Structures/Machines/2x1arcfurnace.rsi

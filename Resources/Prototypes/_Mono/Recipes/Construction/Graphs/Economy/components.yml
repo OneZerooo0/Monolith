@@ -1,0 +1,17 @@
+- type: constructionGraph
+  id: ElectromagnetEconomy2Finish
+  start: unfinished
+  graph:
+  - node: unfinished
+    entity: ElectromagnetEconomy2Start
+    edges:
+    - to: finished
+      steps:
+      - material: Cable
+        amount: 30
+        doAfter: 5
+      - tool: Screwing
+        doAfter: 2
+
+  - node: finished
+    entity: ElectromagnetEconomy2

@@ -55,6 +55,9 @@
     fixedRotation: false
   - type: Pullable
   - type: DamageExaminable
+  - type: GuideHelp
+    guides:
+    - EconomyRecipes
 
 - type: entity
   name: base economy item

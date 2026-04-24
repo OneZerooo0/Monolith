@@ -23,6 +23,19 @@
     Silicon: 30
   recipeType: ArcFurnace
 
+- type: microwaveMealRecipe
+  id: RecipeArmorPlate4Start
+  name: EMAG plate part 1 recipe
+  result: ArmorPlateEconomy4Start
+  time: 20
+  group: ArcFurnace
+  solids:
+    ArmorPlateEconomy3: 1
+  reagents:
+    Carbon: 30
+    Silicon: 30
+  recipeType: ArcFurnace
+
 # end armor recipes
 
 - type: microwaveMealRecipe
@@ -37,3 +50,5 @@
     Silicon: 500
     EZNutrient: 30 # doping agent
   recipeType: ArcFurnace
+
+# end silicon

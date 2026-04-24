@@ -439,6 +439,48 @@
 # T4
 
 - type: entity
+  name: EMAG armor plate (unfinished)
+  description: The ceramic/metallic plate component of an EMAG armor plate, fresh off the forge and awaiting its electronic components. Needs 30 LV cables to begin construction.
+  parent: ArmorPlateEconomy4Broken
+  id: ArmorPlateEconomy4Start
+  components:
+  - type: Tag
+    tags:
+    - EconomyGood
+  - type: StaticPrice
+    price: 3000
+  - type: Sprite
+    sprite: _Mono/Objects/Materials/bayponents.rsi
+    state: "armor4_unfinished"
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1500
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          ArmorPlateEconomy3Broken:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 4000
+      Plasteel: 2000
+      Silver: 1000
+    chemicalComposition:
+      Carbon: 25
+      Silicon: 25
+  - type: Construction
+    graph: ArmorPlateEconomy4Finish
+    node: unfinished
+
+- type: entity
   name: EMAG armor plate
   description: A state-of-the-art EMAG electromagnetic armor plate. Exceptional resistance even when unpowered, but still very heavy. Useful for high-power reactor shielding, infantry armor, FTL drives, and most things that undergo significant stress.
   parent: ArmorPlateEconomy4Broken
@@ -468,6 +510,9 @@
             max: 1
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+  - type: Construction
+    graph: ArmorPlateEconomy4Finish
+    node: finished
 
 - type: entity
   name: broken EMAG armor plate

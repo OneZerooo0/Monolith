@@ -3,4 +3,6 @@
   recipes:
   - ArmorPlateEconomy1Recipe
   - CapsuleEconomyRecipe
-  - Microprocessor1Economy
+  - MicroprocessorEconomy1Recipe
+  - ElectromagnetEconomy1Recipe
+  - CapacitorEconomy1Recipe

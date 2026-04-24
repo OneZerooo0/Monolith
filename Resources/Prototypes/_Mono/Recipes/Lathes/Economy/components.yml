@@ -15,6 +15,28 @@
   completetime: 15
   materials:
     Steel: 300
-    Plastic: 300
+    # Copper: 300
     Gold: 300
     Silver: 300
+
+- type: latheRecipe
+  id: ElectromagnetEconomy1Recipe
+  result: ElectromagnetEconomy1
+  categories:
+  - Materials
+  completetime: 15
+  materials:
+    Steel: 500
+    # Copper: 500
+
+- type: latheRecipe
+  id: CapacitorEconomy1Recipe
+  result: CapacitorEconomy1
+  categories:
+  - Materials
+  completetime: 15
+  materials:
+    Steel: 500
+    # Copper: 300
+    # Lithium: 300
+

@@ -21,6 +21,18 @@
     SiliconBouleEconomy: 1
   recipeType: PrecisionAssembler
 
+# Electromagnets
+
+- type: microwaveMealRecipe
+  id: RecipeElectromagnetEconomy2Start
+  name: compound electromagnet recipe
+  result: ElectromagnetEconomy2Start
+  time: 15
+  group: PrecisionAssembler
+  solids:
+    ElectromagnetEconomy1: 2
+  recipeType: PrecisionAssembler
+
 # Component bricks
 
 - type: microwaveMealRecipe

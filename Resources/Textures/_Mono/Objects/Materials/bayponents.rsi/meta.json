@@ -32,6 +32,9 @@
             "name": "armor4"
         },
         {
+            "name": "armor4_unfinished"
+        },
+        {
             "name": "armor4_broken"
         },
         {
@@ -90,6 +93,9 @@
         },
         {
             "name": "electromagnet2"
+        },
+        {
+            "name": "electromagnet2_unfinished"
         },
         {
             "name": "electromagnet3"
