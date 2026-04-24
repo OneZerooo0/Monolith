@@ -29,8 +29,8 @@
   All tier 1 components (needed for all others) can usually be created in the [color=gray]industrial steel lathe[/color], and are foundational to most other items. They can be made out of raw sheets of material refined from an ore processor, and are crafted like any other lathe-produced item - simply insert the sheets of material, click the desired item in the menu, and wait.
 
   Tier 2 components are where products get complicated. They all require initial production from an [color=orange]Arc Furnace[/color] or [color=cyan]Precision Assembler[/color], and many also require additional components to be added after fabrication.
-  [bold][color=yellow]Remember: All "unfinished" products first require LV cables![/color][/bold]
-  [color=red]REMEMBER: Most components are fragile! Be cautious when introducing them to possible damage sources![/color]
+  [bold][color=yellow]Remember: All "unfinished" products say what they need to start construction in their description![/color][/bold]
+  [color=red]IMPORTANT: Most components are fragile! Be cautious when introducing them to possible damage sources![/color]
 
   To help explain the process of creating a Tier 2 product, this tutorial will include a walk-through about creating a Heavy Armor Plate.
 
