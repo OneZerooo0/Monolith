@@ -183,9 +183,6 @@
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/shotgun_insert.ogg
     autoCycle: false
-  - type: StaticPrice
-    price: 20000
-    vendPrice: 20000
   - type: SpeedModifiedOnWield
     walkModifier: 0.8
     sprintModifier: 0.90
