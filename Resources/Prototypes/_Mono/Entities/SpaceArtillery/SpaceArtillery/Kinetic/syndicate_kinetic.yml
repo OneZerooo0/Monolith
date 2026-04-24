@@ -247,10 +247,10 @@
 - type: entity
   id: WeaponTurretLeviathan
   name: LEVIATHAN 520mm howitzer
-  suffix: Capital, T4
+  suffix: Capital, T5
   parent:
   - BallisticArtilleryUnanchorable
-  - BallisticArtilleryTier4HP
+  - BallisticArtilleryTier5HP
   description: A heavy artillery gun of syndicate origin, the leviathan is tyrannic testiment of Syndicate ingenuity, designed to send a message. Able to crack NanoTrasen battleships, and small fighters in a single shell. Loads with a similar mechanism as the anaconda handgun.
   components:
   - type: StaticPrice
