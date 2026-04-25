@@ -22,11 +22,11 @@
   - type: CargoSellBlacklist
   - type: NFShipyardVoucher # FIXME - whitelist component to prevent misprediction
 
-# NFSD vouchers
+# TSFMC vouchers
 - type: entity
   parent: BaseShipVoucher
-  id: ShipVoucherNfsdSergeant
-  name: TSFMC medium ship voucher
+  id: ShipVoucherTsfT0
+  name: TSFMC T0 ship voucher
   description: Allows for one free small to medium TSFMC ship purchase. Destroyed on sale.
   components:
   - type: Sprite
@@ -39,29 +39,13 @@
     destroyOnEmpty: true
     consoleType: Security
     companyName: TSF
-    access:
-    - Sergeant # Frontier
-    accessGroups: # Frontier
-    - GeneralNfsdAccess # Frontier
-
-- type: entity
-  parent: ShipVoucherNfsdSergeant
-  id: ShipVoucherNfsdBailiff
-  name: TSFMC capital ship voucher
-  description: Allows for one free small to capital TSFMC ship purchase. Destroyed on sale.
-  components:
-  - type: Sprite
-    layers:
-    - state: nfsd
-    - state: voucherbailiff
-  - type: ShipyardVoucher
-    companyName: TSF
-    access:
-    - Armory
-    - Sergeant # Frontier
-    - Bailiff # Frontier
-    accessGroups: # Frontier
-    - GeneralNfsdAccess # Frontier
+    vessels:
+    - Welder
+    - Hoplite
+    - Shiv
+    - Syringe
+    - Ocelot
+    - Tumour
 
 # Service voucher
 - type: entity
