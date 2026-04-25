@@ -10,7 +10,7 @@
     sprite: _Mono/Objects/Misc/newlpc.rsi
     state: icon
   - type: ShipyardVoucher
-    DestroyOnEmpty: false
+    destroyOnEmpty: false
     cooldown: 300 # five minutes
 
 #Ironman Voucher
@@ -34,7 +34,7 @@
     - Baeg
     - Framework
     consoleType: Shipyard
-    DestroyOnEmpty: true
+    destroyOnEmpty: true
 
 # Tsfmc
 
@@ -212,7 +212,7 @@
       shader: unshaded
   - type: RandomSpawner
     offset: 0
-    DeleteSpawnerAfterSpawn: true
+    deleteSpawnerAfterSpawn: true
     prototypes:
     - ShipVoucherSpica
     - ShipVoucherDagger
@@ -483,7 +483,7 @@
       shader: unshaded
   - type: RandomSpawner
     offset: 0
-    DeleteSpawnerAfterSpawn: true
+    deleteSpawnerAfterSpawn: true
     prototypes:
     - ShipVoucherNeptune
     - ShipVoucherBastion
@@ -723,7 +723,7 @@
       shader: unshaded
   - type: ShipyardVoucher
     destroyOnEmpty: false
-    cooldownn: 3600 # 30 minutes
+    cooldown: 3600 # 30 minutes
     consoleType: Sr
     companyName: Colonial
     vessels:

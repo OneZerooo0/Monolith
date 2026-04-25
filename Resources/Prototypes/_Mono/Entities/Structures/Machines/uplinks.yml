@@ -91,6 +91,7 @@
     access: [["Pirate"]]
   - type: CompanyAccessReader
     requiredCompany: PDV
+    popupMessage: company-pdv-access-denied
   - type: Tag
     tags:
     - PirateUplink
