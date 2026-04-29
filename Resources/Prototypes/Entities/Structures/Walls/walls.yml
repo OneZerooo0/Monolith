@@ -319,7 +319,7 @@
   - type: Icon
     sprite: Structures/Walls/plastitanium.rsi
   - type: IconSmooth
-    key: indestructibleplastitaniumwalls # Mono
+    key: plastitaniumwalls # Mono
     base: plastitanium
   - type: Fixtures
     fixtures:

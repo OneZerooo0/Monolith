@@ -37,6 +37,7 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: IconSmooth
+    key: plasmawindows # Mono
     base: pwindow
   - type: Construction
     graph: Window
