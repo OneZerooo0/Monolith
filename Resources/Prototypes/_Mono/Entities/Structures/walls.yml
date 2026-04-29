@@ -18,7 +18,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1100
+        damage: 2000
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -27,7 +27,7 @@
           collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 1000
+        damage: 2500
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -66,7 +66,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 2100
+        damage: 3500
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -75,7 +75,7 @@
           collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 1500
+        damage: 3000
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -114,7 +114,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 3600
+        damage: 4000
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -123,7 +123,7 @@
           collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 2500
+        damage: 3500
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -162,7 +162,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 5100
+        damage: 4500
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]

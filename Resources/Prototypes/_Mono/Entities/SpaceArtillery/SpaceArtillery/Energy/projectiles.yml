@@ -436,7 +436,7 @@
       Heat: 35
       Structural: 35
   - type: HitscanBasicRaycast
-    maxDistance: 400
+    maxDistance: 512
 
 # Apollo
 
