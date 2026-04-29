@@ -149,7 +149,7 @@
     - Diagonal
   - type: IconSmooth
     mode: Diagonal
-    key: walls # Frontier: windows<walls
+    key: reinforcedplasmawindows # Mono
     base: state
   - type: Icon
     sprite: Structures/Windows/plasma_diagonal.rsi
