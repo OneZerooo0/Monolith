@@ -32,8 +32,7 @@
   solids:
     ArmorPlateEconomy3: 1
   reagents:
-    Carbon: 30
-    Silicon: 30
+    Superconductant: 60
   recipeType: ArcFurnace
 
 # end armor recipes

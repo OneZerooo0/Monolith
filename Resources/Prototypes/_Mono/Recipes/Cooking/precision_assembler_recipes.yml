@@ -18,9 +18,10 @@
   time: 15
   group: PrecisionAssembler
   solids:
-    MicroprocessorEconomy2: 2
-    CapacitorEconomy2: 2
+    MicroprocessorEconomy2: 1
     OpticsEconomy1: 1
+  reagents:
+    SodiumPolyacrylate: 30
   recipeType: PrecisionAssembler
 
 - type: microwaveMealRecipe
@@ -32,6 +33,7 @@
   solids:
     SiliconBouleEconomy: 1
   recipeType: PrecisionAssembler
+
 # Capacitors
 
 - type: microwaveMealRecipe
@@ -67,6 +69,8 @@
   group: PrecisionAssembler
   solids:
     ElectromagnetEconomy1: 2
+  reagents:
+    Superconductant: 60
   recipeType: PrecisionAssembler
 
 # Component bricks
