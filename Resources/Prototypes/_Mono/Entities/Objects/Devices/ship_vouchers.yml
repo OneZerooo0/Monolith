@@ -11,7 +11,7 @@
     state: icon
   - type: ShipyardVoucher
     destroyOnEmpty: false
-    cooldown: 300 # five minutes
+    cooldown: 1800 # thirty minutes
 
 #Ironman Voucher
 - type: entity
@@ -88,7 +88,7 @@
       shader: unshaded
   - type: ShipyardVoucher
     destroyOnEmpty: false
-    cooldown: 3600 # 30 minutes
+    cooldown: 7200 # one hour
     consoleType: Security
     companyName: TSF
     vessels:
@@ -113,7 +113,7 @@
       shader: unshaded
   - type: ShipyardVoucher
     destroyOnEmpty: false
-    cooldown: 3600 # 30 minutes
+    cooldown: 7200 # one hour
     consoleType: Security
     companyName: TSF
     vessels:
@@ -138,7 +138,7 @@
       shader: unshaded
   - type: ShipyardVoucher
     destroyOnEmpty: false
-    cooldown: 3600 # 30 minutes
+    cooldown: 7200 # one hour
     consoleType: Security
     companyName: TSF
     vessels:
@@ -163,7 +163,7 @@
       shader: unshaded
   - type: ShipyardVoucher
     destroyOnEmpty: false
-    cooldown: 3600 # 30 minutes
+    cooldown: 7200 # one hour
     consoleType: Security
     companyName: TSF
     vessels:
@@ -188,7 +188,7 @@
       shader: unshaded
   - type: ShipyardVoucher
     destroyOnEmpty: false
-    cooldown: 3600 # 30 minutes
+    cooldown: 7200 # one hour
     consoleType: Security
     companyName: TSF
     vessels:
@@ -241,7 +241,7 @@
       shader: unshaded
   - type: ShipyardVoucher
     destroyOnEmpty: false
-    cooldown: 3600 # 30 minutes
+    cooldown: 7200 # one hour
     consoleType: Security
     companyName: TSF
     vessels:
@@ -270,7 +270,7 @@
       shader: unshaded
   - type: ShipyardVoucher
     destroyOnEmpty: false
-    cooldown: 5400 # 45 minutes
+    cooldown: 10800 # hour and 25 minutes
     consoleType: Security
     companyName: TSF
     vessels:
@@ -299,7 +299,7 @@
       shader: unshaded
   - type: ShipyardVoucher
     destroyOnEmpty: false
-    cooldown: 7200 # 1 hour
+    cooldown: 14400 # 2 hours
     consoleType: Security
     companyName: TSF
     vessels:
@@ -359,7 +359,7 @@
       shader: unshaded
   - type: ShipyardVoucher
     destroyOnEmpty: false
-    cooldown: 3600 # 30 minutes
+    cooldown: 7200 # one hour
     consoleType: BlackMarket
     companyName: PDV
     vessels:
@@ -384,7 +384,7 @@
       shader: unshaded
   - type: ShipyardVoucher
     destroyOnEmpty: false
-    cooldown: 3600 # 30 minutes
+    cooldown: 7200 # one hour
     consoleType: BlackMarket
     companyName: PDV
     vessels:
@@ -409,7 +409,7 @@
       shader: unshaded
   - type: ShipyardVoucher
     destroyOnEmpty: false
-    cooldown: 3600 # 30 minutes
+    cooldown: 7200 # one hour
     consoleType: BlackMarket
     companyName: PDV
     vessels:
@@ -434,7 +434,7 @@
       shader: unshaded
   - type: ShipyardVoucher
     destroyOnEmpty: false
-    cooldown: 3600 # 30 minutes
+    cooldown: 7200 # one hour
     consoleType: BlackMarket
     companyName: PDV
     vessels:
@@ -459,7 +459,7 @@
       shader: unshaded
   - type: ShipyardVoucher
     destroyOnEmpty: false
-    cooldown: 3600 # 30 minutes
+    cooldown: 7200 # one hour
     consoleType: BlackMarket
     companyName: PDV
     vessels:
@@ -512,7 +512,7 @@
       shader: unshaded
   - type: ShipyardVoucher
     destroyOnEmpty: false
-    cooldown: 3600 # 30 minutes
+    cooldown: 7200 # one hour
     consoleType: BlackMarket
     companyName: PDV
     vessels:
@@ -537,7 +537,7 @@
       shader: unshaded
   - type: ShipyardVoucher
     destroyOnEmpty: false
-    cooldown: 3600 # 30 minutes
+    cooldown: 7200 # one hour
     consoleType: BlackMarket
     companyName: PDV
     vessels:
@@ -562,7 +562,7 @@
       shader: unshaded
   - type: ShipyardVoucher
     destroyOnEmpty: false
-    cooldown: 3600 # 30 minutes
+    cooldown: 7200 # one hour
     consoleType: BlackMarket
     companyName: PDV
     vessels:
@@ -591,7 +591,7 @@
       shader: unshaded
   - type: ShipyardVoucher
     destroyOnEmpty: false
-    cooldown: 5400 # 45 minutes
+    cooldown: 10800 # hour and 25 minutes
     consoleType: BlackMarket
     companyName: PDV
     vessels:
@@ -620,7 +620,7 @@
       shader: unshaded
   - type: ShipyardVoucher
     destroyOnEmpty: false
-    cooldown: 7200 # 1 hour
+    cooldown: 14400 # 2 hours
     consoleType: BlackMarket
     companyName: PDV
     vessels:
@@ -723,13 +723,15 @@
       shader: unshaded
   - type: ShipyardVoucher
     destroyOnEmpty: false
-    cooldown: 3600 # 30 minutes
+    cooldown: 7200 # one hour
     consoleType: Sr
     companyName: Colonial
     vessels:
     - Ravager
   - type: StaticPrice
     vendPrice: 325000
+
+# fighters
 
 - type: entity
   parent: BaseShipLPC
