@@ -1,0 +1,18 @@
+- type: reagent
+  id: Superconductant
+  name: reagent-name-superconductant
+  desc: reagent-desc-superconductant
+  physicalDesc: reagent-physical-desc-electric
+  flavor: bitter
+  flavorMinimum: 0.01
+  color: "#a18358"
+  boilingPoint: 8000.6
+  meltingPoint: 659.7
+  friction: 0.4
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 1

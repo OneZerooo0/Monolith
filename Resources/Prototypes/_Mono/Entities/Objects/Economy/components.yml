@@ -40,8 +40,6 @@
       Steel: 500
   - type: MixableSolution
     solution: capsule
-  - type: FitsInDispenser
-    solution: capsule
   - type: RefillableSolution
     solution: capsule
   - type: DrainableSolution
@@ -99,15 +97,13 @@
   - type: SolutionContainerManager
     solutions:
       capsule:
-        maxVol: 200
+        maxVol: 250
   - type: PhysicalComposition
     materialComposition:
       Steel: 1000
       Plastic: 1000
       Glass: 500
   - type: MixableSolution
-    solution: capsule
-  - type: FitsInDispenser
     solution: capsule
   - type: RefillableSolution
     solution: capsule

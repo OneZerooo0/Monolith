@@ -14,10 +14,11 @@
   - Materials
   completetime: 15
   materials:
-    Steel: 300
-    # Copper: 300
+    Steel: 100
+    Copper: 400
     Gold: 300
     Silver: 300
+    Lithium: 300
 
 - type: latheRecipe
   id: ElectromagnetEconomy1Recipe
@@ -27,7 +28,7 @@
   completetime: 15
   materials:
     Steel: 500
-    # Copper: 500
+    Copper: 500
 
 - type: latheRecipe
   id: CapacitorEconomy1Recipe
@@ -36,7 +37,7 @@
   - Materials
   completetime: 15
   materials:
-    Steel: 500
-    # Copper: 300
-    # Lithium: 300
+    Steel: 300
+    Copper: 300
+    Lithium: 500
 
