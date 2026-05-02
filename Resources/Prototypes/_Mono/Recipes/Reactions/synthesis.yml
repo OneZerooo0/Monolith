@@ -9,3 +9,18 @@
       amount: 1
   products:
     Carbon: 6
+
+- type: reaction
+  id: LithiumHydroxide
+  impact: Medium
+  quantized: true
+  reactants:
+    Lithium:
+      amount: 3
+    Water:
+      amount: 2
+  products:
+    LithiumHydroxide: 1
+  effects:
+  - !type:CreateGas
+    gas: WaterVapor
