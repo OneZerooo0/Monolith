@@ -38,7 +38,7 @@ namespace Content.Client._NF.Kitchen.UI
             else if ((MicrowaveUiKey)uiKey == MicrowaveUiKey.PrecisionAssemblerKey) // Mono - added precision assembler key
             {
                 _menuTitle = "assembler-menu-precision-assembler-title";
-                _leftFlavorText = "assembler-precision-assembler-footer-flavor-left";
+                _leftFlavorText = "assembler-menu-precision-assembler-footer-flavor-left";
             }
             else
             {

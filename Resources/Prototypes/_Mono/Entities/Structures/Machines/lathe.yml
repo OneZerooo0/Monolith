@@ -154,6 +154,8 @@
   name: industrial arc furnace
   description: An advanced arc furnace capable of melting ore and refining material through heat. Essential for creating advanced alloys.
   components:
+  - type: Appearance
+  - type: Animateable
   - type: Transform
     noRot: false
   - type: Rotatable
@@ -162,10 +164,10 @@
     sprite: _Mono/Structures/Machines/2x1arcfurnace.rsi
     layers:
     - state: icon
-      map: ["enum.LatheVisualLayers.IsRunning" ]
+      map: [ "enum.MicrowaveVisualizerLayers.Base" ]
     - state: unlit
       shader: unshaded
-      map: ["enum.PowerDeviceVisualLayers.Powered"]
+      map: [ "enum.MicrowaveVisualizerLayers.BaseUnlit" ]
   - type: RequireProjectileTarget
   - type: Destructible
     thresholds:
@@ -220,7 +222,7 @@
     visuals:
       enum.PowerDeviceVisuals.VisualState:
         enum.MicrowaveVisualizerLayers.Base:
-          Idle: { state: "icon" }
+          Idle: { state: "building" }
           Cooking: { state: "building" }
         enum.MicrowaveVisualizerLayers.BaseUnlit:
           Idle: { state: "unlit" }
@@ -244,6 +246,8 @@
   name: precision assembler
   description: A high-accuracy microfabricator capable of manipulating almost all forms of matter in the right circumstances. Astoundingly useful for creating advanced components of all kinds.
   components:
+  - type: Appearance
+  - type: Animateable
   - type: Transform
     noRot: false
   - type: Rotatable
@@ -252,10 +256,10 @@
     sprite: _Mono/Structures/Machines/nfr_assembler.rsi
     layers:
     - state: icon
-      map: ["enum.LatheVisualLayers.IsRunning" ]
+      map: [ "enum.MicrowaveVisualizerLayers.Base" ]
     - state: unlit
       shader: unshaded
-      map: ["enum.PowerDeviceVisualLayers.Powered"]
+      map: [ "enum.MicrowaveVisualizerLayers.BaseUnlit" ]
     #- state: panel
     #  map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: RequireProjectileTarget
@@ -313,10 +317,10 @@
       enum.PowerDeviceVisuals.VisualState:
         enum.MicrowaveVisualizerLayers.Base:
           Idle: { state: "icon" }
+          Broken: { state: "panel" }
           Cooking: { state: "building" }
         enum.MicrowaveVisualizerLayers.BaseUnlit:
-          Idle: { state: "icon" }
-          Broken: { state: "icon" }
+          Idle: { state: "unlit" }
           Cooking: { state: "unlit-building" }
       enum.PowerDeviceVisuals.Powered:
         enum.MicrowaveVisualizerLayers.BaseUnlit:
