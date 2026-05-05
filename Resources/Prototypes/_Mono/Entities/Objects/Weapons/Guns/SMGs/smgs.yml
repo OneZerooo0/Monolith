@@ -225,12 +225,12 @@
     defaultColor: "#FF0000"
   - type: Appearance
 
-# Corpo War .45 Mag Vector
+# Corpo War .375 Vector
 - type: entity
-  name: NTSF-HCLM-45 (.357 magnum)
-  parent: [BaseWeaponSubMachineGun, BaseGunWieldable]
+  name: wayward HCLM-45 (.357 magnum)
+  parent: [BaseWeaponRevolver, BaseGunWieldable, BaseFactionGearOtherFactionT2 ]
   id: WeaponSubMachineGunVectorNtsfHclm
-  description: The NTSF Heavy Caliber Light Machinegun. A very high-quality heavy SMG chambered in .357 magnum for use for the Nano Trasen Security Force and NT spec-ops, from the corporate war.
+  description: An anomalous Heavy Caliber Light Machinegun, uniquely manufactured to accept speed-loaders of .357 magnum. Very powerful, but guns of this pattern are unfamilar in this age.
   components:
   - type: Sprite
     sprite: _Mono/Objects/Weapons/Guns/SMGs/NTSF-HCLM-45rsi
@@ -252,31 +252,21 @@
     availableModes:
     - SemiAuto
     - FullAuto
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        name: Magazine
-        startingItem: Magazine357_magnumPistolFMJ
-        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
-        priority: 2
-        whitelist:
-          tags:
-            - Magazine357_magnumPistolFMJ
-            - Magazine357_magnumPistolHighCapacityFMJ
-            - Magazine357_magnumSubMachineGunFMJ
-      gun_chamber:
-        name: Chamber
-        startingItem: Cartridge357_magnumFMJ
-        priority: 1
-        whitelist:
-          tags:
-            - Cartridge357_magnumFMJ
-  - type: MagazineVisuals
-    magState: mag
-    steps: 1
-    zeroVisible: true
+    damageModifier: 1.2
+  - type: RevolverAmmoProvider
+    whitelist:
+      tags:
+      - Cartridge357_magnumFMJ
+      - SpeedLoader357_magnumFMJ
+    mayTransfer: true # Frontier
+    proto: Cartridge357_magnumFMJ
+    capacity: 24
+    chambers: [ True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True ]
+    ammoSlots: [ null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null ]
   - type: Appearance
+  - type: ContainerContainer
+    containers:
+      revolver-ammo: !type:Container
 
 # merc guns
 
