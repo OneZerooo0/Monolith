@@ -180,16 +180,7 @@
   id: Cartridge357_magnumFMJ
 
 - type: Tag
-  id: Magazine357_magnumPistolHighCapacityFMJ
-
-- type: Tag
   id: SpeedLoader357_magnumFMJ
-
-- type: Tag
-  id: Magazine357_magnumPistolFMJ
-
-- type: Tag
-  id: Magazine357_magnumSubMachineGunFMJ
 
 #9x19mm tags
 
