@@ -147,7 +147,6 @@
   - type: RandomSpawner
     prototypes:
     - WeaponCaseShortViper
-    - WeaponCaseShortDeckardExpedition
     - WeaponCaseShortPython
     - WeaponCaseShortFitzExpedition
     - WeaponCaseShortLuckyExpedition
@@ -333,7 +332,6 @@
       color: red
   - type: RandomSpawner
     prototypes:
-    - WeaponCaseShortN1984Expedition
     - WeaponCaseShortAntiqueLaserExpedition
     - WeaponCaseLongAk
     - WeaponCaseLongEnforcerExpedition

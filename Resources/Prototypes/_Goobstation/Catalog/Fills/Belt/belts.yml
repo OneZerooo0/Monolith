@@ -23,7 +23,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponPistolN1984
+    - id: WeaponRevolverMateba
 
 - type: entity
   id: ClothingBeltSheathFilledNavyOfficer

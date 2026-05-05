@@ -11112,7 +11112,7 @@ entities:
     - type: Transform
       pos: -2.5715644,-1.1120384
       parent: 2
-- proto: WeaponPistolN1984
+- proto: WeaponRevolverMateba
   entities:
   - uid: 1662
     components:
@@ -11140,21 +11140,21 @@ entities:
     - type: Transform
       pos: -2.5090644,0.6692117
       parent: 2
-- proto: WeaponRevolverFaith
+- proto: WeaponRevolverMateba
   entities:
   - uid: 1666
     components:
     - type: Transform
       pos: -2.3528144,-0.3151633
       parent: 2
-- proto: WeaponRevolverFitz
+- proto: WeaponRevolverMateba
   entities:
   - uid: 1667
     components:
     - type: Transform
       pos: -2.3059394,-0.5495383
       parent: 2
-- proto: WeaponRevolverLucky
+- proto: WeaponRevolverMateba
   entities:
   - uid: 1668
     components:

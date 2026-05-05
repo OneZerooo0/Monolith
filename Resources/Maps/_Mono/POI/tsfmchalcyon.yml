@@ -6354,14 +6354,14 @@ entities:
     - type: Transform
       pos: 6.5343175,-3.448002
       parent: 1
-- proto: AmmoBox45_magnumFMJ
+- proto: AmmoBox357_magnumFMJ
   entities:
   - uid: 328
     components:
     - type: Transform
       pos: 1.2578063,9.521729
       parent: 1
-- proto: AmmoBox45_magnumPractice
+- proto: AmmoBox357_magnumPractice
   entities:
   - uid: 329
     components:
@@ -50750,7 +50750,7 @@ entities:
     - type: Transform
       pos: 17.5,3.5
       parent: 1
-- proto: SpeedLoader45_magnumFMJ
+- proto: SpeedLoader357_magnumFMJ
   entities:
   - uid: 7729
     components:

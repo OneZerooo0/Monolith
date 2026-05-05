@@ -58,7 +58,7 @@
 - type: technology
   id: UsspAdvancedAmmo
   name: research-technology-ussp-ammo-advanced
-  entityIcon: AmmoBox45_magnumAP
+  entityIcon: AmmoBox357_magnumAP
   discipline: UsspWeapons
   tier: 3
   cost: 30000

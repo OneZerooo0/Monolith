@@ -3067,7 +3067,7 @@ entities:
     - type: Transform
       pos: -4.7390633,3.4536512
       parent: 1
-- proto: AmmoBox45_magnumFMJ
+- proto: AmmoBox357_magnumFMJ
   entities:
   - uid: 465
     components:
@@ -4940,7 +4940,7 @@ entities:
     - type: Transform
       pos: -4.3887444,4.004726
       parent: 1
-- proto: WeaponRevolverPirate
+- proto: WeaponRevolverMateba
   entities:
   - uid: 766
     components:

@@ -22,7 +22,7 @@
       amount: 2
     - id: WeaponSubMachineGunVectorNtsfHclm
       prob: 0.2
-    - id: Magazine45_magnumPistolHighCapacityFMJ
+    - id: Magazine357_magnumPistolHighCapacityFMJ
       prob: 0.2
       amount: 2
     - id: WeaponRifleNtsfLtr
@@ -84,12 +84,12 @@
   - type: SpawnItemsOnUse
     items:
     #Weapons/ammo/gears
-    - id: WeaponPistolN1984
+    - id: WeaponRevolverMateba
       prob: 0.4
-    - id: Magazine45_magnumPistolPlasteelAP
+    - id: Magazine357_magnumPistolPlasteelAP
       prob: 0.2
       amount: 2
-    - id: Magazine45_magnumPistolFMJ
+    - id: Magazine357_magnumPistolFMJ
       prob: 0.4
       amount: 2
     - id: WeaponPulsePistol
@@ -147,7 +147,7 @@
       prob: 0.1
     - id: WeaponRevolverMateba
       prob: 0.2
-    - id: AmmoBox45_magnumAP
+    - id: AmmoBox357_magnumAP
       amount: 2
       prob: 0.2
     - id: WeaponLRC21PPL

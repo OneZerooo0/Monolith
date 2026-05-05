@@ -2,145 +2,145 @@
 
 - type: latheRecipe
   parent: BaseAmmoFMJIntermediateMagazineRecipe
-  id: Magazine45_magnumPistolFMJ
-  result: Magazine45_magnumPistolFMJ
+  id: Magazine357_magnumPistolFMJ
+  result: Magazine357_magnumPistolFMJ
 
 - type: latheRecipe
   parent: BaseAmmoPlasteelAPIntermediateMagazineRecipe
-  id: Magazine45_magnumPistolPlasteelAP
-  result: Magazine45_magnumPistolPlasteelAP
+  id: Magazine357_magnumPistolPlasteelAP
+  result: Magazine357_magnumPistolPlasteelAP
 
 - type: latheRecipe
   parent: BaseAmmoRubberIntermediateMagazineRecipe
-  id: Magazine45_magnumPistolRubber
-  result: Magazine45_magnumPistolRubber
+  id: Magazine357_magnumPistolRubber
+  result: Magazine357_magnumPistolRubber
 
 - type: latheRecipe
   parent: BaseAmmoIncendiaryIntermediateMagazineRecipe
-  id: Magazine45_magnumPistolIncendiary
-  result: Magazine45_magnumPistolIncendiary
+  id: Magazine357_magnumPistolIncendiary
+  result: Magazine357_magnumPistolIncendiary
 
 - type: latheRecipe
   parent: BaseAmmoPracticeIntermediateMagazineRecipe
-  id: Magazine45_magnumPistolPractice
-  result: Magazine45_magnumPistolPractice
+  id: Magazine357_magnumPistolPractice
+  result: Magazine357_magnumPistolPractice
 
 - type: latheRecipe
   parent: BaseAmmoEmptyIntermediateMagazineRecipe
-  id: Magazine45_magnumPistolEmpty
-  result: Magazine45_magnumPistolEmpty
+  id: Magazine357_magnumPistolEmpty
+  result: Magazine357_magnumPistolEmpty
 
 - type: latheRecipe
   parent: BaseAmmoUraniumIntermediateMagazineRecipe
-  id: Magazine45_magnumPistolUranium
-  result: Magazine45_magnumPistolUranium
+  id: Magazine357_magnumPistolUranium
+  result: Magazine357_magnumPistolUranium
 
 - type: latheRecipe
   parent: BaseAmmoHPIntermediateMagazineRecipe
-  id: Magazine45_magnumPistolHP
-  result: Magazine45_magnumPistolHP
+  id: Magazine357_magnumPistolHP
+  result: Magazine357_magnumPistolHP
 
 - type: latheRecipe
   parent: BaseAmmoRIPIntermediateMagazineRecipe
-  id: Magazine45_magnumPistolRIP
-  result: Magazine45_magnumPistolRIP
+  id: Magazine357_magnumPistolRIP
+  result: Magazine357_magnumPistolRIP
 
 #Speedloaders
 
 - type: latheRecipe
   parent: BaseAmmoFMJIntermediateSpeedloaderRecipe
-  id: SpeedLoader45_magnumFMJ
-  result: SpeedLoader45_magnumFMJ
+  id: SpeedLoader357_magnumFMJ
+  result: SpeedLoader357_magnumFMJ
 
 - type: latheRecipe
   parent: BaseAmmoPlasteelAPIntermediateSpeedloaderRecipe
-  id: SpeedLoader45_magnumPlasteelAP
-  result: SpeedLoader45_magnumPlasteelAP
+  id: SpeedLoader357_magnumPlasteelAP
+  result: SpeedLoader357_magnumPlasteelAP
 
 - type: latheRecipe
   parent: BaseAmmoRubberIntermediateSpeedloaderRecipe
-  id: SpeedLoader45_magnumRubber
-  result: SpeedLoader45_magnumRubber
+  id: SpeedLoader357_magnumRubber
+  result: SpeedLoader357_magnumRubber
 
 - type: latheRecipe
   parent: BaseAmmoIncendiaryIntermediateSpeedloaderRecipe
-  id: SpeedLoader45_magnumIncendiary
-  result: SpeedLoader45_magnumIncendiary
+  id: SpeedLoader357_magnumIncendiary
+  result: SpeedLoader357_magnumIncendiary
 
 - type: latheRecipe
   parent: BaseAmmoPracticeIntermediateSpeedloaderRecipe
-  id: SpeedLoader45_magnumPractice
-  result: SpeedLoader45_magnumPractice
+  id: SpeedLoader357_magnumPractice
+  result: SpeedLoader357_magnumPractice
 
 - type: latheRecipe
   parent: BaseAmmoEmptyIntermediateSpeedloaderRecipe
-  id: SpeedLoader45_magnumEmpty
-  result: SpeedLoader45_magnumEmpty
+  id: SpeedLoader357_magnumEmpty
+  result: SpeedLoader357_magnumEmpty
 
 - type: latheRecipe
   parent: BaseAmmoUraniumIntermediateSpeedloaderRecipe
-  id: SpeedLoader45_magnumUranium
-  result: SpeedLoader45_magnumUranium
+  id: SpeedLoader357_magnumUranium
+  result: SpeedLoader357_magnumUranium
 
 - type: latheRecipe
   parent: BaseAmmoHPIntermediateSpeedloaderRecipe
-  id: SpeedLoader45_magnumHP
-  result: SpeedLoader45_magnumHP
+  id: SpeedLoader357_magnumHP
+  result: SpeedLoader357_magnumHP
 
 - type: latheRecipe
   parent: BaseAmmoRIPIntermediateSpeedloaderRecipe
-  id: SpeedLoader45_magnumRIP
-  result: SpeedLoader45_magnumRIP
+  id: SpeedLoader357_magnumRIP
+  result: SpeedLoader357_magnumRIP
 
 #Boxes
 
 - type: latheRecipe
   parent: BaseAmmoFMJIntermediateMagazineRecipe
-  id: AmmoBox45_magnumFMJ
-  result: AmmoBox45_magnumFMJ
+  id: AmmoBox357_magnumFMJ
+  result: AmmoBox357_magnumFMJ
 
 - type: latheRecipe
   parent: BaseAmmoPlasteelAPIntermediateMagazineRecipe
-  id: AmmoBox45_magnumPlasteelAP
-  result: AmmoBox45_magnumPlasteelAP
+  id: AmmoBox357_magnumPlasteelAP
+  result: AmmoBox357_magnumPlasteelAP
 
 - type: latheRecipe
   parent: BaseAmmoRubberIntermediateMagazineRecipe
-  id: AmmoBox45_magnumRubber
-  result: AmmoBox45_magnumRubber
+  id: AmmoBox357_magnumRubber
+  result: AmmoBox357_magnumRubber
 
 - type: latheRecipe
   parent: BaseAmmoIncendiaryIntermediateMagazineRecipe
-  id: AmmoBox45_magnumIncendiary
-  result: AmmoBox45_magnumIncendiary
+  id: AmmoBox357_magnumIncendiary
+  result: AmmoBox357_magnumIncendiary
 
 - type: latheRecipe
   parent: BaseAmmoPracticeIntermediateMagazineRecipe
-  id: AmmoBox45_magnumPractice
-  result: AmmoBox45_magnumPractice
+  id: AmmoBox357_magnumPractice
+  result: AmmoBox357_magnumPractice
 
 - type: latheRecipe
   parent: BaseAmmoUraniumIntermediateMagazineRecipe
-  id: AmmoBox45_magnumUranium
-  result: AmmoBox45_magnumUranium
+  id: AmmoBox357_magnumUranium
+  result: AmmoBox357_magnumUranium
 
 - type: latheRecipe
   parent: BaseAmmoFMJIntermediateMagazineRecipe
-  id: AmmoBox45_magnumAP
-  result: AmmoBox45_magnumAP
+  id: AmmoBox357_magnumAP
+  result: AmmoBox357_magnumAP
 
 - type: latheRecipe
   parent: BaseAmmoHPIntermediateMagazineRecipe
-  id: AmmoBox45_magnumHP
-  result: AmmoBox45_magnumHP
+  id: AmmoBox357_magnumHP
+  result: AmmoBox357_magnumHP
 
 - type: latheRecipe
   parent: BaseAmmoRIPIntermediateMagazineRecipe
-  id: AmmoBox45_magnumRIP
-  result: AmmoBox45_magnumRIP
+  id: AmmoBox357_magnumRIP
+  result: AmmoBox357_magnumRIP
 
 #big box
 - type: latheRecipe
   parent: BaseAmmoFMJIntermediateBigAmmoBoxRecipe
-  id: AmmoBox45_magnumBigFMJ
-  result: AmmoBox45_magnumBigFMJ
+  id: AmmoBox357_magnumBigFMJ
+  result: AmmoBox357_magnumBigFMJ
