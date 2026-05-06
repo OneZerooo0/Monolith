@@ -22,6 +22,9 @@
       amount: 2
     - id: WeaponSubMachineGunVectorNtsfHclm
       prob: 0.2
+    - id: Magazine357_magnumPistolHighCapacityFMJ
+      prob: 0.2
+      amount: 2
     - id: WeaponRifleNtsfLtr
       prob: 0.05
     - id: Magazine556x45mmPlasteelAP

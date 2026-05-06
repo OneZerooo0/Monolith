@@ -23,7 +23,7 @@
 - type: entity
   parent: NFBaseBlueprintArmory
   id: BlueprintWeaponSubMachineGunVectorNtsfHclm
-  name: Wayward HCLM-45 Blueprint
+  name: NTSF-HCLM-45 Blueprint
   description: A blueprint for the recipe of the NTSF-HCLM-45. It can be inserted into an autolathe or a techfab.
   components:
   - type: Blueprint

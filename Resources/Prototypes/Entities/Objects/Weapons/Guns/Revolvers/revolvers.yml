@@ -96,7 +96,7 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Revolvers/mateba.rsi
   - type: Gun
-    fireRate: 0.3
+    fireRate: 0.5
     soundGunshot:
       path: /Audio/_Mono/Weapons/Guns/Gunshots/bigshot.ogg
     damageModifier: 3
