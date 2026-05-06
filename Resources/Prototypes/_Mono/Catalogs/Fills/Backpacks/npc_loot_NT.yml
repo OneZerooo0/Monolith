@@ -22,9 +22,6 @@
       amount: 2
     - id: WeaponSubMachineGunVectorNtsfHclm
       prob: 0.2
-    - id: Magazine357_magnumPistolHighCapacityFMJ
-      prob: 0.2
-      amount: 2
     - id: WeaponRifleNtsfLtr
       prob: 0.05
     - id: Magazine556x45mmPlasteelAP
@@ -86,12 +83,6 @@
     #Weapons/ammo/gears
     - id: WeaponRevolverMateba
       prob: 0.4
-    - id: Magazine357_magnumPistolPlasteelAP
-      prob: 0.2
-      amount: 2
-    - id: Magazine357_magnumPistolFMJ
-      prob: 0.4
-      amount: 2
     - id: WeaponPulsePistol
       prob: 0.2
     - id: WeaponPulseCarbine

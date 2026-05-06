@@ -123,15 +123,6 @@
   - AmmoBox762x39mmSubsonic
   - AmmoBox762x39mmHP
   - AmmoBox762x39mmRIP
-  - Magazine357_magnumPistolFMJ
-  - Magazine357_magnumPistolPlasteelAP
-  - Magazine357_magnumPistolRubber
-  - Magazine357_magnumPistolIncendiary
-  - Magazine357_magnumPistolPractice
-  - Magazine357_magnumPistolEmpty
-  - Magazine357_magnumPistolUranium
-  - Magazine357_magnumPistolHP
-  - Magazine357_magnumPistolRIP
   - SpeedLoader357_magnumFMJ
   - SpeedLoader357_magnumPlasteelAP
   - SpeedLoader357_magnumRubber
@@ -298,7 +289,6 @@
   - AmmoBox556x45mmUranium
   - Magazine762x39mmUranium
   - AmmoBox762x39mmUranium
-  - Magazine357_magnumPistolUranium
   - SpeedLoader357_magnumUranium
   - AmmoBox357_magnumUranium
   - Magazine46x30mmPistolUranium
@@ -324,7 +314,6 @@
   - Magazine556x45mmEmpty
   - SpeedLoader556x45mmEmpty
   - Magazine762x39mmEmpty
-  - Magazine357_magnumPistolEmpty
   - SpeedLoader357_magnumEmpty
   - Magazine68x52mmEmpty
   - Magazine46x30mmPistolEmpty
@@ -358,7 +347,6 @@
   - AmmoBox556x45mmPractice
   - Magazine762x39mmPractice
   - AmmoBox762x39mmPractice
-  - Magazine357_magnumPistolPractice
   - SpeedLoader357_magnumPractice
   - AmmoBox357_magnumPractice
   - Magazine68x52mmPractice
@@ -393,7 +381,6 @@
   - AmmoBox556x45mmIncendiary
   - Magazine762x39mmIncendiary
   - AmmoBox762x39mmIncendiary
-  - Magazine357_magnumPistolIncendiary
   - SpeedLoader357_magnumIncendiary
   - AmmoBox357_magnumIncendiary
   - Magazine46x30mmPistolIncendiary
@@ -422,7 +409,6 @@
   - AmmoBox556x45mmRubber
   - Magazine762x39mmRubber
   - AmmoBox762x39mmRubber
-  - Magazine357_magnumPistolRubber
   - SpeedLoader357_magnumRubber
   - AmmoBox357_magnumRubber
   - Magazine68x52mmRubber
@@ -460,7 +446,6 @@
   - Magazine762x39mmFMJ
   - SpeedLoader762x39mmFMJ
   - AmmoBox762x39mmFMJ
-  - Magazine357_magnumPistolFMJ
   - SpeedLoader357_magnumFMJ
   - AmmoBox357_magnumFMJ
   - Magazine68x52mmFMJ
@@ -502,7 +487,6 @@
   - AmmoBox556x45mmPlasteelAP
   - Magazine762x39mmPlasteelAP
   - AmmoBox762x39mmPlasteelAP
-  - Magazine357_magnumPistolPlasteelAP
   - AmmoBox357_magnumPlasteelAP
   - SpeedLoader357_magnumPlasteelAP
   - Magazine46x30mmPistolPlasteelAP
@@ -534,7 +518,6 @@
   - AmmoBox556x45mmHP
   - Magazine762x39mmHP
   - AmmoBox762x39mmHP
-  - Magazine357_magnumPistolHP
   - SpeedLoader357_magnumHP
   - AmmoBox357_magnumHP
   - Magazine46x30mmPistolHP
@@ -563,7 +546,6 @@
   - AmmoBox556x45mmRIP
   - Magazine762x39mmRIP
   - AmmoBox762x39mmRIP
-  - Magazine357_magnumPistolRIP
   - SpeedLoader357_magnumRIP
   - AmmoBox357_magnumRIP
   - Magazine46x30mmPistolRIP
@@ -600,7 +582,6 @@
   - Magazine762x39mmFMJ
   - SpeedLoader762x39mmFMJ
   - AmmoBox762x39mmFMJ
-  - Magazine357_magnumPistolFMJ
   - SpeedLoader357_magnumFMJ
   - AmmoBox357_magnumFMJ
   - Magazine68x52mmFMJ
@@ -652,7 +633,6 @@
   - AmmoBox556x45mmPractice
   - Magazine762x39mmPractice
   - AmmoBox762x39mmPractice
-  - Magazine357_magnumPistolPractice
   - SpeedLoader357_magnumPractice
   - AmmoBox357_magnumPractice
   - Magazine68x52mmPractice
@@ -680,7 +660,6 @@
   - Magazine556x45mmEmpty
   - SpeedLoader556x45mmEmpty
   - Magazine762x39mmEmpty
-  - Magazine357_magnumPistolEmpty
   - SpeedLoader357_magnumEmpty
   - Magazine68x52mmEmpty
   - Magazine46x30mmPistolEmpty
@@ -709,7 +688,6 @@
   - AmmoBox556x45mmRubber
   - Magazine762x39mmRubber
   - AmmoBox762x39mmRubber
-  - Magazine357_magnumPistolRubber
   - SpeedLoader357_magnumRubber
   - AmmoBox357_magnumRubber
   - Magazine68x52mmRubber
@@ -741,7 +719,6 @@
   - AmmoBox556x45mmHP
   - Magazine762x39mmHP
   - AmmoBox762x39mmHP
-  - Magazine357_magnumPistolHP
   - SpeedLoader357_magnumHP
   - AmmoBox357_magnumHP
   - Magazine46x30mmPistolHP
@@ -782,7 +759,6 @@
   - AmmoBox556x45mmUranium
   - Magazine762x39mmUranium
   - AmmoBox762x39mmUranium
-  - Magazine357_magnumPistolUranium
   - SpeedLoader357_magnumUranium
   - AmmoBox357_magnumUranium
   - Magazine46x30mmPistolUranium
@@ -815,7 +791,6 @@
   - AmmoBox556x45mmIncendiary
   - Magazine762x39mmIncendiary
   - AmmoBox762x39mmIncendiary
-  - Magazine357_magnumPistolIncendiary
   - SpeedLoader357_magnumIncendiary
   - AmmoBox357_magnumIncendiary
   - Magazine46x30mmPistolIncendiary
@@ -843,7 +818,6 @@
   - AmmoBox556x45mmPlasteelAP
   - Magazine762x39mmPlasteelAP
   - AmmoBox762x39mmPlasteelAP
-  - Magazine357_magnumPistolPlasteelAP
   - AmmoBox357_magnumPlasteelAP
   - SpeedLoader357_magnumPlasteelAP
   - Magazine46x30mmPistolPlasteelAP
@@ -878,7 +852,6 @@
   - AmmoBox556x45mmRIP
   - Magazine762x39mmRIP
   - AmmoBox762x39mmRIP
-  - Magazine357_magnumPistolRIP
   - SpeedLoader357_magnumRIP
   - AmmoBox357_magnumRIP
   - Magazine46x30mmPistolRIP

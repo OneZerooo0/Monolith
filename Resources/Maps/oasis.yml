@@ -144821,13 +144821,6 @@ entities:
     - type: Transform
       pos: -47.520466,-22.794298
       parent: 2
-- proto: Magazine357_magnumPistolFMJ
-  entities:
-  - uid: 4205
-    components:
-    - type: Transform
-      pos: 32.59941,-20.510296
-      parent: 2
 - proto: Magazine46x30mmSubMachineGunTopMountedFMJ
   entities:
   - uid: 14233
