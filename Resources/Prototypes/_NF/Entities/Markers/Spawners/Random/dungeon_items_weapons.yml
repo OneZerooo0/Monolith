@@ -55,7 +55,6 @@
     - WeaponCaseShortMk58Expedition
     - WeaponCaseShortUniversalExpedition
     - WeaponCaseShortPollockExpedition
-    - WeaponCaseShortFaithExpedition
     - WeaponCaseShortArgentiExpedition
     - WeaponCaseShortLaserGunExpedition
     #- WeaponCaseShortHandmadeExpedition
@@ -148,8 +147,6 @@
     prototypes:
     - WeaponCaseShortViper
     - WeaponCaseShortPython
-    - WeaponCaseShortFitzExpedition
-    - WeaponCaseShortLuckyExpedition
     - WeaponCaseLongKammererExpedition
     - WeaponCaseLongRepeaterExpedition
     - WeaponCaseLongAK220 # Mono
