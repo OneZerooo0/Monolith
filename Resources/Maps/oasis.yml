@@ -144829,6 +144829,13 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 42.740047,-41.364567
       parent: 2
+- proto: Magazine45_magnumPistolFMJ
+  entities:
+  - uid: 4205
+    components:
+    - type: Transform
+      pos: 32.59941,-20.510296
+      parent: 2
 - proto: MagicDiceBag
   entities:
   - uid: 7963
@@ -192919,7 +192926,7 @@ entities:
     - type: Transform
       pos: 45.517193,-35.503773
       parent: 2
-- proto: WeaponRevolverMateba
+- proto: WeaponPistolN1984
   entities:
   - uid: 4204
     components:

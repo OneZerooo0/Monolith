@@ -42125,6 +42125,15 @@ entities:
     - type: Transform
       pos: 7.5,-8.5
       parent: 1668
+- proto: Magazine45_magnumPistolFMJ
+  entities:
+  - uid: 6885
+    components:
+    - type: Transform
+      parent: 6884
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
 - proto: MagicDiceBag
   entities:
   - uid: 4765
@@ -59384,7 +59393,7 @@ entities:
     - type: Transform
       pos: -30.623615,-7.8922486
       parent: 1668
-- proto: WeaponRevolverMateba
+- proto: WeaponPistolN1984
   entities:
   - uid: 1383
     components:

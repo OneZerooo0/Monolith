@@ -4940,7 +4940,7 @@ entities:
     - type: Transform
       pos: -4.3887444,4.004726
       parent: 1
-- proto: WeaponRevolverMateba
+- proto: WeaponRevolverPirate
   entities:
   - uid: 766
     components:

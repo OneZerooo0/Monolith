@@ -152592,7 +152592,7 @@ entities:
     - type: Transform
       pos: -2.5,38.5
       parent: 5350
-- proto: SpeedLoader357_magnumPractice
+- proto: SpeedLoader45_magnumPractice
   entities:
   - uid: 10328
     components:

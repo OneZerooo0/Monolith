@@ -10182,7 +10182,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -1.4560889,-3.29282
       parent: 179
-- proto: WeaponRevolverN1984
+- proto: WeaponPistolN1984
   entities:
   - uid: 1581
     components:
