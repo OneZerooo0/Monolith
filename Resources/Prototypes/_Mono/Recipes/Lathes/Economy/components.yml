@@ -1,6 +1,6 @@
 - type: latheRecipe
-  id: CapsuleEconomyRecipe
-  result: CapsuleEconomy
+  id: MatterBinEconomy1Recipe
+  result: MatterBinEconomy1
   categories:
   - Materials
   completetime: 10

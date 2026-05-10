@@ -1,3 +1,18 @@
+# Capsule
+
+- type: microwaveMealRecipe
+  id: RecipeMatterBinEconomy2
+  name: large matter bin
+  result: MatterBinEconomy2
+  time: 15
+  group: PrecisionAssembler
+  solids:
+    MatterBinEconomy1: 2
+    ArmorPlateEconomy1: 1
+  recipeType: PrecisionAssembler
+
+# Microprocessors
+
 - type: microwaveMealRecipe
   id: RecipeMicroprocessorEconomy2
   name: nanoprocessor recipe
@@ -73,6 +88,19 @@
     Superconductant: 60
   recipeType: PrecisionAssembler
 
+- type: microwaveMealRecipe
+  id: RecipeElectromagnetEconomy3Start
+  name: superconductive electromagnet recipe
+  result: ElectromagnetEconomy3Start
+  time: 15
+  group: PrecisionAssembler
+  solids:
+    ElectromagnetEconomy2: 2
+    CapacitorEconomy2: 2
+  reagents:
+    LithiumHydroxide: 20
+  recipeType: PrecisionAssembler
+
 # Component bricks
 
 - type: microwaveMealRecipe
@@ -84,7 +112,7 @@
   solids:
     MicroprocessorEconomy1: 1
     ArmorPlateEconomy1: 1
-    CapsuleEconomy: 1
+    MatterBinEconomy1: 1
   recipeType: PrecisionAssembler
 
 - type: microwaveMealRecipe
@@ -96,6 +124,6 @@
   solids:
     MicroprocessorEconomy2: 1
     ArmorPlateEconomy2: 1
-    CapsuleLargeEconomy: 1
+    MatterBinEconomy2: 1
     ComponentBrickEconomy1: 1
   recipeType: PrecisionAssembler

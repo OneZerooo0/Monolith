@@ -19,8 +19,7 @@
   solids:
     ArmorPlateEconomy2: 2
   reagents:
-    Carbon: 30
-    Silicon: 30
+    LithiumHydroxide: 30
   recipeType: ArcFurnace
 
 - type: microwaveMealRecipe

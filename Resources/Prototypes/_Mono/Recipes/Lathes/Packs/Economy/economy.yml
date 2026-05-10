@@ -2,7 +2,7 @@
   id: EconomyBasic
   recipes:
   - ArmorPlateEconomy1Recipe
-  - CapsuleEconomyRecipe
+  - MatterBinEconomy1Recipe
   - MicroprocessorEconomy1Recipe
   - ElectromagnetEconomy1Recipe
   - CapacitorEconomy1Recipe

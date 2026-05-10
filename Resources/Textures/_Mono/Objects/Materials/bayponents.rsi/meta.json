@@ -68,13 +68,32 @@
             "name": "canister2fill2"
         },
         {
+            "name": "canister3",
+            "delays": [
+                [
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1
+                ]
+            ]
+        },
+        {
             "name": "capacitor1"
         },
         {
             "name": "capacitor2"
         },
         {
-            "name": "capacitor3"
+            "name": "capacitor3",
+            "delays": [
+                [
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1
+                ]
+            ]
         },
         {
             "name": "componentbrick1"
@@ -99,6 +118,9 @@
         },
         {
             "name": "electromagnet3"
+        },
+        {
+            "name": "electromagnet3_unfinished"
         },
         {
             "name": "microprocessor1"

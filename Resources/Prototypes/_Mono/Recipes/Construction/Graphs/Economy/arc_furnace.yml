@@ -10,14 +10,22 @@
       - material: Cable
         amount: 30
         doAfter: 5
-      - tool: Cutting
-        doAfter: 2
       - tag: ElectromagnetEconomy2
         icon:
           sprite: _Mono/Objects/Materials/bayponents.rsi
           state: "electromagnet2_unfinished"
         name: compound electromagnet
       - tool: Screwing
+        doAfter: 2
+      - tool: Cutting
+        doAfter: 2
+      - tool: Screwing
+        doAfter: 2
+      - tool: Cutting
+        doAfter: 2
+      - tool: Screwing
+        doAfter: 2
+      - tool: Cutting
         doAfter: 2
 
   - node: finished

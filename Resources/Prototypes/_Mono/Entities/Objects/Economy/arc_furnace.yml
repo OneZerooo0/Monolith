@@ -440,7 +440,7 @@
 
 - type: entity
   name: EMAG armor plate (unfinished)
-  description: The ceramic/metallic plate component of an EMAG armor plate, fresh off the forge and awaiting its electronic components. Needs 30 LV cables to begin construction.
+  description: The ceramic/metallic plate component of an EMAG armor plate, fresh off the forge and awaiting its electronic components. Needs 30 LV cables to begin construction, then significant screwing and cutting.
   parent: ArmorPlateEconomy4Broken
   id: ArmorPlateEconomy4Start
   components:

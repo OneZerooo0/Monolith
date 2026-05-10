@@ -12,6 +12,46 @@
         doAfter: 5
       - tool: Screwing
         doAfter: 2
+      - tool: Screwing
+        doAfter: 2
+      - tool: Screwing
+        doAfter: 2
+      - tool: Screwing
+        doAfter: 2
+      - tool: Screwing
+        doAfter: 2
 
   - node: finished
     entity: ElectromagnetEconomy2
+
+- type: constructionGraph
+  id: ElectromagnetEconomy3Finish
+  start: unfinished
+  graph:
+  - node: unfinished
+    entity: ElectromagnetEconomy3Start
+    edges:
+    - to: finished
+      steps:
+      - material: Cable
+        amount: 30
+        doAfter: 5
+      - tool: Welding
+        doAfter: 2
+      - tool: Welding
+        doAfter: 2
+      - tool: Welding
+        doAfter: 2
+      - tool: Welding
+        doAfter: 2
+      - tool: Welding
+        doAfter: 2
+      - tool: Welding
+        doAfter: 2
+      - tool: Welding
+        doAfter: 2
+
+  - node: finished
+    entity: ElectromagnetEconomy3
+
+# end electromagnets
