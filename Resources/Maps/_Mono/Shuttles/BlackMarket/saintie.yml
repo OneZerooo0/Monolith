@@ -1316,7 +1316,7 @@ entities:
     - type: PointLight
       radius: 2
       enabled: True
-- proto: AmmoBox357_magnumFMJ
+- proto: AmmoBox45_magnumFMJ
   entities:
   - uid: 1113
     components:

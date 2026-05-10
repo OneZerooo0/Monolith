@@ -10182,7 +10182,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -1.4560889,-3.29282
       parent: 179
-- proto: WeaponRevolverMateba
+- proto: WeaponRevolverN1984
   entities:
   - uid: 1581
     components:
@@ -10217,21 +10217,21 @@ entities:
     - type: Transform
       pos: -2.5090644,0.6692117
       parent: 179
-- proto: WeaponRevolverMateba
+- proto: WeaponRevolverFaith
   entities:
   - uid: 1577
     components:
     - type: Transform
       pos: -2.3528144,-0.3151633
       parent: 179
-- proto: WeaponRevolverMateba
+- proto: WeaponRevolverFitz
   entities:
   - uid: 1578
     components:
     - type: Transform
       pos: -2.3059394,-0.5495383
       parent: 179
-- proto: WeaponRevolverMateba
+- proto: WeaponRevolverLucky
   entities:
   - uid: 1579
     components:

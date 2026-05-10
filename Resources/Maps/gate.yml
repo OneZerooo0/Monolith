@@ -163221,7 +163221,7 @@ entities:
     - type: Transform
       pos: -32.5,7.5
       parent: 2
-- proto: SpeedLoader357_magnumFMJ
+- proto: SpeedLoader45_magnumFMJ
   entities:
   - uid: 3542
     components:

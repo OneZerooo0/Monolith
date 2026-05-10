@@ -19,7 +19,7 @@
 - type: entity
   id: ClothingBeltHolsterFilledCentComm
   parent: ClothingBeltHolster
-  suffix: Filled, N1984
+  suffix: Filled, Mateba
   components:
   - type: StorageFill
     contents:
