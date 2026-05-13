@@ -1,0 +1,133 @@
+- type: entity
+  name: solid armor
+  description: An additional chunk of armor, attached to the side of a vessel.
+  id: ArmorAddonSolid
+  parent: BaseGreeble
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    offset: 0,0.45
+    sprite: _Mono/Structures/Wallmounts/Addons/armor.rsi
+    layers:
+    - state: armor-solid
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: WallDefense2
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 2000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+  - type: ShipRepairable
+    repairTime: 3
+    repairCost: 3
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,0.1,0.5,0.8"
+        mask:
+        - MachineMask
+        layer:
+        - WallLayer
+        density: 1000
+
+- type: entity
+  name: solid armor corner
+  suffix: Left
+  description: An additional chunk of armor, attached to the side of a vessel.
+  id: ArmorAddonSolidCornerL
+  parent: ArmorAddonSolid
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    offset: 0,0.45
+    sprite: _Mono/Structures/Wallmounts/Addons/armor.rsi
+    layers:
+    - state: armor-solid-cornerL
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: WallDefense2
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+  - type: ShipRepairable
+    repairTime: 2
+    repairCost: 2
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "0.5,0.1,0.2,0.7"
+        mask:
+        - MachineMask
+        layer:
+        - WallLayer
+        density: 500
+
+- type: entity
+  name: solid armor corner
+  suffix: Right
+  description: An additional chunk of armor, attached to the side of a vessel.
+  id: ArmorAddonSolidCornerR
+  parent: ArmorAddonSolid
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    offset: 0,0.45
+    sprite: _Mono/Structures/Wallmounts/Addons/armor.rsi
+    layers:
+    - state: armor-solid-cornerR
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: WallDefense2
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+  - type: ShipRepairable
+    repairTime: 2
+    repairCost: 2
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,0.7,-0.2,0.1"
+        mask:
+        - MachineMask
+        layer:
+        - WallLayer
+        density: 500
