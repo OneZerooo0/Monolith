@@ -15,6 +15,15 @@
     },
     {
       "name": "armor-solid-cornerR"
+    },
+    {
+      "name": "armor-solid-broken"
+    },
+    {
+      "name": "armor-solid-broken-cornerL"
+    },
+    {
+      "name": "armor-solid-broken-cornerR"
     }
   ]
 }

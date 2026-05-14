@@ -1,7 +1,7 @@
 - type: entity
   name: solid armor
   description: An additional chunk of armor, attached to the side of a vessel.
-  id: ArmorAddonSolid
+  id: WallArmorAddonSolid
   parent: BaseGreeble
   placement:
     mode: SnapgridCenter
@@ -46,8 +46,8 @@
   name: solid armor corner
   suffix: Left
   description: An additional chunk of armor, attached to the side of a vessel.
-  id: ArmorAddonSolidCornerL
-  parent: ArmorAddonSolid
+  id: WallArmorAddonSolidCornerL
+  parent: WallArmorAddonSolid
   placement:
     mode: SnapgridCenter
   components:
@@ -91,8 +91,8 @@
   name: solid armor corner
   suffix: Right
   description: An additional chunk of armor, attached to the side of a vessel.
-  id: ArmorAddonSolidCornerR
-  parent: ArmorAddonSolid
+  id: WallArmorAddonSolidCornerR
+  parent: WallArmorAddonSolid
   placement:
     mode: SnapgridCenter
   components:
@@ -131,3 +131,135 @@
         layer:
         - WallLayer
         density: 500
+
+# Broken solid armor
+
+- type: entity
+  name: broken solid armor
+  description: The remains of a chunk of additional armor plating. Doesn't seem very effective anymore.
+  id: WallArmorAddonSolidBroken
+  parent: WallArmorAddonSolid
+  placement:
+    mode: SnapgridCenter
+  components:
+    - type: Sprite
+      offset: 0,0.45
+      sprite: _Mono/Structures/Wallmounts/Addons/armor.rsi
+      layers:
+        - state: armor-solid-broken
+    - type: Damageable
+      damageContainer: StructuralInorganic
+      damageModifierSet: WallDefense2
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 500
+          behaviors:
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalSlam
+    - type: ShipRepairable
+      repairTime: 3
+      repairCost: 1
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.5,0.1,0.5,0.8"
+          mask:
+            - TableMask
+          layer:
+            - WallLayer
+          density: 500
+
+- type: entity
+  name: broken solid armor corner
+  suffix: Left
+  description: The remains of a chunk of additional armor plating. Doesn't seem very effective anymore.
+  id: WallArmorAddonSolidBrokenCornerL
+  parent: WallArmorAddonSolidCornerL
+  placement:
+    mode: SnapgridCenter
+  components:
+    - type: Sprite
+      offset: 0,0.45
+      sprite: _Mono/Structures/Wallmounts/Addons/armor.rsi
+      layers:
+        - state: armor-solid-broken-cornerL
+    - type: Damageable
+      damageContainer: StructuralInorganic
+      damageModifierSet: WallDefense2
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 250
+          behaviors:
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalSlam
+    - type: ShipRepairable
+      repairTime: 1
+      repairCost: 1
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "0.5,0.1,0.2,0.7"
+          mask:
+            - TableMask
+          layer:
+            - WallLayer
+          density: 250
+
+- type: entity
+  name: broken solid armor corner
+  suffix: Right
+  description: The remains of a chunk of additional armor plating. Doesn't seem very effective anymore.
+  id: WallArmorAddonSolidBrokenCornerR
+  parent: WallArmorAddonSolidCornerR
+  placement:
+    mode: SnapgridCenter
+  components:
+    - type: Sprite
+      offset: 0,0.45
+      sprite: _Mono/Structures/Wallmounts/Addons/armor.rsi
+      layers:
+        - state: armor-solid-broken-cornerR
+    - type: Damageable
+      damageContainer: StructuralInorganic
+      damageModifierSet: WallDefense2
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 250
+          behaviors:
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalSlam
+    - type: ShipRepairable
+      repairTime: 2
+      repairCost: 2
+    - type: Physics
+      bodyType: Static
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.5,0.7,-0.2,0.1"
+          mask:
+            - TableMask
+          layer:
+            - WallLayer
+          density: 250
