@@ -1,6 +1,6 @@
 - type: entity
   name: solid armor
-  description: An additional chunk of armor, attached to the side of a vessel.
+  description: An additional chunk of armor, attached to the side of a vessel. Provides additional protection, but makes the hull more vulnerable to explosives.
   id: WallArmorAddonSolid
   parent: BaseGreeble
   placement:
@@ -18,10 +18,12 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 2000
+        damage: 4000
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+      - !type:ChangeConstructionNodeBehavior
+        node: broken
       - !type:PlaySoundBehavior
         sound:
           collection: MetalSlam
@@ -41,11 +43,14 @@
         layer:
         - WallLayer
         density: 1000
+  - type: Construction
+    graph: WallArmorAddonSolidGraph
+    node: finished
 
 - type: entity
   name: solid armor corner
   suffix: Left
-  description: An additional chunk of armor, attached to the side of a vessel.
+  description: An additional chunk of armor, attached to the side of a vessel. Provides additional protection, but makes the hull more vulnerable to explosives.
   id: WallArmorAddonSolidCornerL
   parent: WallArmorAddonSolid
   placement:
@@ -63,10 +68,12 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1000
+        damage: 2000
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+      - !type:ChangeConstructionNodeBehavior
+        node: broken
       - !type:PlaySoundBehavior
         sound:
           collection: MetalSlam
@@ -86,11 +93,14 @@
         layer:
         - WallLayer
         density: 500
+  - type: Construction
+    graph: WallArmorAddonSolidCornerLGraph
+    node: finished
 
 - type: entity
   name: solid armor corner
   suffix: Right
-  description: An additional chunk of armor, attached to the side of a vessel.
+  description: An additional chunk of armor, attached to the side of a vessel. Provides additional protection, but makes the hull more vulnerable to explosives.
   id: WallArmorAddonSolidCornerR
   parent: WallArmorAddonSolid
   placement:
@@ -108,10 +118,12 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1000
+        damage: 2000
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+      - !type:ChangeConstructionNodeBehavior
+        node: broken
       - !type:PlaySoundBehavior
         sound:
           collection: MetalSlam
@@ -131,6 +143,9 @@
         layer:
         - WallLayer
         density: 500
+  - type: Construction
+    graph: WallArmorAddonSolidCornerRGraph
+    node: finished
 
 # Broken solid armor
 
@@ -175,6 +190,9 @@
           layer:
             - WallLayer
           density: 500
+    - type: Construction
+      graph: WallArmorAddonSolidGraph
+      node: broken
 
 - type: entity
   name: broken solid armor corner
@@ -218,6 +236,9 @@
           layer:
             - WallLayer
           density: 250
+    - type: Construction
+      graph: WallArmorAddonSolidCornerLGraph
+      node: broken
 
 - type: entity
   name: broken solid armor corner
@@ -263,3 +284,6 @@
           layer:
             - WallLayer
           density: 250
+    - type: Construction
+      graph: WallArmorAddonSolidCornerRGraph
+      node: broken
