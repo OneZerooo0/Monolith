@@ -188,7 +188,7 @@
           mask:
             - TableMask
           layer:
-            - WallLayer
+            - TableLayer
           density: 500
     - type: Construction
       graph: WallArmorAddonSolidGraph
@@ -234,7 +234,7 @@
           mask:
             - TableMask
           layer:
-            - WallLayer
+            - TableLayer
           density: 250
     - type: Construction
       graph: WallArmorAddonSolidCornerLGraph
@@ -282,7 +282,7 @@
           mask:
             - TableMask
           layer:
-            - WallLayer
+            - TableLayer
           density: 250
     - type: Construction
       graph: WallArmorAddonSolidCornerRGraph

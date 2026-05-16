@@ -8,8 +8,10 @@
       steps:
       - material: Steel
         amount: 4
+        doAfter: 0.5
       - material: Plasteel # After economy stuff is obtainable, replace all this with economy armor plates
         amount: 4
+        doAfter: 0.5
       #- tag: ArmorPlateEconomy1
       #  name: basic armor plate
       #  icon:
@@ -41,8 +43,10 @@
       steps:
       - material: Steel
         amount: 2
+        doAfter: 0.5
       - material: Plasteel # After economy stuff is obtainable, replace all this with economy armor plates
         amount: 2
+        doAfter: 0.5
       #- tag: ArmorPlateEconomy1
       #  name: basic armor plate
       #  icon:
@@ -50,7 +54,7 @@
       #    state: armor1
       #  doAfter: 2
   - node: broken
-    entity: WallArmorAddonSolidCornerLBroken
+    entity: WallArmorAddonSolidBrokenCornerL
     edges:
     - to: finished
       steps:
@@ -72,8 +76,10 @@
       steps:
       - material: Steel
         amount: 2
+        doAfter: 0.5
       - material: Plasteel # After economy stuff is obtainable, replace all this with economy armor plates
         amount: 2
+        doAfter: 0.5
       #- tag: ArmorPlateEconomy1
       #  name: basic armor plate
       #  icon:
@@ -81,7 +87,7 @@
       #    state: armor1
       #  doAfter: 2
   - node: broken
-    entity: WallArmorAddonSolidCornerRBroken
+    entity: WallArmorAddonSolidBrokenCornerR
     edges:
     - to: finished
       steps:
