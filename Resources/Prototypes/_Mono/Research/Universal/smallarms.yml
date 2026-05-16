@@ -19,6 +19,8 @@
   - AmmoBox762x39mmPlasteelAP
   - AmmoBox357_magnumPlasteelAP
   - SpeedLoader357_magnumPlasteelAP
+  - Magazine68x52mmPlasteelAP
+  - AmmoBox68x52mmPlasteelAP
   - Magazine46x30mmPistolPlasteelAP
   - Magazine46x30mmSubMachineGunPlasteelAP
   - AmmoBox46x30mmPlasteelAP
@@ -97,6 +99,8 @@
   - AmmoBox762x39mmRIP
   - SpeedLoader357_magnumRIP
   - AmmoBox357_magnumRIP
+  - Magazine68x52mmRIP
+  - AmmoBox68x52mmRIP
   - Magazine46x30mmPistolRIP
   - Magazine46x30mmSubMachineGunRIP
   - AmmoBox46x30mmRIP
