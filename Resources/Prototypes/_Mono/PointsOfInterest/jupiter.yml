@@ -32,6 +32,8 @@
     Jupiter:
       stationProto: RecordsFrontierOutpostCargo
       components:
+        - type: VesselInfo
+          description: "A large cargo-hauler, haphazardly turned into a battlecarrier by the Dynasty. Glory to the Sultan."
         - type: StationNameSetup
           mapNameTemplate: 'PDV Jupiter Class Carrier'
         - type: ExtraStationInformation
