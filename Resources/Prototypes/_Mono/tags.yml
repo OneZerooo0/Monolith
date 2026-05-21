@@ -64,7 +64,13 @@
   id: MonoGripErebusRailmount
 
 - type: Tag
+  id: MonoGripPistolMount
+
+- type: Tag
   id: MonoGripLAM
+
+- type: Tag
+  id: MonoGripLight
 
 - type: Tag
   id: MonoGripVFG
@@ -213,13 +219,22 @@
 - type: Tag
   id: Magazine45_ACPFMJBox
 
-#.357 magnum tags
+#45 magnum tags
 
 - type: Tag
-  id: Cartridge357_magnumFMJ
+  id: Cartridge45_magnumFMJ
 
 - type: Tag
-  id: SpeedLoader357_magnumFMJ
+  id: Magazine45_magnumPistolHighCapacityFMJ
+
+- type: Tag
+  id: SpeedLoader45_magnumFMJ
+
+- type: Tag
+  id: Magazine45_magnumPistolFMJ
+
+- type: Tag
+  id: Magazine45_magnumSubMachineGunFMJ
 
 #9x19mm tags
 
