@@ -21269,3 +21269,20 @@ Entries:
   id: 2343
   time: '2026-05-21T21:52:39.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/4035
+- author: kasature90
+  changes:
+    - type: Add
+      message: >-
+        Added attachments support for Mk.58 & Viper, and a dedicated pistol LAM
+        attachment.
+    - type: Add
+      message: Added attachable weapon lights for grip slot.
+    - type: Tweak
+      message: Buffed Lecter & Drozd firerate by 1 RPS.
+    - type: Tweak
+      message: Nerfed 4x optic maximum spread & recoil increase multipliers.
+    - type: Fix
+      message: Fixed VFGs increasing recoil recovery rate instead of decreasing.
+  id: 2344
+  time: '2026-05-21T22:07:37.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/4031
