@@ -52,3 +52,9 @@ WeaponRevolverDeckardExpeditionGrifty: WeaponRevolverInspector
 WeaponRevolverDeckard: WeaponRevolverInspector
 WeaponRevolverPirate: WeaponRevolverInspector
 
+# Hyperlink books
+
+HyperlinkBookSpaceLaw: null
+HyperlinkBookNfsdSop: null
+
+
