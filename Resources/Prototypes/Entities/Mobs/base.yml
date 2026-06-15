@@ -51,6 +51,11 @@
   - type: PassiveThermalSignature # Mono
     signature: 225 # if nothing else is generating heat, 30m radius, 60m with 4 mobs, 120 with 16
   - type: ThermalSignature # Mono
+  - type: BarricadeBlock # BF14
+    bidirectional: false
+    omnidirectional: true
+    passthroughdistance: 1
+    blocking: 100
 
 - type: entity
   save: false
