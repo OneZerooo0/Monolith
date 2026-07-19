@@ -25,26 +25,17 @@ namespace Content.Client._NF.Kitchen.UI
 
         public AssemblerBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
         {
-            if ((MicrowaveUiKey)uiKey == MicrowaveUiKey.MedicalAssemblerKey)
+            if (EntMan.TryGetComponent(owner, out MicrowaveComponent? component))
             {
-                _menuTitle = "assembler-menu-medical-title";
-                _leftFlavorText = "assembler-menu-medical-footer-flavor-left";
+                if (component.MenuTitle != null)
+                    _menuTitle = Loc.GetString(component.MenuTitle);
+                else
+                    _menuTitle = "";
+                if (component.FlavorText != null)
+                    _leftFlavorText = Loc.GetString(component.FlavorText);
+                else
+                    _leftFlavorText = "";
             }
-            else if ((MicrowaveUiKey)uiKey == MicrowaveUiKey.ArcFurnaceKey) // Mono - added arc furnace key
-            {
-                _menuTitle = "assembler-menu-arc-furnace-title";
-                _leftFlavorText = "assembler-menu-arc-furnace-footer-flavor-left";
-            }
-            else if ((MicrowaveUiKey)uiKey == MicrowaveUiKey.PrecisionAssemblerKey) // Mono - added precision assembler key
-            {
-                _menuTitle = "assembler-menu-precision-assembler-title";
-                _leftFlavorText = "assembler-menu-precision-assembler-footer-flavor-left";
-            }
-            else
-            {
-                _menuTitle = "assembler-menu-title";
-                _leftFlavorText = "assembler-menu-footer-flavor-left";
-            } // End mono
         }
 
         protected override void Open()

@@ -20,5 +20,5 @@ public sealed partial class SpawnOnDespawnComponent : Component
     /// Mono: How many Entity prototypes to spawn.
     /// </summary>
     [DataField]
-    public int? Count = null;
+    public int Count = 1;
 }
