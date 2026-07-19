@@ -275,6 +275,9 @@
   - MagazineAsmgtUniversal762x39mm
   - MagazineAsmgtUniversal556x45mm
   - MagazineAsmgtUniversal635x40mm
+  - MagazineShenzhen
+  - AmmoBoxShenzhen
+  - AmmoBoxShenzhenBig
 
 #Uranium recipes
 
@@ -575,6 +578,7 @@
   recipes:
 #FMJ recipes
 
+  - Magazine4_gaugeBuckshot
   - AmmoBox23x75mmBuckshot
   - Magazine12_gaugeBuckshot
   - AmmoBox12_gaugeBuckshot
@@ -619,6 +623,8 @@
   - MagazineAsmgtUniversal9x19mm
   - MagazineAsmgtUniversal762x39mm
   - MagazineAsmgtUniversal556x45mm
+  - MagazineShenzhen
+  - AmmoBoxShenzhen
 
 #SKR
 
@@ -660,6 +666,7 @@
 
 #Empty recipes
 
+  - Magazine4_gaugeEmpty
   - Magazine12_gaugeEmpty
   - Magazine762x51mmEmpty
   - Magazine762x54mmREmpty
@@ -920,6 +927,7 @@
   - AmmoBox57x28mmBigFMJ
   - AmmoBox635x40mmCaselessBig #PDV
   - AmmoBox68x52mmCaselessBig #TSF
+  - AmmoBoxShenzhenBig #TSF
 
 #8x65 SKR Ammo Box
   - AmmoBox8x65mmSKR

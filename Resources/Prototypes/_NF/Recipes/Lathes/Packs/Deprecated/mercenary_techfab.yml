@@ -104,6 +104,7 @@
   - WelderExperimental
   - JawsOfLife
   - PowerDrill
+  - TrayGoggles # Mono
   - JetpackVoid
   - PowerCellHigh
   # - PowerCellHyperNF
@@ -134,6 +135,7 @@
   - ClothingUniformRandomPunkCroptopShorts
   - ClothingOuterCoatLettermanRandomized
   - ClothingOuterCoatBomberRandomized
+  - ClothingBackpackJack
 ## EVA / Hardsuits
   - ClothingOuterHardsuitCap
   - ClothingOuterHardsuitMercenary
@@ -203,6 +205,7 @@
   - UllmanWeaponPulseRifle
   - UllmanWeaponPulseSniper
   - UllmanMeleePlasmaBlade
+  - WeaponShotgunJack
   ## LPC
   - BalorDroneVoucherMerc
 #Mono end
