@@ -15,12 +15,12 @@ job-name-pirate-first-mate = PDV Asvaran
 job-name-pdv-denasvar = PDV Denasvar
 job-name-pdv-tarkhan = PDV Tarkhan
 job-name-tsf-marsoc = TSFMC MARSOC Operative
-job-name-security-guard = Judge
+job-name-security-guard = CCTC Judge
 job-name-sheriff = TSFMC Colonel
 job-name-stc = Station Traffic Controller
-job-name-sr = Overseer
+job-name-sr = CCTC Marshall
 job-name-pal = Public Affairs Liaison
-job-name-doc = Director of Care
+job-name-doc = CCTC Claims Manager
 
 # Job titles
 job-title-ert-mail-carrier = ERT Mail Carrier

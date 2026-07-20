@@ -1,0 +1,23 @@
+- type: loadoutGroup
+  id: CCTCJumpsuit
+  name: loadout-group-contractor-jumpsuit
+  minLimit: 1
+  loadouts:
+  - MercenaryClothingUniformJumpsuitMilitaryTurtleneckMercenary
+  - ContractorClothingUniformJumpsuitMilitaryColorDarkGreen
+  - ContractorClothingUniformJumpsuitMilitaryColorGreen
+  - ContractorClothingUniformJumpsuitMilitaryColorTeal
+  fallbacks:
+  - ContractorClothingUniformJumpsuitMilitaryColorDarkGreen
+
+- type: loadoutGroup
+  id: CCTCJumpsuitUtility
+  name: loadout-group-contractor-jumpsuit
+  minLimit: 1
+  loadouts:
+  - ContractorClothingUniformJumpsuitMilitaryColorBrown
+  - ContractorClothingUniformJumpsuitMilitaryCargo
+  - ContractorClothingUniformJumpsuitMilitaryEngineering
+  - ContractorClothingUniformJumpsuitMilitarySalvageSpecialist
+  fallbacks:
+  - ContractorClothingUniformJumpsuitMilitaryEngineering

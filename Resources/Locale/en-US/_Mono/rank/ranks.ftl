@@ -64,8 +64,9 @@ vg-lieutenant = Lt.
 vg-commander = Commander
 
 ### CC/MD ranks
-cc-judge = Jdg.
+cctc-justice = Jdg.
 cc-stc = STC
-cc-overseer = Overseer
+cctc-marshall = Marshall
+cctc-noble = Nbl.
 md-doc = Director Of Care
 md-medic = ER.

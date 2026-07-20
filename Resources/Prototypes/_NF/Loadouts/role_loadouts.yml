@@ -110,33 +110,6 @@
   - CivGunCaseSpecial # Mono
   - ContractorArmorPlates # Mono
 
-# Frontier
-- type: roleLoadout
-  id: JobCCServiceWorker # Mono
-  groups:
-  - ContractorNeck
-  - ValetJumpsuit
-  - ContractorBackpack
-  - ValetOuterClothing
-  - ContractorShoes
-  - ContractorFace
-  - ContractorGlasses
-  - ContractorBelt
-  - ContractorEars
-  - ContractorEncryptionKey
-  - ContractorBoxSurvival
-  - ContractorWallet
-  - ContractorCartridge
-  - ContractorImplanter
-  - ContractorUtility # Mono
-  - ContractorFun
-  - ContractorTrinkets
-  - ContractorBureaucracy
-  - NFSpeciesSpecific
-  - ContractorFirearm # Mono
-  - ContractorMag # Mono
-  - ContractorArmorPlates # Mono
-
 - type: roleLoadout
   id: JobNFJanitor
   groups:
@@ -252,10 +225,10 @@
   # Mono Start
   - MonoSecurityGuardOuterClothing
   - MonoSecurityGuardBelt
-  - MonoSecurityGuardGaiter
+  - TsfmcNeck
   - MonoSecurityGuardHud
   - MonoSecurityGuardShoes
-  - MonoSecurityGuardJumpsuit
+  - CCTCJumpsuit
   - MonoSecurityGuardBack
   - SecurityGuardFirearm
   - SecurityGuardPistol

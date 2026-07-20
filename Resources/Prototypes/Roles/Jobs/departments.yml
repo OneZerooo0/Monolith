@@ -81,6 +81,7 @@
   - StationTrafficController # Frontier
   - DirectorOfCare # Mono
   primary: false
+  editorHidden: true
   weight: 100
 
 - type: department

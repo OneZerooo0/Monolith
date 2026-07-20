@@ -1,14 +1,14 @@
 - type: job
   id: SecurityGuard
-  name: job-name-security-guard
-  description: job-description-security-guard
+  name: job-name-cctc-justice
+  description: job-description-cctc-justice
   playTimeTracker: JobSecurityGuard
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 36000 # Frontier - 10 hrs
   startingGear: SecurityGuardGear
   alwaysUseSpawner: true
-  icon: "JobIconSecurityGuard"
+  icon: "JobIconCCTCJustice"
   supervisors: job-supervisors-sr
   assignedCompany: Colonial
   weight: 80
@@ -27,7 +27,7 @@
   - !type:AddComponentSpecial
     components:
     - type: ChatRank
-      rank: cc-judge
+      rank: cctc-justice
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ] # Mono - remove TSFMC implant
   - !type:GiveItemOnHolidaySpecial

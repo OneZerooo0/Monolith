@@ -1,0 +1,22 @@
+
+- type: roleLoadout
+  id: JobCCServiceWorker # Mono
+  groups:
+  - ContractorNeck
+  - CCTCJumpsuit
+  - CCTCBackpack
+  - TsfmcShoes
+  - TsfmcFace
+  - ContractorBelt
+  - ContractorEars
+  - ContractorEncryptionKey
+  - ContractorBoxSurvival
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorImplanter
+  - ContractorUtility # Mono
+  - ContractorFun
+  - ContractorTrinkets
+  - ContractorBureaucracy
+  - NFSpeciesSpecific
+  - ContractorArmorPlates # Mono

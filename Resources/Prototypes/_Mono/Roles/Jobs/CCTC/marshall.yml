@@ -1,11 +1,11 @@
 - type: job
   id: StationRepresentative
-  name: job-name-sr
-  description: job-description-sr
+  name: job-name-cctc-marshall
+  description: job-description-cctc-marshall
   playTimeTracker: JobHeadOfPersonnel
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 360000 # 100 hrs
+      time: 180000 # 50 hrs - 100 > 50 - mono
     - !type:RoleTimeRequirement
       role: JobSecurityGuard
       time: 18000 # 5 hrs as security guard - mono
@@ -20,11 +20,11 @@
   startingGear: SrGear
   alwaysUseSpawner: true
   assignedCompany: Colonial
-  icon: "JobIconHeadOfSecurity" # Mono
+  icon: "JobIconCCTCMarshall" # Mono
   requireAdminNotify: true
   supervisors: job-supervisors-centcom
   weight: 170
-  displayWeight: 60 # Top
+  displayWeight: 50 # Second from top
   canBeAntag: false
   accessGroups:
   - AllAccessMono #Mono
@@ -34,7 +34,7 @@
   - !type:AddComponentSpecial
     components:
     - type: ChatRank
-      rank: cc-overseer
+      rank: cctc-marshall
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ] # Mono - remove TSFMC implant
   - !type:AddComponentSpecial

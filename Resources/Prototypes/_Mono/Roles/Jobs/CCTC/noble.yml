@@ -1,22 +1,28 @@
 - type: job
   id: StationTrafficController
-  name: job-name-stc
-  description: job-description-stc
+  name: job-name-cctc-noble
+  description: job-description-cctc-noble
   playTimeTracker: JobStc
   startingGear: StcGear
   alwaysUseSpawner: true
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 54000 # 20 hrs # mono - change to 15 hr
+      time: 180000 # 50 hrs - 100 > 50 - mono
     - !type:RoleTimeRequirement
       role: JobSecurityGuard
-      time: 3600 # 3 hrs as security guard # mono - change to 1 hr
+      time: 18000 # 5 hrs as security guard - mono
+    - !type:RoleTimeRequirement
+      role: JobServiceWorker
+      time: 18000 # 5 hrs
+    - !type:DepartmentTimeRequirement
+      department: Frontier
+      time: 54000 # 15 hours
   canBeAntag: false
-  icon: "JobIconStc"
+  icon: "JobIconCCTCNoble"
   assignedCompany: Colonial
   supervisors: job-supervisors-sr
   weight: 160
-  displayWeight: 50 # Second from the top
+  displayWeight: 60 # Top
   setPreference: true
   access:
   - Service

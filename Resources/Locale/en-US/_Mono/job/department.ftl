@@ -2,5 +2,5 @@
 department-PMC = Private Military Contractors
 department-UnionOfSovietSocialistPlanets = Union of Soviet Socialist Planets
 department-UnionOfSovietSocialistPlanets-description = Serve the glorious Union in space against TSFMC and PDV forces.
-department-Medical = Medical Dispatch
+department-Medical = Creon-Centennial Medical Associates
 department-Viper = Viper Group
