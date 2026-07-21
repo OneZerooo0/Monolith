@@ -25,7 +25,7 @@
 #            !type:NanotrasenNameGenerator
 #            prefixCreator: '14'
         - type: ExtraStationInformation
-          icon: /Textures/_Mono/Interface/Misc/job_icons/CCTCnoble.png # Mono
+          icon: /Textures/_Mono/Interface/FactionLogo/CCTCnoble.png # Mono
           stationSubtext: 'frontier-lobby-frontier-subtext'
           stationDescription: 'frontier-lobby-frontier-description'
           lobbySortOrder: 1
