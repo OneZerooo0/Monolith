@@ -16,6 +16,9 @@ public sealed partial class LaserPointerComponent : Component
     [DataField]
     public SoundSpecifier? Sound = new SoundPathSpecifier("/Audio/_Goobstation/Weapons/Effects/laserpointer.ogg");
 
+    [DataField]
+    public bool WieldRequired = true;
+
     [DataField(customTypeSerializer: typeof(FlagSerializer<CollisionMask>))]
     public int CollisionMask = (int) CollisionGroup.Opaque; // Mono - change to opaque; its a laser
 
