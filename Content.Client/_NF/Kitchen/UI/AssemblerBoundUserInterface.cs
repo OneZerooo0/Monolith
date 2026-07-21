@@ -27,8 +27,8 @@ namespace Content.Client._NF.Kitchen.UI
         {
             if (EntMan.TryGetComponent(owner, out MicrowaveComponent? component))
             {
-                _menuTitle = component.MenuTitle
-                _leftFlavorText = component.FlavorText
+                _menuTitle = component.MenuTitle;
+                _leftFlavorText = component.FlavorText;
             }
         }
 
