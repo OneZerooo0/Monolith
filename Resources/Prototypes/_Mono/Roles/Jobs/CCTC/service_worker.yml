@@ -30,7 +30,6 @@
 - type: startingGear
   id: CCServiceWorkerGear
   equipment:
-    head:
     id: CCServiceWorkerPDA
   storage:
     back:
