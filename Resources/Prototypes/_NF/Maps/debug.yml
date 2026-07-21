@@ -39,7 +39,7 @@
             MdMedic: [ -1, -1 ] # mono
             SecurityGuard: [ -1, -1 ]
             CCServiceWorker: [ -1, -1 ]
-            NFJanitor: [ -1, -1 ]
+            # NFJanitor: [ -1, -1 ]
             MailCarrier: [ -1, -1 ]
             Sheriff: [ -1, -1]
             # Bailiff: [ -1, -1] Mono

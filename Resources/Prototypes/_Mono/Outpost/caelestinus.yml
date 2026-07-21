@@ -25,7 +25,7 @@
 #            !type:NanotrasenNameGenerator
 #            prefixCreator: '14'
         - type: ExtraStationInformation
-          icon: /Textures/_Mono/Logo/icon/icon-256x256.png # used the biggest one, looks better when downscaling than upscaling
+          icon: /Textures/_Mono/Interface/Misc/job_icons.rsi/CCTCnoble.png # Mono
           stationSubtext: 'frontier-lobby-frontier-subtext'
           stationDescription: 'frontier-lobby-frontier-description'
           lobbySortOrder: 1
@@ -37,7 +37,7 @@
             StationTrafficController: [ 1, 1 ]
             StationRepresentative: [ 1, 1 ]
             SecurityGuard: [ 3, 3 ]
-            CCServiceWorker: [ 2, 2 ]
+            CCServiceWorker: [ 4, 4 ]
             # NFJanitor: [ 2, 2 ]
             # MailCarrier: [ 2, 2 ]
             DirectorOfCare: [ 1, 1 ]
