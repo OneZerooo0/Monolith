@@ -102,6 +102,7 @@
   roles: # Mono
   - DirectorOfCare # Mono
   - MdMedic # Mono
+  primary: false # Mono
 
 - type: department
   id: Security
