@@ -149,13 +149,13 @@ namespace Content.Shared.Kitchen.Components // Mono: Moved to Shared
         /// Mono: The localization string to be displayed for the UI menu.
         /// </summary>
         [DataField, ViewVariables(VVAccess.ReadWrite)]
-        public string MenuTitle = "assembler-menu-arc-furnace-title";
+        public string MenuTitle = "assembler-menu-generic-title";
 
         /// <summary>
         /// Mono: The localization string to be displayed for the UI footer flavor text.
         /// </summary>
         [DataField, ViewVariables(VVAccess.ReadWrite)]
-        public string FlavorText = "assembler-menu-arc-furnace-footer-flavor-left";
+        public string FlavorText = "assembler-menu-generic-footer-flavor-left";
 
         /// <summary>
         /// The sound that is played when a set of ingredients does not match an assembly recipe.

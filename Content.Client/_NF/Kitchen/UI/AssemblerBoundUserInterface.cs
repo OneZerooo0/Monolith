@@ -20,21 +20,15 @@ namespace Content.Client._NF.Kitchen.UI
         [ViewVariables]
         private readonly Dictionary<int, ReagentQuantity> _reagents = new();
 
-        private readonly string _menuTitle;
-        private readonly string _leftFlavorText;
+        private readonly string? _menuTitle;
+        private readonly string? _leftFlavorText;
 
         public AssemblerBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
         {
             if (EntMan.TryGetComponent(owner, out MicrowaveComponent? component))
             {
-                if (component.MenuTitle != null)
-                    _menuTitle = Loc.GetString(component.MenuTitle);
-                else
-                    _menuTitle = "";
-                if (component.FlavorText != null)
-                    _leftFlavorText = Loc.GetString(component.FlavorText);
-                else
-                    _leftFlavorText = "";
+                _menuTitle = component.MenuTitle
+                _leftFlavorText = component.FlavorText
             }
         }
 
@@ -49,8 +43,8 @@ namespace Content.Client._NF.Kitchen.UI
                 SendPredictedMessage(new MicrowaveEjectSolidIndexedMessage(EntMan.GetNetEntity(_solids[args.ItemIndex])));
             };
 
-            _menu.Title = Loc.GetString(_menuTitle);
-            _menu.LeftFooter.Text = Loc.GetString(_leftFlavorText);
+            _menu.Title = Loc.GetString(_menuTitle ?? string.Empty);
+            _menu.LeftFooter.Text = Loc.GetString(_leftFlavorText ?? string.Empty);
         }
 
         protected override void UpdateState(BoundUserInterfaceState state)

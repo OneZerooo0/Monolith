@@ -335,6 +335,8 @@
     foodDoneSound: /Audio/Effects/Shuttle/radar_ping.ogg
     loopingSound: /Audio/_Mono/Structures/Economy/furnace.ogg
     key: ArcFurnaceKey
+    menuTitle: "assembler-menu-arc-furnace-title"
+    flavorText: "assembler-menu-arc-furnace-footer-flavor-left"
   - type: ActivatableUI
     key: enum.MicrowaveUiKey.ArcFurnaceKey
   - type: ContainerContainer
@@ -429,6 +431,8 @@
     foodDoneSound: /Audio/Effects/Shuttle/radar_ping.ogg
     loopingSound: /Audio/_Mono/Structures/Economy/furnace.ogg
     key: PrecisionAssemblerKey
+    menuTitle: "assembler-menu-precision-assembler-title"
+    flavorText: "assembler-menu-precision-assembler-footer-flavor-left"
   - type: ActivatableUI
     key: enum.MicrowaveUiKey.PrecisionAssemblerKey
   - type: ContainerContainer
