@@ -278,6 +278,8 @@
   - MagazineShenzhen
   - AmmoBoxShenzhen
   - AmmoBoxShenzhenBig
+  - Magazine127x99mm
+  - AmmoBox127x99mm
 
 #Uranium recipes
 
@@ -903,6 +905,9 @@
   - AmmoBox145x114mm
   - AmmoBox145x114mmBig
   - Magazine35mmGrenade
+  - Magazine127x99mm
+  - AmmoBox127x99mm
+  - Magazine762x39mmBox
 
 #DP
   - MagazineDP29
