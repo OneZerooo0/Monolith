@@ -1,7 +1,7 @@
 - type: microwaveMealRecipe
   id: RecipeArmorPlate2
   name: heavy armor plate recipe
-  result: ArmorPlateEconomy2
+  result: ArmorPlateEconomy2Finished
   time: 15
   group: ArcFurnace
   solids:
@@ -17,7 +17,7 @@
   time: 15
   group: ArcFurnace
   solids:
-    ArmorPlateEconomy2: 2
+    ArmorPlateEconomy2Finished: 2
   reagents:
     LithiumHydroxide: 30
   recipeType: ArcFurnace

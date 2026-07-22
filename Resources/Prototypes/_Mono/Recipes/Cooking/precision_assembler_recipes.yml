@@ -42,7 +42,7 @@
 - type: microwaveMealRecipe
   id: RecipeSiliconWaferEconomy
   name: silicon wafer recipe
-  result: SiliconWaferEconomySliceSpawner
+  result: SiliconWaferEconomySliceSpawner8
   time: 15
   group: PrecisionAssembler
   solids:

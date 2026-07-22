@@ -672,6 +672,9 @@
   id: EconomyGood
 
 - type: Tag
+  id: ArmorPlateEconomy1
+
+- type: Tag
   id: ElectromagnetEconomy2
 
 # Static uplinks

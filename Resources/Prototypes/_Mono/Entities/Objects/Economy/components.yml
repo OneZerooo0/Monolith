@@ -330,7 +330,7 @@
 
 - type: entity
   name: compound electromagnet (unfinished)
-  description: A work-in-progress compound electromagnet. Needs 30 LV cables to begin construction.
+  description: A work-in-progress compound electromagnet. Needs 10 LV cables to begin construction.
   parent: BaseEconomyGoodTier1
   id: ElectromagnetEconomy2Start
   components:
@@ -363,7 +363,7 @@
 
 - type: entity
   name: superconductive electromagnet (unfinished)
-  description: A work-in-progress superconductive electromagnet. Needs 30 LV cables to begin construction, then significant welding.
+  description: A work-in-progress superconductive electromagnet. Needs 10 LV cables to begin construction, then significant welding.
   parent: BaseEconomyGoodTier2
   id: ElectromagnetEconomy3Start
   components:

@@ -1,55 +1,57 @@
 - type: constructionGraph
   id: ElectromagnetEconomy2Finish
-  start: unfinished
+  start: start
   graph:
+  - node: start
   - node: unfinished
     entity: ElectromagnetEconomy2Start
     edges:
     - to: finished
       steps:
       - material: Cable
-        amount: 30
+        amount: 10
         doAfter: 5
       - tool: Screwing
-        doAfter: 2
+        doAfter: 3
       - tool: Screwing
-        doAfter: 2
+        doAfter: 3
       - tool: Screwing
-        doAfter: 2
+        doAfter: 3
       - tool: Screwing
-        doAfter: 2
+        doAfter: 3
       - tool: Screwing
-        doAfter: 2
+        doAfter: 3
 
   - node: finished
     entity: ElectromagnetEconomy2
 
 - type: constructionGraph
   id: ElectromagnetEconomy3Finish
-  start: unfinished
+  start: start
   graph:
+  - node: start
   - node: unfinished
     entity: ElectromagnetEconomy3Start
     edges:
     - to: finished
       steps:
       - material: Cable
-        amount: 30
+        amount: 10
         doAfter: 5
       - tool: Welding
-        doAfter: 2
+        doAfter: 3
       - tool: Welding
-        doAfter: 2
+        doAfter: 3
       - tool: Welding
-        doAfter: 2
+        doAfter: 3
       - tool: Welding
-        doAfter: 2
+        doAfter: 3
       - tool: Welding
-        doAfter: 2
+        doAfter: 3
       - tool: Welding
-        doAfter: 2
+        doAfter: 3
       - tool: Welding
-        doAfter: 2
+        doAfter: 3
 
   - node: finished
     entity: ElectromagnetEconomy3

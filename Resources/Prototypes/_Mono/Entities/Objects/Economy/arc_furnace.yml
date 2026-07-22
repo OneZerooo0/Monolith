@@ -2,13 +2,14 @@
 
 - type: entity
   name: basic armor plate
-  description: A simple, refined "armor" alloy plate useful for things that need structural stability.
+  description: A simple, refined "armor" alloy plate useful for things that need structural stability. Can be layered to start creating a heavy armor plate.
   parent: ArmorPlateEconomy1Broken
   id: ArmorPlateEconomy1
   components:
   - type: Tag
     tags:
     - EconomyGood
+    - ArmorPlateEconomy1
   - type: Sprite
     sprite: _Mono/Objects/Materials/bayponents.rsi
     state: "armor1"
@@ -30,6 +31,27 @@
         acts: [ "Destruction" ]
   - type: StaticPrice
     price: 1000
+  - type: Construction
+    graph: ArmorPlateEconomy1Finish
+    node: unfinished
+
+- type: entity
+  name: heavy armor plate (unfinished)
+  description: A work-in-progress heap of metal, in the process of being refined into a strong protective plate. Needs screwing to start processing.
+  categories: [ HideSpawnMenu ]
+  id: ArmorPlateEconomy2UnfinishedSpawner
+  components:
+  - type: TimedDespawn
+    lifetime: 0.1
+  - type: Sprite
+    sprite: _Mono/Objects/Materials/bayponents.rsi
+    state: "armor2_unfinished"
+  - type: SpawnOnDespawn
+    count: 1
+    prototype: ArmorPlateEconomy2Start
+  - type: Construction
+    graph: ArmorPlateEconomy1Finish
+    node: finished
 
 - type: entity
   name: broken basic armor plate
@@ -118,10 +140,10 @@
       Silicon: 20
 
 - type: entity
-  name: silicon wafer (x4)
+  name: silicon wafer (x8)
   description: A clean slice of pure monocrystalline silicon. Essential for advanced electronics!
   categories: [ HideSpawnMenu ]
-  id: SiliconWaferEconomySliceSpawner
+  id: SiliconWaferEconomySliceSpawner8
   components:
   - type: TimedDespawn
     lifetime: 0.1
@@ -129,7 +151,7 @@
     sprite: _Mono/Objects/Materials/silicon.rsi
     state: "cuticon"
   - type: SpawnOnDespawn
-    count: 3
+    count: 7
     prototype: SiliconWaferEconomy
 
 - type: entity
@@ -164,7 +186,7 @@
   name: heavy armor plate
   description: A heavier, layered alloy armor plate. Heavy, but strong. Useful for things that need significant structural stability, or more commonly, the ability to take a hit.
   parent: ArmorPlateEconomy2Broken
-  id: ArmorPlateEconomy2
+  id: ArmorPlateEconomy2Finished
   components:
   - type: Tag
     tags:
@@ -192,8 +214,42 @@
     price: 3000
 
 - type: entity
+  name: heavy armor plate (unfinished)
+  description: A work-in-progress heap of metal, in the process of being refined into a strong protective plate. Needs screwing to start processing.
+  parent: ArmorPlateEconomy2Broken
+  id: ArmorPlateEconomy2Start
+  components:
+  - type: Tag
+    tags:
+    - EconomyGood
+  - type: Sprite
+    sprite: _Mono/Objects/Materials/bayponents.rsi
+    state: "armor2_unfinished"
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          ArmorPlateEconomy2Broken:
+            min: 0
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: StaticPrice
+    price: 500
+  - type: Construction
+    graph: ArmorPlateEconomy2Finish
+    node: unfinished
+
+- type: entity
   name: broken heavy armor plate
-  description: Wreckage from a heavy alloy armor plate. A little concerning.
+  description: Wreckage from a heavy alloy armor plate.
   parent: BaseEconomyGoodTier2
   id: ArmorPlateEconomy2Broken
   components:
@@ -302,9 +358,9 @@
           collection: GlassBreak
       - !type:SpawnEntitiesBehavior
         spawn:
-          SiliconBouleScrapEconomy:
-            min: 1
-            max: 1
+          SiliconWaferScrapEconomy:
+            min: 3
+            max: 5
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: DamageOnLand
@@ -315,8 +371,8 @@
   - type: Butcherable
     butcheringType: Knife
     spawned:
-    - id: SiliconBouleScrapEconomy
-      amount: 1
+    - id: SiliconWaferEconomy
+      amount: 4
   - type: PhysicalComposition
     chemicalComposition:
       Silicon: 100
