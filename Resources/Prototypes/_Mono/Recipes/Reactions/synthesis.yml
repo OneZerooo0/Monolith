@@ -19,8 +19,8 @@
       amount: 3
     Water:
       amount: 2
-  products:
-    LithiumHydroxide: 2
   effects:
   - !type:CreateGas
     gas: WaterVapor
+  products:
+    LithiumHydroxide: 2

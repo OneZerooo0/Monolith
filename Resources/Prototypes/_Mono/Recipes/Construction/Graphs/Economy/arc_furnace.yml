@@ -84,9 +84,6 @@
     edges:
     - to: finished
       steps:
-      - material: Cable
-        amount: 30
-        doAfter: 5
       - tag: ElectromagnetEconomy2
         icon:
           sprite: _Mono/Objects/Materials/bayponents.rsi

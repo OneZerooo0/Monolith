@@ -77,21 +77,21 @@
 # Electromagnets
 
 - type: microwaveMealRecipe
-  id: RecipeElectromagnetEconomy2Start
+  id: RecipeElectromagnetEconomy2
   name: compound electromagnet recipe
-  result: ElectromagnetEconomy2Start
+  result: ElectromagnetEconomy2
   time: 15
   group: PrecisionAssembler
   solids:
-    ElectromagnetEconomy1: 2
+    ElectromagnetEconomy1: 3
   reagents:
     Superconductant: 60
   recipeType: PrecisionAssembler
 
 - type: microwaveMealRecipe
-  id: RecipeElectromagnetEconomy3Start
+  id: RecipeElectromagnetEconomy3
   name: superconductive electromagnet recipe
-  result: ElectromagnetEconomy3Start
+  result: ElectromagnetEconomy3
   time: 15
   group: PrecisionAssembler
   solids:

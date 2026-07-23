@@ -6,6 +6,10 @@
   description: Used for storing chemicals and other substances needed for industrial processes. Can be opened and closed. Don't use as a component while it has reagents inside!
   parent: BaseEconomyGood
   components:
+  - type: Tag
+    tags:
+    - EconomyGood
+    - MatterBinEconomy1
   - type: GenericVisualizer
     visuals:
       enum.OpenableVisuals.Opened:
@@ -62,6 +66,9 @@
     solution: capsule
   - type: Spillable
     solution: capsule
+  - type: Construction
+    graph: ComponentBrickEconomy
+    node: MatterBinEconomy1
 
 - type: entity
   id: MatterBinEconomy2
@@ -97,6 +104,28 @@
       Steel: 1000
       Plastic: 1000
       Glass: 500
+  - type: Construction
+    graph: ComponentBrickEconomy
+    node: MatterBinEconomy2
+
+- type: entity
+  name: basic components
+  description: A casing of mechanical-electrical interfacing systems, like gears, stepper motors, cabling and more.
+  parent: BaseEconomyGoodTier2
+  categories: [ HideSpawnMenu ]
+  id: MatterBinEconomy2Spawner
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Materials/bayponents.rsi
+    state: "canister2"
+  - type: TimedDespawn
+    lifetime: 0.1
+  - type: SpawnOnDespawn
+    count: 0
+    prototype: MatterBinEconomy2
+  - type: Construction
+    graph: ComponentBrickEconomy
+    node: MatterBinEconomy2Spawn
 
 - type: entity
   id: MatterBinEconomy3
@@ -146,6 +175,7 @@
   - type: Tag
     tags:
     - EconomyGood
+    - MicroprocessorEconomy1
   - type: Item
     size: Small
   - type: Sprite
@@ -188,6 +218,9 @@
           collection: MetalBreak
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+  - type: Construction
+    graph: ComponentBrickEconomy
+    node: MicroprocessorEconomy2
 
 - type: entity
   name: quantum processor
@@ -229,6 +262,7 @@
       tags:
         - EconomyGood
         - CapacitorStockPart
+        - CapacitorEconomy1
     - type: Sprite
       sprite: _Mono/Objects/Materials/bayponents.rsi
       state: "capacitor1"
@@ -245,12 +279,16 @@
     - type: Tag
       tags:
         - EconomyGood
+        - CapacitorEconomy2
     - type: Sprite
       sprite: _Mono/Objects/Materials/bayponents.rsi
       state: "capacitor2"
     - type: MachinePart
       part: Capacitor
       rating: 3
+    - type: Construction
+      graph: ComponentBrickEconomy
+      node: CapacitorEconomy2
 
 - type: entity
   name: supercapacitor
@@ -281,9 +319,32 @@
   - type: Tag
     tags:
     - EconomyGood
+    - ComponentBrickEconomy1
   - type: Sprite
     sprite: _Mono/Objects/Materials/bayponents.rsi
     state: "componentbrick1"
+  - type: Construction
+    graph: ComponentBrickEconomy
+    node: finished_1
+
+- type: entity
+  name: basic components
+  description: A casing of mechanical-electrical interfacing systems, like gears, stepper motors, cabling and more.
+  parent: BaseEconomyGoodTier2
+  categories: [ HideSpawnMenu ]
+  id: ComponentBrickEconomy1SpawnerT2
+  components:
+  - type: Sprite
+    sprite: _Mono/Objects/Materials/bayponents.rsi
+    state: "componentbrick1"
+  - type: TimedDespawn
+    lifetime: 0.1
+  - type: SpawnOnDespawn
+    count: 2
+    prototype: ComponentBrickEconomy1
+  - type: Construction
+    graph: ComponentBrickEconomy
+    node: finished_1_t2
 
 - type: entity
   name: advanced components
@@ -317,16 +378,20 @@
 
 - type: entity
   name: basic electromagnet
-  description: A circular ring composed of magnetic metal and conductive cabling. Useful for containment structures and mechanical/electrical interfacing.
+  description: A circular ring composed of magnetic metal and conductive cabling. Useful for containment structures and mechanical/electrical interfacing. Add basic components to start assembling a compound electromagnet.
   parent: BaseEconomyGoodTier1
   id: ElectromagnetEconomy1
   components:
   - type: Tag
     tags:
     - EconomyGood
+    - ElectromagnetEconomy1
   - type: Sprite
     sprite: _Mono/Objects/Materials/bayponents.rsi
     state: "electromagnet1"
+  - type: Construction
+    graph: ElectromagnetEconomy
+    node: ElectromagnetEconomy1
 
 - type: entity
   name: compound electromagnet (unfinished)
@@ -341,7 +406,7 @@
     sprite: _Mono/Objects/Materials/bayponents.rsi
     state: "electromagnet2_unfinished"
   - type: Construction
-    graph: ElectromagnetEconomy2Finish
+    graph: ElectromagnetEconomy
     node: unfinished
 
 - type: entity
@@ -358,7 +423,7 @@
     sprite: _Mono/Objects/Materials/bayponents.rsi
     state: "electromagnet2"
   - type: Construction
-    graph: ElectromagnetEconomy2Finish
+    graph: ElectromagnetEconomy
     node: finished
 
 - type: entity
@@ -374,8 +439,8 @@
     sprite: _Mono/Objects/Materials/bayponents.rsi
     state: "electromagnet3_unfinished"
   - type: Construction
-    graph: ElectromagnetEconomy3Finish
-    node: unfinished
+    graph: ElectromagnetEconomy
+    node: unfinished_ElectromagnetEconomy3
 
 - type: entity
   name: superconductive electromagnet
@@ -390,8 +455,8 @@
     sprite: _Mono/Objects/Materials/bayponents.rsi
     state: "electromagnet3"
   - type: Construction
-    graph: ElectromagnetEconomy3Finish
-    node: finished
+    graph: ElectromagnetEconomy
+    node: finished_ElectromagnetEconomy3
 
 # end magnets
 
@@ -430,12 +495,13 @@
 - type: entity
   name: optical sensor
   description: An eye-like camera capable of capturing photons. Basically a fancy eyeball, though it has other uses.
-  parent: BaseEconomyGoodTier2
+  parent: BaseEconomyGoodTier1
   id: OpticsEconomy1
   components:
     - type: Tag
       tags:
         - EconomyGood
+        - OpticsEconomy1
     - type: Sprite
       sprite: _Mono/Objects/Materials/bayponents.rsi
       state: "optics1"
@@ -454,3 +520,54 @@
       state: "optics2"
 
 # end optics
+
+# start camera
+
+- type: entity
+  name: photonic flash camera
+  description: An optical sensor adapted to both emit and recieve high-energy photons. Useful.
+  parent: BaseEconomyGoodTier2
+  id: CameraEconomy1
+  components:
+  - type: Tag
+    tags:
+    - EconomyGood
+  - type: Sprite
+    sprite: _Mono/Objects/Materials/bayponents.rsi
+    state: "camera"
+  - type: Construction
+    graph: ComponentBrickEconomy
+    node: CameraEconomy1
+  # flash stuff
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/Weapons/flash.ogg
+  - type: FlashOnTrigger
+    range: 3
+  - type: TriggerOnProximity
+    enabled: true
+    cooldown: 5
+    shape:
+      !type:PhysShapeCircle
+      radius: 2
+    repeating: true
+
+# end camera
+
+# start motor
+
+- type: entity
+  name: industrial motor
+  description: A powerful and dedicated electromotor, useful in high-torque-requiring electric-mechanical energy conversion.
+  parent: BaseEconomyGoodTier2
+  id: MotorEconomy1
+  components:
+  - type: Tag
+    tags:
+    - EconomyGood
+  - type: Sprite
+    sprite: _Mono/Objects/Materials/bayponents.rsi
+    state: "motor"
+  - type: Construction
+    graph: ComponentBrickEconomy
+    node: MotorEconomy1

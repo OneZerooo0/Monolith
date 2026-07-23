@@ -5,7 +5,7 @@
   time: 15
   group: ArcFurnace
   solids:
-    ArmorPlateEconomy1: 2
+    ArmorPlateEconomy3Fragment: 2
   reagents:
     Silver: 100
   recipeType: ArcFurnace

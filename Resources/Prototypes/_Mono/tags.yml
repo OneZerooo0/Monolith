@@ -672,7 +672,28 @@
   id: EconomyGood
 
 - type: Tag
+  id: ComponentBrickEconomy1
+
+- type: Tag
+  id: MicroprocessorEconomy1
+
+- type: Tag
+  id: CapacitorEconomy1
+
+- type: Tag
+  id: CapacitorEconomy2
+
+- type: Tag
+  id: MatterBinEconomy1
+
+- type: Tag
+  id: OpticsEconomy1
+
+- type: Tag
   id: ArmorPlateEconomy1
+
+- type: Tag
+  id: ElectromagnetEconomy1
 
 - type: Tag
   id: ElectromagnetEconomy2
