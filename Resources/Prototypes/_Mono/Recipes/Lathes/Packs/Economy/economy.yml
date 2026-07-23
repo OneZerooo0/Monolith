@@ -1,8 +1,12 @@
 - type: latheRecipePack
-  id: EconomyBasic
+  id: IndustrialPressEconomyElectronics
   recipes:
-  - ArmorPlateEconomy1Recipe
   - MatterBinEconomy1Recipe
   - MicroprocessorEconomy1Recipe
-  - ElectromagnetEconomy1Recipe
   - CapacitorEconomy1Recipe
+
+- type: latheRecipePack
+  id: IndustrialPressEconomyPlates
+  recipes:
+  - ArmorPlateEconomy1Recipe
+  - ElectromagnetEconomy1Recipe

@@ -21,24 +21,47 @@
         defaultPrototype: Beaker
 
 - type: entity
-  id: IndustrialLatheEconomyMachineCircuitboard
+  id: IndustrialPressEconomyPlatesMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: industrial lathe machine board
-  description: A machine printed circuit board for an industrial economy lathe.
+  name: industrial press (plates) machine board
+  description: A machine printed circuit board for an industrial press, calibrated for plating.
   components:
   - type: Sprite
     state: engineering
   - type: MachineBoard
-    prototype: IndustrialLatheEconomy
+    prototype: IndustrialPressEconomyPlates
     requirements:
-      MatterBin: 2
-      Manipulator: 4
-      Capacitor: 2
+      MatterBin: 1
+      Capacitor: 1
     stackRequirements:
       Glass: 5
-      Plasteel: 10
-      CableHV: 5
-    tagRequirements:
-      GlassBeaker:
-        amount: 1
-        defaultPrototype: Beaker
+      Lithium: 5
+      Plasteel: 20
+      CableHV: 10
+    #tagRequirements: # todo: make it take a press plate component
+    #  GlassBeaker:
+    #    amount: 1
+    #    defaultPrototype: Beaker
+
+- type: entity
+  id: IndustrialPressEconomyElectronicsMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: industrial press (electronics) machine board
+  description: A machine printed circuit board for an industrial press, calibrated for electronic components.
+  components:
+  - type: Sprite
+    state: engineering
+  - type: MachineBoard
+    prototype: IndustrialPressEconomyElectronics
+    requirements:
+      MatterBin: 1
+      Capacitor: 1
+    stackRequirements:
+      Glass: 5
+      Lithium: 5
+      Plasteel: 20
+      CableHV: 10
+  #tagRequirements: # todo: make it take a press plate component
+  #  GlassBeaker:
+  #    amount: 1
+  #    defaultPrototype: Beaker

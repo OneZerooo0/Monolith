@@ -239,31 +239,79 @@
     - Economy
 
 - type: entity
-  id: IndustrialLatheEconomy
+  id: IndustrialPressEconomyElectronics
   parent: BaseLatheLube
-  name: industrial steel lathe
-  description: Capable of forming metal into all types of shapes. Essential for starting to create most advanced items.
+  name: industrial press (electronics)
+  description: Capable of forming metal into all types of shapes. This one is calibrated for electronics.
   components:
+  - type: Transform
+    noRot: false
+  - type: Rotatable
   - type: Sprite
-    sprite: _Mono/Structures/Machines/altolathe.rsi
+    sprite: _Mono/Structures/Machines/pressinator.rsi
+    noRot: true
+    offset: 0, 0.2
     layers:
     - state: icon
       map: [ "enum.LatheVisualLayers.IsRunning" ]
-    - state: unlit
+    - state: electronics
       shader: unshaded
       map: [ "enum.PowerDeviceVisualLayers.Powered"]
-    - state: inserting
-      map: ["enum.MaterialStorageVisualLayers.Inserting"]
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: Machine
-    board: IndustrialLatheEconomyMachineCircuitboard
+    board: IndustrialPressEconomyElectronicsMachineCircuitboard
   - type: Lathe
-    producingSound: /Audio/Machines/circuitprinter.ogg
+    producingSound: /Audio/_Mono/Structures/Economy/hammerpress.ogg
     idleState: icon
     runningState: building
+    unlitIdleState: electronics
+    unlitRunningState: unlit-building
     staticPacks:
-    - EconomyBasic
+    - IndustrialPressEconomyElectronics
+    # dynamicPacks:
+  - type: MaterialStorage
+    whitelist:
+      tags:
+      - Sheet
+      - RawMaterial
+      - Ingot
+  - type: RequireProjectileTarget
+  - type: GuideHelp
+    guides:
+    - Economy
+
+- type: entity
+  id: IndustrialPressEconomyPlates
+  parent: BaseLatheLube
+  name: industrial press (plates)
+  description: Capable of forming metal into all types of shapes. This one is calibrated for plating.
+  components:
+  - type: Transform
+    noRot: false
+  - type: Rotatable
+  - type: Sprite
+    sprite: _Mono/Structures/Machines/pressinator.rsi
+    noRot: true
+    offset: 0, 0.2
+    layers:
+    - state: icon
+      map: [ "enum.LatheVisualLayers.IsRunning" ]
+    - state: plates
+      shader: unshaded
+      map: [ "enum.PowerDeviceVisualLayers.Powered"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: IndustrialPressEconomyPlatesMachineCircuitboard
+  - type: Lathe
+    producingSound: /Audio/_Mono/Structures/Economy/hammerpress.ogg
+    idleState: icon
+    runningState: building
+    unlitIdleState: plates
+    unlitRunningState: unlit-building
+    staticPacks:
+    - IndustrialPressEconomyPlates
     # dynamicPacks:
   - type: MaterialStorage
     whitelist:

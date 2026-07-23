@@ -123,7 +123,7 @@
   group: PrecisionAssembler
   solids:
     MicroprocessorEconomy2: 1
-    ArmorPlateEconomy2: 1
+    ArmorPlateEconomy2Finished: 1
     MatterBinEconomy2: 1
     ComponentBrickEconomy1: 1
   recipeType: PrecisionAssembler

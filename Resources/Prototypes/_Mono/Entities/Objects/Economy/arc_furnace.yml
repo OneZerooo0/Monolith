@@ -439,7 +439,7 @@
     butcheringType: Knife
     spawned:
       - id: ArmorPlateEconomy3Fragment
-        amount: 2
+        amount: 5
 
 - type: entity
   name: broken composite armor plate

@@ -30,14 +30,14 @@
 # Cherry picked base item things
   - type: EmitSoundOnPickup
     sound:
-      collection: GenericPickup
+      path: /Audio/_Goobstation/Items/handling/phone_pickup.ogg
       params:
-        volume: -7
+        volume: -2
   - type: EmitSoundOnDrop
     sound:
-      collection: GenericDrop
+      path: /Audio/_Goobstation/Items/handling/phone_drop.ogg
       params:
-        volume: -7
+        volume: -2
   - type: Animateable
   - type: Clickable
   - type: InteractionOutline

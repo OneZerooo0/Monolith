@@ -36,7 +36,7 @@
 
   ## Heavy Armor Plate
   <Box>
-    <GuideEntityEmbed Entity="ArmorPlateEconomy2" Caption="heavy armor plate"/>
+    <GuideEntityEmbed Entity="ArmorPlateEconomy2Start" Caption="heavy armor plate"/>
   </Box>
 
   Heavy armor plates are one of the simplest Tier 2 products to manufacture. The only particularly confusing part of their production is getting the silver they require and figuring out how to operate the [color=orange]Arc Furnace[/color].
