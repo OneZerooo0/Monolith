@@ -228,8 +228,6 @@
             max: 1
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-  - type: StaticPrice
-    price: 500
   - type: Construction
     graph: ArmorPlateEconomy2Finish
     node: unfinished

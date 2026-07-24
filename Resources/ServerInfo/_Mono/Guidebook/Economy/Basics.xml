@@ -18,7 +18,7 @@
   [color=yellow]It is highly recommended to specialize in a certain type of product - Each is complicated! Remember that you can often purchase required items from other players![/color]
 
   <Box>
-    <GuideEntityEmbed Entity="IndustrialLatheEconomy" Caption="industrial steel lathe"/>
+    <GuideEntityEmbed Entity="IndustrialPressEconomyPlates" Caption="industrial steel lathe"/>
     <GuideEntityEmbed Entity="IndustrialFurnaceEconomy" Caption="industrial arc furnace"/>
     <GuideEntityEmbed Entity="PrecisionAssemblerEconomy" Caption="precision assembler"/>
     <GuideEntityEmbed Entity="KitchenReagentGrinder" Caption="reagent grinder"/>
