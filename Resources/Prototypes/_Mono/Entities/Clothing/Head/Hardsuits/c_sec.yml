@@ -82,8 +82,8 @@
     relayOverlay: true
     goggleEffect: true
     action: ActionToggleNightVision
-    viewCircleRadius: 400
-    viewCircleCount: 2
+    viewCircleRadius: 590
+    viewCircleCount: 1
     viewCircleSpacing: 260
     phosphorColor: "#41D7D9"
     lightingColor: "#FFFFFF32"
