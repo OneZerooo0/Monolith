@@ -77,19 +77,6 @@
         acts: [ "Destruction" ]
   - type: Item
     size: Huge
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.15,-0.15,0.15,0.15"
-        density: 40
-        mask:
-        - MobMask
-        layer:
-        - MobLayer
-        restitution: 0.3  # fite me
-        friction: 0.2
   - type: PhysicalComposition
     materialComposition:
       Steel: 1000
@@ -271,19 +258,6 @@
         acts: [ "Destruction" ]
   - type: Item
     size: Huge
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.2,-0.2,0.2,0.2"
-        density: 40
-        mask:
-        - MobMask
-        layer:
-        - MobLayer
-        restitution: 0.3  # fite me
-        friction: 0.4
   - type: MultiHandedItem
   - type: ClothingSpeedModifier
     walkModifier: 0.8
@@ -465,19 +439,6 @@
         acts: [ "Destruction" ]
   - type: Item
     size: Huge
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.2,-0.2,0.2,0.2"
-        density: 60
-        mask:
-        - MobMask
-        layer:
-        - MobLayer
-        restitution: 0.3  # fite me
-        friction: 0.4
   - type: MultiHandedItem
   - type: ClothingSpeedModifier
     walkModifier: 0.8
@@ -594,19 +555,6 @@
         acts: [ "Destruction" ]
   - type: Item
     size: Huge
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.2,-0.2,0.2,0.2"
-        density: 80
-        mask:
-        - MobMask
-        layer:
-        - MobLayer
-        restitution: 0.3  # fite me
-        friction: 0.6
   - type: MultiHandedItem
   - type: ClothingSpeedModifier
     walkModifier: 0.7

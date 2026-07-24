@@ -65,3 +65,33 @@
   #  GlassBeaker:
   #    amount: 1
   #    defaultPrototype: Beaker
+
+- type: entity
+  id: InteractorCCTCCircuitboard
+  parent: BaseMachineCircuitboard
+  name: proprietary interactor machine board
+  description: A machine printed circuit board for a proprietary interactor. Very important for automated manufacturing.
+  components:
+  - type: Sprite
+    state: engineering
+  - type: MachineBoard
+    prototype: InteractorCCTC
+    requirements:
+      Capacitor: 1
+    stackRequirements:
+      Glass: 5
+
+- type: entity
+  id: RoboticArmCCTCCircuitboard
+  parent: BaseMachineCircuitboard
+  name: proprietary robotic arm machine board
+  description: A machine printed circuit board for a proprietary robotic arm. Very important for automated manufacturing.
+  components:
+  - type: Sprite
+    state: engineering
+  - type: MachineBoard
+    prototype: RoboticArmCCTC
+    requirements:
+      Capacitor: 1
+    stackRequirements:
+      Steel: 5
