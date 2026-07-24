@@ -50766,7 +50766,7 @@ entities:
     - type: Transform
       pos: 17.5,3.5
       parent: 1
-- proto: SpeedLoader45_magnumFMJ
+- proto: SpeedLoader357_magnumFMJ
   entities:
   - uid: 7709
     components:
