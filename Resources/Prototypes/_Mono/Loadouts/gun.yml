@@ -779,7 +779,7 @@
     - WeaponRevolverInspector
 
 - type: loadout #.357 Magnum Ammo
-  id: FactionMagnum45Loadout
+  id: FactionMagnum357Loadout
   price: 0
   storage:
     back:
