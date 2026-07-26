@@ -6,7 +6,7 @@
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 36000 # Frontier - 10 hrs
-  startingGear: SecurityGuardGear
+  startingGear: CCTCJusticeGear
   alwaysUseSpawner: true
   icon: "JobIconCCTCJustice"
   supervisors: job-supervisors-sr
@@ -35,9 +35,9 @@
     prototype: FrontierBirthdayGift
 
 - type: startingGear
-  id: SecurityGuardGear
+  id: CCTCJusticeGear
   equipment:
-    pocket1: WeaponEnergyGunLawbringer
+    pocket1: WeaponPistolCCTCGalactica
   storage:
     back:
     - EncryptionKeyService

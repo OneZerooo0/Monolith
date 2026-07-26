@@ -1,6 +1,6 @@
 
 - type: roleLoadout
-  id: JobCCServiceWorker # Mono
+  id: JobCCServiceWorker # Service Tech
   groups:
   - ContractorNeck
   - CCTCJumpsuit
@@ -15,6 +15,97 @@
   - ContractorCartridge
   - ContractorImplanter
   - ContractorUtility # Mono
+  - ContractorFun
+  - ContractorTrinkets
+  - ContractorBureaucracy
+  - NFSpeciesSpecific
+  - ContractorArmorPlates # Mono
+
+- type: roleLoadout
+  id: JobSecurityGuard # Justice
+  groups:
+  # Mono Start
+  - CCTCJusticeOuterClothing
+  - MonoSecurityGuardBelt
+  - TsfmcNeck
+  - MonoSecurityGuardHud
+  - MonoSecurityGuardShoes
+  - CCTCJumpsuit
+  - MonoSecurityGuardBack
+  - SecurityGuardFirearm
+  - SecurityGuardPistol
+  - SecurityGuardAmmo
+  # Mono End
+  - SecurityGuardGloves
+  - SecurityGuardHead
+  - SecurityGuardEars
+  - NfsdBoxSurvival
+  - SecurityGuardPDA
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorImplanter
+  - ContractorUtility # Mono
+  - ContractorEncryptionKey
+  - ContractorFun
+  - ContractorTrinkets
+  - ContractorBureaucracy
+  - NFSpeciesSpecific
+  - FactionArmorPlates # Mono
+
+# Mono edit
+- type: roleLoadout
+  id: JobStationRepresentative # Marshall
+  groups:
+  #  - StationRepHead
+  #  - StationRepNeck
+  #  - StationRepJumpsuit
+  - StationRepGloves
+  - SecurityBackpack
+  - MarshallOuterClothing
+  #  - ContractorShoes
+  #  - ContractorFace
+  #  - ContractorGlasses
+  #  - ContractorBelt
+  - MonoSecurityGuardHud
+  - StationRepEars
+  - MonoSecurityGuardShoes
+  - HeadofSecurityHead
+  - HeadofSecurityJumpsuit
+  - HeadofSecurityNeck
+  - ColonialLiaisonFirearm # Mono
+  - ContractorBoxSurvival
+  - StationRepPDA
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorImplanter
+  - ContractorUtility # Mono
+  # - ContractorFun # Mono - no fun allowed
+  - StationRepTrinkets
+  - ContractorBureaucracy
+  - NFSpeciesSpecific
+  - ContractorArmorPlates # Mono
+
+- type: roleLoadout
+  id: JobDirectorOfCare # Claims Manager
+  groups:
+  - DocHead
+  - DocNeck
+  - DocJumpsuit
+  - DocGloves
+  - MdMedicBackpack
+  - ContractorOuterClothing
+  - DocShoes
+  - ContractorFace
+  - ContractorGlasses
+  - ContractorBelt
+  - DocEars
+  - ContractorBoxSurvival
+  - DocPDA
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorImplanter
+  - ContractorUtility # Mono
+  - ContractorEncryptionKey
   - ContractorFun
   - ContractorTrinkets
   - ContractorBureaucracy

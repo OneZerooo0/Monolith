@@ -6,7 +6,7 @@
   - MercenaryClothingUniformJumpsuitMilitaryTurtleneckMercenary
   - ContractorClothingUniformJumpsuitMilitaryColorDarkGreen
   - ContractorClothingUniformJumpsuitMilitaryColorGreen
-  - ContractorClothingUniformJumpsuitMilitaryColorTeal
+  - ContractorClothingUniformJumpsuitMilitaryColorRed
   fallbacks:
   - ContractorClothingUniformJumpsuitMilitaryColorDarkGreen
 
@@ -19,5 +19,7 @@
   - ContractorClothingUniformJumpsuitMilitaryCargo
   - ContractorClothingUniformJumpsuitMilitaryEngineering
   - ContractorClothingUniformJumpsuitMilitarySalvageSpecialist
+  - ContractorClothingUniformJumpsuitMilitaryColorDarkGreen
+  - ContractorClothingUniformJumpsuitMilitaryColorGreen
   fallbacks:
   - ContractorClothingUniformJumpsuitMilitaryEngineering

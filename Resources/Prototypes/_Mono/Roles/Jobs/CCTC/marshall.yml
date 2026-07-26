@@ -50,7 +50,7 @@
 - type: startingGear
   id: SrGear
   equipment:
-    pocket1: WeaponEnergyGunLawbringer
+    pocket1: WeaponPistolCCTCGalactica
   storage:
     back:
     - Flash
