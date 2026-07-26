@@ -123,33 +123,23 @@
   - AmmoBox762x39mmSubsonic
   - AmmoBox762x39mmHP
   - AmmoBox762x39mmRIP
-  - Magazine762x39mmBox
-  - Magazine45_magnumPistolFMJ
-  - Magazine45_magnumPistolPlasteelAP
-  - Magazine45_magnumPistolRubber
-  - Magazine45_magnumPistolIncendiary
-  - Magazine45_magnumPistolPractice
-  - Magazine45_magnumPistolEmpty
-  - Magazine45_magnumPistolUranium
-  - Magazine45_magnumPistolHP
-  - Magazine45_magnumPistolRIP
-  - SpeedLoader45_magnumFMJ
-  - SpeedLoader45_magnumPlasteelAP
-  - SpeedLoader45_magnumRubber
-  - SpeedLoader45_magnumIncendiary
-  - SpeedLoader45_magnumPractice
-  - SpeedLoader45_magnumEmpty
-  - SpeedLoader45_magnumUranium
-  - SpeedLoader45_magnumHP
-  - SpeedLoader45_magnumRIP
-  - AmmoBox45_magnumPlasteelAP
-  - AmmoBox45_magnumRubber
-  - AmmoBox45_magnumIncendiary
-  - AmmoBox45_magnumPractice
-  - AmmoBox45_magnumUranium
-  - AmmoBox45_magnumAP
-  - AmmoBox45_magnumHP
-  - AmmoBox45_magnumRIP
+  - SpeedLoader357_magnumFMJ
+  - SpeedLoader357_magnumPlasteelAP
+  - SpeedLoader357_magnumRubber
+  - SpeedLoader357_magnumIncendiary
+  - SpeedLoader357_magnumPractice
+  - SpeedLoader357_magnumEmpty
+  - SpeedLoader357_magnumUranium
+  - SpeedLoader357_magnumHP
+  - SpeedLoader357_magnumRIP
+  - AmmoBox357_magnumPlasteelAP
+  - AmmoBox357_magnumRubber
+  - AmmoBox357_magnumIncendiary
+  - AmmoBox357_magnumPractice
+  - AmmoBox357_magnumUranium
+  - AmmoBox357_magnumAP
+  - AmmoBox357_magnumHP
+  - AmmoBox357_magnumRIP
   - Magazine68x52mmRubber
   - Magazine68x52mmPractice
   - AmmoBox68x52mmRubber
