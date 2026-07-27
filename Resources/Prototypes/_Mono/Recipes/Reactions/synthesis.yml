@@ -17,7 +17,7 @@
   reactants:
     Lithium:
       amount: 3
-    Water:
+    Hydroxide:
       amount: 2
   effects:
   - !type:CreateGas
