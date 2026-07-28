@@ -24,15 +24,14 @@
   id: IndustrialPressEconomyPlatesMachineCircuitboard
   parent: BaseMachineCircuitboard
   name: industrial press (plates) machine board
-  description: A machine printed circuit board for an industrial press, calibrated for plating.
+  description: A machine printed circuit board for an industrial press, calibrated for plating. Screwdrive it to switch between variants.
   components:
   - type: Sprite
     state: engineering
   - type: MachineBoard
     prototype: IndustrialPressEconomyPlates
     requirements:
-      MatterBin: 1
-      Capacitor: 1
+      Capacitor: 2
     stackRequirements:
       Glass: 5
       Lithium: 5
@@ -42,20 +41,50 @@
     #  GlassBeaker:
     #    amount: 1
     #    defaultPrototype: Beaker
+  - type: Construction
+    deconstructionTarget: null
+    graph: IndustrialPress
+    node: plates
+
+- type: entity
+  id: IndustrialPressEconomyPlatesMMCMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: MMC industrial press (plates) machine board
+  description: A machine printed circuit board for an industrial press, calibrated for plating. Screwdrive it to switch between variants.
+  components:
+  - type: Sprite
+    state: engineering
+  - type: MachineBoard
+    prototype: IndustrialPressEconomyPlatesMMC
+    requirements:
+      MatterBin: 2
+      Capacitor: 2
+    stackRequirements: # faster mmc variant
+      Glass: 10
+      Lithium: 10
+      Plasteel: 30
+      CableHV: 20
+    #tagRequirements: # todo: make it take a press plate component
+    #  GlassBeaker:
+    #    amount: 1
+    #    defaultPrototype: Beaker
+  - type: Construction
+    deconstructionTarget: null
+    graph: IndustrialPressMMC
+    node: plates
 
 - type: entity
   id: IndustrialPressEconomyElectronicsMachineCircuitboard
   parent: BaseMachineCircuitboard
   name: industrial press (electronics) machine board
-  description: A machine printed circuit board for an industrial press, calibrated for electronic components.
+  description: A machine printed circuit board for an industrial press, calibrated for electronic components. Screwdrive it to switch between variants.
   components:
   - type: Sprite
     state: engineering
   - type: MachineBoard
     prototype: IndustrialPressEconomyElectronics
     requirements:
-      MatterBin: 1
-      Capacitor: 1
+      Capacitor: 2
     stackRequirements:
       Glass: 5
       Lithium: 5
@@ -65,6 +94,37 @@
   #  GlassBeaker:
   #    amount: 1
   #    defaultPrototype: Beaker
+  - type: Construction
+    deconstructionTarget: null
+    graph: IndustrialPress
+    node: electronics
+
+- type: entity
+  id: IndustrialPressEconomyElectronicsMMCMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: MMC industrial press (electronics) machine board
+  description: A machine printed circuit board for an industrial press, calibrated for electronic components. Screwdrive it to switch between variants.
+  components:
+  - type: Sprite
+    state: engineering
+  - type: MachineBoard
+    prototype: IndustrialPressEconomyElectronicsMMC
+    requirements:
+      MatterBin: 2
+      Capacitor: 2
+    stackRequirements: # faster mmc variant
+      Glass: 10
+      Lithium: 10
+      Plasteel: 30
+      CableHV: 20
+  #tagRequirements: # todo: make it take a press plate component
+  #  GlassBeaker:
+  #    amount: 1
+  #    defaultPrototype: Beaker
+  - type: Construction
+    deconstructionTarget: null
+    graph: IndustrialPressMMC
+    node: electronics
 
 - type: entity
   id: InteractorCCTCCircuitboard
