@@ -364,7 +364,7 @@
   - type: Machine
     board: IndustrialPressEconomyElectronicsMMCMachineCircuitboard
   - type: Lathe
-    PartRatingMaterialUseMultiplier: 0.98 # less of a buff from matter bins
+    partRatingMaterialUseMultiplier: 0.98 # less of a buff from matter bins
     producingSound: /Audio/_Mono/Structures/Economy/hammerpress.ogg
     idleState: mmc
     runningState: building_mmc
@@ -448,7 +448,7 @@
   - type: Machine
     board: IndustrialPressEconomyPlatesMMCMachineCircuitboard
   - type: Lathe
-    PartRatingMaterialUseMultiplier: 0.98 # less of a buff from matter bins
+    partRatingMaterialUseMultiplier: 0.98 # less of a buff from matter bins
     producingSound: /Audio/_Mono/Structures/Economy/hammerpress.ogg
     idleState: mmc
     runningState: building_mmc
