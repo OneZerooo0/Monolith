@@ -6,6 +6,24 @@
     endAt: 10800 # 3 hour
 
 - type: entity
+  id: PortstrikeAnnounceRuleRandom1To3
+  parent: BaseGameRule
+  components:
+  - type: GameRule
+    delay:
+      min: 3600 # 1 hr
+      max: 10800 # 3 hr
+  - type: BlankRule
+  - type: StationEvent
+    earliestStart: 0
+    endAnnouncement: gamerule-portstrike-announce-announcement
+    announceSender: gamerule-portstrike-announce-sender
+    endAudio:
+      path: /Audio/Misc/gamma.ogg
+      params:
+        volume: -2
+
+- type: entity
   id: PortstrikeAnnounceRuleHour4
   parent: BaseGameRule
   components:
