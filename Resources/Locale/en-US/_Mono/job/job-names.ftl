@@ -31,5 +31,5 @@ job-name-cctc-noble = CCTC Shareholder
 job-name-mmc-liason = MMC Corporate Liason
 job-name-mmc-security = MMC Corporate Security
 job-name-mmc-employee = MMC Employee
-job-supervisors-mmc-highcomm = the Mieyo Corporate Board.
+job-supervisors-mmc-highcomm = the Mieyo Corporate Board
 job-supervisors-mmc-liason = the Corporate Liason
