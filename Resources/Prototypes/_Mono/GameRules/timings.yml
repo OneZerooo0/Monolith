@@ -17,8 +17,8 @@
     warLevel: true
 
 - type: entity
-  id: PortstrikeAnnounceRuleHour4
-  parent: PortstrikeAnnounceRuleRandom1To3
+  id: PortstrikeAnnounceRuleRandom1To3
+  parent: PortstrikeAnnounceRuleHour4
   components:
   - type: GameRule
     delay:
