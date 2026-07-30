@@ -1,16 +1,4 @@
 - type: reaction
-  id: SugarAcidCarbon
-  impact: Medium
-  quantized: true
-  reactants:
-    Sugar:
-      amount: 1
-    SulfuricAcid:
-      amount: 1
-  products:
-    Carbon: 6
-
-- type: reaction
   id: LithiumHydroxide
   impact: Medium
   quantized: true
