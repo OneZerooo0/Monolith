@@ -51,6 +51,7 @@
 
 # end silicon
 
+- type: microwaveMealRecipe
   id: IriditePowderIntoCrystal
   name: iridite powder pulverization
   result: IriditeCrystal
