@@ -209,7 +209,7 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    totalIntensity: 300
+    totalIntensity: 200
     intensitySlope: 6
     maxIntensity: 25
   - type: GatheringProjectile
