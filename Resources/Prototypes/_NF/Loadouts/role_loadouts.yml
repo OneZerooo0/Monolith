@@ -159,33 +159,6 @@
   - ContractorMag # Mono
   - ContractorArmorPlates # Mono
 
-- type: roleLoadout
-  id: JobStationTrafficController
-  groups:
-  - StcHead
-  - ContractorNeck
-  - StcJumpsuit
-  - ContractorGloves
-  - ContractorBackpack
-  - ContractorOuterClothing
-  - StcShoes
-  - ContractorFace
-  - ContractorGlasses
-  - ContractorBelt
-  - StcEars
-  - ContractorBoxSurvival
-  - ContractorWallet
-  - ContractorCartridge
-  - ContractorImplanter
-  - ContractorUtility # Mono
-  - ContractorFun
-  - ContractorTrinkets
-  - ContractorBureaucracy
-  - NFSpeciesSpecific
-  - ContractorFirearm # Mono
-  - ContractorMag # Mono
-  - ContractorArmorPlates # Mono
-
 # Nfsd
 
 # MONO DISCLAMER - REMOVED ALL OF THESE EXCEPT DETECTIVE AND PAL - FUCK COMMENTING ALL THAT OUT

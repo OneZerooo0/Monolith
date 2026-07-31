@@ -82,7 +82,7 @@
 - type: entity
   id: SpawnPointStc
   parent: SpawnPointJobBase
-  name: station traffic controller
+  name: CCTC shareholder
   components:
   - type: SpawnPoint
     job_id: StationTrafficController

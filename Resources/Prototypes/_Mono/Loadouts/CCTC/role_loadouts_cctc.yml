@@ -7,7 +7,7 @@
   - CCTCBackpack
   - TsfmcShoes
   - TsfmcFace
-  - ContractorBelt
+  - MMCEmployeeBelt
   - ContractorEars
   - ContractorEncryptionKey
   - ContractorBoxSurvival
@@ -17,7 +17,6 @@
   - ContractorUtility # Mono
   - ContractorFun
   - ContractorTrinkets
-  - ContractorBureaucracy
   - NFSpeciesSpecific
   - ContractorArmorPlates # Mono
 
@@ -60,6 +59,7 @@
   #  - StationRepNeck
   #  - StationRepJumpsuit
   - StationRepGloves
+  - CCTCJumpsuit
   - SecurityBackpack
   - MarshallOuterClothing
   #  - ContractorShoes
@@ -86,11 +86,35 @@
   - ContractorArmorPlates # Mono
 
 - type: roleLoadout
+  id: JobStationTrafficController # Shareholder
+  groups:
+  - CCTCShareholderHead
+  - CCTCShareholderNeck
+  - CCTCShareholderJumpsuit
+  - StationRepGloves
+  - CCTCBackpack
+  - StcShoes
+  - ContractorFace
+  - ContractorGlasses
+  - ContractorBelt
+  - StationRepEars
+  - ContractorBoxSurvival
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorImplanter
+  - ContractorUtility # Mono
+  - ContractorFun
+  - ContractorTrinkets
+  - ContractorBureaucracy
+  - NFSpeciesSpecific
+  - ContractorArmorPlates # Mono
+
+- type: roleLoadout
   id: JobDirectorOfCare # Claims Manager
   groups:
   - DocHead
   - DocNeck
-  - DocJumpsuit
+  - CCTCJumpsuit
   - DocGloves
   - MdMedicBackpack
   - ContractorOuterClothing
