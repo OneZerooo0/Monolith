@@ -1,8 +1,8 @@
 # Its basically just a LMG, but I thought it would be more fitting in launchers.
 
 - type: entity
-  name: wayward NT-WS Mk.348 "Hailstorm" directed kinetic pulse weapon
-  parent: BaseItem
+  name: wayward NT-WS Mk.348 "Hailstorm" DKPW
+  parent: [BaseItem, BaseFactionGearOtherFactionT3]
   id: WeaponLauncherMk348
   description: A bulky multi-barreled weapon firing 9x19mm. Ammo is fed via boxes, which is moved inside the gun to each respective barrel. Despite its clunkiness, it was a successful prototype developed before the great Confederate Expansion... how do you know this?
   components:

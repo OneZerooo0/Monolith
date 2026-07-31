@@ -1,6 +1,6 @@
 - type: entity
   id: WeaponHeavyPulseCannon
-  parent: [ BaseWeaponBattery, BaseGunWieldable ]
+  parent: [ BaseWeaponBattery, BaseGunWieldable, BaseFactionGearOtherFactionT3 ]
   name: wayward NT-WS heavy pulse cannon
   description: An anomalous and massive shoulder mounted pulse cannon, packing enough power in its punches to blow holes through organics, or when tuned to high power, blow holes clean into shuttle hulls.
   components:

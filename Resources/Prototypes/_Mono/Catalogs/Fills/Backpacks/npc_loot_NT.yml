@@ -163,8 +163,8 @@
     - id: CartridgeMPSSMMissile
       amount: 3
       prob: 0.09
-    - id: WeaponHeavyPulseCannon
-      prob: 0.005
+    #- id: WeaponHeavyPulseCannon
+    #  prob: 0.005
     - id: MedkitCombatFilled
       prob: 0.5
     #Clothings
