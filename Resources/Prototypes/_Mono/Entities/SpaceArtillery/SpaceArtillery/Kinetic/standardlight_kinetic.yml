@@ -114,7 +114,7 @@
     ports:
     - Toggle
   - type: Gun
-    damageModifier: 1.4
+    damageModifier: 1
     fireRate: 25
     recoil: 5 # 1/5x
     projectileSpeed: 160

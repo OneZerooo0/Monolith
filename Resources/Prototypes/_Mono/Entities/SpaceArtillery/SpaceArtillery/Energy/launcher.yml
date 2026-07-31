@@ -341,7 +341,7 @@
     maxAngle: 6
     fireRate: 1
     recoil: 10 # 2/5x
-    burstCooldown: 5.5
+    burstCooldown: 4.5
     burstFireRate: 15
     shotsPerBurst: 35
     selectedMode: Burst
