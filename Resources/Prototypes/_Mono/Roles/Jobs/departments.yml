@@ -51,10 +51,10 @@
   name: department-CreonCentennialTradeCharter
   description: department-CreonCentennialTradeCharter-description
   color: "#5c6045"
-  weight: 50
+  weight: 100
   roles:
   - JobShareholderCCTC
   - JobMarshallCCTC
   - JobSecurityCCTC
   - JobServiceTechCCTC
-  primary: false
+  primary: true

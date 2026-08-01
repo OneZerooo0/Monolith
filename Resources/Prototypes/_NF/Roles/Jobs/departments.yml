@@ -10,13 +10,13 @@
 #
 # SPDX-License-Identifier: MPL-2.0
 
-- type: department
-  id: Frontier # mono: Acts as CCTC
-  name: department-Frontier
-  description: department-NF-description
-  color: "#334E6D"
-  weight: 50 # accounted for in jobs
-  roles:
+#- type: department
+#  id: Frontier # mono: Acts as CCTC
+#  name: department-Frontier
+#  description: department-NF-description
+#  color: "#334E6D"
+#  weight: 50 # accounted for in jobs
+#  roles:
   #- StationRepresentative
   #- StationTrafficController
   #- CCServiceWorker
@@ -25,7 +25,7 @@
   #- SecurityGuard
   # medic roles moved - mono
   #- DirectorOfCare # Mono
-  - MdMedic # Mono
+#  - MdMedic # Mono
 
 - type: department
   id: Antag

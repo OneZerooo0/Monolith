@@ -22,7 +22,7 @@ job-description-vg-commander = Lead the Vipers to glory and wealth. Forge new bu
 job-description-cctc-servicetech = Develop the sector's industrial capability to please the nobilitat.
 job-description-cctc-justice = Obey the Marshall's, and by extension, the nobilitat's will. Put down threats to the safety and security of the trade charter.
 job-description-cctc-marshall = Use the wealth of assets at your disposal to secure and defend the Nobilitat's interests. Ensure all industrial and military operations run smoothly.
-job-description-cctc-noble = Enjoy the fruits of your employee's labor. Ensure plenty of profit is being made, and make sure the few people richer than you are happy. Try not to get assassinated by the people you've indirectly screwed over.
+job-description-cctc-shareholder = Enjoy the fruits of your employee's labor. Ensure plenty of profit is being made, and make sure the few people richer than you are happy. Try not to get assassinated by the people you've indirectly screwed over.
 # MARK: MMC
 job-description-mmc-liason = Ensure profits for your corporate managers, keep your employees in line, and ensure the protection MMC assets in the sector.
 job-description-mmc-security = Protect MMC assets and employees in the area from any threats.

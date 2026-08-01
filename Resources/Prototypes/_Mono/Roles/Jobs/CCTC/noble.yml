@@ -1,7 +1,7 @@
 - type: job
   id: JobShareholderCCTC
-  name: job-name-cctc-noble
-  description: job-description-cctc-noble
+  name: job-name-cctc-shareholder
+  description: job-description-cctc-shareholder
   playTimeTracker: JobShareholderCCTC
   startingGear: ShareholderCCTCGear
   alwaysUseSpawner: true

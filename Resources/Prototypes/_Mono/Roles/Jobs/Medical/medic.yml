@@ -12,7 +12,7 @@
   supervisors: job-supervisors-doc
   weight: 170
   displayWeight: 5 # Bottom
-  assignedCompany: Colonial # mono
+  assignedCompany: CCTC # mono
   canBeAntag: false
   accessGroups:
   - GeneralAccess

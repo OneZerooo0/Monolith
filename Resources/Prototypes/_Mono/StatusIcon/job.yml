@@ -111,7 +111,7 @@
   icon:
     sprite: /Textures/_Mono/Interface/Misc/job_icons.rsi
     state: CCTCnoble
-  jobName: job-name-cctc-noble
+  jobName: job-name-cctc-shareholder
 
 - type: jobIcon
   id: JobIconMMCEmployee

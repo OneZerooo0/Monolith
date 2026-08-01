@@ -25,7 +25,7 @@ job-name-vg-commander = VG Commander
 job-name-cctc-justice = CCTC Judge
 job-name-cctc-servicetech = CCTC Service Tech
 job-name-cctc-marshall = CCTC Marshall
-job-name-cctc-noble = CCTC Shareholder
+job-name-cctc-shareholder = CCTC Shareholder
 
 # MARK: MMC
 job-name-mmc-liason = MMC Corporate Liason

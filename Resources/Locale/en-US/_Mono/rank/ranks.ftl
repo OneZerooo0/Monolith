@@ -74,6 +74,6 @@ mmc-liason = Corporate Liason
 cctc-justice = Jdg.
 cc-stc = STC
 cctc-marshall = Marshall
-cctc-noble = Nbl.
+cctc-shareholder = Nbl.
 md-doc = Director Of Care
 md-medic = ER.
