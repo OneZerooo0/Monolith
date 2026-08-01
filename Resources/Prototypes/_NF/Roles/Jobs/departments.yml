@@ -17,14 +17,14 @@
   color: "#334E6D"
   weight: 50 # accounted for in jobs
   roles:
-  - StationRepresentative
-  - StationTrafficController
-  - CCServiceWorker
-  - NFJanitor # mono, old
-  - MailCarrier # mono, old
-  - SecurityGuard
+  #- StationRepresentative
+  #- StationTrafficController
+  #- CCServiceWorker
+  #- NFJanitor # mono, old
+  #- MailCarrier # mono, old
+  #- SecurityGuard
   # medic roles moved - mono
-  - DirectorOfCare # Mono
+  #- DirectorOfCare # Mono
   - MdMedic # Mono
 
 - type: department

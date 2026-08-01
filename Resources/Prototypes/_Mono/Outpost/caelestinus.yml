@@ -39,13 +39,13 @@
         #   gridPath: /Maps/_Mono/POI/surface_outpost_desert.yml
         - type: StationJobs
           availableJobs:
-            StationTrafficController: [ 1, 1 ]
-            StationRepresentative: [ 1, 1 ]
-            SecurityGuard: [ 3, 3 ]
-            CCServiceWorker: [ 4, 4 ]
+            #StationTrafficController: [ 1, 1 ]
+            #StationRepresentative: [ 1, 1 ]
+            #SecurityGuard: [ 3, 3 ]
+            #CCServiceWorker: [ 4, 4 ]
             # NFJanitor: [ 2, 2 ]
             # MailCarrier: [ 2, 2 ]
-            DirectorOfCare: [ 1, 1 ]
+            #DirectorOfCare: [ 1, 1 ]
             MdMedic: [ -1, -1 ]
             Contractor: [ -1, -1 ]
             Pilot: [ -1, -1 ]

@@ -1,8 +1,8 @@
 - type: job
-  id: SecurityGuard
+  id: JobSecurityCCTC
   name: job-name-cctc-justice
   description: job-description-cctc-justice
-  playTimeTracker: JobSecurityGuard
+  playTimeTracker: JobSecurityCCTC
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 36000 # Frontier - 10 hrs
@@ -10,12 +10,13 @@
   alwaysUseSpawner: true
   icon: "JobIconCCTCJustice"
   supervisors: job-supervisors-sr
-  assignedCompany: Colonial
+  assignedCompany: CCTC
   weight: 80
   displayWeight: 20 # Second from the bottom
   canBeAntag: false
   access:
   - Security
+  - CCTCSecurity
   - Brig
   - Maintenance
   - Service

@@ -1,8 +1,8 @@
 - type: job
-  id: StationRepresentative
+  id: JobMarshallCCTC
   name: job-name-cctc-marshall
   description: job-description-cctc-marshall
-  playTimeTracker: JobHeadOfPersonnel
+  playTimeTracker: JobMarshallCCTC
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 180000 # 50 hrs - 100 > 50 - mono
@@ -17,9 +17,9 @@
       department: Security
       time: 36000 # 10 hours
   whitelisted: false
-  startingGear: SrGear
+  startingGear: MarshallCCTCGear
   alwaysUseSpawner: true
-  assignedCompany: Colonial
+  assignedCompany: CCTC
   icon: "JobIconCCTCMarshall" # Mono
   requireAdminNotify: true
   supervisors: job-supervisors-centcom
@@ -27,9 +27,13 @@
   displayWeight: 50 # Second from top
   canBeAntag: false
   accessGroups:
-  - AllAccessMono #Mono
+  - CCTC
   access:
-  - HeadOfPersonnel #Mono
+  - Maintenance
+  - External
+  - Service
+  - Frontier
+  - Mercenary
   special:
   - !type:AddComponentSpecial
     components:
@@ -48,7 +52,7 @@
     prototype: FrontierBirthdayGift
 
 - type: startingGear
-  id: SrGear
+  id: MarshallCCTCGear
   equipment:
     pocket1: WeaponPistolCCTCGalactica
   storage:

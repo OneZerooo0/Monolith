@@ -1,9 +1,9 @@
 - type: job
-  id: StationTrafficController
+  id: JobShareholderCCTC
   name: job-name-cctc-noble
   description: job-description-cctc-noble
-  playTimeTracker: JobStc
-  startingGear: StcGear
+  playTimeTracker: JobShareholderCCTC
+  startingGear: ShareholderCCTCGear
   alwaysUseSpawner: true
   requirements:
     - !type:OverallPlaytimeRequirement
@@ -19,11 +19,13 @@
       time: 54000 # 15 hours
   canBeAntag: false
   icon: "JobIconCCTCNoble"
-  assignedCompany: Colonial
+  assignedCompany: CCTC
   supervisors: job-supervisors-sr
   weight: 160
   displayWeight: 60 # Top
   setPreference: true
+  accessGroups:
+  - CCTC
   access:
   - Service
   - Maintenance
@@ -40,9 +42,9 @@
     prototype: FrontierBirthdayGift
 
 - type: startingGear
-  id: StcGear
-  equipment:
-    id: StcPDA
+  id: ShareholderCCTCGear
+  #equipment:
+  #  id: StcPDA
   storage:
     back:
     - Flash

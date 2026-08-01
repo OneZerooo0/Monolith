@@ -1,6 +1,6 @@
 
 - type: roleLoadout
-  id: JobCCServiceWorker # Service Tech
+  id: JobServiceTechCCTC # Service Tech
   groups:
   - ContractorNeck
   - CCTCJumpsuit
@@ -21,7 +21,7 @@
   - ContractorArmorPlates # Mono
 
 - type: roleLoadout
-  id: JobSecurityGuard # Justice
+  id: JobSecurityCCTC # Justice
   groups:
   # Mono Start
   - CCTCJusticeOuterClothing
@@ -53,7 +53,7 @@
 
 # Mono edit
 - type: roleLoadout
-  id: JobStationRepresentative # Marshall
+  id: JobMarshallCCTC # Marshall
   groups:
   #  - StationRepHead
   #  - StationRepNeck
@@ -86,7 +86,7 @@
   - ContractorArmorPlates # Mono
 
 - type: roleLoadout
-  id: JobStationTrafficController # Shareholder
+  id: JobShareholderCCTC # Shareholder
   groups:
   - CCTCShareholderHead
   - CCTCShareholderNeck

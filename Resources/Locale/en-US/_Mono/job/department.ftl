@@ -8,4 +8,7 @@ department-Medical = Creon-Centennial Medical Associates
 department-MieyoManufacturingConcern = Mieyo Manufacturing Concern
 department-MieyoManufacturingConcern-description = Work under the MMC industrial conglomerate, and make as much as you can for the company.
 
+department-CreonCentennialTradeCharter = Creon-Centennial Trade Charter
+department-CreonCentennialTradeCharter-description = Work for the Creon-Centennial Trade Charter. Monopolize the sector, and extract as much value for the royal executive board.
+
 department-Viper = Viper Group

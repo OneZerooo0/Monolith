@@ -76,10 +76,10 @@
   # - ERTSecurity # Frontier
   # - ERTEngineer # Frontier
   # - DeathSquad # Frontier
-  - StationRepresentative # Frontier
+  #- StationRepresentative # Frontier
   - Sheriff  # Frontier
-  - StationTrafficController # Frontier
-  - DirectorOfCare # Mono
+  #- StationTrafficController # Frontier
+  #- DirectorOfCare # Mono
   primary: false
   editorHidden: true
   weight: 100

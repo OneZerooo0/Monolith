@@ -1,18 +1,18 @@
 - type: job
-  id: CCServiceWorker
+  id: JobServiceTechCCTC
   name: job-name-cctc-servicetech
   description: job-description-cctc-servicetech
-  playTimeTracker: JobCCServiceWorker
+  playTimeTracker: JobServiceTechCCTC
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 10800 # three hours
-  startingGear: CCServiceWorkerGear
+  startingGear: ServiceTechCCTCGear
   alwaysUseSpawner: true
   icon: "JobIconCCTCServiceTech"
   supervisors: job-supervisors-sr
   weight: 60 # Frontier
   displayWeight: 10 # Frontier
-  assignedCompany: Colonial
+  assignedCompany: CCTC
   canBeAntag: false
   access:
   - Maintenance
@@ -28,7 +28,7 @@
     prototype: FrontierBirthdayGift # Frontier
 
 - type: startingGear
-  id: CCServiceWorkerGear
+  id: ServiceTechCCTCGear
   equipment:
     id: CCServiceWorkerPDA
   storage:

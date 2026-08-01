@@ -35,6 +35,12 @@
   disabled: true
 
 - type: company
+  id: CCTC
+  name: CCTC
+  color: "#5c6045"
+  disabled: true
+
+- type: company
   id: TSFHighComm
   name: Winter Solstice
   description: winter-solstice-description
