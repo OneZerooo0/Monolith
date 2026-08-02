@@ -178,6 +178,7 @@
   - type: Tag
     tags:
     - EconomyGood
+    - ArmorPlateEconomy2
   - type: Sprite
     sprite: _Mono/Objects/Materials/bayponents.rsi
     state: "armor2"
@@ -199,6 +200,9 @@
         acts: [ "Destruction" ]
   - type: StaticPrice
     price: 3000
+  - type: Construction
+    graph: ArmorPlateEconomy2Finish
+    node: finished
 
 - type: entity
   name: heavy armor plate (unfinished)
@@ -386,6 +390,7 @@
   - type: Tag
     tags:
     - EconomyGood
+    - ArmorPlateEconomy3
   - type: Sprite
     sprite: _Mono/Objects/Materials/bayponents.rsi
     state: "armor3"
@@ -411,7 +416,7 @@
     butcheringType: Knife
     spawned:
       - id: ArmorPlateEconomy3Fragment
-        amount: 5
+        amount: 4
 
 - type: entity
   name: broken composite armor plate
@@ -455,7 +460,7 @@
 
 - type: entity
   name: EMAG armor plate (unfinished)
-  description: The ceramic/metallic plate component of an EMAG armor plate, fresh off the forge and awaiting its electronic components. Needs 30 LV cables to begin construction, then significant screwing and cutting.
+  description: The ceramic/metallic plate component of an EMAG armor plate, fresh off the forge and awaiting its electronic components. Needs a compound electromagnet to begin construction, then significant screwing and cutting.
   parent: ArmorPlateEconomy4Broken
   id: ArmorPlateEconomy4Start
   components:
