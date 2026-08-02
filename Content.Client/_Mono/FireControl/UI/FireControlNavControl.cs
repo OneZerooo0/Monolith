@@ -7,7 +7,6 @@ using Content.Shared.Shuttles.BUIStates;
 using Content.Shared.Shuttles.Components;
 using Content.Shared.Shuttles.Systems;
 using Content.Client._Mono.Radar;
-using Content.Shared._Mono.Detection;
 using Content.Shared._Mono.Radar;
 using Content.Shared._Crescent.ShipShields;
 using Robust.Shared.Physics.Collision.Shapes;
@@ -32,6 +31,8 @@ public sealed class FireControlNavControl : ShuttleNavControl
     private EntityUid? _activeConsole;
     private FireControllableEntry[]? _controllables;
     private HashSet<NetEntity> _selectedWeapons = new();
+
+    private readonly Dictionary<NetEntity, Color> _blipColors = new();
 
     // Add a limit to how often we update the cursor position to prevent network spam
     private float _lastCursorUpdateTime = 0f;
@@ -67,20 +68,22 @@ public sealed class FireControlNavControl : ShuttleNavControl
 
         base.Draw(handle);
 
-        var mapPos = _transform.ToMapCoordinates(_coordinates.Value);
-        var posMatrix = Matrix3Helpers.CreateTransform(_coordinates.Value.Position, _rotation.Value);
-        var ourEntRot = RotateWithEntity ? _transform.GetWorldRotation(xform) : _rotation.Value;
-        var ourEntMatrix = Matrix3Helpers.CreateTransform(_transform.GetWorldPosition(xform), ourEntRot);
-        var shuttleToWorld = Matrix3x2.Multiply(posMatrix, ourEntMatrix);
-        Matrix3x2.Invert(shuttleToWorld, out var worldToShuttle);
+        var coordEntRot = _transform.GetWorldRotation(_coordinates.Value.EntityId);
+
+        var worldRot = _rotation.Value;
+
+        var mapPos = _transform.ToMapCoordinates(_coordinates.Value).Offset(_rotation.Value.RotateVec(Offset));
+        var mapCoord = _transform.ToCoordinates(mapPos);
+        var worldToShuttle = Matrix3Helpers.CreateTranslation(-mapCoord.Position) * Matrix3Helpers.CreateRotation(-worldRot);
+        Matrix3x2.Invert(worldToShuttle, out var shuttleToWorld);
         var shuttleToView = Matrix3x2.CreateScale(new Vector2(MinimapScale, -MinimapScale)) * Matrix3x2.CreateTranslation(MidPointVector);
         var worldToView = worldToShuttle * shuttleToView;
         Matrix3x2.Invert(worldToView, out var viewToWorld);
 
         var blips = _blips.GetCurrentBlips();
-        var colors = new Dictionary<NetEntity, Color>();
+        _blipColors.Clear();
         foreach (var blip in blips)
-            colors[blip.NetUid] = blip.Color;
+            _blipColors[blip.NetUid] = blip.Config.Color;
 
         if (_controllables != null)
         {
@@ -101,7 +104,7 @@ public sealed class FireControlNavControl : ShuttleNavControl
 
                     var results = _physics.IntersectRay(xform.MapID, ray, direction.Length(), ignoredEnt: _coordinates?.EntityId);
 
-                    if (!results.Any() && colors.TryGetValue(controllable.NetEntity, out var color))
+                    if (!results.Any() && _blipColors.TryGetValue(controllable.NetEntity, out var color))
                         handle.DrawLine(Vector2.Transform(worldPos, worldToView), cursorViewPos, color.WithAlpha(0.3f));
                 }
             }
@@ -127,15 +130,7 @@ public sealed class FireControlNavControl : ShuttleNavControl
 
         _lastCursorUpdateTime = (float)currentTime;
 
-        // Convert mouse position to world coordinates for missile tracking
-        if (_coordinates == null || _rotation == null || OnRadarClick == null)
-            return;
-
-        var a = InverseScalePosition(relativePosition);
-        var relativeWorldPos = new Vector2(a.X, -a.Y);
-        relativeWorldPos = _rotation.Value.RotateVec(relativeWorldPos);
-        var coords = _coordinates.Value.Offset(relativeWorldPos);
-
+        var coords = GetMouseEntityCoordinates(relativePosition);
         // This will update the server of our cursor position without triggering actual firing
         OnRadarClick?.Invoke(coords);
     }

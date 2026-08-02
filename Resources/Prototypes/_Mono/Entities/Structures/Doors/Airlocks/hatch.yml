@@ -27,9 +27,36 @@
 
 - type: entity
   parent: AirlockHatchSyndicate
-  id: AirlockHatchRogueCommanderLocked
-  suffix: Rogue Command, Locked
+  id: AirlockHatchGrandVizierLocked
+  suffix: Grand Vizier, Locked
   components:
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsRogueCommander ]
+      board: [ DoorElectronicsGrandVizier ]
+
+- type: entity
+  parent: AirlockHatchSyndicate
+  id: AirlockHatchPDVCommandLocked
+  suffix: PDV Command, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsPdvCommand ]
+
+- type: entity
+  parent: AirlockHatchSyndicate
+  id: AirlockHatchViper
+  suffix: Viper Group, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsViper ]
+
+- type: entity
+  parent: AirlockHatchSyndicate
+  id: AirlockHatchViperCommand
+  suffix: Viper Group Command, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsViperCommand ]

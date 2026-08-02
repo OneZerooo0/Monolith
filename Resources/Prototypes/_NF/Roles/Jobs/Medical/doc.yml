@@ -15,14 +15,17 @@
       time: 234000 # mono 65 hours
   startingGear: DocGear
   alwaysUseSpawner: true
+  assignedCompany: MD
   icon: "JobIconDoc"
   requireAdminNotify: true
-  supervisors: job-supervisors-centcom
+  supervisors: job-supervisors-sr # Mono
   weight: 170
   displayWeight: 60 # Second from the top # mono - first from top
   canBeAntag: false
   accessGroups:
-  - AllAccessSR
+  - AllAccessMono #Mono
+  access:
+  - ChiefMedicalOfficer #Mono
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ] # Mono - remove TSFMC implant
@@ -34,6 +37,8 @@
         - MD # mono faction
       - type: SurgerySpeedModifier
         SpeedModifier: 2
+      - type: ChatRank
+        rank: md-doc
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
@@ -48,3 +53,5 @@
     - RubberStampDoc
     - BoxFolderMedicalDoctor
     - StationAdministrationConsoleFlatpack
+    - PhoneInstrumentHigh
+    - MDHandheldOverwatchConsole

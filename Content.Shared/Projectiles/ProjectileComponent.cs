@@ -3,6 +3,7 @@ using Content.Shared.FixedPoint;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
+using System.Numerics;
 
 namespace Content.Shared.Projectiles;
 
@@ -82,12 +83,6 @@ public sealed partial class ProjectileComponent : Component
     public bool ProjectileSpent;
 
     /// <summary>
-    ///     If true, the projectile has hit enough targets and should no longer interact with further collisions pending deletion.
-    /// </summary>
-    [DataField, AutoNetworkedField]
-    public bool DamagedEntity;
-
-    /// <summary>
     ///     When a projectile has this threshold set, it will continue to penetrate entities until the damage dealt reaches this threshold.
     /// </summary>
     [DataField]
@@ -106,14 +101,23 @@ public sealed partial class ProjectileComponent : Component
     public FixedPoint2 PenetrationAmount = FixedPoint2.Zero;
 
     /// <summary>
-    /// Frontier: Chance for a blind effect bonus to occur (1 = 100%).
+    ///     Mono: Determines either should be entity deleted on collision if damage == null or not.
     /// </summary>
     [DataField]
-    public float RandomBlindChance { get; set; } = 0;
+    public bool NoDamageDelete = true;
 
     // Goobstation Start
     [DataField]
     public float ArmorPenetration;
     // Goobstation End
 
+    /// <summary>
+    ///     Mono - Needed for hack to allow us to work properly when raycasting through continuous batches of wall.
+    /// </summary>
+    [DataField]
+    public Vector2? RaycastResetVelocity = null;
+
+    // Mono
+    [DataField]
+    public float LinearDampening = 0f;
 }

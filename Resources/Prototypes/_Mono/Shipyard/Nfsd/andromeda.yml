@@ -1,17 +1,21 @@
+#Author: Articular1 on Github, Articular on Discord.
+
 - type: vessel
   id: Andromeda
   parent: BaseVesselAntag
   name: TSF-CRSW Andromeda
   description: A experimental heavy frigate, with heavy burst frontal firepower and fast maneuveability.
-  limit: 2
-  price: 272250
+  limit: 3
+  hyperwarLimit: 5
+  hyperwarTimelock: 1800
+  price: 358869
+  purchasable: false # voucher only
   category: Large
   group: Security
   access: Armory
-  shuttlePath: /Maps/_Mono/Shuttles/Nfsd/andromeda.yml
+  shuttlePath: /SharedMaps/_Mono/Shuttles/Nfsd/andromeda.yml
   guidebookPage: Null
   class:
-  - Capital
   - Frigate
   engine:
   - Plasma
@@ -19,11 +23,14 @@
 - type: gameMap
   id: Andromeda
   mapName: 'Andromeda'
-  mapPath: /Maps/_Mono/Shuttles/Nfsd/andromeda.yml
+  mapPath: /SharedMaps/_Mono/Shuttles/Nfsd/andromeda.yml
   minPlayers: 0
   stations:
     Andromeda:
       stationProto: StandardFrontierSecurityVessel
+      gridComponents:
+      - type: VesselInfo
+        description: "Enough guns to blot out the stars."
       components:
       - type: StationNameSetup
         mapNameTemplate: 'Andromeda TSF{1}'
@@ -33,3 +40,4 @@
       - type: StationJobs
         availableJobs:
           Deputy: [ 0, 0 ]
+          TsfBorg: [ 0, 0 ]

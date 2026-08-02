@@ -3,9 +3,6 @@
 - type: Tag
   id: AccessBreakerImmune
 
-- type: Tag # Mono
-  id: AdvancedLaserPistol
-
 - type: Tag
   id: AICoreElectronics
 
@@ -134,6 +131,21 @@
 
 - type: Tag
   id: BorgModuleSyndicateAssault
+
+- type: Tag
+  id: BorgModuleXenoborgBase
+
+- type: Tag
+  id: BorgModuleXenoborgEngineer
+
+- type: Tag
+  id: BorgModuleXenoborgHeavy
+
+- type: Tag
+  id: BorgModuleXenoborgScout
+
+- type: Tag
+  id: BorgModuleXenoborgStealth
 
 - type: Tag
   id: Bot
@@ -278,9 +290,6 @@
 
 - type: Tag
   id: CartridgeRocket
-
-- type: Tag
-  id: CartridgeRocketEmp # mono
 
 # Allows you to walk over tile entities such as lava without steptrigger
 - type: Tag
@@ -859,6 +868,12 @@
   id: MopBasic
 
 - type: Tag
+  id: MothershipModule # Cyborg module category for evil xenoborg core
+
+- type: Tag
+  id: MothershipPinpointerPiece # ConstructionGraph: RepairMothershipPinpointer
+
+- type: Tag
   id: Mouse
 
 - type: Tag
@@ -1271,6 +1286,12 @@
   id: Truncheon
 
 - type: Tag
+  id: TurretCompatibleWeapon # Used in the construction of sentry turrets
+
+- type: Tag
+  id: TurretControlElectronics # Used in the construction of sentry turret control panels
+
+- type: Tag
   id: Unimplantable
 
 - type: Tag
@@ -1311,9 +1332,6 @@
 
 - type: Tag
   id: WeaponShotgunKammerer
-
-- type: Tag # Mono - Prevents a crash and makes future cherry-picks hurt less but not actually implemented
-  id: TurretCompatibleWeapon # Used in the construction of sentry turrets
 
 - type: Tag
   id: WeldingMask
@@ -1367,23 +1385,3 @@
   id: WriteIgnoreStamps
 
 # ALPHABETICAL
-
-# Mono
-
-- type: Tag
-  id: CartridgeMachineGun
-
-- type: Tag
-  id: CartridgeShell
-
-- type: Tag
-  id: Mask
-
-- type: Tag
-  id: SugarBiscuit
-
-- type: Tag
-  id: OatmealBiscuit
-
-- type: Tag
-  id: SimpleBiscuit

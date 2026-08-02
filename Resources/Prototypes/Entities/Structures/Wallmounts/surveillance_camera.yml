@@ -94,6 +94,10 @@
               collection: MetalBreak
               params:
                 volume: -8
+  # Mono
+  - type: ShipRepairable
+    repairTime: 2
+    repairCost: 2
   placement:
     mode: SnapgridCenter
     snap:
@@ -286,5 +290,19 @@
     deviceNetId: Wired
     receiveFrequencyId: SurveillanceCameraUSSP
     transmitFrequencyId: SurveillanceCamera
+  - type: SurveillanceCamera
+    networkSet: true
+
+# Xenoborg
+- type: entity
+  parent: SurveillanceCameraBase
+  id: Xenoborgs
+  name: camera
+  suffix: Xenoborgs
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wired
+    receiveFrequencyId: Mothership
+    transmitFrequencyId: Mothership
   - type: SurveillanceCamera
     networkSet: true

@@ -9,13 +9,15 @@
   description: mono-standard-description
   showInVote: false # For admin usage really. Not that boring, but I'd rather just let players choose their main threat instead of choosing no threat.
   rules:
-    - NFAdventure
-    - BasicStationEventScheduler
-    - BluespaceEventScheduler
-    - BluespaceDungeonEventScheduler
-    - BluespaceSalvageEventScheduler
-    - SmugglingEventScheduler
-    - FrontierRoundstartVariation
+  - NFAdventure
+  - BasicStationEventScheduler
+  - BluespaceEventScheduler
+  - BluespaceDungeonEventScheduler
+  - BluespaceSalvageEventScheduler
+  - SmugglingEventScheduler
+  - FrontierRoundstartVariation
+  - MonoMonolithicEventsScheduler
+  - PortstrikeAnnounceRuleRandom1To3
 
 - type: gamePreset
   id: MonoRogueTSF
@@ -30,6 +32,8 @@
   - BluespaceSalvageEventScheduler
   - SmugglingEventScheduler
   - FrontierRoundstartVariation
+  - MonoMonolithicEventsScheduler
+  - PortstrikeAnnounceRuleRandom1To3
 
 - type: gamePreset
   id: MonoRogueUSSP
@@ -44,6 +48,8 @@
   - BluespaceSalvageEventScheduler
   - SmugglingEventScheduler
   - FrontierRoundstartVariation
+  - MonoMonolithicEventsScheduler
+  - PortstrikeAnnounceRuleRandom1To3
 
 - type: gamePreset
   id: MonoTSFUSSP
@@ -58,6 +64,8 @@
   - BluespaceSalvageEventScheduler
   - SmugglingEventScheduler
   - FrontierRoundstartVariation
+  - MonoMonolithicEventsScheduler
+  - PortstrikeAnnounceRuleRandom1To3
 
 - type: gamePreset
   id: MonoADS
@@ -74,7 +82,9 @@
   - FrontierRoundstartVariation
   - MonoAISTCShuttleSpawnerScheduler
   - MonoAISTCShuttleSpawnerSchedulerTier2
-  - MonoAsakimSTCShuttleSpawnerScheduler
+  #- MonoAsakimSTCShuttleSpawnerScheduler
+  - MonoMonolithicEventsScheduler
+  - PortstrikeAnnounceRuleRandom1To3
 
 - type: gamePreset
   id: MonoChimera
@@ -90,6 +100,8 @@
   - SmugglingEventScheduler
   - FrontierRoundstartVariation
   - MonoChimeraSTCShuttleSpawnerScheduler
+  - MonoMonolithicEventsScheduler
+  - PortstrikeAnnounceRuleRandom1To3
 
 - type: gamePreset
   id: MonoMixed
@@ -107,13 +119,16 @@
   - MonoChimeraSTCShuttleSpawnerSchedulerSlow
   - MonoAISTCShuttleSpawnerSchedulerSlow
   - MonoAISTCShuttleSpawnerSchedulerTier2Slow
-  - MonoAsakimSTCShuttleSpawnerSchedulerSlow
+  #- MonoAsakimSTCShuttleSpawnerSchedulerSlow
+  - MonoMonolithicEventsScheduler
+  - PortstrikeAnnounceRuleRandom1To3
 
 - type: gamePreset
   id: MonoAllAtOnce
   name: mono-allatonce-title
   description: mono-allatonce-description
-  showInVote: false # Bad idea sir! Don't let this happen again.
+  showInVote: true # we ball
+  weight: 0.25 # requires 80% votes
   rules:
   - NFAdventure
   - BasicStationEventScheduler
@@ -124,5 +139,18 @@
   - FrontierRoundstartVariation
   - MonoChimeraSTCShuttleSpawnerSchedulerApocalypse
   - MonoAISTCShuttleSpawnerSchedulerApocalypse
-  - MonoAsakimSTCShuttleSpawnerSchedulerApocalypse
+  #- MonoAsakimSTCShuttleSpawnerSchedulerApocalypse
+  - MonoMonolithicEventsScheduler
+  - RoundEndRuleHour3
+  - PortstrikeAnnounceRuleHour1
 
+- type: gamePreset
+  id: MonoRogueTSFHyperwar
+  name: mono-roguetsf-hyperwar-title
+  description: mono-roguetsf-hyperwar-description
+  showInVote: false # AO
+  rules:
+  - NFAdventure
+  - Hyperwar
+  - RoundEndRuleHour3
+  - PortstrikeAnnounceRuleHour2

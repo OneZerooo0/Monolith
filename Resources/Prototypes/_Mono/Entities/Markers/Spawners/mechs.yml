@@ -29,26 +29,6 @@
     - MediumMechTOW
 
 - type: entity
-  id: AFInterceptorGBattery
-  parent: AFInterceptorG
-  suffix: Battery
-  components:
-  - type: ContainerFill
-    containers:
-      mech-battery-slot:
-      - PowerCageHigh
-
-- type: entity
-  id: AFInterceptorGFilled
-  parent: AFInterceptorGBattery
-  suffix: Battery, Filled
-  components:
-  - type: Mech
-    startingEquipment:
-    - MediumMechDMR
-    - LightMechaSMG
-
-- type: entity
   name: AF-28 Broadsword Spawner
   suffix: Filled
   id: SpawnMechAFInterceptorFilled
@@ -75,9 +55,8 @@
     - AFInterceptorMFilled
 
 - type: entity
-  name: AF-28-G Sabre Spawner
-  suffix: Filled
-  id: SpawnMechAFInterceptorGFilled
+  name: TSF flail spawner
+  id: SpawnTSFFlail
   parent: MarkerBase
   components:
   - type: Sprite
@@ -85,4 +64,16 @@
     - state: green
   - type: ConditionalSpawner
     prototypes:
-    - AFInterceptorGFilled
+    - AFFlailTSF
+
+- type: entity
+  name: TSF spyglass spawner
+  id: SpawnTSFSpyglass
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+  - type: ConditionalSpawner
+    prototypes:
+    - AFFlailETSF

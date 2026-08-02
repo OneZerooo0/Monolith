@@ -52,6 +52,10 @@
     guides:
     - AtmosphericAlertsComputer
     - DeviceMonitoringAndControl
+  # Mono
+  - type: ShipRepairable
+    repairTime: 4
+    repairCost: 8
 
 - type: entity
   parent: BaseComputerAiAccess
@@ -89,6 +93,10 @@
     guides:
     - AtmosphericNetworkMonitor
     - DeviceMonitoringAndControl
+  # Mono
+  - type: ShipRepairable
+    repairTime: 4
+    repairCost: 8
 
 - type: entity
   parent: BaseComputer
@@ -122,6 +130,9 @@
   abstract: true
   components:
   - type: ShuttleConsole
+  - type: TargetSeekingTarget # Mono
+  - type: ShipNpcTarget # Mono
+    needPower: true
   - type: ShuttleConsoleLock
   - type: ActivatableUI
     key: enum.ShuttleConsoleUiKey.Key
@@ -132,10 +143,9 @@
         enum.WiresUiKey.Key:
           type: WiresBoundUserInterface
   - type: RadarConsole
-    maxRange: 1024 #256->1024 Mono
     relativePanning: true # Mono
   - type: WorldLoader
-    radius: 384 # Mono
+    radius: 700 # Mono
   - type: PointLight
     radius: 1.5
     energy: 1.6
@@ -170,6 +180,25 @@
     - device-button-6
     - device-button-7
     - device-button-8
+  # Mono
+  - type: ShipRepairable
+    repairTime: 10
+    repairCost: 30
+  - type: RadarBlip
+    visibleFromOtherGrids: true
+    radarColor: "#03f8fc"
+    scale: 1.5
+    shape: diamond
+    gridConfig:
+      color: "#03f8fc"
+      shape: Square
+      respectZoom: true
+      rotate: true
+      bounds: "-0.5,-0.5,0.5,0.5"
+  - type: HTN
+    sleepPlayerCheckRangeOverride: 4000 # to allow alternative usages and not spotaneously flee when people close
+    rootTask:
+      task: AutopilotShuttleCompound
 
 - type: entity
   parent: [BaseComputerShuttle, BaseShuttleIntercom] # Frontier - BaseShuttleIntercom
@@ -209,6 +238,31 @@
       key_slots:
       - EncryptionKeyTraffic
   # End Frontier
+  - type: TargetSeekerAlert # Mono
+    targetGainSound:
+      path: /Audio/_Mono/Effects/Alerts/rwr_beep.ogg
+      params:
+        volume: 1.55
+    distanceAlertSettings:
+    - maximumDistance: 250
+      sound:
+        path: /Audio/_Mono/Effects/Alerts/launchwarning.ogg
+        params:
+          loop: true
+          volume: 0.9
+    - maximumDistance: 600
+      sound:
+        path: /Audio/_Mono/Effects/Alerts/master_caution.ogg
+        params:
+          loop: true
+          volume: 1.2
+          pitch: 1.15
+    - maximumDistance: 1000
+      sound:
+        path: /Audio/_Mono/Effects/Alerts/master_caution.ogg
+        params:
+          loop: true
+          volume: 1
 
 - type: entity
   parent: BaseComputerShuttle
@@ -233,7 +287,6 @@
     tags:
       - Syndicate
   - type: RadarConsole
-    maxRange: 1024 #384->1024 Mono
   - type: WorldLoader
     radius: 1536
   - type: PointLight
@@ -266,7 +319,6 @@
     components:
       - type: CargoShuttle
   - type: RadarConsole
-    maxRange: 256
   - type: PointLight
     radius: 1.5
     energy: 1.6
@@ -370,6 +422,10 @@
         type: PowerMonitoringConsoleBoundUserInterface
       enum.WiresUiKey.Key:
         type: WiresBoundUserInterface
+  # Mono
+  - type: ShipRepairable
+    repairTime: 4
+    repairCost: 8
 
 - type: entity
   parent: BaseComputerAiAccess
@@ -395,6 +451,10 @@
     color: "#1f8c28"
   - type: Computer
     board: MedicalRecordsComputerCircuitboard
+  # Mono
+  - type: ShipRepairable
+    repairTime: 4
+    repairCost: 8
 
 - type: entity
   parent: [BaseStructureIndestructible, BaseComputerAiAccess] # Frontier: added BaseStructureIndestructible
@@ -431,9 +491,10 @@
     board: CriminalRecordsComputerCircuitboard
   - type: AccessReader
     access: [["Security"]]
-  - type: GuideHelp
-    guides:
-    - CriminalRecords
+  # Mono
+  - type: ShipRepairable
+    repairTime: 4
+    repairCost: 8
 
 - type: entity
   parent: BaseComputerAiAccess
@@ -456,9 +517,10 @@
     color: "#1f8c28"
   - type: Computer
     board: StationRecordsComputerCircuitboard
-  - type: GuideHelp
-    guides:
-    - Forensics
+  # Mono
+  - type: ShipRepairable
+    repairTime: 4
+    repairCost: 8
 
 - type: entity
   parent: BaseComputerAiAccess
@@ -498,6 +560,10 @@
     receiveFrequencyId: CrewMonitor
 #  - type: WirelessNetworkConnection
 #    range: 1200
+  # Mono
+  - type: ShipRepairable
+    repairTime: 4
+    repairCost: 8
 
 - type: entity
   parent: BaseComputerAiAccess
@@ -546,6 +612,10 @@
   - type: GuideHelp
     guides:
     - Science
+  # Mono
+  - type: ShipRepairable
+    repairTime: 4
+    repairCost: 8
 
 - type: entity
   parent: BaseComputerAiAccess
@@ -596,6 +666,10 @@
   - type: GuideHelp
     guides:
     - Xenoarchaeology
+  # Mono
+  - type: ShipRepairable
+    repairTime: 4
+    repairCost: 8
 
 - type: entity
   parent: [BaseStructureIndestructible, BaseComputerAiAccess] # Frontier: added BaseStructureIndestructible
@@ -659,6 +733,10 @@
       board: !type:Container
       IdCardConsole-privilegedId: !type:ContainerSlot
       IdCardConsole-targetId: !type:ContainerSlot
+  # Mono
+  - type: ShipRepairable
+    repairTime: 4
+    repairCost: 8
 
 - type: entity
   parent: BaseComputerAiAccess
@@ -674,6 +752,10 @@
     radius: 1.5
     energy: 1.6
     color: "#1f8c28"
+  # Mono
+  - type: ShipRepairable
+    repairTime: 4
+    repairCost: 8
 
 - type: entity
   parent: BaseComputerAiAccess
@@ -694,7 +776,7 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: AccessReader
-    access: [["HeadOfPersonnel"], ["HeadOfSecurity"]]
+    access: [["HeadOfPersonnel"], ["HeadOfSecurity"], ["ChiefMedicalOfficer"]]
   - type: CommunicationsConsole
     title: comms-console-announcement-title-station
     global: true #SR WILL NOT BE IGNORED
@@ -718,6 +800,10 @@
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: StructuralMetallicStrong
+  # Mono
+  - type: ShipRepairable
+    repairTime: 4
+    repairCost: 8
 
 - type: entity
   parent: ComputerComms
@@ -855,6 +941,10 @@
     guides:
     - SolarPanels
     - Power
+  # Mono
+  - type: ShipRepairable
+    repairTime: 4
+    repairCost: 8
 
 - type: entity
   parent: BaseComputerAiAccess
@@ -875,8 +965,7 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: RadarConsole
-    maxRange: 1024 #256->1024 Mono
-    maxIffRange: 1024 # Frontier
+    noRotate: true # Mono
   - type: ActivatableUI
     key: enum.RadarConsoleUiKey.Key
   - type: UserInterface
@@ -891,31 +980,10 @@
     radius: 1.5
     energy: 1.6
     color: "#e6e227"
-  - type: TargetSeekerAlert # Mono
-    targetGainSound:
-      path: /Audio/_Mono/Effects/Alerts/rwr_beep.ogg
-      params:
-        volume: 1.55
-    distanceAlertSettings:
-    - maximumDistance: 250
-      sound:
-        path: /Audio/_Mono/Effects/Alerts/launchwarning.ogg
-        params:
-          loop: true
-          volume: 0.9
-    - maximumDistance: 600
-      sound:
-        path: /Audio/_Mono/Effects/Alerts/master_caution.ogg
-        params:
-          loop: true
-          volume: 1.2
-          pitch: 1.15
-    - maximumDistance: 1000
-      sound:
-        path: /Audio/_Mono/Effects/Alerts/master_caution.ogg
-        params:
-          loop: true
-          volume: 1
+  # Mono
+  - type: ShipRepairable
+    repairTime: 4
+    repairCost: 8
 
 - type: entity
   id: ComputerCargoShuttle
@@ -1012,6 +1080,10 @@
   # - type: GuideHelp # Frontier: guidebook removed
   #   guides: # Frontier: guidebook removed
   #   - Cargo # Frontier: guidebook removed
+  # Mono
+  - type: ShipRepairable
+    repairTime: 4
+    repairCost: 8
 
 - type: entity
   id: ComputerCargoBounty
@@ -1159,6 +1231,10 @@
 #      access: [["Salvage"]]
     - type: StealTarget
       stealGroup: SalvageExpeditionsComputerCircuitboard
+    # Mono
+    - type: ShipRepairable
+      repairTime: 4
+      repairCost: 8
 
 - type: entity
   parent: BaseComputer
@@ -1198,6 +1274,10 @@
           type: SurveillanceCameraMonitorBoundUserInterface
         enum.WiresUiKey.Key:
           type: WiresBoundUserInterface
+  # Mono
+  - type: ShipRepairable
+    repairTime: 4
+    repairCost: 8
 
 - type: entity
   parent: BaseComputer
@@ -1239,6 +1319,10 @@
           type: SurveillanceCameraMonitorBoundUserInterface
         enum.WiresUiKey.Key:
           type: WiresBoundUserInterface
+  # Mono
+  - type: ShipRepairable
+    repairTime: 4
+    repairCost: 8
 
 - type: entity
   id: ComputerPalletConsole
@@ -1456,3 +1540,7 @@
     containers:
       circuit_holder: !type:ContainerSlot
       board: !type:Container
+  # Mono
+  - type: ShipRepairable
+    repairTime: 10
+    repairCost: 25

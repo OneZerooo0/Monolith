@@ -1,9 +1,9 @@
 ## UI
-adventure-list-start = [color=gold]TSF Central Bank[/color]
+adventure-list-start = [color=gold]Colossus Central Bank[/color]
 adventure-list-profit = made a total profit of [color=#d19e5e]{$amount}[/color].
 adventure-list-loss = lost a total of [color=#659cc9]{$amount}[/color].
 
-adventure-webhook-list-start = TSF Central Bank
+adventure-webhook-list-start = Colossus Central Bank
 adventure-webhook-list-high = This Shift's Top Earners:
 adventure-webhook-list-low = This Shift's Biggest Spenders:
 adventure-webhook-list-no-entries = No entries found.
@@ -39,6 +39,7 @@ shuttle-ftl-too-many = Too many shuttles already on expedition!
 changelog-tab-title-Upstream = Upstream Changelog
 multiauth-already-connected = Already connected to Monolith Official servers.
 
-public-transit-shuttle-name = Public Transport Shuttle
+public-transit-shuttle-name = Bus
 public-transit-departure = Now departing for {$destination}. Estimated travel time: {$flytime} seconds.
 public-transit-arrival = Thank you for choosing NT Public Transit. Next transfer to {$destination} departs in {$waittime} seconds.
+public-transit-instant = Arrived at {$destination}. Next destination in {$waittime} seconds.

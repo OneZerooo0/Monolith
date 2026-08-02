@@ -18,10 +18,10 @@
     - suitStorage
   - type: Wieldable
     unwieldOnUse: false
-  - type: GunWieldBonus
-    minAngle: -20
+  - type: GunWieldBonus # Mono
+    minAngle: -22
     maxAngle: -20
-  - type: Gun
+  - type: Gun # L6 LMG stats adjusted
     minAngle: 24
     maxAngle: 45
     angleIncrease: 3
@@ -77,8 +77,8 @@
       sprite: _RMC14/Interface/MousePointer/lmg_mouse.rsi
       state: all
   - type: WieldDelay # Mono
-    baseDelay: 1.4
-    modifiedDelay: 1.4
+    baseDelay: 1
+    modifiedDelay: 1
     preventFiring: true
   # Goobstation edit start
   - type: EmitSoundOnPickup
@@ -95,8 +95,8 @@
 - type: entity
   name: PA L6B SAW (7.62x39mm)
   id: WeaponLightMachineGunL6
-  parent: BaseWeaponLightMachineGun
-  description: A rather traditionally made LMG with a pleasantly lacquered wooden pistol grip. Uses 7.62x39mm ammo. No longer in production, it serves as a remnant of humanity's greed and ambition during The Fracture.
+  parent: [BaseWeaponLightMachineGun, BaseFactionGearPDVT3]
+  description: A rather traditionally made LMG with a pleasantly lacquered wooden pistol grip. Uses 7.62x39mm ammo. it serves as a remnant of humanity's greed and ambition during The Fracture.
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/LMGs/l6.rsi
@@ -120,12 +120,13 @@
   parent: BaseItem
   description: A L6 SAW for use by cyborgs. Creates 762x39mm ammo on the fly from an internal ammo fabricator, which slowly self-charges.
   components:
-    - type: Gun
+    - type: Gun # Gun stats adjusted to be similar to LMG
       minAngle: 4
-      maxAngle: 25
-      angleIncrease: 4
-      angleDecay: 16
+      maxAngle: 20
+      angleIncrease: 3
+      angleDecay: 20
       fireRate: 8
+      projectileSpeed: 55 # Mono
       selectedMode: FullAuto
       availableModes:
         - FullAuto

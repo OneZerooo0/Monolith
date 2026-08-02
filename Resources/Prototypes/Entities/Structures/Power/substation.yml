@@ -88,9 +88,7 @@
         gasMixture:
           volume: 1000
           moles:
-            - 0 # oxygen
-            - 0 # nitrogen
-            - 340.5701689 # carbon dioxide
+            CarbonDioxide: 340.5701689 # carbon dioxide
           temperature: 373.15
   - type: Explosive
     explosionType: Default
@@ -265,6 +263,10 @@
   - type: Battery
     maxCharge: 2500000
     startingCharge: 2500000
+  # Mono
+  - type: ShipRepairable
+    repairTime: 6
+    repairCost: 20
 
 - type: entity
   parent: SubstationBasic
@@ -292,6 +294,10 @@
       board: !type:Container
       capacitor: !type:Container
       powercell: !type:Container
+  # Mono
+  - type: ShipRepairable
+    repairTime: 5
+    repairCost: 16
 
 # Construction Frame
 - type: entity

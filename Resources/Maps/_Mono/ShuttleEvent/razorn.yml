@@ -33,6 +33,12 @@ entities:
     components:
     - type: MetaData
       name: ADS Razor-N
+    # bet
+    - type: InitRepairSnapshot
+    - type: ShipRepairRestrict
+      toolWhitelist:
+        tags:
+        - ADSRepairTool
     - type: Transform
       parent: invalid
     - type: MapGrid
@@ -1393,7 +1399,7 @@ entities:
     - type: Transform
       pos: -1.5,0.5
       parent: 1
-- proto: WallPlastitaniumIndestructible
+- proto: WallPlastitanium
   entities:
   - uid: 42
     components:

@@ -87,8 +87,8 @@
       enum.RadarConsoleUiKey.Key:
         toggleAction: ActionObserverShowRadar
   - type: RadarConsole # Mono
-    maxRange: 384
     followEntity: true
+    noRotate: true
     maxIffRange: 0
     hideCoords: false
   - type: RandomSprite
@@ -177,9 +177,15 @@
   - type: ActionGun
     action: ActionDragonsBreath
     gunProto: BabyDragonsBreathGun
-  - type: NightVision # Goobstation - Nigthvision - Mono
-    activateSound: null
-    deactivateSound: null
+  - type: NightVision # Gen 3 wide-quadtube
+    relayOverlay: false
+    goggleEffect: true
+    viewCircleRadius: 450
+    viewCircleCount: 4
+    viewCircleSpacing: 280
+    action: ActionToggleNightVision
+    phosphorColor: "#00FF00"
+    lightingColor: "#FFFFFF32"
   - type: LanguageKnowledge
     speaks:
     - TauCetiBasic

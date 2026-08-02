@@ -16,8 +16,8 @@
     - HamsterWearable
     - WhitelistChameleon
   - type: HideLayerClothing
-    slots:
-    - Snout
+    layers:
+      Snout: Mask
     hideOnToggle: true
 
 - type: entity
@@ -41,7 +41,7 @@
         Heat: 0.95
 
 - type: entity
-  parent: [ClothingMaskGas]
+  parent: [ClothingMaskGas, BaseFactionGearPDVT1]
   id: ClothingMaskGasSyndicate
   name: syndicate gas mask
   description: A close-fitting tactical mask that can be connected to an air supply.
@@ -50,7 +50,7 @@
     sprite: Clothing/Mask/gassyndicate.rsi
   - type: Clothing
     sprite: Clothing/Mask/gassyndicate.rsi
-  - type: FlashImmunity
+  # - type: FlashImmunity # Mono
   - type: EyeProtection
   - type: Armor
     modifiers:
@@ -705,7 +705,7 @@
     state: icon
   - type: Clothing
     sprite: Clothing/Mask/welding-gas.rsi
-  - type: FlashImmunity
+  #- type: FlashImmunity # You dont deserve this. # Mono
   - type: EyeProtection
   - type: PhysicalComposition
     materialComposition:

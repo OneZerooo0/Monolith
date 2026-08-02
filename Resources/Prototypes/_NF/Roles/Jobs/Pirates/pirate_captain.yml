@@ -5,10 +5,10 @@
   playTimeTracker: JobPirateCaptain
   requirements:
     - !type:OverallPlaytimeRequirement # mono start
-      time: 108000 # 65 hours
+      time: 144000 # 40 hours
     - !type:RoleTimeRequirement
       role: JobPirateFirstMate
-      time: 3600 # 1 hour
+      time: 18000 # 5 hours - mono
   whitelisted: true
   startingGear: PirateCaptainNFGear
   alwaysUseSpawner: true
@@ -18,11 +18,12 @@
   supervisors: job-supervisors-nobody
   weight: 50
   displayWeight: 50
+  assignedCompany: PDV
   setPreference: true
-  guides: [ BasicLore, PhaethonDynasty ] # Mono
   access:
   - Pirate
-  - RogueCommander
+  - GrandVizier
+  - PDVCommand
   - Mercenary
   accessGroups:
   - GeneralAccess
@@ -32,6 +33,8 @@
     - type: NpcFactionMember
       factions:
       - PirateNF
+    - type: ChatRank
+      rank: pdv-vizier
   - !type:AddImplantSpecial
     implants: [ FreelanceTrackingImplant ]
   - !type:AddLanguageSpecial # Monolith - Languages
@@ -46,11 +49,13 @@
 - type: startingGear
   id: PirateCaptainNFGear
   equipment:
-    ears: ClothingHeadsetAltFreelancer
+    ears: ClothingHeadsetAltVanguardCommand
     #belt: ClothingBeltUtility # mono
     pocket1: BasePirateUplinkRadioPirateCaptain
     pocket2: EnergySword
   storage:
     back:
     - RadioHandheldNF # mono
-    - ShipVoucherSaintie
+    - PhoneInstrumentHigh
+    - RubberStampPDVVizier # mono
+    - PDVHandheldOverwatchConsole

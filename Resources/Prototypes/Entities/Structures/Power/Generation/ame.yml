@@ -1,7 +1,7 @@
 - type: entity
   id: AmeController
-  name: AME controller
-  description: It's a controller for the antimatter engine.
+  name: IRE controller
+  description: It's a controller for the isotopes reaction engine.
   placement:
     mode: SnapgridCenter
   components:
@@ -111,6 +111,21 @@
     highVoltageNode: input
     mediumVoltageNode: ame
   - type: DragDropTargetable # Mono
+  # Mono
+  - type: ShipRepairable
+    repairTime: 15
+    repairCost: 50
+  - type: RadarBlip
+    visibleFromOtherGrids: true
+    radarColor: "#fcba03"
+    scale: 2
+    shape: diamond
+    gridConfig:
+      color: "#fcba03"
+      shape: Square
+      respectZoom: true
+      rotate: true
+      bounds: "-1.5,-1.5,1.5,1.5"
 
 - type: entity
   categories: [ HideSpawnMenu ]
@@ -125,8 +140,8 @@
 
 - type: entity
   id: AmeShielding
-  name: AME shielding
-  description: Keeps the antimatter in and the matter out.
+  name: IRE shielding
+  description: Keeps the isotopes in and extra radiation out.
   placement:
     mode: SnapgridCenter
   components:
@@ -239,3 +254,7 @@
     onBump: false
     requirePower: true
     highVoltageNode: ame
+  # Mono
+  - type: ShipRepairable
+    repairTime: 4
+    repairCost: 15
