@@ -24,7 +24,16 @@
     delay:
       min: 3600 # 1 hr
       max: 10800 # 3 hr
-        
+
+- type: entity
+  id: PortstrikeAnnounceRuleRandom2To5
+  parent: PortstrikeAnnounceRuleHour4
+  components:
+  - type: GameRule
+    delay:
+      min: 7200 # 2 hr
+      max: 18000 # 5 hr
+
 - type: entity
   id: PortstrikeAnnounceRuleHour2
   parent: PortstrikeAnnounceRuleHour4
