@@ -1553,8 +1553,8 @@
       ComponentBrickEconomy3:
         amount: 1
         defaultPrototype: ComponentBrickEconomy3
-      MotorEconomy2:
-        amount: 2
+      ElectromagnetEconomy2:
+        amount: 1
         defaultPrototype: ElectromagnetEconomy2
       OpticsEconomy1:
         amount: 2
