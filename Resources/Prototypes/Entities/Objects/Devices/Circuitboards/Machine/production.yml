@@ -1550,12 +1550,12 @@
       MicroprocessorEconomy1:
         amount: 2
         defaultPrototype: MicroprocessorEconomy1
-      ComponentBrickEconomy3:
+      ComponentBrickEconomy1:
         amount: 1
-        defaultPrototype: ComponentBrickEconomy3
-      ElectromagnetEconomy2:
+        defaultPrototype: ComponentBrickEconomy1
+      ElectromagnetEconomy1:
         amount: 1
-        defaultPrototype: ElectromagnetEconomy2
+        defaultPrototype: ElectromagnetEconomy1
       OpticsEconomy1:
         amount: 2
         defaultPrototype: OpticsEconomy1
