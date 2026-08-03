@@ -37,12 +37,13 @@
       Gold: 500
       Lithium: 500 # Mono
       Copper: 500 # Mono
-      Plastitanium: 10
+      Bluespace: 100
     baseComputerCost:
       Steel: 500
       Glass: 250
       Silver: 100
       Gold: 50
+      Bluespace: 50
   - type: Machine
     board: FlatpackerMachineCircuitboard
   - type: MaterialStorage
