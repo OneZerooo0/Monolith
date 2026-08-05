@@ -172,7 +172,7 @@
   entities:
     ElectromagnetEconomy1: 2
     CapacitorEconomy1: 2
-    
+
 - type: latheRecipe
   id: ElectromagnetEconomy2Alt
   result: ElectromagnetEconomy2
