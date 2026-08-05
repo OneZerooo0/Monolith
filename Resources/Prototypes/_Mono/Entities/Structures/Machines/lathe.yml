@@ -101,6 +101,11 @@
     - entity_storage
   - type: EntityStorage
     capacity: 75
+  - type: ExtendDescription
+    descriptionList:
+    - description: Insert components for recipes by placing them on top of the lathe, then "open / close" inside its right-click menu.
+      color: "#4f94ad"
+      requireDetailRange: true
 
 #USSP
 
@@ -630,11 +635,6 @@
     unlitRunningState: building
     staticPacks:
     - ArcFurnaceStatic
-  - type: ExtendDescription
-    descriptionList:
-    - description: Insert components for recipes by placing them on top of the lathe, then "open / close" inside its right-click menu.
-      color: "#4f94ad"
-      requireDetailRange: true
 
 - type: entity
   id: PrecisionAssemblerEconomy
@@ -760,11 +760,6 @@
     unlitRunningState: unlit-building
     staticPacks:
     - PrecisionAssemblerStatic
-  - type: ExtendDescription
-    descriptionList:
-    - description: Insert components for recipes by placing them on top of the lathe, then "open / close" inside its right-click menu.
-      color: "#4f94ad"
-      requireDetailRange: true
 
 - type: entity
   id: CentrifugeLathe
