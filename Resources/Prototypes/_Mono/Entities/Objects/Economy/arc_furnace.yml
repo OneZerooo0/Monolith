@@ -409,6 +409,11 @@
     spawned:
       - id: ArmorPlateEconomy3Fragment
         amount: 4
+  - type: ExtendDescription
+    descriptionList:
+    - description: Can be cut with a knife to create four fragments.
+      color: "#4f94ad"
+      requireDetailRange: true
 
 - type: entity
   name: broken composite armor plate
