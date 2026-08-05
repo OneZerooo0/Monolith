@@ -171,9 +171,8 @@
   completetime: 15
   entities:
     ElectromagnetEconomy1: 2
-  reagents:
     CapacitorEconomy1: 2
-
+    
 - type: latheRecipe
   id: ElectromagnetEconomy2Alt
   result: ElectromagnetEconomy2
