@@ -2,18 +2,10 @@
 - type: entity
   id: NukeTestingProjectile
   name: nuclear lobster
+  suffix: yeah
   description: You need to krill yourself NOW.
-  parent: [ BaseBulletTrigger, BlueLobster ]
+  parent: [ BlueLobsterExploding ]
   components:
-  - type: Projectile
-    damage:
-      types:
-        Radiation: 25
-        Structural: 500
-        Heat: 50
-  - type: Ammo
-    muzzleFlash: MuzzleFlashEffectPlasmaPulser
-  - type: ShipWeaponProjectile
   - type: RadarBlip
     radarColor: "#C92BCC"
     scale: 2.5
