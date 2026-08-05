@@ -329,10 +329,20 @@
     - Economy
 
 # industrial presses
+- type: entity
+  id: BaseIndustrialPressEconomy
+  parent: BaseLatheAssembler
+  abstract: true
+  components:
+  - type: EntityStorage
+    capacity: 30
+    isCollidableWhenOpen: true
+    enteringOffset: 0.5,0
+    enteringRange: 0.35
 
 - type: entity
   id: IndustrialPressEconomyElectronics
-  parent: BaseLatheLube
+  parent: BaseIndustrialPressEconomy
   name: industrial press (electronics)
   description: Capable of forming metal into all types of shapes. This one is calibrated for electronics.
   components:
@@ -416,7 +426,7 @@
 
 - type: entity
   id: IndustrialPressEconomyPlates
-  parent: BaseLatheLube
+  parent: BaseIndustrialPressEconomy
   name: industrial press (plates)
   description: Capable of forming metal into all types of shapes. This one is calibrated for plating.
   components:
@@ -620,7 +630,11 @@
     unlitRunningState: building
     staticPacks:
     - ArcFurnaceStatic
-
+  - type: ExtendDescription
+    descriptionList:
+    - description: Insert components for recipes by placing them on top of the lathe, then "open / close" inside its right-click menu.
+      color: "#4f94ad"
+      requireDetailRange: true
 
 - type: entity
   id: PrecisionAssemblerEconomy
@@ -698,7 +712,7 @@
     anchoring: false
   - type: Sprite
     offset: 0,0
-    sprite: _Mono/Structures/Machines/altolathe.rsi
+    sprite: _Mono/Structures/Machines/1x1precisionass.rsi
     layers:
     - state: icon
       map: [ "enum.MicrowaveVisualizerLayers.Base" ]
@@ -746,6 +760,11 @@
     unlitRunningState: unlit-building
     staticPacks:
     - PrecisionAssemblerStatic
+  - type: ExtendDescription
+    descriptionList:
+    - description: Insert components for recipes by placing them on top of the lathe, then "open / close" inside its right-click menu.
+      color: "#4f94ad"
+      requireDetailRange: true
 
 - type: entity
   id: CentrifugeLathe

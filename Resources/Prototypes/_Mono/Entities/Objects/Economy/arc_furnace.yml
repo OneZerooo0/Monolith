@@ -31,9 +31,6 @@
         acts: [ "Destruction" ]
   - type: StaticPrice
     price: 1000
-  - type: Construction
-    graph: ArmorPlateEconomy1Finish
-    node: unfinished
 
 - type: entity
   name: heavy armor plate (unfinished)
@@ -49,9 +46,6 @@
   - type: SpawnOnDespawn
     count: 1
     prototype: ArmorPlateEconomy2Start
-  - type: Construction
-    graph: ArmorPlateEconomy1Finish
-    node: finished
 
 - type: entity
   name: broken basic armor plate

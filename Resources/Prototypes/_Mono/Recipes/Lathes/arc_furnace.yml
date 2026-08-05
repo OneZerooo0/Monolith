@@ -67,6 +67,8 @@
 - type: latheRecipe
   id: MaterialIndustrySterile
   result: MaterialIndustrySterile
+  categories:
+  - ComponentMaterials
   completetime: 5
   resultCount: 2
   entities:
