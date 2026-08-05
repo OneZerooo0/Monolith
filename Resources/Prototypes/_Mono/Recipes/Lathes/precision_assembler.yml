@@ -230,7 +230,7 @@
   completetime: 20
   entities:
     MicroprocessorEconomy2: 1
-    ArmorPlateEconomy2Finished: 1
+    ArmorPlateEconomy2: 1
     MatterBinEconomy2: 1
     ComponentBrickEconomy1: 1
 
@@ -308,7 +308,7 @@
   completetime: 10
   resultCount: 2
   entities:
-    ArmorPlateEconomy2Finished: 2
+    ArmorPlateEconomy2: 2
     ArmorPlateEconomy1: 4
 
 - type: latheRecipe
