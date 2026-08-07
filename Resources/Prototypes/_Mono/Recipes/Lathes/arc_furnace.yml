@@ -3,9 +3,16 @@
   result: ArmorPlateEconomy2
   completetime: 15
   entities:
-    ArmorPlateEconomy3Fragment: 2
+    ArmorPlateEconomy1: 2
+
+- type: latheRecipe
+  id: ArmorPlate2Alt
+  result: ArmorPlateEconomy2
+  completetime: 10
+  entities:
+    ArmorPlateEconomy3Fragment: 1
   reagents:
-    Silver: 100
+    Silver: 50
 
 - type: latheRecipe
   id: ArmorPlate3
@@ -13,6 +20,13 @@
   completetime: 15
   entities:
     ArmorPlateEconomy2: 2
+
+- type: latheRecipe
+  id: ArmorPlate3Alt
+  result: ArmorPlateEconomy3
+  completetime: 10
+  entities:
+    ArmorPlateEconomy2: 1
   reagents:
     LithiumHydroxide: 30
 
