@@ -61,7 +61,7 @@
       state: robot_e
 
 - type: entity
-  id: SpawnPointTSFCivilian
+  id: SpawnPointPDVCivilian
   parent: SpawnPointJobBase
   name: PDV Peasant
   components:
