@@ -10,7 +10,7 @@
   name: 'TSF-CIV "Stellar Blessing"'
   minimumDistance: 0 # Mono
   maximumDistance: 1 # Mono
-  posX: 5100
+  posX: 5200
   posY: -9000
   spawnGamePreset: [ NFAdventure, NFPirate, MonoStandard, MonoRogueTSF, MonoTSFUSSP, MonoADS, MonoChimera, MonoMixed, MonoAllAtOnce ]
   spawnGroup: Required
