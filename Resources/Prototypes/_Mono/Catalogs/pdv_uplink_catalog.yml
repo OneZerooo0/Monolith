@@ -769,7 +769,7 @@
   id: UplinkPirateC20
   name: uplink-pirate-c20-name
   description: uplink-pirate-c20-desc
-  productEntity: ClothingBackpackDuffelSyndicateFilledSMG
+  productEntity: ClothingBackpackDuffelPDVFilledSMG
   icon: { sprite: Objects/Weapons/Guns/SMGs/c20r.rsi, state: icon }
   cost:
     Doubloon: 20

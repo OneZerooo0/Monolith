@@ -9,3 +9,15 @@
       - id: WeaponDEWSmilodon
       - id: LargePowerCell700Thz
       - id: LargePowerCell400Thz
+
+- type: entity
+  parent: ClothingBackpackDuffelSecurity
+  id: ClothingBackpackDuffelPDVFilledSMG
+  name: C-20r bundle
+  description: "Old faithful: The classic C-20r Submachine Gun, bundled with three magazines." #, and a Suppressor.
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponSubMachineGunC20r
+    - id: Magazine9x19mmSubMachineGunFMJ
+      amount: 3
