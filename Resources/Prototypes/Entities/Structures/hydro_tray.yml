@@ -95,7 +95,7 @@
       path: /Audio/Ambience/Objects/flowing_water_open.ogg
   - type: GuideHelp
     guides:
-    #- Botany
+    - Botany
     - Chemicals
   - type: PirateBountyItem # Frontier
     id: HydroponicsTray # Frontier

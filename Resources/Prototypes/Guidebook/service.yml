@@ -15,10 +15,10 @@
 #  text: "/ServerInfo/Guidebook/Service/Bartender.xml"
 #  filterEnabled: True
 
-#- type: guideEntry
-#  id: Botany
-#  name: guide-entry-botany
-#  text: "/ServerInfo/Guidebook/Service/Botany.xml"
+- type: guideEntry
+  id: Botany
+  name: guide-entry-botany
+  text: "/ServerInfo/Guidebook/Service/Botany.xml"
 
 #- type: guideEntry
 #  id: Chef

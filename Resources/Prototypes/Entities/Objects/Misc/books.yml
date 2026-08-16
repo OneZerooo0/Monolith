@@ -189,7 +189,7 @@
       color: gold
   - type: GuideHelp
     guides:
-    #- Botany
+    - Botany
     - Chemicals
 
 - type: entity
