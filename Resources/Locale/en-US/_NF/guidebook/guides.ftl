@@ -1,6 +1,6 @@
 # Base entries
-guide-entry-nf14 = Frontier Guide
-guide-entry-bank = Colossus Central Bank
+guide-entry-nf14 = Sector Basics
+guide-entry-bank = Banking
 guide-entry-piloting = Piloting
 guide-entry-startinggear = Starting Equipment
 guide-entry-hiring = Hiring Crew
