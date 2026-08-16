@@ -82,9 +82,9 @@
       storagebase: !type:Container
         ents: []
       item_slot: !type:ContainerSlot {}
-  - type: GuideHelp
-    guides:
-    - Janitorial
+  #- type: GuideHelp
+  #  guides:
+  #  - Janitorial
   - type: Damageable
     damageContainer: Inorganic
   - type: Destructible
