@@ -6,8 +6,9 @@
   startingGear: PdvCivilianGear
   icon: JobIconPDVCiv
   supervisors: job-supervisors-pdv-civ
-  weight: 200
-  displayWeight: 300
+  alwaysUseSpawner: true
+  weight: 0
+  displayWeight: 0
   assignedCompany: PDV
   canBeAntag: true
   setPreference: true

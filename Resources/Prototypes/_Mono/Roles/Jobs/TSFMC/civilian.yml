@@ -6,8 +6,9 @@
   startingGear: TsfCivilianGear
   icon: JobIconTSFCiv
   supervisors: job-supervisors-prisoner
-  weight: 200
-  displayWeight: 300
+  weight: 0
+  displayWeight: 0
+  alwaysUseSpawner: true
   assignedCompany: TSF
   canBeAntag: false
   setPreference: true

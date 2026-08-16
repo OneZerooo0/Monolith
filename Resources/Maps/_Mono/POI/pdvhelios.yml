@@ -4,8 +4,8 @@ meta:
   engineVersion: 277.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/16/2026 16:22:44
-  entityCount: 8481
+  time: 08/16/2026 16:35:35
+  entityCount: 8504
 maps: []
 grids:
 - 1
@@ -4131,9 +4131,9 @@ entities:
             470: 4,49
     - type: SpreaderGrid
       spreadQueues:
-        Smoke: []
         MetalFoam: []
         Kudzu: []
+        Smoke: []
         Puddle: []
     - type: GridAtmosphere
       version: 2
@@ -15695,6 +15695,121 @@ entities:
     components:
     - type: Transform
       pos: 0.5,8.5
+      parent: 1
+  - uid: 8482
+    components:
+    - type: Transform
+      pos: -13.5,-5.5
+      parent: 1
+  - uid: 8483
+    components:
+    - type: Transform
+      pos: -12.5,-5.5
+      parent: 1
+  - uid: 8484
+    components:
+    - type: Transform
+      pos: -11.5,-5.5
+      parent: 1
+  - uid: 8485
+    components:
+    - type: Transform
+      pos: -8.5,2.5
+      parent: 1
+  - uid: 8486
+    components:
+    - type: Transform
+      pos: -8.5,1.5
+      parent: 1
+  - uid: 8487
+    components:
+    - type: Transform
+      pos: -8.5,0.5
+      parent: 1
+  - uid: 8488
+    components:
+    - type: Transform
+      pos: -8.5,-0.5
+      parent: 1
+  - uid: 8489
+    components:
+    - type: Transform
+      pos: -8.5,-1.5
+      parent: 1
+  - uid: 8490
+    components:
+    - type: Transform
+      pos: -7.5,-1.5
+      parent: 1
+  - uid: 8491
+    components:
+    - type: Transform
+      pos: -6.5,-1.5
+      parent: 1
+  - uid: 8492
+    components:
+    - type: Transform
+      pos: -5.5,-1.5
+      parent: 1
+  - uid: 8493
+    components:
+    - type: Transform
+      pos: -6.5,-2.5
+      parent: 1
+  - uid: 8494
+    components:
+    - type: Transform
+      pos: -8.5,-2.5
+      parent: 1
+  - uid: 8495
+    components:
+    - type: Transform
+      pos: -5.5,0.5
+      parent: 1
+  - uid: 8496
+    components:
+    - type: Transform
+      pos: -5.5,-0.5
+      parent: 1
+  - uid: 8497
+    components:
+    - type: Transform
+      pos: -6.5,0.5
+      parent: 1
+  - uid: 8498
+    components:
+    - type: Transform
+      pos: -7.5,0.5
+      parent: 1
+  - uid: 8499
+    components:
+    - type: Transform
+      pos: -9.5,1.5
+      parent: 1
+  - uid: 8500
+    components:
+    - type: Transform
+      pos: -10.5,1.5
+      parent: 1
+  - uid: 8501
+    components:
+    - type: Transform
+      pos: -12.5,1.5
+      parent: 1
+  - uid: 8502
+    components:
+    - type: Transform
+      pos: -11.5,1.5
+      parent: 1
+  - uid: 8503
+    components:
+    - type: Transform
+      pos: 8.5,3.5
+      parent: 1
+  - uid: 8504
+    components:
+    - type: Transform
+      pos: 9.5,3.5
       parent: 1
 - proto: CableHV
   entities:
