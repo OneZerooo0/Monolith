@@ -127,7 +127,7 @@
   - type: HitscanBasicDamage
     damage:
       types:
-        Heat: 28 # Mono
+        Heat: 25 # Mono
         Shock: 7
   - type: HitscanBasicVisuals
     muzzleFlash:

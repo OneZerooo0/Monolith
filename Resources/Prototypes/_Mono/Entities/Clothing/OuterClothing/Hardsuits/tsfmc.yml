@@ -184,8 +184,8 @@
         Blunt: 0.7
         Slash: 0.7
         Piercing: 0.7
-        Heat: 0.7
-        Radiation: 0.45
+        Heat: 0.6
+        Radiation: 0.7
         Caustic: 0.8
         Poison: 0.8 # Mono
   - type: ClothingSpeedModifier # Mono - Armor Value Changes
@@ -205,15 +205,16 @@
     color: "#E0FFFF"
     scale: 2.3
     shield:
-      maxCharge: 1000 # Juggernaut suit basically.
+      maxCharge: 400
       regenRate: 5
       spinupTime: 2.5
-      breakCooldown: 50 # REALLY slow regen.
+      breakCooldown: 20
       powerDraw: 0.5
       blockModifier:
         coefficients:
           Heat: 1.5
-          Radiation: 3.5
+          Radiation: 2.5
+          Shock: 3.5
           Structural: 0.3
   - type: Battery
     maxCharge: 100
@@ -226,6 +227,12 @@
     coefficient: 0.0001
   - type: UseDelay
     delay: 10
+  - type: FootstepModifier # Mono
+    footstepSoundCollection:
+      path: /Audio/_Mono/Effects/Footsteps/big_stomp.ogg
+      params:
+        volume: 3
+        variation: 0.2
 
 # MARSOC only
 

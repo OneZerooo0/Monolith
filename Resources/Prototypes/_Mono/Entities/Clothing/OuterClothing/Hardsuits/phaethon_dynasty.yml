@@ -205,8 +205,9 @@
       powerDraw: 1
       blockModifier:
         coefficients:
-          Piercing: 0.7
-          Heat: 2.5
+          Piercing: 1
+          Heat: 0.7
+          Radiation: 2.5
   - type: Battery
     maxCharge: 100
     startingCharge: 100
