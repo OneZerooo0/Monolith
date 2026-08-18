@@ -4,8 +4,8 @@ meta:
   engineVersion: 277.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/16/2026 16:35:35
-  entityCount: 8504
+  time: 08/18/2026 20:47:55
+  entityCount: 8524
 maps: []
 grids:
 - 1
@@ -4131,10 +4131,10 @@ entities:
             470: 4,49
     - type: SpreaderGrid
       spreadQueues:
-        MetalFoam: []
-        Kudzu: []
-        Smoke: []
         Puddle: []
+        MetalFoam: []
+        Smoke: []
+        Kudzu: []
     - type: GridAtmosphere
       version: 2
       data:
@@ -25815,6 +25815,13 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 7.5,12.5
       parent: 1
+- proto: DatafarmResearchFaction
+  entities:
+  - uid: 8524
+    components:
+    - type: Transform
+      pos: -9.5,30.5
+      parent: 1
 - proto: DefaultStationBeaconAI
   entities:
   - uid: 3895
@@ -42173,6 +42180,20 @@ entities:
     - type: Transform
       pos: -1.5,34.5
       parent: 1
+- proto: MaterialCloth
+  entities:
+  - uid: 8522
+    components:
+    - type: Transform
+      pos: -18.34366,28.61182
+      parent: 1
+- proto: MaterialDurathread
+  entities:
+  - uid: 8523
+    components:
+    - type: Transform
+      pos: -18.145744,28.830723
+      parent: 1
 - proto: MedicalBed
   entities:
   - uid: 6018
@@ -44179,6 +44200,16 @@ entities:
     - type: Transform
       pos: -11.5,-4.5
       parent: 1
+  - uid: 8505
+    components:
+    - type: Transform
+      pos: -16.5,30.5
+      parent: 1
+  - uid: 8507
+    components:
+    - type: Transform
+      pos: -16.5,29.5
+      parent: 1
 - proto: Railing
   entities:
   - uid: 486
@@ -45229,6 +45260,82 @@ entities:
     components:
     - type: Transform
       pos: 13.5,38.5
+      parent: 1
+- proto: SheetCopper50
+  entities:
+  - uid: 8513
+    components:
+    - type: Transform
+      pos: -18.739494,26.547888
+      parent: 1
+- proto: SheetGlass
+  entities:
+  - uid: 8514
+    components:
+    - type: Transform
+      pos: -16.68741,28.716059
+      parent: 1
+  - uid: 8515
+    components:
+    - type: Transform
+      pos: -16.40616,28.643093
+      parent: 1
+- proto: SheetLithium50
+  entities:
+  - uid: 8516
+    components:
+    - type: Transform
+      pos: -18.37491,26.672974
+      parent: 1
+- proto: SheetPlasma
+  entities:
+  - uid: 8517
+    components:
+    - type: Transform
+      pos: -18.78116,28.736908
+      parent: 1
+- proto: SheetPlasteel
+  entities:
+  - uid: 8518
+    components:
+    - type: Transform
+      pos: -18.65616,28.632668
+      parent: 1
+- proto: SheetPlastic
+  entities:
+  - uid: 8519
+    components:
+    - type: Transform
+      pos: -16.645744,29.529123
+      parent: 1
+  - uid: 8520
+    components:
+    - type: Transform
+      pos: -16.40616,29.581244
+      parent: 1
+- proto: SheetSteel
+  entities:
+  - uid: 8510
+    components:
+    - type: Transform
+      pos: -16.697828,30.675755
+      parent: 1
+  - uid: 8511
+    components:
+    - type: Transform
+      pos: -16.489494,30.52982
+      parent: 1
+  - uid: 8512
+    components:
+    - type: Transform
+      pos: -16.333244,30.383884
+      parent: 1
+- proto: SheetUranium
+  entities:
+  - uid: 8521
+    components:
+    - type: Transform
+      pos: -18.447828,28.726484
       parent: 1
 - proto: ShieldGeneratorPOI
   entities:
@@ -46927,6 +47034,21 @@ entities:
     components:
     - type: Transform
       pos: 2.5,60.5
+      parent: 1
+  - uid: 8506
+    components:
+    - type: Transform
+      pos: -16.5,28.5
+      parent: 1
+  - uid: 8508
+    components:
+    - type: Transform
+      pos: -18.5,28.5
+      parent: 1
+  - uid: 8509
+    components:
+    - type: Transform
+      pos: -18.5,26.5
       parent: 1
 - proto: TableCounterWood
   entities:

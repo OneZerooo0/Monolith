@@ -4,8 +4,8 @@ meta:
   engineVersion: 277.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/16/2026 17:30:57
-  entityCount: 10332
+  time: 08/18/2026 20:15:28
+  entityCount: 10346
 maps: []
 grids:
 - 1
@@ -243,10 +243,10 @@ entities:
     - type: OccluderTree
     - type: SpreaderGrid
       spreadQueues:
-        Kudzu: []
         Puddle: []
         MetalFoam: []
         Smoke: []
+        Kudzu: []
     - type: Shuttle
       dampingModifier: 0.25
     - type: GridPathfinding
@@ -5699,7 +5699,7 @@ entities:
       pos: 8.5,-4.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -69949.914
+      secondsUntilStateChange: -70315.47
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -5723,7 +5723,7 @@ entities:
       pos: 8.5,-3.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -69949.15
+      secondsUntilStateChange: -70314.7
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -31386,6 +31386,13 @@ entities:
     - type: Transform
       pos: -6.5,26.5
       parent: 1
+- proto: CrateMaterialSteel
+  entities:
+  - uid: 10335
+    components:
+    - type: Transform
+      pos: 5.5,-5.5
+      parent: 1
 - proto: CrateNfsdRestraints
   entities:
   - uid: 4775
@@ -31814,6 +31821,13 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -10.5,-5.5
+      parent: 1
+- proto: DatafarmResearchFaction
+  entities:
+  - uid: 10346
+    components:
+    - type: Transform
+      pos: -3.5,9.5
       parent: 1
 - proto: DefaultStationBeaconBar
   entities:
@@ -47501,6 +47515,20 @@ entities:
     - type: Transform
       pos: 26.230234,-7.5392537
       parent: 1
+- proto: MaterialCloth
+  entities:
+  - uid: 10342
+    components:
+    - type: Transform
+      pos: 0.35861492,-3.6264672
+      parent: 1
+- proto: MaterialDurathread
+  entities:
+  - uid: 10338
+    components:
+    - type: Transform
+      pos: 0.7961149,-3.345022
+      parent: 1
 - proto: MaterialReclaimer
   entities:
   - uid: 7009
@@ -51417,12 +51445,64 @@ entities:
     - type: Transform
       pos: -11.478342,15.488059
       parent: 1
+- proto: SheetCopper50
+  entities:
+  - uid: 10343
+    components:
+    - type: Transform
+      pos: 0.119031906,-4.533347
+      parent: 1
+- proto: SheetGlass
+  entities:
+  - uid: 10336
+    components:
+    - type: Transform
+      pos: 1.4627819,-4.3352933
+      parent: 1
+  - uid: 10340
+    components:
+    - type: Transform
+      pos: 1.6606984,-4.3248687
+      parent: 1
 - proto: SheetGlass10
   entities:
   - uid: 7629
     components:
     - type: Transform
       pos: 5.469966,-8.260523
+      parent: 1
+- proto: SheetLithium50
+  entities:
+  - uid: 10344
+    components:
+    - type: Transform
+      pos: 0.19194841,-4.3665648
+      parent: 1
+- proto: SheetPlasma
+  entities:
+  - uid: 10339
+    components:
+    - type: Transform
+      pos: 0.4731984,-3.3971417
+      parent: 1
+- proto: SheetPlasteel
+  entities:
+  - uid: 10337
+    components:
+    - type: Transform
+      pos: 1.0981984,-4.449956
+      parent: 1
+- proto: SheetPlastic
+  entities:
+  - uid: 10161
+    components:
+    - type: Transform
+      pos: 0.7023649,-4.4395323
+      parent: 1
+  - uid: 10345
+    components:
+    - type: Transform
+      pos: 0.5148649,-4.40826
       parent: 1
 - proto: SheetPlastic10
   entities:
@@ -51469,6 +51549,13 @@ entities:
     components:
     - type: Transform
       pos: 5.419566,-8.166765
+      parent: 1
+- proto: SheetUranium
+  entities:
+  - uid: 10341
+    components:
+    - type: Transform
+      pos: 0.1815319,-3.3137505
       parent: 1
 - proto: ShieldGeneratorPOI
   entities:
@@ -52136,11 +52223,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 27.5,9.5
-      parent: 1
-  - uid: 7699
-    components:
-    - type: Transform
-      pos: 0.5,-3.5
       parent: 1
   - uid: 7700
     components:
@@ -54353,6 +54435,11 @@ entities:
       parent: 1
 - proto: Table
   entities:
+  - uid: 7699
+    components:
+    - type: Transform
+      pos: 0.5,-4.5
+      parent: 1
   - uid: 7941
     components:
     - type: Transform
@@ -54406,6 +54493,16 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 5.5,-7.5
+      parent: 1
+  - uid: 8070
+    components:
+    - type: Transform
+      pos: 0.5,-3.5
+      parent: 1
+  - uid: 10158
+    components:
+    - type: Transform
+      pos: 1.5,-4.5
       parent: 1
   - uid: 10276
     components:
@@ -55101,12 +55198,6 @@ entities:
       parent: 1
 - proto: ToiletEmpty
   entities:
-  - uid: 8070
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 0.5,-4.5
-      parent: 1
   - uid: 8071
     components:
     - type: Transform
