@@ -184,8 +184,8 @@
         Blunt: 0.7
         Slash: 0.7
         Piercing: 0.7
-        Heat: 0.6
-        Radiation: 0.7
+        Heat: 0.5
+        Radiation: 0.5
         Caustic: 0.8
         Poison: 0.8 # Mono
   - type: ClothingSpeedModifier # Mono - Armor Value Changes
@@ -212,11 +212,10 @@
       powerDraw: 0.5
       blockModifier:
         coefficients:
-          Piercing: 0.3
+          Piercing: 0.2
           Heat: 1.5
-          Radiation: 3.5
-          Shock: 3.5
-          Structural: 0.3
+          Radiation: 2.5
+          Shock: 2.5
   - type: Battery
     maxCharge: 100
     startingCharge: 100
