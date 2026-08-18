@@ -7,7 +7,7 @@
   - !type:OverallPlaytimeRequirement
     time: 43200 # 12 hours
   icon: "JobIconContractor"
-  supervisors: job-supervisors-hire
+  supervisors: job-supervisors-nobody
   displayWeight: 40 # Top
   accessGroups: # Frontier
   - GeneralAccess # Frontier
