@@ -212,7 +212,7 @@
       powerDraw: 0.5
       blockModifier:
         coefficients:
-          Piercing: 0.2
+          Piercing: 0.5
           Heat: 1.5
           Radiation: 2.5
           Shock: 2.5
