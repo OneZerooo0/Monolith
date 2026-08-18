@@ -212,8 +212,9 @@
       powerDraw: 0.5
       blockModifier:
         coefficients:
+          Piercing: 0.3
           Heat: 1.5
-          Radiation: 2.5
+          Radiation: 3.5
           Shock: 3.5
           Structural: 0.3
   - type: Battery
@@ -223,16 +224,19 @@
     autoRecharge: true
     autoRechargeRate: 5
     autoRechargePauseTime: 5
-  - type: EmpResistance
-    coefficient: 0.0001
   - type: UseDelay
     delay: 10
   - type: FootstepModifier # Mono
     footstepSoundCollection:
-      path: /Audio/_Mono/Effects/Footsteps/big_stomp.ogg
-      params:
-        volume: 3
-        variation: 0.2
+      path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
+  - type: ExtendDescription
+    descriptionList:
+    - description: Alt-click or otherwise interact to toggle additional shielding.
+      color: "#4f94ad"
+      requireDetailRange: true
+    - description: The M92-x shield is designed to inhibit the velocity of incoming conventional firearms. However, it struggles against anything involving high-energy particles, such as lasers.
+      color: "#94768c"
+      requireDetailRange: true
 
 # MARSOC only
 
@@ -298,3 +302,8 @@
     autoRechargePauseTime: 5
   - type: EmpResistance
     coefficient: 0.0001
+  - type: ExtendDescription
+    descriptionList:
+    - description: Alt-click or otherwise interact to toggle additional shielding.
+      color: "#4f94ad"
+      requireDetailRange: true

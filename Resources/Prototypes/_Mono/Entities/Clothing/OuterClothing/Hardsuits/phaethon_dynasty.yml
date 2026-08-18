@@ -198,16 +198,17 @@
     fillLevel: 0.1
     coreFade: 0.85
     shield:
-      maxCharge: 280
+      maxCharge: 200
       regenRate: 5
       spinupTime: 0.5
-      breakCooldown: 22.5
+      breakCooldown: 17
       powerDraw: 1
       blockModifier:
         coefficients:
           Piercing: 1
-          Heat: 0.7
-          Radiation: 2.5
+          Heat: 0.5
+          Radiation: 0.5
+          Shock: 0.5
   - type: Battery
     maxCharge: 100
     startingCharge: 100
@@ -221,6 +222,14 @@
     radius: 1.4
     energy: 2
     color: "#5dd439"
+  - type: ExtendDescription
+    descriptionList:
+    - description: Alt-click or otherwise interact to toggle additional shielding.
+      color: "#4f94ad"
+      requireDetailRange: true
+    - description: The CV-53 hard-shield is a modification of wayward shielding technology designed for a laser-centric combat environment. It is very effective against lasers and other high-energy particles, but will fail against ballistics.
+      color: "#94768c"
+      requireDetailRange: true
 
 - type: entity
   parent: ClothingOuterHardsuitAshen
