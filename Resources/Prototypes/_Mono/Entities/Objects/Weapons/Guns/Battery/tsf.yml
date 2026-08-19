@@ -179,3 +179,8 @@
   - type: GunWieldBonus
     minAngle: 0
     maxAngle: 0
+  - type: ExtendDescription
+    descriptionList:
+    - description: Continued fire increases accuracy.
+      color: "#4f94ad"
+      requireDetailRange: true
