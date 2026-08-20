@@ -97,4 +97,4 @@
       types:
         Piercing: 18
         Structural: 40
-    armorPenetration: 1
+    armorPenetration: 0.8
