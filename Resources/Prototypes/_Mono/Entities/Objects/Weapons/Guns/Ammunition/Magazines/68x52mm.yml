@@ -203,7 +203,7 @@
 
 - type: entity
   id: Magazine68x52mmCaselessPlasma
-  name: "magazine (6.8x52mm STANAG Caseless Plasma)"
+  name: "magazine (6.8x52mm STANAG caseless plasma)"
   parent: BaseMagazine68x52mmCaseless
   components:
   - type: BallisticAmmoProvider
