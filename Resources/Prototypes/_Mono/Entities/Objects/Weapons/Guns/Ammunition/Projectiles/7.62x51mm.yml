@@ -95,9 +95,9 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 13
+        Piercing: 10
         Structural: 40
-    armorPenetration: 0.8
+    armorPenetration: 1
 
 #anti-structure (heavy balistic turrets):
 - type: entity
