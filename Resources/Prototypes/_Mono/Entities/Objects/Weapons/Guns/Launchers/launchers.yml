@@ -162,7 +162,7 @@
     - Back
     - suitStorage
   - type: Gun
-    projectileSpeed: 60
+    projectileSpeed: 30
     fireRate: 2
     selectedMode: SemiAuto
     availableModes:
@@ -188,10 +188,6 @@
     baseDelay: 2
     modifiedDelay: 2
     preventFiring: true
-  - type: CursorOffsetRequiresWield
-  - type: EyeCursorOffset
-    maxOffset: 7
-    pvsIncrease: 0.7
 
 # TPGL (its just a QLU-11...)
 

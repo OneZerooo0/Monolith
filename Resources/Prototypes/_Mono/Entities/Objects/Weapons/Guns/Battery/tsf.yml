@@ -94,7 +94,7 @@
     damageModifier: 1.1
     minAngle: 1
     maxAngle: 22
-    angleIncrease: -1
+    angleIncrease: -1.5
     angleDecay: -3
     fireRate: 6
     selectedMode: FullAuto

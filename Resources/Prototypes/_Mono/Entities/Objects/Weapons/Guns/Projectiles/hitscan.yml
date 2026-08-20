@@ -173,9 +173,11 @@
   - type: HitscanBasicDamage
     damage:
       types:
-        Piercing: 15
+        Blunt: 15
         Structural: 350
     armorPenetration: 0
+  - type: HitscanStaminaDamage
+    staminaDamage: 250
   - type: HitscanSpawnEntity
     spawnedEntity: 145x114mmEMPExplosion
 

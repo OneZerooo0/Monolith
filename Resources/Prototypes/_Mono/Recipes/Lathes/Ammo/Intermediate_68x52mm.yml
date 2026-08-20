@@ -41,9 +41,10 @@
   categories:
   - Ammo
   materials:
-    Steel: 175
-    Plasma: 625
+    Steel: 500
     UraniumDepleted: 150
+  reagents:
+    Plasma: 60
   result: Magazine68x52mmCaselessPlasma
 
 #Boxes
@@ -84,9 +85,10 @@
   categories:
   - Ammo
   materials:
-    Steel: 350
-    Plasma: 1250
+    Steel: 1000
     UraniumDepleted: 300
+  reagents:
+    Plasma: 120
   result: AmmoBox68x52mmCaselessPlasma
 
 #big box
