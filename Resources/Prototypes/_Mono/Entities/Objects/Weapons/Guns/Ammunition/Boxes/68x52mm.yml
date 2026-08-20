@@ -117,7 +117,7 @@
 - type: entity
   parent: BaseAmmoBox68x52mmCaseless
   id: AmmoBox68x52mmCaselessPlasma
-  name: ammunition box (6.8x52mm STANAG Caseless Plasma)
+  name: ammunition box (6.8x52mm STANAG caseless plasma)
   components:
   - type: BallisticAmmoProvider
     proto: Cartridge68x52mmCaselessPlasma
