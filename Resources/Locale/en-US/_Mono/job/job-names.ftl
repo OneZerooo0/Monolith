@@ -12,11 +12,11 @@ job-name-md-medic = Emergency Responder
 # MARK: TSF
 job-name-tsf-engineer = TSFMC Engineer
 job-name-tsf-borg = TSFMC Cyborg
-job-name-tsf-civilian = TSF Citizen
+job-name-tsf-civilian = TSF Contractor
 
 # MARK: PDV
 job-name-pdv-borg = PDV Cyborg
-job-name-pdv-civilian = PDV Peasant
+job-name-pdv-civilian = PDV Freeman
 
 # MARK: Viper Group
 job-name-vg-infanteer = VG Infanteer

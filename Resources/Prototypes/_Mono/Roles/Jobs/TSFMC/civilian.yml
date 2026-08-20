@@ -20,8 +20,6 @@
     - type: NpcFactionMember
       factions:
       - TSFMC
-  - !type:AddImplantSpecial
-    implants: [ MindShieldImplant ]
   - !type:AddLanguageSpecial
     languagesSpoken:
     - SolCommon

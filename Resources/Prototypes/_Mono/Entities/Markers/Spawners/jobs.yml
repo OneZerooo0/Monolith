@@ -3,7 +3,7 @@
 - type: entity
   id: SpawnPointTSFCivilian
   parent: SpawnPointJobBase
-  name: TSF Citizen
+  name: TSF Civilian Spawn
   components:
   - type: SpawnPoint
     job_id: TsfCivilian
@@ -63,7 +63,7 @@
 - type: entity
   id: SpawnPointPDVCivilian
   parent: SpawnPointJobBase
-  name: PDV Peasant
+  name: PDV Civilian Spawn
   components:
   - type: SpawnPoint
     job_id: PdvCivilian

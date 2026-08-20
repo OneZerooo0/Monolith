@@ -11,8 +11,8 @@
   name: 'PDV Helios Fortress'
   minimumDistance: 0
   maximumDistance: 1
-  posX: -5000
-  posY: 9000
+  #posX: -5000
+  #posY: 9000
   spawnGamePreset: [ NFAdventure, NFPirate, MonoStandard, MonoRogueTSF, MonoRogueUSSP, MonoADS, MonoChimera, MonoMixed, MonoAllAtOnce ]
   spawnGroup: Required
   gridPath: /Maps/_Mono/POI/pdvhelios.yml
