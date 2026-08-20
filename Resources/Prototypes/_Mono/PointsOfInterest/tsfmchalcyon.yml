@@ -14,8 +14,8 @@
   id: TSFMCHalcyon
   parent: [BasePOI, BaseRepairablePOI]
   name: 'TSFMC Flagship Halcyon'
-  minimumDistance: 0 # Mono
-  maximumDistance: 1 # Mono
+  minimumDistance: 4500 # Mono
+  maximumDistance: 5500 # Mono
   #posX: 5000
   #posY: -9000
   spawnGamePreset: [ NFAdventure, NFPirate, MonoStandard, MonoRogueTSF, MonoTSFUSSP, MonoADS, MonoChimera, MonoMixed, MonoAllAtOnce ]
