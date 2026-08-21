@@ -14,6 +14,8 @@ job-description-tsf-civilian = Survive in the Colossus sector, do what your gove
 # MARK: PDV
 job-description-pdv-borg = Half-human, Half-machine. Follow your laws, serve the PDV, and beg dynasty troops for upgrades.
 job-description-pdv-civilian = Survive in the Colossus sector, obey the Sultanate and bring success to the Dynasty through your work.
+job-description-pdv-ambassador = A high ranking official of the Dynasty.
+job-description-pdv-prince = The son of the Sultan. Holds high authority.
 
 # MARK: Viper Group
 job-description-vg-infanteer = Follow the orders from above. Complete contracts. Get paid.

@@ -17,6 +17,8 @@ job-name-tsf-civilian = TSF Contractor
 # MARK: PDV
 job-name-pdv-borg = PDV Cyborg
 job-name-pdv-civilian = PDV Freeman
+job-name-pdv-ambassador = Dynasty Ambassador
+job-name-pdv-prince = Dynasty Prince
 
 # MARK: Viper Group
 job-name-vg-infanteer = VG Infanteer
