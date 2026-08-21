@@ -413,10 +413,7 @@
   - type: Appearance
   - type: PhysicalComposition
     materialComposition:
-      Plasma: 30
-      Iron: 30
-      Gestalzitine: 30
-      Carbon: 10
+      PdvComposite: 100
 
 - type: entity
   parent: SheetPdvComposite
