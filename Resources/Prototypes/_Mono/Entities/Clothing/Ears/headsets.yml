@@ -43,6 +43,7 @@
       key_slots:
       - EncryptionKeyCommon
       - EncryptionKeyNfsd
+      - EncryptionKeyCommand
 
 - type: entity
   parent: ClothingHeadsetAlt
