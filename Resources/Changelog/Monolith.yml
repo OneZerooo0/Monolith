@@ -24204,3 +24204,59 @@ Entries:
   id: 2660
   time: '2026-08-23T19:32:57.0000000+00:00'
   url: https://github.com/Monolith-Station/Monolith/pull/4556
+- author: Onezero0
+  changes:
+    - type: Tweak
+      message: Zvezda is now less of a deathtrap. Its still kind of a deathtrap though.
+  id: 2661
+  time: '2026-08-23T23:41:50.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/4557
+- author: kasature90
+  changes:
+    - type: Add
+      message: Safety deposit boxes can be bought with savings money too now.
+    - type: Fix
+      message: Fixed safety deposit boxes being able to store LPCs.
+  id: 2662
+  time: '2026-08-24T00:27:09.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/4560
+- author: tonotom1
+  changes:
+    - type: Tweak
+      message: Caelestinus station received much deserved love and care
+    - type: Tweak
+      message: You can pawn your vessel off at Zeta node now
+    - type: Fix
+      message: >-
+        The world now once again has biome markers. Biome information was
+        touched up to match recent topological reworks.
+  id: 2663
+  time: '2026-08-24T09:17:08.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/4480
+- author: pizzay30tyd
+  changes:
+    - type: Add
+      message: Added Show IFF and Show Detailed IFF Buttons to Mass Scanners/Radars
+  id: 2664
+  time: '2026-08-24T09:17:26.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/4562
+- author: kasature90
+  changes:
+    - type: Fix
+      message: Fixed military assemblers not linking to silo.
+  id: 2665
+  time: '2026-08-24T09:48:45.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/4563
+- author: Onezero0
+  changes:
+    - type: Add
+      message: TSF/PDV civilians now get faction comms.
+    - type: Tweak
+      message: >-
+        TSF command comms have been rebranded as "TSF Military" and should be
+        accessible to all military roles.
+    - type: Add
+      message: There is now a beginner guide guidebook entry.
+  id: 2666
+  time: '2026-08-24T18:01:04.0000000+00:00'
+  url: https://github.com/Monolith-Station/Monolith/pull/4565
