@@ -5,6 +5,24 @@
   loadouts:
   - ProgressionAmmoBox9x19mmFMJ
   - ProgressionDockFlatpack
+  - ProgressionNFPouchContractor
+  - ProgressionExtendedEmergencyOxygenTankFilled
+  - ProgressionWeaponPistolMk58
+  - ProgressionWeaponPistolViper
+  - ProgressionAmmoBox9x19mmBigFMJ
+  - ProgressionClothingHeadHatBeretCommander
+  - ProgressionGeneratorRTGFlatpack
+  - ProgressionResearchAndDevelopmentServerFlatpack
+  - ProgressionComputerResearchAndDevelopmentFlatpack
+  - ProgressionProtolatheFlatpack
+  - ProgressionClothingOuterHardsuitPilot
+  - ProgressionTelecrystal5
+  - ProgressionRCD
+  - ProgressionShipRepairDevice
+  - ProgressionRPD
+  - ProgressionResearchDisk5000
+  - ProgressionSheetSteel
+  - ProgressionRCDAmmo
 
 - type: loadout
   id: ProgressionAmmoBox9x19mmFMJ
@@ -174,7 +192,8 @@
     proto: MonoCiv50Hours
   price: 5000
   storage:
-    back: ResearchDisk5000
+    back:
+    - ResearchDisk5000
 
 - type: loadout
   id: ProgressionSheetSteel
@@ -183,7 +202,8 @@
     proto: MonoCiv50Hours
   price: 5000
   storage:
-    back: SheetSteel
+    back:
+    - SheetSteel
 
 - type: loadout
   id: ProgressionRCDAmmo
@@ -192,13 +212,14 @@
     proto: MonoCiv50Hours
   price: 5000
   storage:
-    back: RCDAmmo
+    back:
+    - RCDAmmo
 
-- type: loadout
-  id: Progression
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: MonoCiv60Hours
-  price: 5000
-  storage:
-    back: 
+#- type: loadout
+#  id: Progression
+#  effects:
+#  - !type:GroupLoadoutEffect
+#    proto: MonoCiv60Hours
+#  price: 5000
+#  storage:
+#    back:
