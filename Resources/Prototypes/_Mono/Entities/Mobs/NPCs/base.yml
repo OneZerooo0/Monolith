@@ -3,7 +3,7 @@
 - type: entity
   suffix: AI, Hostile, Shade
   name: wayward shade
-  description: Something great that has been lost.
+  description: Something great has been lost.
   #abstract: true
   parent:
   - BaseMobSpeciesShade
@@ -34,7 +34,6 @@
     sound:
       collection: MonoShadeAmbience
       params:
-        volume: -2
         maxDistance: 8
         variation: 0.05
   - type: Sprite
