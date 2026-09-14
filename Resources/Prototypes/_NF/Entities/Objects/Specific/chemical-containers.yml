@@ -220,7 +220,6 @@
       map: [ "base" ]
     - state: plasma
       shader: unshaded
-      map: [ "base" ]
   - type: Appearance
   - type: StaticPrice
     price: 0
@@ -257,7 +256,6 @@
       map: [ "base" ]
     - state: uranium
       shader: unshaded
-      map: ["base"]
   - type: Appearance
   - type: StaticPrice
     price: 0
@@ -294,7 +292,6 @@
       map: [ "base" ]
     - state: tritium
       shader: unshaded
-      map: [ "base" ]
   - type: Appearance
   - type: StaticPrice
     price: 0
