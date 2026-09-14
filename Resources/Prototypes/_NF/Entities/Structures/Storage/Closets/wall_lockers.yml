@@ -135,7 +135,7 @@
   categories: [ HideSpawnMenu ] # debloat spawn menu
   id: LockerWallColorBananium
   parent: LockerWallColorBase
-  name: bananium fuel wall locker
+  name: plutonium fuel wall locker
   components:
   - type: Sprite
     layers:
