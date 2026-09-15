@@ -20,7 +20,7 @@
   suffix: Filled, Uranium (x2 Generators)
 
 - type: entity
-  parent: [ LockerWallColorBananium, StorageFillMaterialsFuelPlutonium ]
+  parent: [ LockerWallColorPlutonium, StorageFillMaterialsFuelPlutonium ]
   id: LockerWallMaterialsFuelPlutoniumFilled
   suffix: Filled, Plutonium
 
