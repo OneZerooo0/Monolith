@@ -809,7 +809,7 @@
   parent: ComputerComms
   id: SyndicateComputerComms
   name: ancient communications computer # mono
-  description: An old broadcasting computer, capable of broadcasting a message across most radio frequencies using connected broadcasting equipment. People will definitely hear you use this. # mono
+  description: An old telecomms interface, capable of sending a message across most radio frequencies using connected broadcasting equipment. People will definitely hear you use this. # mono
   components:
   - type: Sprite
     layers:
