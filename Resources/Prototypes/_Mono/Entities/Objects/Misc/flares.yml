@@ -247,7 +247,7 @@
 # green
 
 - type: entity
-  name: signal flare (ally)
+  name: signal flare (friendly)
   categories: [ HideSpawnMenu ]
   parent: BaseSignalFlareActivated
   id: SignalFlareGreenActivated
@@ -291,7 +291,7 @@
     shape: star
 
 - type: entity
-  name: signal flare (ally)
+  name: signal flare (friendly)
   parent: BaseSignalFlare
   id: SignalFlareGreen
   description: A flare that produces a very bright light and an IFF signal for a short while. Indicates friendly intent.
@@ -551,3 +551,100 @@
   #  proto: SignalFlareGoldActivated
   - type: CartridgeAmmo
     proto: SignalFlareGoldActivated
+
+# boxes
+
+- type: entity
+  id: BoxDispenserFlare
+  parent: BaseAmmoProvider # this is for cycling flares out and not spawning 9 entities
+  name: emergency flare dispenser
+  description: Dispenses emergency flares.
+  components:
+  - type: Sprite
+    layers:
+    - state: boxwide
+    - state: flare
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - SignalFlareLaunchable
+    proto: Flare
+    capacity: 12
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  id: BoxDispenserFlareGreen
+  parent: BaseAmmoProvider # this is for cycling flares out and not spawning 9 entities
+  name: signal flare (friendly) dispenser
+  description: Dispenses signal flares, used for indicating friendly intent.
+  components:
+  - type: Sprite
+    layers:
+    - state: boxwide
+    - state: flare
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - SignalFlareLaunchable
+    proto: SignalFlareGreen
+    capacity: 12
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  id: BoxDispenserFlareRed
+  parent: BaseAmmoProvider # this is for cycling flares out and not spawning 9 entities
+  name: signal flare (hostile) dispenser
+  description: Dispenses signal flares, used for indicating hostile intent.
+  components:
+  - type: Sprite
+    layers:
+    - state: boxwide
+    - state: flare
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - SignalFlareLaunchable
+    proto: SignalFlareRed
+    capacity: 12
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  id: BoxDispenserFlareRed
+  parent: BaseAmmoProvider # this is for cycling flares out and not spawning 9 entities
+  name: signal flare (neutral/surrender) dispenser
+  description: Dispenses signal flares, used for indicating neutral intent or, in combat, surrender.
+  components:
+  - type: Sprite
+    layers:
+    - state: boxwide
+    - state: flare
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - SignalFlareLaunchable
+    proto: SignalFlareWhite
+    capacity: 12
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  id: BoxDispenserFlareRed
+  parent: BaseAmmoProvider # this is for cycling flares out and not spawning 9 entities
+  name: signal flare (other) dispenser
+  description: Dispenses signal flares, used for indicating a miscellaneous signal.
+  components:
+  - type: Sprite
+    layers:
+    - state: boxwide
+    - state: flare
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - SignalFlareLaunchable
+    proto: SignalFlareGold
+    capacity: 12
+  - type: StaticPrice
+    price: 10
