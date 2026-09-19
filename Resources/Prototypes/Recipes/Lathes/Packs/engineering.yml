@@ -68,8 +68,8 @@
   - JawsOfLife
   - ExperimentalNaniteApplicator
   - TrayGoggles # Delta-V
-  # - Fulton # Frontier
-  # - FultonBeacon # Frontier
+  - Fulton
+  - FultonBeacon
 
 - type: latheRecipePack
   id: AtmosTools
