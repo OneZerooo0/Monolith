@@ -582,7 +582,8 @@
   - type: Sprite
     layers:
     - state: boxwide
-    - state: flare
+    - state: flare_grayscale
+      color: "#3fc40a"
   - type: BallisticAmmoProvider
     whitelist:
       tags:
@@ -601,7 +602,8 @@
   - type: Sprite
     layers:
     - state: boxwide
-    - state: flare
+    - state: flare_grayscale
+      color: "#e62e43"
   - type: BallisticAmmoProvider
     whitelist:
       tags:
@@ -620,7 +622,8 @@
   - type: Sprite
     layers:
     - state: boxwide
-    - state: flare
+    - state: flare_grayscale
+      color: "#f5ffff"
   - type: BallisticAmmoProvider
     whitelist:
       tags:
@@ -639,7 +642,8 @@
   - type: Sprite
     layers:
     - state: boxwide
-    - state: flare
+    - state: flare_grayscale
+      color: "#f0b548"
   - type: BallisticAmmoProvider
     whitelist:
       tags:
