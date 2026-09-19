@@ -612,7 +612,7 @@
     price: 10
 
 - type: entity
-  id: BoxDispenserFlareRed
+  id: BoxDispenserFlareWhite
   parent: BaseAmmoProvider # this is for cycling flares out and not spawning 9 entities
   name: signal flare (neutral/surrender) dispenser
   description: Dispenses signal flares, used for indicating neutral intent or, in combat, surrender.
