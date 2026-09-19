@@ -631,7 +631,7 @@
     price: 10
 
 - type: entity
-  id: BoxDispenserFlareRed
+  id: BoxDispenserFlareGold
   parent: BaseAmmoProvider # this is for cycling flares out and not spawning 9 entities
   name: signal flare (other) dispenser
   description: Dispenses signal flares, used for indicating a miscellaneous signal.
