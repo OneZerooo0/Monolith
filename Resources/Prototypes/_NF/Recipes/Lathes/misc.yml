@@ -100,7 +100,7 @@
     Steel: 1800
 
 - type: latheRecipe
-  id: BoxDispenserFlarGold
+  id: BoxDispenserFlareGold
   result: BoxDispenserFlareGold
   parent: BoxDispenserFlare
   materials:
