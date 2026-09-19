@@ -773,14 +773,21 @@
 
 - type: Tag
   id: Central
-  
+
 # Stashes
 
 - type: Tag
   id: Unstashable
-  
+
 # Map migration tags for door autorotation thing.
 
 - type: Tag
   id: DoorAutorotate
 
+# Signal flare cartridge tag
+
+- type: Tag
+  id: SignalFlareLaunchable
+
+- type: Tag
+  id: SignalFlareLauncher
